@@ -33,11 +33,14 @@ public class Player : MonoBehaviour
         );
         animator.SetFloat("speed", absSpeed);
 
-        transform.localScale = new Vector3(
-            -Mathf.Sign(movement.x),
-            1.0f,
-            1.0f
-        );
+        if (Mathf.Abs(movement.x) > 0)
+        {
+            transform.localScale = new Vector3(
+                -Mathf.Sign(movement.x),
+                1.0f,
+                1.0f
+            );
+        }
 
         transform.position += new Vector3
         (
