@@ -22,6 +22,15 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Vector3 direction = (player.transform.position - transform.position).normalized;
-        transform.position += direction * movementSpeed * Time.deltaTime;
+        transform.position += movementSpeed * Time.deltaTime * direction;
+
+        if (Mathf.Abs(direction.x) > 0)
+        {
+            transform.localScale = new Vector3(
+                -Mathf.Sign(direction.x),
+                1.0f,
+                1.0f
+            );
+        }
     }
 }
