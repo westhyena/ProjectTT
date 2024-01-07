@@ -7,11 +7,14 @@ public class Player : MonoBehaviour
     Animator animator;
     public float movementSpeed = 20.0f;
 
+    new Rigidbody2D rigidbody;
+
     float hp = 100.0f;
 
     void Awake()
     {
         animator = GetComponentInChildren<Animator>();
+        rigidbody = GetComponent<Rigidbody2D>();
     }
 
     public void Initialize()
@@ -37,10 +40,10 @@ public class Player : MonoBehaviour
             );
         }
 
-        transform.position += new Vector3
-        (
-            movementSpeed * movement.x * Time.deltaTime,
-            movementSpeed * movement.y * Time.deltaTime,
+        //rigidbody.MovePosition(movementSpeed * Time.deltaTime * movement);
+        transform.position += new Vector3(
+            movementSpeed * Time.deltaTime * movement.x,
+            movementSpeed * Time.deltaTime * movement.y,
             0.0f
         );
     }
