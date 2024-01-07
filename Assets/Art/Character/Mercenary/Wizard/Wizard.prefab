@@ -193,7 +193,7 @@ Transform:
   m_GameObject: {fileID: 1351260518960922016}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -0.08, z: 0}
+  m_LocalPosition: {x: 0.05, y: 2.22, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -316,6 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7863905953050456106}
   - component: {fileID: 1699048536403115565}
+  - component: {fileID: 8450359145942928890}
   m_Layer: 0
   m_Name: shadow
   m_TagString: Untagged
@@ -332,7 +333,7 @@ Transform:
   m_GameObject: {fileID: 2369787373443030175}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.13, y: -1.6, z: 0.2}
+  m_LocalPosition: {x: 0.09, y: -3.3, z: 0.2}
   m_LocalScale: {x: 1.1595633, y: 1.1595633, z: 1.1595633}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -390,6 +391,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &8450359145942928890
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2369787373443030175}
+  m_Enabled: 1
+  m_SortingLayerID: -953567355
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_SortAtRoot: 1
 --- !u!1 &2818308921104590763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +1103,7 @@ Transform:
   m_GameObject: {fileID: 8018278645535455475}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.82, z: 0.15}
+  m_LocalPosition: {x: 0, y: 0, z: 0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1282,7 +1295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 284659797765972084, guid: eee1b1aca929eb14990397644afcb5ac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 142.3
+      value: 159.3
       objectReference: {fileID: 0}
     - target: {fileID: 306804033911440943, guid: eee1b1aca929eb14990397644afcb5ac, type: 3}
       propertyPath: m_Pivot.x
