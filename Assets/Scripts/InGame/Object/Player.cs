@@ -7,20 +7,16 @@ public class Player : MonoBehaviour
     Animator animator;
     public float movementSpeed = 20.0f;
 
+    float hp = 100.0f;
+
     void Awake()
     {
         animator = GetComponentInChildren<Animator>();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void Initialize()
     {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        this.hp = 100.0f;
     }
 
     public void Move(Vector2 movement)
