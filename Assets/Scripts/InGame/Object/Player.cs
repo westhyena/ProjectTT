@@ -7,19 +7,21 @@ public class Player : MonoBehaviour
     Animator animator;
     public float movementSpeed = 20.0f;
 
-    new Rigidbody2D rigidbody;
-
     float hp = 100.0f;
+    float maxHp = 100.0f;
+
+    public GameObject attackPrefab;
+    public float attackTime = 3.0f;
 
     void Awake()
     {
         animator = GetComponentInChildren<Animator>();
-        rigidbody = GetComponent<Rigidbody2D>();
     }
 
     public void Initialize()
     {
-        this.hp = 100.0f;
+        this.maxHp = 100.0f;
+        this.hp = this.maxHp;
     }
 
     public void Move(Vector2 movement)
@@ -40,7 +42,6 @@ public class Player : MonoBehaviour
             );
         }
 
-        //rigidbody.MovePosition(movementSpeed * Time.deltaTime * movement);
         transform.position += new Vector3(
             movementSpeed * Time.deltaTime * movement.x,
             movementSpeed * Time.deltaTime * movement.y,

@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour
 
     public float movementSpeed = 20.0f;
 
+    float hp = 100.0f;
+    float maxHp = 100.0f;
+
     void Awake()
     {
         animator = GetComponentInChildren<Animator>();
@@ -17,6 +20,9 @@ public class Enemy : MonoBehaviour
     public void Initialize(Player player)
     {
         this.player = player;
+
+        this.maxHp = 100.0f;
+        this.hp = this.maxHp;
     }
 
     void Update()
