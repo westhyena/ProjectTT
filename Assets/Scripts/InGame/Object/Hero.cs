@@ -17,7 +17,8 @@ public class Hero : MonoBehaviour
     }
     HeroState state = HeroState.Idle;
 
-    public float followDistance = 5.0f;
+    public float followStartDistance = 20.0f;
+    public float followEndDistance = 10.0f;
     Vector2 followTargetPosition;
 
     Vector2 Position2D { get { 
@@ -73,7 +74,7 @@ public class Hero : MonoBehaviour
         float distanceSqr = Vector2.SqrMagnitude(
             Position2D - PlayerPosition2D
         );
-        if (distanceSqr > followDistance * followDistance)
+        if (distanceSqr > followStartDistance * followStartDistance)
         {
             state = HeroState.Follow;
         }
@@ -85,7 +86,7 @@ public class Hero : MonoBehaviour
         Vector2 direction = diff.normalized;
 
         float distanceSqr = Vector2.SqrMagnitude(diff);
-        if (distanceSqr < followDistance * followDistance)
+        if (distanceSqr < followEndDistance * followEndDistance)
         {
             state = HeroState.Idle;
         }
