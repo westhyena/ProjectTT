@@ -8,6 +8,9 @@ public class EnemyManager : MonoBehaviour
 
     public Player player;
     public Transform enemyRoot;
+    readonly List<Enemy> enemyList = new();
+    public int enemyMax = 10;
+
     public float respawnTime = 5.0f;
     public int respawnCount = 5;
 
@@ -18,7 +21,7 @@ public class EnemyManager : MonoBehaviour
     void Update()
     {
         respawnTimer += Time.deltaTime;
-        if (respawnTimer > respawnTime)
+        if (respawnTimer > respawnTime && enemyList.Count < enemyMax)
         {
             respawnTimer = 0.0f;
             for (int i = 0; i < respawnCount; ++i)
@@ -29,9 +32,11 @@ public class EnemyManager : MonoBehaviour
                     randomPosition.y,
                     0.0f
                 );
-                GameObject enemy = Instantiate(enemyPrefab, position, Quaternion.identity);
-                enemy.transform.parent = enemyRoot;
-                enemy.GetComponent<Enemy>().Initialize(player);
+                GameObject enemyObj = Instantiate(enemyPrefab, position, Quaternion.identity);
+                enemyObj.transform.parent = enemyRoot;
+                Enemy enemy = enemyObj.GetComponent<Enemy>();
+                enemy.Initialize(player);
+                enemyList.Add(enemy);
             }
         }
     }

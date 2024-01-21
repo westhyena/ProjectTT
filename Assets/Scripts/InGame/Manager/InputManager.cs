@@ -8,6 +8,13 @@ public class InputManager : MonoBehaviour
 
     public Player player;
 
+    HeroManager heroManager;
+    
+    void Awake()
+    {
+        heroManager = GetComponent<HeroManager>();
+    }
+
     void Update()
     {
         movement = Vector2.zero;
@@ -30,5 +37,10 @@ public class InputManager : MonoBehaviour
         }
 
         player.Move(movement);
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            heroManager.CreateHero();
+        }
     }
 }
