@@ -2,20 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Character
 {
-    Animator animator;
     Player player;
 
     public float movementSpeed = 20.0f;
 
+    enum EnemyState
+    {
+        Idle,
+        Target,
+        Attack
+    }
+    EnemyState state = EnemyState.Idle;
+
+    float targetStartDistance = 20.0f;
+    Hero targetHero = null;
+
+    float attackStartRange = 5.0f;
+
     float hp = 100.0f;
     float maxHp = 100.0f;
-
-    void Awake()
-    {
-        animator = GetComponentInChildren<Animator>();
-    }
 
     public void Initialize(Player player)
     {
@@ -25,18 +32,74 @@ public class Enemy : MonoBehaviour
         this.hp = this.maxHp;
     }
 
+    void UpdateIdle()
+    {
+        Hero nerarestHero = GameManager.instance.GetNearestHero(Position2D);
+        if (nerarestHero != null)
+        {
+            if (CheckDistanceUnder(nerarestHero.Position2D, targetStartDistance))
+            {
+                state = EnemyState.Target;
+                targetHero = nerarestHero;
+            }
+        }
+        Vector3 direction = (player.transform.position - transform.position).normalized;
+        Move(direction);
+    }
+
+    void UpdateTarget()
+    {
+        if (targetHero == null)
+        {
+            state = EnemyState.Idle;
+            return;
+        }
+
+        Hero nearestHero = GameManager.instance.GetNearestHero(Position2D);
+        if (nearestHero != targetHero)
+        {
+            targetHero = nearestHero;
+        }
+
+        if (CheckDistanceOver(targetHero.Position2D, targetStartDistance))
+        {
+            state = EnemyState.Idle;
+        }
+        else if (CheckDistanceUnder(targetHero.Position2D, attackStartRange))
+        {
+            state = EnemyState.Attack;
+        }
+        else
+        {
+            Vector2 diff = targetHero.Position2D - Position2D;
+            Vector2 direction = diff.normalized;
+            Move(direction);
+        }
+    }
+
+    void UpdateAttack()
+    {
+        animator.SetBool("ATTACK", true);
+
+        if (CheckDistanceOver(targetHero.Position2D, attackStartRange))
+        {
+            state = EnemyState.Target;
+        }
+    }
+
     void Update()
     {
-        Vector3 direction = (player.transform.position - transform.position).normalized;
-        transform.position += movementSpeed * Time.deltaTime * direction;
-
-        if (Mathf.Abs(direction.x) > 0)
+        switch (state)
         {
-            transform.localScale = new Vector3(
-                -Mathf.Sign(direction.x),
-                1.0f,
-                1.0f
-            );
+            case EnemyState.Idle:
+                UpdateIdle();
+                break;
+            case EnemyState.Target:
+                UpdateTarget();
+                break;
+            case EnemyState.Attack:
+                UpdateAttack();
+                break;
         }
     }
 }

@@ -17,15 +17,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    HeroManager heroManager;
+    EnemyManager enemyManager;
+
+    void Awake()
     {
-        
+        heroManager = GetComponent<HeroManager>();
+        enemyManager = GetComponent<EnemyManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public Hero GetNearestHero(Vector2 position)
     {
-        
+        Hero nearestHero = null;
+        float nearestDistanceSqr = Mathf.Infinity;
+        foreach (Hero hero in heroManager.HeroList)
+        {
+            float distanceSqr = Vector2.SqrMagnitude(position - hero.Position2D);
+            if (distanceSqr < nearestDistanceSqr)
+            {
+                nearestDistanceSqr = distanceSqr;
+                nearestHero = hero;
+            }
+        }
+        return nearestHero;
     }
 }
