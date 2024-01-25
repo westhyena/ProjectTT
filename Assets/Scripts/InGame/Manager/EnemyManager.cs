@@ -26,6 +26,10 @@ public class EnemyManager : MonoBehaviour
             respawnTimer = 0.0f;
             for (int i = 0; i < respawnCount; ++i)
             {
+                if (enemyList.Count >= enemyMax)
+                {
+                    break;
+                }
                 Vector2 randomPosition = respawnDistance * Random.insideUnitCircle.normalized;
                 Vector3 position = player.transform.position + new Vector3(
                     randomPosition.x,

@@ -15,11 +15,13 @@ public class Enemy : Character
         Attack
     }
     EnemyState state = EnemyState.Idle;
+    float curStateTime = 0.0f;
 
     float targetStartDistance = 20.0f;
     Hero targetHero = null;
 
     float attackStartRange = 5.0f;
+    float attackCooltime = 3.0f;
 
     float hp = 100.0f;
     float maxHp = 100.0f;
@@ -32,6 +34,12 @@ public class Enemy : Character
         this.hp = this.maxHp;
     }
 
+    void ChangeState(EnemyState newState)
+    {
+        state = newState;
+        curStateTime = 0.0f;
+    }
+
     void UpdateIdle()
     {
         Hero nerarestHero = GameManager.instance.GetNearestHero(Position2D);
@@ -39,7 +47,7 @@ public class Enemy : Character
         {
             if (CheckDistanceUnder(nerarestHero.Position2D, targetStartDistance))
             {
-                state = EnemyState.Target;
+                ChangeState(EnemyState.Target);
                 targetHero = nerarestHero;
             }
         }
@@ -51,7 +59,7 @@ public class Enemy : Character
     {
         if (targetHero == null)
         {
-            state = EnemyState.Idle;
+            ChangeState(EnemyState.Idle);
             return;
         }
 
@@ -63,11 +71,12 @@ public class Enemy : Character
 
         if (CheckDistanceOver(targetHero.Position2D, targetStartDistance))
         {
-            state = EnemyState.Idle;
+            ChangeState(EnemyState.Idle);
         }
         else if (CheckDistanceUnder(targetHero.Position2D, attackStartRange))
         {
-            state = EnemyState.Attack;
+            animator.SetTrigger("attack");
+            ChangeState(EnemyState.Attack);
         }
         else
         {
@@ -79,16 +88,20 @@ public class Enemy : Character
 
     void UpdateAttack()
     {
-        animator.SetBool("ATTACK", true);
-
+        if (curStateTime > attackCooltime)
+        {
+            animator.SetTrigger("attack");
+            ChangeState(EnemyState.Attack);
+        }
         if (CheckDistanceOver(targetHero.Position2D, attackStartRange))
         {
-            state = EnemyState.Target;
+            ChangeState(EnemyState.Target);
         }
     }
 
     void Update()
     {
+        curStateTime += Time.deltaTime;
         switch (state)
         {
             case EnemyState.Idle:
