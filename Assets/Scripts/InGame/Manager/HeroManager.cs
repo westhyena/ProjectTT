@@ -12,13 +12,19 @@ public class HeroManager : MonoBehaviour
 
     public Player player;
     public float spawnRange = 5.0f;
-    
-    public void CreateHero()
+
+    void Awake()
     {
-        // Create a Random hero from companionPrefabs
-        int randomIndex = Random.Range(0, companionPrefabs.Length);
+        foreach (GameObject prefab in companionPrefabs)
+        {
+            CreateHero(prefab);
+        }
+    }
+
+    Hero CreateHero(GameObject prefab)
+    {
         GameObject heroObj = Instantiate(
-            companionPrefabs[randomIndex],
+            prefab,
             player.transform.position,
             Quaternion.identity
         );
@@ -33,6 +39,13 @@ public class HeroManager : MonoBehaviour
         Hero hero = heroObj.GetComponent<Hero>();
         hero.Initialize(player);
         heroList.Add(hero);
-        
+        return hero;
+    }
+
+    public Hero CreateHero()
+    {
+        // Create a Random hero from companionPrefabs
+        int randomIndex = Random.Range(0, companionPrefabs.Length);
+        return CreateHero(companionPrefabs[randomIndex]);
     }
 }

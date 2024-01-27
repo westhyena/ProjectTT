@@ -12,13 +12,21 @@ public class Hero : Character
     {
         Idle,
         Follow,
+        Target,
         Attack
     }
     HeroState state = HeroState.Idle;
+    float curStateTime = 0.0f;
 
     float followStartDistance = 20.0f;
     float followEndDistance = 10.0f;
     Vector2 followTargetPosition;
+
+    float targetStartDistance = 20.0f;
+    Enemy targetEnemy = null;
+
+    float attackStartRange = 5.0f;
+    float attackCooltime = 2.0f;
 
     Vector2 PlayerPosition2D { get { return player.Position2D; } }
 
@@ -27,11 +35,26 @@ public class Hero : Character
         this.player = player;
     }
 
+    void ChangeState(HeroState newState)
+    {
+        state = newState;
+        curStateTime = 0.0f;
+    }
+
     void UpdateIdle()
     {
+        Enemy nearestEnemy = GameManager.instance.GetNearestEnemy(Position2D);
         if (CheckDistanceOver(PlayerPosition2D, followStartDistance))
         {
-            state = HeroState.Follow;
+            ChangeState(HeroState.Follow);
+        }
+        else if (nearestEnemy != null)
+        {
+            if (CheckDistanceUnder(nearestEnemy.Position2D, targetStartDistance))
+            {
+                ChangeState(HeroState.Target);
+                targetEnemy = nearestEnemy;
+            }
         }
     }
 
@@ -42,7 +65,7 @@ public class Hero : Character
 
         if (CheckDistanceUnder(PlayerPosition2D, followEndDistance))
         {
-            state = HeroState.Idle;
+            ChangeState(HeroState.Idle);
         }
         else
         {
@@ -50,8 +73,58 @@ public class Hero : Character
         }
     }
 
+    void UpdateTarget()
+    {
+        if (CheckDistanceOver(PlayerPosition2D, followStartDistance))
+        {
+            ChangeState(HeroState.Follow);
+            return;
+        }
+
+        Enemy nearestEnemy = GameManager.instance.GetNearestEnemy(Position2D);
+        if (nearestEnemy != targetEnemy)
+        {
+            targetEnemy = nearestEnemy;
+        }
+
+        if (CheckDistanceOver(targetEnemy.Position2D, targetStartDistance))
+        {
+            ChangeState(HeroState.Idle);
+        }
+        else if (CheckDistanceUnder(targetEnemy.Position2D, attackStartRange))
+        {
+            animator.SetTrigger("attack");
+            ChangeState(HeroState.Attack);
+        }
+        else
+        {
+            Vector2 diff = targetEnemy.Position2D - Position2D;
+            Vector2 direction = diff.normalized;
+            Move(direction);
+        }
+    }
+
+    void UpdateAttack()
+    {
+        if (curStateTime > attackCooltime)
+        {
+            animator.SetTrigger("attack");
+            ChangeState(HeroState.Attack);
+        }
+        else if (CheckDistanceOver(PlayerPosition2D, followStartDistance))
+        {
+            ChangeState(HeroState.Follow);
+            return;
+        }
+        else if (CheckDistanceOver(targetEnemy.Position2D, attackStartRange))
+        {
+            ChangeState(HeroState.Target);
+        }
+    }
+
     void Update()
     {
+        curStateTime += Time.deltaTime;
         switch (state)
         {
             case HeroState.Idle:
@@ -59,6 +132,12 @@ public class Hero : Character
                 break;
             case HeroState.Follow:
                 UpdateFollow();
+                break;
+            case HeroState.Target:
+                UpdateTarget();
+                break;
+            case HeroState.Attack:
+                UpdateAttack();
                 break;
 
         }

@@ -9,6 +9,7 @@ public class EnemyManager : MonoBehaviour
     public Player player;
     public Transform enemyRoot;
     readonly List<Enemy> enemyList = new();
+    public List<Enemy> EnemyList => enemyList;
     public int enemyMax = 10;
 
     public float respawnTime = 5.0f;

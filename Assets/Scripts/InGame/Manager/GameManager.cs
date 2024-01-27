@@ -41,4 +41,20 @@ public class GameManager : MonoBehaviour
         }
         return nearestHero;
     }
+
+    public Enemy GetNearestEnemy(Vector2 position)
+    {
+        Enemy nearestEnemy = null;
+        float nearestDistanceSqr = Mathf.Infinity;
+        foreach (Enemy enemy in enemyManager.EnemyList)
+        {
+            float distanceSqr = Vector2.SqrMagnitude(position - enemy.Position2D);
+            if (distanceSqr < nearestDistanceSqr)
+            {
+                nearestDistanceSqr = distanceSqr;
+                nearestEnemy = enemy;
+            }
+        }
+        return nearestEnemy;
+    }
 }
