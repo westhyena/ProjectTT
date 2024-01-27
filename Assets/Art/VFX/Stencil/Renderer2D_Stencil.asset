@@ -15,17 +15,20 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: Render Player OBJ
-    Event: 500
+    Event: 450
     filterSettings:
       RenderQueueType: 1
       LayerMask:
         serializedVersion: 2
-        m_Bits: 64
+        m_Bits: 192
       PassNames: []
-    overrideMaterial: {fileID: 2100000, guid: 4e3f97f57c1bbb04696dbfd9e3476f95, type: 2}
+    overrideMaterial: {fileID: 0}
     overrideMaterialPassIndex: 0
-    overrideDepthState: 0
-    depthCompareFunction: 4
+    overrideShader: {fileID: 0}
+    overrideShaderPassIndex: 0
+    overrideMode: 1
+    overrideDepthState: 1
+    depthCompareFunction: 1
     enableWrite: 1
     stencilSettings:
       overrideStencilState: 1
@@ -37,8 +40,8 @@ MonoBehaviour:
     cameraSettings:
       overrideCamera: 0
       restoreCamera: 1
-      offset: {x: 0, y: 0, z: 0, w: 0}
-      cameraFieldOfView: 60
+      offset: {x: 0, y: -2.12, z: 0, w: 1}
+      cameraFieldOfView: 42
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,12 +56,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugShaders:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7, type: 3}
+    hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
   - {fileID: 1737547212994378692}
   - {fileID: -2362669552001431497}
   m_RendererFeatureMap: c4fbfffafb011d1837c852778f1c36df
   m_UseNativeRenderPass: 0
-  m_TransparencySortMode: 0
+  m_TransparencySortMode: 3
   m_TransparencySortAxis: {x: 0, y: 1, z: 0}
   m_HDREmulationScale: 1
   m_LightRenderTextureScale: 0.5
@@ -66,8 +70,8 @@ MonoBehaviour:
   - name: Multiply
     maskTextureChannel: 0
     blendMode: 1
-  - name: Additive
-    maskTextureChannel: 0
+  - name: Rim
+    maskTextureChannel: 1
     blendMode: 0
   - name: Multiply with Mask
     maskTextureChannel: 1
@@ -85,7 +89,9 @@ MonoBehaviour:
   m_ShapeLightVolumeShader: {fileID: 4800000, guid: 7e60080c8cd24a2468cb08b4bfee5606, type: 3}
   m_PointLightShader: {fileID: 4800000, guid: e35a31e1679aeff489e202f5cc4853d5, type: 3}
   m_PointLightVolumeShader: {fileID: 4800000, guid: c7d04ca57e5449d49ad9cee1c604bc26, type: 3}
-  m_BlitShader: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
+  m_CoreBlitShader: {fileID: 4800000, guid: 93446b5c5339d4f00b85c159e1159b7c, type: 3}
+  m_BlitHDROverlay: {fileID: 4800000, guid: a89bee29cffa951418fc1e2da94d1959, type: 3}
+  m_CoreBlitColorAndDepthPS: {fileID: 4800000, guid: d104b2fc1ca6445babb8e90b0758136b, type: 3}
   m_SamplingShader: {fileID: 4800000, guid: 04c410c9937594faa893a11dceb85f7e, type: 3}
   m_ProjectedShadowShader: {fileID: 4800000, guid: ce09d4a80b88c5a4eb9768fab4f1ee00, type: 3}
   m_SpriteShadowShader: {fileID: 4800000, guid: 44fc62292b65ab04eabcf310e799ccf6, type: 3}
@@ -114,27 +120,30 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: Render Infront OBJ
-    Event: 500
+    Event: 450
     filterSettings:
       RenderQueueType: 1
       LayerMask:
         serializedVersion: 2
         m_Bits: 128
       PassNames: []
-    overrideMaterial: {fileID: 0}
+    overrideMaterial: {fileID: 2100000, guid: 4e3f97f57c1bbb04696dbfd9e3476f95, type: 2}
     overrideMaterialPassIndex: 0
-    overrideDepthState: 0
-    depthCompareFunction: 4
+    overrideShader: {fileID: 0}
+    overrideShaderPassIndex: 0
+    overrideMode: 1
+    overrideDepthState: 1
+    depthCompareFunction: 8
     enableWrite: 1
     stencilSettings:
       overrideStencilState: 1
       stencilReference: 1
       stencilCompareFunction: 8
-      passOperation: 2
+      passOperation: 0
       failOperation: 0
       zFailOperation: 0
     cameraSettings:
       overrideCamera: 0
       restoreCamera: 1
       offset: {x: 0, y: 0, z: 0, w: 0}
-      cameraFieldOfView: 60
+      cameraFieldOfView: 52.1
