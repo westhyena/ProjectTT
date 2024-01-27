@@ -72,13 +72,13 @@ Material:
     - _Dissolve_Thickness: 0.1
     - _EnableExternalAlpha: 0
     - _Mask_intensity: 1
-    - _Normal_Strength: 1
+    - _Normal_Strength: 1.5
     - _bending: 0.001
     - _twirl_Strength: 10
     m_Colors:
     - _Add_Color: {r: 1, g: 1, b: 0.7688679, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Dissolve_Color: {r: 1, g: 0.03301889, b: 0.03301889, a: 0}
+    - _Dissolve_Color: {r: 0, g: 0.2627451, b: 1, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
