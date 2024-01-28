@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -382,6 +382,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Enemy_005_0
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 0
+        width: 160
+        height: 91
+      alignment: 9
+      pivot: {x: 0.49749947, y: 0.60112756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bdfbbc41709c914eb25ccb714c120fb
+      internalID: 870929622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -393,6 +414,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Enemy_005_0: 870929622
       body: 2016974693
       ear_l: 1138078569
       ear_r: 1832156131
