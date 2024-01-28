@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -391,12 +391,12 @@ TextureImporter:
       name: w1
       rect:
         serializedVersion: 2
-        x: 379
+        x: 387
         y: 732
         width: 170
         height: 292
       alignment: 9
-      pivot: {x: 0.701036, y: 0.23705657}
+      pivot: {x: 0.65161026, y: 0.25212955}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -412,10 +412,10 @@ TextureImporter:
       name: w2
       rect:
         serializedVersion: 2
-        x: 404
-        y: 355
-        width: 215
-        height: 210
+        x: 391
+        y: 346
+        width: 230
+        height: 220
       alignment: 9
       pivot: {x: 0.21474467, y: 0.72070706}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,6 +471,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: arm_down
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 454
+        width: 109
+        height: 177
+      alignment: 9
+      pivot: {x: 0.6036326, y: 0.51595503}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a405ee09b8a7d84f942ce6b17c1cb78
+      internalID: -330110955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arm_up
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 482
+        width: 170
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7159514, y: 0.5086232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c686513077c51ef419280020ecb69656
+      internalID: 1182235848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -482,6 +524,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      arm_down: -330110955
+      arm_up: 1182235848
       arrow: -1114661756
       body: 668063774
       eye_l: 1449108371
