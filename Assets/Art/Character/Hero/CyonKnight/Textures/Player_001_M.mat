@@ -72,7 +72,7 @@ Material:
     - _Dissolve_Thickness: 0.1
     - _EnableExternalAlpha: 0
     - _Mask_intensity: 1
-    - _Normal_Strength: 1.5
+    - _Normal_Strength: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _bending: 0.001
@@ -83,6 +83,7 @@ Material:
     - _Dissolve_Color: {r: 0, g: 0.2627451, b: 1, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _emmision_color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8818128626099693850
 MonoBehaviour:
