@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     HeroManager heroManager;
     EnemyManager enemyManager;
 
+    public Vector3 characterRotation = new Vector3(-30.0f, 0.0f, 0.0f);
+
     void Awake()
     {
         heroManager = GetComponent<HeroManager>();

@@ -44,11 +44,7 @@ public class Hero : Character
     void UpdateIdle()
     {
         Enemy nearestEnemy = GameManager.instance.GetNearestEnemy(Position2D);
-        if (CheckDistanceOver(PlayerPosition2D, followStartDistance))
-        {
-            ChangeState(HeroState.Follow);
-        }
-        else if (nearestEnemy != null)
+        if (nearestEnemy != null)
         {
             if (CheckDistanceUnder(nearestEnemy.Position2D, targetStartDistance))
             {
@@ -75,12 +71,6 @@ public class Hero : Character
 
     void UpdateTarget()
     {
-        if (CheckDistanceOver(PlayerPosition2D, followStartDistance))
-        {
-            ChangeState(HeroState.Follow);
-            return;
-        }
-
         Enemy nearestEnemy = GameManager.instance.GetNearestEnemy(Position2D);
         if (nearestEnemy != targetEnemy)
         {
@@ -110,11 +100,6 @@ public class Hero : Character
         {
             animator.SetTrigger("attack");
             ChangeState(HeroState.Attack);
-        }
-        else if (CheckDistanceOver(PlayerPosition2D, followStartDistance))
-        {
-            ChangeState(HeroState.Follow);
-            return;
         }
         else if (CheckDistanceOver(targetEnemy.Position2D, attackStartRange))
         {

@@ -36,6 +36,7 @@ public class HeroManager : MonoBehaviour
             randomPosition.y,
             0.0f
         );
+        heroObj.transform.localRotation = Quaternion.Euler(GameManager.instance.characterRotation);
         Hero hero = heroObj.GetComponent<Hero>();
         hero.Initialize(player);
         heroList.Add(hero);

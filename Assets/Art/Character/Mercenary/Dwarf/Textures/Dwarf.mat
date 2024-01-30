@@ -66,12 +66,16 @@ Material:
     m_Ints: []
     m_Floats:
     - _Add_strength: 0
+    - _Boolean: 1
     - _Dissolve_Amount: 0
     - _Dissolve_Scale: 10
     - _Dissolve_Thickness: 0.1
     - _EnableExternalAlpha: 0
     - _Mask_intensity: 1
     - _Normal_Strength: 1.5
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _bending: 0.001
     - _twirl_Strength: 10
     m_Colors:
     - _Add_Color: {r: 1, g: 1, b: 1, a: 0}
