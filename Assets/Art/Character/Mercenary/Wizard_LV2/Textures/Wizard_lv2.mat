@@ -19,7 +19,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _Dist_intensity
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -29,6 +29,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Base_Tex:
         m_Texture: {fileID: 2800000, guid: 04ac08319dccc984eb3ac6c960435584, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Dist_MaskTex:
+        m_Texture: {fileID: 2800000, guid: 718dbe5f8b0e65e4f8c70aaeaf006d61, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -70,6 +74,10 @@ Material:
     - _Dissolve_Amount: 0
     - _Dissolve_Scale: 10
     - _Dissolve_Thickness: 0.1
+    - _Dist_Size: 5
+    - _Dist_intensity: 0.03
+    - _Dist_speed: 0.5
+    - _Distotion: 1
     - _EnableExternalAlpha: 0
     - _Mask_intensity: 1
     - _Normal_Strength: 1.5
