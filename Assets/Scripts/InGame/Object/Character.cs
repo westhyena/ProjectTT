@@ -11,6 +11,7 @@ public abstract class Character : MonoBehaviour
         Target,  // 적이 타겟된 상태
         Attack,
 
+        Manual,
     }
 
     protected State state = State.Idle;
@@ -156,6 +157,8 @@ public abstract class Character : MonoBehaviour
         }
     }
 
+    protected virtual void UpdateManual() {}
+
     protected void UpdateState()
     {
         curStateTime += Time.deltaTime;
@@ -170,6 +173,9 @@ public abstract class Character : MonoBehaviour
                 break;
             case State.Attack:
                 UpdateAttack();
+                break;
+            case State.Manual:
+                UpdateManual();
                 break;
         }
     }

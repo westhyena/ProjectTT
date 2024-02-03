@@ -36,7 +36,7 @@ public class InputManager : MonoBehaviour
             movement.x = 1;
         }
 
-        player.Move(movement);
+        player.ManualMove(movement);
 
         if (Input.GetKeyDown(KeyCode.C))
         {
