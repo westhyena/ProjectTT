@@ -6781,7 +6781,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dd384e129224a5388d506f42d960a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovementSpeed: 20
+  heroMovementSpeed: 20
+  enemyMovementSpeed: 20
+  heroTargetStartDistance: 20
+  enemyTargetStartDistance: 20
+  enemyAttackStartDistance: 5
+  enemyAttackCooltime: 3
   characterRotation: {x: -30, y: 0, z: 0}
+  player: {fileID: 4674403231761158290}
 --- !u!4 &1133609862
 Transform:
   m_ObjectHideFlags: 0
@@ -13320,7 +13328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ae61c61ceba42aeb27d007393e5383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 20
   attackPrefab: {fileID: 0}
   attackTime: 3
 --- !u!1 &4685553827533079180

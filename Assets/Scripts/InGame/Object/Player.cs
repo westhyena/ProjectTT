@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class Player : Character
 {
-    public float movementSpeed = 20.0f;
-
     float hp = 100.0f;
     float maxHp = 100.0f;
-
-    public GameObject attackPrefab;
-    public float attackTime = 3.0f;
 
     public void Initialize()
     {
         this.maxHp = 100.0f;
         this.hp = this.maxHp;
+    }
+
+    protected override Character GetNearestTarget(Vector2 position)
+    {
+        return GameManager.instance.GetNearestEnemy(position);
+    }
+
+    protected override void UpdateVariable()
+    {
+        movementSpeed = GameManager.instance.playerMovementSpeed;
     }
 }
