@@ -88,7 +88,7 @@ Material:
     m_Floats:
     - _Add_strength: 0
     - _Additive_Intensity: 0
-    - _Boolean: 1
+    - _Boolean: 0
     - _Dissolve_Amount: 0
     - _Dissolve_Scale: 10
     - _Dissolve_Thickness: 0.1
@@ -101,11 +101,13 @@ Material:
     - _InnerFalloff: 0.09
     - _Mask_Intensity: 1
     - _Mask_intensity: 1
+    - _Metalic: 0
     - _Normal_Strength: 1
     - _OuterEdge: 0.93
     - _Outer_falloff: 0.55
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Smoothness: 0.4
     - _SpriteEdge_Alpha: 0.13
     - _bending: 0.001
     - _twirl_Strength: 10
