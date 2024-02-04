@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -19,6 +20,9 @@ public class GameManager : MonoBehaviour
 
     // For test, 추후엔 Data Table에서 ㄷ불러오게 변경
     public float playerMovementSpeed = 20.0f;
+    public float playerAttackDamage = 100.0f;
+    public float playerAttackStartDistance = 5.0f;
+    public float playerAttackCooltime = 3.0f;
 
     public float heroMovementSpeed = 20.0f;
     public float heroTargetStartDistance = 20.0f;
@@ -26,11 +30,13 @@ public class GameManager : MonoBehaviour
     public float heroAttackCooltime = 3.0f;
     public float heroFollowOffsetRange = 5.0f;
     public float heroFollowSpeed = 50.0f;
+    public float heroAttackDamage = 50.0f;
 
     public float enemyMovementSpeed = 20.0f;
     public float enemyTargetStartDistance = 20.0f;
     public float enemyAttackStartDistance = 5.0f;
     public float enemyAttackCooltime = 3.0f;
+    public float enemyAttackDamage = 10.0f;
 
     HeroManager heroManager;
     EnemyManager enemyManager;
@@ -70,7 +76,7 @@ public class GameManager : MonoBehaviour
     {
         Character nearestTarget = null;
         float nearestDistanceSqr = Mathf.Infinity;
-        foreach (Hero hero in heroManager.HeroList)
+        foreach (Hero hero in heroManager.AliveHeroList)
         {
             float distanceSqr = Vector2.SqrMagnitude(position - hero.Position2D);
             if (distanceSqr < nearestDistanceSqr)
@@ -95,7 +101,7 @@ public class GameManager : MonoBehaviour
     {
         Enemy nearestEnemy = null;
         float nearestDistanceSqr = Mathf.Infinity;
-        foreach (Enemy enemy in enemyManager.EnemyList)
+        foreach (Enemy enemy in enemyManager.AliveEnemyList)
         {
             float distanceSqr = Vector2.SqrMagnitude(position - enemy.Position2D);
             if (distanceSqr < nearestDistanceSqr)
@@ -105,5 +111,21 @@ public class GameManager : MonoBehaviour
             }
         }
         return nearestEnemy;
+    }
+
+    public List<Character> GetEnemyList()
+    {
+        return enemyManager.AliveEnemyList.Cast<Character>().ToList();
+    }
+
+    public List<Character> GetHeroList(bool includePlayer)
+    {
+        List<Character> heroList = new();
+        if (includePlayer)
+        {
+            heroList.Add(player);
+        }
+        heroList.AddRange(heroManager.AliveHeroList.Cast<Character>());
+        return heroList;
     }
 }

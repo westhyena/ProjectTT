@@ -4,12 +4,26 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    private static EnemyManager _instance;
+    public static EnemyManager instance
+    {
+        get
+        {
+            if (null == _instance)
+            {
+                _instance = FindObjectOfType<EnemyManager>();
+            }
+            return _instance;
+        }
+    }
+
     public GameObject enemyPrefab;
 
     public Player player;
     public Transform enemyRoot;
     readonly List<Enemy> enemyList = new();
     public List<Enemy> EnemyList => enemyList;
+    public List<Enemy> AliveEnemyList => enemyList.FindAll(enemy => !enemy.IsDead);
     public int enemyMax = 10;
 
     public float respawnTime = 5.0f;

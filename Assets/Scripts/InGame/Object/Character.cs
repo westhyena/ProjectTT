@@ -10,6 +10,7 @@ public abstract class Character : MonoBehaviour
         Move,  // 적을 찾아 이동 중
         Target,  // 적이 타겟된 상태
         Attack,
+        Dying,
 
         Manual,
         Follow,
@@ -33,6 +34,7 @@ public abstract class Character : MonoBehaviour
     } }
 
     protected Animator animator;
+    protected Collider2D collider2d;
 
     protected float movementSpeed = 20.0f;
 
@@ -40,12 +42,21 @@ public abstract class Character : MonoBehaviour
     protected float targetStartDistance = 20.0f;
     protected float attackStartDistance = 5.0f;
     protected float attackCooltime = 3.0f;
+    protected bool attackPerformed = false;
+    protected float attackDelay = 0.2f;
 
     protected Character target = null;
+
+    protected float hp = 100.0f;
+    protected float maxHp = 100.0f;
+    public bool IsDead { get { return hp <= 0.0f; } }
+
+    protected float attackDamage = 10.0f;
 
     protected void Awake()
     {
         this.animator = GetComponentInChildren<Animator>();
+        this.collider2d = GetComponent<Collider2D>();
         this.state = State.Idle;
     }
 
@@ -96,13 +107,19 @@ public abstract class Character : MonoBehaviour
         );
         return distanceSqr < distance * distance;
     }
-    
+
     abstract protected Character GetNearestTarget(Vector2 position);
+    abstract protected List<Character> GetTargetList();
 
     protected void ChangeState(State newState)
     {
         state = newState;
         curStateTime = 0.0f;
+
+        if (newState == State.Attack)
+        {
+            attackPerformed = false;
+        }
     }
 
     protected virtual void UpdateVariable()
@@ -138,7 +155,7 @@ public abstract class Character : MonoBehaviour
 
     void UpdateTarget()
     {
-        if (target == null)
+        if (target == null || target.IsDead)
         {
             ChangeState(State.Idle);
             return;
@@ -160,7 +177,12 @@ public abstract class Character : MonoBehaviour
     {
         if (curStateTime > attackCooltime)
         {
-            if (CheckDistanceOver(target.Position2D, attackStartDistance))
+            if (target.IsDead)
+            {
+                target = null;
+                ChangeState(State.Idle);
+            }
+            else if (CheckDistanceOver(target.Position2D, attackStartDistance))
             {
                 ChangeState(State.Target);
             }
@@ -170,11 +192,58 @@ public abstract class Character : MonoBehaviour
                 ChangeState(State.Attack);
             }
         }
+        else if (!attackPerformed && curStateTime > attackDelay)
+        {
+            Attack();
+            attackPerformed = true;
+        }
+    }
+
+    void Attack()
+    {
+        AttackInRange();
     }
 
     void AttackInRange()
     {
+        List<Character> targetList = GetTargetList();
+        foreach (Character target in targetList)
+        {
+            if (lookingDirection == LookDirection.Left)
+            {
+                if (target.Position2D.x > Position2D.x)
+                {
+                    continue;
+                }
+            }
+            else
+            {
+                if (target.Position2D.x < Position2D.x)
+                {
+                    continue;
+                }
+            }
+            if (CheckDistanceUnder(target.Position2D, attackStartDistance))
+            {
+                target.Damage(attackDamage);
+            }
+        }
+    }
 
+    public void Damage(float damage)
+    {
+        hp -= damage;
+        if (hp <= 0)
+        {
+            Die();
+        }
+    }
+
+    protected void Die()
+    {
+        collider2d.enabled = false;
+        animator.SetBool("DEATH", true);
+        ChangeState(State.Dying);
     }
 
     protected virtual void UpdateManual() {}

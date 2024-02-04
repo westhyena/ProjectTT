@@ -5,15 +5,12 @@ using UnityEngine;
 
 public class Player : Character
 {
-    float hp = 100.0f;
-    float maxHp = 100.0f;
-
     public float manualEndTime = 1.0f;
 
     public void Initialize()
     {
-        this.maxHp = 100.0f;
-        this.hp = this.maxHp;
+        maxHp = 100.0f;
+        hp = maxHp;
     }
 
     protected override Character GetNearestTarget(Vector2 position)
@@ -21,9 +18,17 @@ public class Player : Character
         return GameManager.instance.GetNearestEnemy(position);
     }
 
+    protected override List<Character> GetTargetList()
+    {
+        return GameManager.instance.GetEnemyList();
+    }
+
     protected override void UpdateVariable()
     {
         movementSpeed = GameManager.instance.playerMovementSpeed;
+        attackDamage = GameManager.instance.playerAttackDamage;
+        attackStartDistance = GameManager.instance.playerAttackStartDistance;
+        attackCooltime = GameManager.instance.playerAttackCooltime;
     }
 
     protected override void UpdateManual()

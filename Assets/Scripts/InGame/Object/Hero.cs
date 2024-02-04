@@ -17,11 +17,18 @@ public class Hero : Character
     public void Initialize(Player player)
     {
         this.player = player;
+        maxHp = 100.0f;
+        hp = maxHp;
     }
 
     protected override Character GetNearestTarget(Vector2 position)
     {
         return GameManager.instance.GetNearestEnemy(position);
+    }
+
+    protected override List<Character> GetTargetList()
+    {
+        return GameManager.instance.GetEnemyList();
     }
 
     protected override void UpdateVariable()
@@ -30,6 +37,7 @@ public class Hero : Character
         targetStartDistance = GameManager.instance.heroTargetStartDistance;
         attackStartDistance = GameManager.instance.heroAttackStartDistance;
         attackCooltime = GameManager.instance.heroAttackCooltime;
+        attackDamage = GameManager.instance.heroAttackDamage;
         followOffsetRange = GameManager.instance.heroFollowOffsetRange;
         followSpeed = GameManager.instance.heroFollowSpeed;
     }

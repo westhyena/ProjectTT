@@ -4,11 +4,25 @@ using UnityEngine;
 
 public class HeroManager : MonoBehaviour
 {
+    private static HeroManager _instance;
+    public static HeroManager instance
+    {
+        get
+        {
+            if (null == _instance)
+            {
+                _instance = FindObjectOfType<HeroManager>();
+            }
+            return _instance;
+        }
+    }
+
     public GameObject[] companionPrefabs;
     public Transform companionRoot;
 
     readonly List<Hero> heroList = new();
     public List<Hero> HeroList => heroList;
+    public List<Hero> AliveHeroList => heroList.FindAll(hero => !hero.IsDead);
 
     public Player player;
     public float spawnRange = 5.0f;
