@@ -155,7 +155,8 @@ public abstract class Character : MonoBehaviour
 
     void UpdateTarget()
     {
-        if (target == null || target.IsDead)
+        if (target == null || target.IsDead ||
+            CheckDistanceOver(target.Position2D, targetStartDistance))
         {
             ChangeState(State.Idle);
             return;
@@ -163,8 +164,10 @@ public abstract class Character : MonoBehaviour
 
         if (CheckDistanceUnder(target.Position2D, attackStartDistance))
         {
-            animator.SetTrigger("attack");
             ChangeState(State.Attack);
+            // 바로 공격하게
+            animator.SetTrigger("attack");
+            curStateTime = float.MaxValue;
         }
         else
         {

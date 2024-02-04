@@ -46,15 +46,18 @@ public class Hero : Character
     {
         base.UpdateFollow();
         Vector2 followPosition = PlayerPosition2D + followOffset;
-        float distanceSqr = (followPosition - Position2D).sqrMagnitude;
-        if (distanceSqr < followDoneDistance * followDoneDistance)
-        {
-            ChangeState(State.Idle);
-        }
-        else
-        {
-            Move((followPosition - Position2D).normalized, followSpeed);
-        }
+        transform.position = followPosition;
+        ChangeState(State.Idle);
+
+        // float distanceSqr = (followPosition - Position2D).sqrMagnitude;
+        // if (distanceSqr < followDoneDistance * followDoneDistance)
+        // {
+        //     ChangeState(State.Idle);
+        // }
+        // else
+        // {
+        //     Move((followPosition - Position2D).normalized, followSpeed);
+        // }
     }
     public void FollowPlayer()
     {
