@@ -42,5 +42,13 @@ public class InputManager : MonoBehaviour
         {
             heroManager.CreateHero();
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("Follow Player KeyDown");
+            foreach (Hero hero in heroManager.HeroList)
+            {
+                hero.FollowPlayer();
+            }
+        }
     }
 }

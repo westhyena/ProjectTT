@@ -9,6 +9,11 @@ public class Hero : Character
 
     Vector2 PlayerPosition2D { get { return player.Position2D; } }
 
+    Vector2 followOffset = Vector2.zero;
+    float followOffsetRange = 5.0f;
+    float followDoneDistance = 0.1f;
+    float followSpeed = 50.0f;
+
     public void Initialize(Player player)
     {
         this.player = player;
@@ -23,5 +28,30 @@ public class Hero : Character
     {
         movementSpeed = GameManager.instance.heroMovementSpeed;
         targetStartDistance = GameManager.instance.heroTargetStartDistance;
+        attackStartDistance = GameManager.instance.heroAttackStartDistance;
+        attackCooltime = GameManager.instance.heroAttackCooltime;
+        followOffsetRange = GameManager.instance.heroFollowOffsetRange;
+        followSpeed = GameManager.instance.heroFollowSpeed;
+    }
+
+    protected override void UpdateFollow()
+    {
+        base.UpdateFollow();
+        Vector2 followPosition = PlayerPosition2D + followOffset;
+        float distanceSqr = (followPosition - Position2D).sqrMagnitude;
+        if (distanceSqr < followDoneDistance * followDoneDistance)
+        {
+            ChangeState(State.Idle);
+        }
+        else
+        {
+            Move((followPosition - Position2D).normalized, followSpeed);
+        }
+    }
+    public void FollowPlayer()
+    {
+        Debug.Log("FOLOW PLAYER CALLED");
+        followOffset = Random.insideUnitCircle.normalized * followOffsetRange;
+        ChangeState(State.Follow);
     }
 }

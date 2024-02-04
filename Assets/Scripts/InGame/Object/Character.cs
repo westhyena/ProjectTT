@@ -12,9 +12,17 @@ public abstract class Character : MonoBehaviour
         Attack,
 
         Manual,
+        Follow,
+    }
+
+    public enum LookDirection
+    {
+        Left,
+        Right
     }
 
     protected State state = State.Idle;
+    protected LookDirection lookingDirection = LookDirection.Left;
     protected float curStateTime = 0.0f;
 
     public Vector2 Position2D { get { 
@@ -43,6 +51,11 @@ public abstract class Character : MonoBehaviour
 
     public void Move(Vector2 movement)
     {
+        Move(movement, movementSpeed);
+    }
+
+    protected void Move(Vector2 movement, float speed)
+    {
         float absSpeed = Mathf.Max
         (
             Mathf.Abs(movement.x),
@@ -59,9 +72,11 @@ public abstract class Character : MonoBehaviour
             );
         }
 
+        lookingDirection = (movement.x < 0) ? LookDirection.Left : LookDirection.Right;
+
         transform.position += new Vector3(
-            movementSpeed * Time.deltaTime * movement.x,
-            movementSpeed * Time.deltaTime * movement.y,
+            speed * Time.deltaTime * movement.x,
+            speed * Time.deltaTime * movement.y,
             0.0f
         );
     }
@@ -157,7 +172,13 @@ public abstract class Character : MonoBehaviour
         }
     }
 
+    void AttackInRange()
+    {
+
+    }
+
     protected virtual void UpdateManual() {}
+    protected virtual void UpdateFollow() {}
 
     protected void UpdateState()
     {
@@ -176,6 +197,9 @@ public abstract class Character : MonoBehaviour
                 break;
             case State.Manual:
                 UpdateManual();
+                break;
+            case State.Follow:
+                UpdateFollow();
                 break;
         }
     }
