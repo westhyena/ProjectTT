@@ -31,6 +31,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 5bcba51f7bb6b2d42961f5b08cc26ef5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Dist_MaskTex:
+        m_Texture: {fileID: 2800000, guid: ae1aa485168ecf3448780912c09a1a7a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 66a219a335fe2464bb6552390ed64ae4, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -70,6 +74,10 @@ Material:
     - _Dissolve_Amount: 0
     - _Dissolve_Scale: 10
     - _Dissolve_Thickness: 0.1
+    - _Dist_Size: 3
+    - _Dist_intensity: 0.03
+    - _Dist_speed: 0.7
+    - _Distotion: 1
     - _EnableExternalAlpha: 0
     - _Mask_intensity: 1
     - _Normal_Strength: 2
