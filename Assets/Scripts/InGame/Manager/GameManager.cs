@@ -19,11 +19,15 @@ public class GameManager : MonoBehaviour
 
     // For test, 추후엔 Data Table에서 ㄷ불러오게 변경
     public float playerMovementSpeed = 20.0f;
+
     public float heroMovementSpeed = 20.0f;
-    public float enemyMovementSpeed = 20.0f;
-
     public float heroTargetStartDistance = 20.0f;
+    public float heroAttackStartDistance = 5.0f;
+    public float heroAttackCooltime = 3.0f;
+    public float heroFollowOffsetRange = 5.0f;
+    public float heroFollowSpeed = 50.0f;
 
+    public float enemyMovementSpeed = 20.0f;
     public float enemyTargetStartDistance = 20.0f;
     public float enemyAttackStartDistance = 5.0f;
     public float enemyAttackCooltime = 3.0f;
