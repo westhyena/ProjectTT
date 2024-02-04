@@ -7932,6 +7932,10 @@ PrefabInstance:
       value: Boss_01_M 1
       objectReference: {fileID: 0}
     - target: {fileID: 4491714769125648254, guid: d3b4435cb96823f4187e66f509f09867, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491714769125648254, guid: d3b4435cb96823f4187e66f509f09867, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -7970,6 +7974,18 @@ PrefabInstance:
     - target: {fileID: 4491714769125648254, guid: d3b4435cb96823f4187e66f509f09867, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279437929551809139, guid: d3b4435cb96823f4187e66f509f09867, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d71bc22dcb6657144a191771521e30cd, type: 2}
+    - target: {fileID: 7308699759372699649, guid: d3b4435cb96823f4187e66f509f09867, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.973953
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308699759372699649, guid: d3b4435cb96823f4187e66f509f09867, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9410083
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
