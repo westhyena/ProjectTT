@@ -1301,9 +1301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ae61c61ceba42aeb27d007393e5383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 20
-  attackPrefab: {fileID: 0}
-  attackTime: 3
+  manualEndTime: 1
 --- !u!58 &5464052997786497750
 CircleCollider2D:
   m_ObjectHideFlags: 0
