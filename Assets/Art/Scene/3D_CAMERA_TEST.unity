@@ -17800,7 +17800,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1913657461234986524, guid: b29cf2351625d47c09460428bb9bc5d0, type: 3}
   player: {fileID: 4674403231761158290}
   enemyRoot: {fileID: 1984089528}
-  enemyMax: 30
+  enemyMax: 50
   respawnTime: 5
   respawnCount: 6
   respawnDistance: 60
@@ -37217,7 +37217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19496191308692811, guid: d3b4435cb96823f4187e66f509f09867, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4491714769125648254, guid: d3b4435cb96823f4187e66f509f09867, type: 3}
       propertyPath: m_LocalPosition.x
