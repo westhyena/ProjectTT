@@ -58,11 +58,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2221337252705305921, guid: 8962136fdc19b0240b52415236897001, type: 3}
       propertyPath: m_Name
-      value: Warrior (1) Variant
+      value: Warrior
       objectReference: {fileID: 0}
     - target: {fileID: 2769736069796661274, guid: 8962136fdc19b0240b52415236897001, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026461942982240473, guid: 8962136fdc19b0240b52415236897001, type: 3}
+      propertyPath: m_Mass
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3088695542162852264, guid: 8962136fdc19b0240b52415236897001, type: 3}
       propertyPath: m_LocalPosition.z
