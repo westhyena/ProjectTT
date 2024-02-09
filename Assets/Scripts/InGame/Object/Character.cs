@@ -86,7 +86,10 @@ public abstract class Character : MonoBehaviour
             );
         }
 
-        lookingDirection = (movement.x < 0) ? LookDirection.Left : LookDirection.Right;
+        if (movement.x != 0)
+        {
+            lookingDirection = (movement.x < 0) ? LookDirection.Left : LookDirection.Right;
+        }
 
         transform.position += new Vector3(
             speed * Time.deltaTime * movement.x,
