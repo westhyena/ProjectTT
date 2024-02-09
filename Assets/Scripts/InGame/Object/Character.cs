@@ -11,6 +11,7 @@ public abstract class Character : MonoBehaviour
         Target,  // 적이 타겟된 상태
         Attack,
         Dying,
+        Dead,
 
         Manual,
         Follow,
@@ -44,6 +45,8 @@ public abstract class Character : MonoBehaviour
     protected float attackCooltime = 3.0f;
     protected bool attackPerformed = false;
     protected float attackDelay = 0.2f;
+
+    protected float dyingDelay = 2.0f;
 
     protected Character target = null;
 
@@ -151,6 +154,10 @@ public abstract class Character : MonoBehaviour
             Vector3 direction = (moveTarget.Position2D - Position2D).normalized;
             Move(direction);
         }
+        else
+        {
+            Move(Vector2.zero);
+        }
     }
 
     void UpdateTarget()
@@ -178,6 +185,7 @@ public abstract class Character : MonoBehaviour
 
     void UpdateAttack()
     {
+        Move(Vector2.zero);
         if (curStateTime > attackCooltime)
         {
             if (target.IsDead)
@@ -252,6 +260,14 @@ public abstract class Character : MonoBehaviour
     protected virtual void UpdateManual() {}
     protected virtual void UpdateFollow() {}
 
+    protected void UpdateDying()
+    {
+        if (curStateTime > dyingDelay)
+        {
+            ChangeState(State.Dead);
+        }
+    }
+
     protected void UpdateState()
     {
         curStateTime += Time.deltaTime;
@@ -272,6 +288,9 @@ public abstract class Character : MonoBehaviour
                 break;
             case State.Follow:
                 UpdateFollow();
+                break;
+            case State.Dying:
+                UpdateDying();
                 break;
         }
     }

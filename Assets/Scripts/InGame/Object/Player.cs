@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : Character
 {
     public float manualEndTime = 1.0f;
+    Vector2 manualMovement = Vector2.zero;
 
     public void Initialize()
     {
@@ -43,10 +44,10 @@ public class Player : Character
 
     public void ManualMove(Vector2 movement)
     {
+        Move(movement);
         if (movement.sqrMagnitude > 0)
         {
             ChangeState(State.Manual);
-            Move(movement);
         }
     }
 }
