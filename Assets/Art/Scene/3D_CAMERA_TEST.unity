@@ -18040,7 +18040,7 @@ MonoBehaviour:
   heroAttackCooltime: 1.5
   heroFollowOffsetRange: 5
   heroFollowSpeed: 50
-  heroAttackDamage: 50
+  heroAttackDamage: 10
   enemyMovementSpeed: 20
   enemyTargetStartDistance: 20
   enemyAttackStartDistance: 5
@@ -18107,11 +18107,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   companionPrefabs:
-  - {fileID: 580291539478100851, guid: 829c4fc0214bb4fceae885428d2197e2, type: 3}
+  - {fileID: 9168148501429241460, guid: 00a0ca7e72b239740a29f97cbe9ff80a, type: 3}
   - {fileID: 1926050158432554443, guid: b6268583115fb4245a4d6d2e6c17ef4d, type: 3}
   - {fileID: 8420832997619894984, guid: 5110dc9392efed84b943b6608534d235, type: 3}
-  - {fileID: 9168148501429241460, guid: 00a0ca7e72b239740a29f97cbe9ff80a, type: 3}
-  - {fileID: 8032351793609704326, guid: 981877210ca9ca4469cd1cce9dbdaa4b, type: 3}
+  - {fileID: 580291539478100851, guid: 829c4fc0214bb4fceae885428d2197e2, type: 3}
   companionRoot: {fileID: 1528238749}
   player: {fileID: 4674403231761158290}
   spawnRange: 5
