@@ -32,7 +32,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Dist_MaskTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 125299d66a885a940b4183a940c75450, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -75,9 +75,9 @@ Material:
     - _Dissolve_Scale: 10
     - _Dissolve_Thickness: 0.1
     - _Dist_Size: 5
-    - _Dist_intensity: 0.1
-    - _Dist_speed: 1
-    - _Distotion: 0
+    - _Dist_intensity: 0.01
+    - _Dist_speed: 0.3
+    - _Distotion: 1
     - _EnableExternalAlpha: 0
     - _Mask_intensity: 1
     - _Metalic: 0
