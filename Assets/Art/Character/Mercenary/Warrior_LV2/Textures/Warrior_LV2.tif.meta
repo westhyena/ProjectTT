@@ -387,6 +387,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sword_vfx
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 653
+        width: 342
+        height: 371
+      alignment: 9
+      pivot: {x: 0.4274523, y: 0.11784589}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205be944c3536d4478b4bb30072bac25
+      internalID: 1705544869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -411,6 +432,7 @@ TextureImporter:
       body: 1850826606
       head: -1347383600
       soldier: -1722883573
+      sword_vfx: 1705544869
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
