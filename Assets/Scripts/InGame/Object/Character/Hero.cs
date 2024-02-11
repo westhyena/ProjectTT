@@ -35,7 +35,14 @@ public class Hero : Character
     {
         movementSpeed = GameManager.instance.heroMovementSpeed;
         targetStartDistance = GameManager.instance.heroTargetStartDistance;
-        attackStartDistance = GameManager.instance.heroAttackStartDistance;
+        if (attackType == AttackType.Melee)
+        {
+            attackStartDistance = GameManager.instance.heroAttackStartDistance;
+        }
+        else
+        {
+            attackStartDistance = GameManager.instance.heroAttackRangeStartDistance;
+        }
         attackCooltime = GameManager.instance.heroAttackCooltime;
         attackDamage = GameManager.instance.heroAttackDamage;
         followOffsetRange = GameManager.instance.heroFollowOffsetRange;

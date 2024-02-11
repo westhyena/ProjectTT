@@ -6427,6 +6427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d78ef081f74945d9a8a24db8ff3f58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackType: 1
+  projectilePrefab: {fileID: 8218466125982187687, guid: 6c11beb1b22f84b0f9fee9abd0430207, type: 3}
 --- !u!58 &3927940307532054483
 CircleCollider2D:
   m_ObjectHideFlags: 0

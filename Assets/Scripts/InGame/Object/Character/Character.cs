@@ -41,6 +41,15 @@ public abstract class Character : MonoBehaviour
 
     protected Character moveTarget = null;
     protected float targetStartDistance = 20.0f;
+
+    public enum AttackType
+    {
+        Melee,
+        Range,
+    }
+    [SerializeField]
+    protected AttackType attackType = AttackType.Melee;
+    public GameObject projectilePrefab;
     protected float attackStartDistance = 5.0f;
     protected float attackCooltime = 3.0f;
     protected bool attackPerformed = false;
@@ -55,6 +64,7 @@ public abstract class Character : MonoBehaviour
     public bool IsDead { get { return hp <= 0.0f; } }
 
     protected float attackDamage = 10.0f;
+    public float AttackDamage { get { return attackDamage; } }
 
     protected void Awake()
     {
@@ -215,10 +225,17 @@ public abstract class Character : MonoBehaviour
 
     void Attack()
     {
-        AttackInRange();
+        if (attackType == AttackType.Melee)
+        {
+            AttackMelee();
+        }
+        else
+        {
+            AttackRange();
+        }
     }
 
-    void AttackInRange()
+    protected void AttackMelee()
     {
         List<Character> targetList = GetTargetList();
         foreach (Character target in targetList)
@@ -242,6 +259,19 @@ public abstract class Character : MonoBehaviour
                 target.Damage(attackDamage);
             }
         }
+    }
+
+    protected void AttackRange()
+    {
+        GameObject projectile = Instantiate(projectilePrefab);
+        projectile.transform.position = new Vector3(
+            this.Position2D.x,
+            this.Position2D.y,
+            -0.1f
+        );
+        projectile.transform.localRotation = Quaternion.Euler(GameManager.instance.characterRotation);
+        Projectile projectileComponent = projectile.GetComponent<Projectile>();
+        projectileComponent.Initialize(this, target);
     }
 
     public void Damage(float damage)

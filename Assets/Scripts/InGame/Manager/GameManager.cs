@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public float heroMovementSpeed = 20.0f;
     public float heroTargetStartDistance = 20.0f;
     public float heroAttackStartDistance = 5.0f;
+    public float heroAttackRangeStartDistance = 20.0f;
     public float heroAttackCooltime = 3.0f;
     public float heroFollowOffsetRange = 5.0f;
     public float heroFollowSpeed = 50.0f;
