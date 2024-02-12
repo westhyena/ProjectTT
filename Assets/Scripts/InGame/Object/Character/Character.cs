@@ -276,6 +276,7 @@ public abstract class Character : MonoBehaviour
 
     public void Damage(float damage)
     {
+        animator.SetTrigger("DAMAGE");
         hp -= damage;
         if (hp <= 0)
         {
