@@ -31,6 +31,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: e0562a121bbaef14f9db4c4b546e9899, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Dist_MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: e0562a121bbaef14f9db4c4b546e9899, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -70,15 +74,21 @@ Material:
     - _Dissolve_Amount: 0
     - _Dissolve_Scale: 10
     - _Dissolve_Thickness: 0.1
+    - _Dist_Size: 5
+    - _Dist_intensity: 0.1
+    - _Dist_speed: 1
+    - _Distotion: 0
     - _EnableExternalAlpha: 0
     - _Mask_intensity: 1
+    - _Metalic: 0
     - _Normal_Strength: 1.5
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Smoothness: 0.5
     - _bending: 0.001
     - _twirl_Strength: 10
     m_Colors:
-    - _Add_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Add_Color: {r: 1, g: 0.1537725, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Dissolve_Color: {r: 0, g: 0.08817577, b: 1, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}

@@ -688,6 +688,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ae61c61ceba42aeb27d007393e5383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackType: 0
+  projectilePrefab: {fileID: 0}
   manualEndTime: 1
 --- !u!58 &5464052997786497750
 CircleCollider2D:
@@ -1580,11 +1582,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 284659797765972084, guid: eee1b1aca929eb14990397644afcb5ac, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 8
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 284659797765972084, guid: eee1b1aca929eb14990397644afcb5ac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 197.4
+      value: -35.1
       objectReference: {fileID: 0}
     - target: {fileID: 306804033911440943, guid: eee1b1aca929eb14990397644afcb5ac, type: 3}
       propertyPath: m_Pivot.x

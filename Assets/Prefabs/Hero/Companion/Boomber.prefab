@@ -81,8 +81,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4618790889113248789, guid: 33f085a90a3dac943bb8752ff275926e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4618790889113248789, guid: 33f085a90a3dac943bb8752ff275926e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 190.2
+      value: -26.7
       objectReference: {fileID: 0}
     - target: {fileID: 5366119937207010819, guid: 33f085a90a3dac943bb8752ff275926e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -285,3 +289,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d78ef081f74945d9a8a24db8ff3f58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackType: 0
+  projectilePrefab: {fileID: 0}
