@@ -70,6 +70,12 @@ public abstract class Character : MonoBehaviour
     {
         this.animator = GetComponentInChildren<Animator>();
         this.collider2d = GetComponent<Collider2D>();
+
+        if (this.collider2d.GetType() == typeof(CircleCollider2D))
+        {
+            CircleCollider2D circleCollider = (CircleCollider2D)this.collider2d;
+            circleCollider.radius = GameManager.instance.baseColliderWidth;
+        }
         this.state = State.Idle;
     }
 

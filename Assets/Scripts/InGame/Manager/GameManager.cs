@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public float baseColliderWidth = 2.5f;
+
     // For test, 추후엔 Data Table에서 ㄷ불러오게 변경
     public float playerMovementSpeed = 20.0f;
     public float playerAttackDamage = 100.0f;
