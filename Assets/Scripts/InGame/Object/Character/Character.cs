@@ -37,6 +37,9 @@ public abstract class Character : MonoBehaviour
     protected Animator animator;
     protected Collider2D collider2d;
 
+    // Data Table에서 가져올 값들.
+    public float mspd = 500.0f; 
+
     protected float movementSpeed = 20.0f;
 
     protected Character moveTarget = null;
@@ -74,9 +77,14 @@ public abstract class Character : MonoBehaviour
         if (this.collider2d.GetType() == typeof(CircleCollider2D))
         {
             CircleCollider2D circleCollider = (CircleCollider2D)this.collider2d;
-            circleCollider.radius = GameManager.instance.baseColliderWidth;
+            circleCollider.radius = GameManager.instance.baseColliderWidth / 2.0f;
         }
         this.state = State.Idle;
+    }
+
+    protected void Start()
+    {
+        movementSpeed = GameManager.instance.baseColliderWidth * 1000.0f / mspd;
     }
 
     public void Move(Vector2 movement)

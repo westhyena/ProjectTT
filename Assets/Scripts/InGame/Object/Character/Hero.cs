@@ -33,7 +33,6 @@ public class Hero : Character
 
     protected override void UpdateVariable()
     {
-        movementSpeed = GameManager.instance.heroMovementSpeed;
         targetStartDistance = GameManager.instance.heroTargetStartDistance;
         if (attackType == AttackType.Melee)
         {

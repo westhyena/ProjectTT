@@ -7246,12 +7246,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dd384e129224a5388d506f42d960a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColliderWidth: 2.5
-  playerMovementSpeed: 20
+  baseColliderWidth: 5
   playerAttackDamage: 100
   playerAttackStartDistance: 10
   playerAttackCooltime: 3
-  heroMovementSpeed: 20
   heroTargetStartDistance: 30
   heroAttackStartDistance: 5
   heroAttackRangeStartDistance: 30
@@ -7259,7 +7257,6 @@ MonoBehaviour:
   heroFollowOffsetRange: 5
   heroFollowSpeed: 50
   heroAttackDamage: 50
-  enemyMovementSpeed: 20
   enemyTargetStartDistance: 20
   enemyAttackStartDistance: 5
   enemyAttackCooltime: 3
@@ -14365,6 +14362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ae61c61ceba42aeb27d007393e5383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mspd: 500
   attackType: 0
   projectilePrefab: {fileID: 0}
   manualEndTime: 1

@@ -26,7 +26,6 @@ public class Enemy : Character
 
     protected override void UpdateVariable()
     {
-        movementSpeed = GameManager.instance.enemyMovementSpeed;
         targetStartDistance = GameManager.instance.enemyTargetStartDistance;
         attackStartDistance = GameManager.instance.enemyAttackStartDistance;
         attackCooltime = GameManager.instance.enemyAttackCooltime;

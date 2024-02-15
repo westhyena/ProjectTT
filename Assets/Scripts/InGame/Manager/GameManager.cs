@@ -18,15 +18,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public float baseColliderWidth = 2.5f;
+    public float baseColliderWidth = 5.0f;
 
     // For test, 추후엔 Data Table에서 ㄷ불러오게 변경
-    public float playerMovementSpeed = 20.0f;
     public float playerAttackDamage = 100.0f;
     public float playerAttackStartDistance = 5.0f;
     public float playerAttackCooltime = 3.0f;
 
-    public float heroMovementSpeed = 20.0f;
     public float heroTargetStartDistance = 20.0f;
     public float heroAttackStartDistance = 5.0f;
     public float heroAttackRangeStartDistance = 20.0f;
@@ -35,7 +33,6 @@ public class GameManager : MonoBehaviour
     public float heroFollowSpeed = 50.0f;
     public float heroAttackDamage = 50.0f;
 
-    public float enemyMovementSpeed = 20.0f;
     public float enemyTargetStartDistance = 20.0f;
     public float enemyAttackStartDistance = 5.0f;
     public float enemyAttackCooltime = 3.0f;
