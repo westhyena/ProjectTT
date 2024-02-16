@@ -39,6 +39,7 @@ public abstract class Character : MonoBehaviour
 
     // Data Table에서 가져올 값들.
     public float mspd = 500.0f; 
+    public float rangeOfTarget = 3.0f;
 
     protected float movementSpeed = 20.0f;
 
@@ -85,6 +86,8 @@ public abstract class Character : MonoBehaviour
     protected void Start()
     {
         movementSpeed = GameManager.instance.baseColliderWidth * 1000.0f / mspd;
+        attackStartDistance = GameManager.instance.baseColliderWidth * rangeOfTarget;
+        targetStartDistance = attackStartDistance * 2.0f;
     }
 
     public void Move(Vector2 movement)

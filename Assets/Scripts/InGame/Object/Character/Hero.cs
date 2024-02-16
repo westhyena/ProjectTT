@@ -33,15 +33,6 @@ public class Hero : Character
 
     protected override void UpdateVariable()
     {
-        targetStartDistance = GameManager.instance.heroTargetStartDistance;
-        if (attackType == AttackType.Melee)
-        {
-            attackStartDistance = GameManager.instance.heroAttackStartDistance;
-        }
-        else
-        {
-            attackStartDistance = GameManager.instance.heroAttackRangeStartDistance;
-        }
         attackCooltime = GameManager.instance.heroAttackCooltime;
         attackDamage = GameManager.instance.heroAttackDamage;
         followOffsetRange = GameManager.instance.heroFollowOffsetRange;

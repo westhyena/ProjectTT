@@ -27,7 +27,6 @@ public class Player : Character
     protected override void UpdateVariable()
     {
         attackDamage = GameManager.instance.playerAttackDamage;
-        attackStartDistance = GameManager.instance.playerAttackStartDistance;
         attackCooltime = GameManager.instance.playerAttackCooltime;
     }
 
