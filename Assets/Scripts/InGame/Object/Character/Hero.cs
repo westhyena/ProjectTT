@@ -58,8 +58,8 @@ public class Hero : Character
     }
     public void FollowPlayer()
     {
-        Debug.Log("FOLOW PLAYER CALLED");
         followOffset = Random.insideUnitCircle.normalized * followOffsetRange;
+        animator.SetTrigger("CallToArms");
         ChangeState(State.Follow);
     }
 }

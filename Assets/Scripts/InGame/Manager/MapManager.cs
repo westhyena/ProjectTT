@@ -56,7 +56,6 @@ public class BackgroundManager : MonoBehaviour
                 k += 1;
             }
         }
-        //Debug.Log(minIndexX +/ ", " + maxIndexY + ", " + minIndexX + ", " + maxIndexX);
     }
 
     void Update()
