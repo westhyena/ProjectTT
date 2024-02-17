@@ -57,7 +57,6 @@ public abstract class Character : MonoBehaviour
     public Transform projectileSpawnPoint;
     protected float attackStartDistance = 5.0f;
     protected float attackCooltime = 3.0f;
-    protected bool attackPerformed = false;
     protected float attackDelay = 0.2f;
 
     protected float dyingDelay = 2.0f;
@@ -149,11 +148,6 @@ public abstract class Character : MonoBehaviour
     {
         state = newState;
         curStateTime = 0.0f;
-
-        if (newState == State.Attack)
-        {
-            attackPerformed = false;
-        }
     }
 
     protected virtual void UpdateVariable()
@@ -234,14 +228,9 @@ public abstract class Character : MonoBehaviour
                 ChangeState(State.Attack);
             }
         }
-        else if (!attackPerformed && curStateTime > attackDelay)
-        {
-            Attack();
-            attackPerformed = true;
-        }
     }
 
-    void Attack()
+    public void Attack()
     {
         if (attackType == AttackType.Melee)
         {
