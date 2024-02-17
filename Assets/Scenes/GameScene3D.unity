@@ -7256,7 +7256,7 @@ MonoBehaviour:
   heroAttackDamage: 50
   enemyAttackCooltime: 3
   enemyAttackDamage: 0
-  characterRotation: {x: -30, y: 0, z: 0}
+  characterRotation: {x: -40, y: 0, z: 0}
   player: {fileID: 1191122693}
 --- !u!4 &1133609862
 Transform:
@@ -13615,11 +13615,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 748227313369922430, guid: 3b74dccd3846a48969064aba68eee923, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9659259
+      value: 0.9396927
       objectReference: {fileID: 0}
     - target: {fileID: 748227313369922430, guid: 3b74dccd3846a48969064aba68eee923, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.258819
+      value: -0.3420201
       objectReference: {fileID: 0}
     - target: {fileID: 748227313369922430, guid: 3b74dccd3846a48969064aba68eee923, type: 3}
       propertyPath: m_LocalRotation.y
@@ -13631,7 +13631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 748227313369922430, guid: 3b74dccd3846a48969064aba68eee923, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -30
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 748227313369922430, guid: 3b74dccd3846a48969064aba68eee923, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -13835,7 +13835,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 200
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 70
   m_Depth: -1
