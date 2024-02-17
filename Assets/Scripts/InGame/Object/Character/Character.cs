@@ -54,6 +54,7 @@ public abstract class Character : MonoBehaviour
     [SerializeField]
     protected AttackType attackType = AttackType.Melee;
     public GameObject projectilePrefab;
+    public Transform projectileSpawnPoint;
     protected float attackStartDistance = 5.0f;
     protected float attackCooltime = 3.0f;
     protected bool attackPerformed = false;
@@ -281,12 +282,8 @@ public abstract class Character : MonoBehaviour
     protected void AttackRange()
     {
         GameObject projectile = Instantiate(projectilePrefab);
-        projectile.transform.position = new Vector3(
-            this.Position2D.x,
-            this.Position2D.y,
-            -0.1f
-        );
-        projectile.transform.localRotation = Quaternion.Euler(GameManager.instance.characterRotation);
+        projectile.transform.position = projectileSpawnPoint.position;
+        projectile.transform.rotation = projectileSpawnPoint.rotation;
         Projectile projectileComponent = projectile.GetComponent<Projectile>();
         projectileComponent.Initialize(this, target);
     }

@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour
     public float positionYOffset = 4.0f;
     public float positionZOffset = 0.1f;
     public float angleOffset = 90.0f;
+    public float anglegSpeed = 2.0f;
 
     public void Initialize(Character source, Character target)
     {
@@ -37,11 +38,8 @@ public class Projectile : MonoBehaviour
             return;
         }
 
-        
-
         direction.Normalize();
         transform.position +=  speed * Time.deltaTime * (Vector3)direction;
-
         transform.eulerAngles = new Vector3(0.0f, 0.0f, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + angleOffset);
     }
 }
