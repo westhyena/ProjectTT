@@ -17,9 +17,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.030483484
-  m_TransitionOffset: 0.3212439
-  m_ExitTime: 0.9909327
+  m_TransitionDuration: 0.028097212
+  m_TransitionOffset: 0
+  m_ExitTime: 0.993319
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -109,7 +109,7 @@ AnimatorStateMachine:
     m_Position: {x: 450, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5560877137577823320}
-    m_Position: {x: 456.20685, y: -11.465515, z: 0}
+    m_Position: {x: 460, y: -10, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -9130065497433931998}
@@ -154,7 +154,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: APPEAR
+  m_Name: CallToArms
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -168,7 +168,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2a42b2e61e6b30b4a8d1f1715a728123, type: 2}
+  m_Motion: {fileID: 7400000, guid: b3eeb376c41a46e4288aeff9700a5f64, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
