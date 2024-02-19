@@ -1161,7 +1161,7 @@ Transform:
   m_GameObject: {fileID: 6050049958898174826}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7, y: 2.5272727, z: 1.0518843}
+  m_LocalPosition: {x: -1.7, y: 1.53, z: 1.0518843}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6741,6 +6741,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mspd: 500
   rangeOfTarget: 6
+  attackStat: 10
+  defenceStat: 5
+  hpStat: 100
   attackType: 1
   projectilePrefab: {fileID: 8218466125982187687, guid: 6c11beb1b22f84b0f9fee9abd0430207, type: 3}
   projectileSpawnPoint: {fileID: 5497233610057163979}
