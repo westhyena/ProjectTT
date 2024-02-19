@@ -690,6 +690,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mspd: 500
   rangeOfTarget: 3
+  attackStat: 10
+  defenceStat: 5
+  hpStat: 999999
   attackType: 0
   projectilePrefab: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}

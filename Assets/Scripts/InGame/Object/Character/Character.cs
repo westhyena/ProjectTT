@@ -41,6 +41,14 @@ public abstract class Character : MonoBehaviour
     public float mspd = 500.0f; 
     public float rangeOfTarget = 3.0f;
 
+    public float attackStat = 10.0f;
+    public float AttackStat { get { return attackStat; } }
+    public float defenceStat = 5.0f;
+    public float DefenceStat { get { return defenceStat; } }
+    public float hpStat = 100.0f;
+    public float HpStat { get { return hpStat; } }
+
+
     protected float movementSpeed = 20.0f;
 
     protected Character moveTarget = null;
@@ -67,9 +75,6 @@ public abstract class Character : MonoBehaviour
     protected float maxHp = 100.0f;
     public bool IsDead { get { return hp <= 0.0f; } }
 
-    protected float attackDamage = 10.0f;
-    public float AttackDamage { get { return attackDamage; } }
-
     protected void Awake()
     {
         this.animator = GetComponentInChildren<Animator>();
@@ -88,6 +93,9 @@ public abstract class Character : MonoBehaviour
         movementSpeed = GameManager.instance.baseColliderWidth * 1000.0f / mspd;
         attackStartDistance = GameManager.instance.baseColliderWidth * rangeOfTarget;
         targetStartDistance = attackStartDistance * 2.0f;
+
+        maxHp = hpStat;
+        hp = maxHp;
     }
 
     public void Move(Vector2 movement)
@@ -263,7 +271,7 @@ public abstract class Character : MonoBehaviour
             }
             if (CheckDistanceUnder(target.Position2D, attackStartDistance))
             {
-                target.Damage(attackDamage);
+                target.Damage(attackStat);
             }
         }
     }
@@ -277,8 +285,27 @@ public abstract class Character : MonoBehaviour
         projectileComponent.Initialize(this, target);
     }
 
-    public void Damage(float damage)
+    public void Damage(float attackVal)
     {
+        if (hp <= 0)
+        {
+            // already die
+            return;
+        }
+        // TODO Critical 발동 확률
+        bool isCritical = false;
+        float criticalFactor = 1.0f;
+        if (isCritical)
+        {
+            criticalFactor = GameManager.instance.criticalFactor;
+        }
+
+        float damage = attackVal * criticalFactor * (
+            GameManager.instance.defenceFactor1 / (
+                GameManager.instance.defenceFactor1 + defenceStat * GameManager.instance.defenceFactor2
+            ) * GameManager.instance.defenceFactor2
+        );
+
         animator.SetTrigger("DAMAGE");
         hp -= damage;
         if (hp <= 0)

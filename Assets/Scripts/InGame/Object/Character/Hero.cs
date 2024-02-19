@@ -34,7 +34,6 @@ public class Hero : Character
     protected override void UpdateVariable()
     {
         attackCooltime = GameManager.instance.heroAttackCooltime;
-        attackDamage = GameManager.instance.heroAttackDamage;
         followOffsetRange = GameManager.instance.heroFollowOffsetRange;
         followSpeed = GameManager.instance.heroFollowSpeed;
     }

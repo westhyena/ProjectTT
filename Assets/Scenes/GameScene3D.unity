@@ -7247,15 +7247,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColliderWidth: 5
-  playerAttackDamage: 100
+  defenceFactor1: 300
+  defenceFactor2: 3
+  criticalFactor: 1.5
   playerAttackCooltime: 3
   heroAttackRangeStartDistance: 30
   heroAttackCooltime: 3
   heroFollowOffsetRange: 5
   heroFollowSpeed: 50
-  heroAttackDamage: 50
   enemyAttackCooltime: 3
-  enemyAttackDamage: 0
   characterRotation: {x: -40, y: 0, z: 0}
   player: {fileID: 1191122693}
 --- !u!4 &1133609862

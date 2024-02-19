@@ -33,7 +33,7 @@ public class Projectile : MonoBehaviour
         float sqrDistance = direction.sqrMagnitude;
         if (sqrDistance < 0.1f * 0.1f)
         {
-            target.Damage(source.AttackDamage);
+            target.Damage(source.AttackStat);
             Destroy(gameObject);
             return;
         }

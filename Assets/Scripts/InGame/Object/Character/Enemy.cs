@@ -27,6 +27,5 @@ public class Enemy : Character
     protected override void UpdateVariable()
     {
         attackCooltime = GameManager.instance.enemyAttackCooltime;
-        attackDamage = GameManager.instance.enemyAttackDamage;
     }
 }

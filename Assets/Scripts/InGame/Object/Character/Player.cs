@@ -26,7 +26,6 @@ public class Player : Character
 
     protected override void UpdateVariable()
     {
-        attackDamage = GameManager.instance.playerAttackDamage;
         attackCooltime = GameManager.instance.playerAttackCooltime;
     }
 

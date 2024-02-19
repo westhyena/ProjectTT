@@ -20,18 +20,19 @@ public class GameManager : MonoBehaviour
 
     public float baseColliderWidth = 5.0f;
 
+    public float defenceFactor1 = 300.0f;
+    public float defenceFactor2 = 3.0f;
+    public float criticalFactor = 1.5f;
+
     // For test, 추후엔 Data Table에서 ㄷ불러오게 변경
-    public float playerAttackDamage = 100.0f;
     public float playerAttackCooltime = 3.0f;
 
     public float heroAttackRangeStartDistance = 20.0f;
     public float heroAttackCooltime = 3.0f;
     public float heroFollowOffsetRange = 5.0f;
     public float heroFollowSpeed = 50.0f;
-    public float heroAttackDamage = 50.0f;
 
     public float enemyAttackCooltime = 3.0f;
-    public float enemyAttackDamage = 10.0f;
 
     HeroManager heroManager;
     EnemyManager enemyManager;
