@@ -75,7 +75,7 @@ public abstract class Character : MonoBehaviour
     protected float maxHp = 100.0f;
     public bool IsDead { get { return hp <= 0.0f; } }
 
-    protected void Awake()
+    protected virtual void Awake()
     {
         this.animator = GetComponentInChildren<Animator>();
         this.collider2d = GetComponent<Collider2D>();

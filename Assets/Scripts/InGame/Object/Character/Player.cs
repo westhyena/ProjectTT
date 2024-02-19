@@ -6,7 +6,17 @@ using UnityEngine;
 public class Player : Character
 {
     public float manualEndTime = 1.0f;
-    Vector2 manualMovement = Vector2.zero;
+    private Vector2 manualMovement = Vector2.zero;
+
+    public GameObject followEffectPrefab;
+    GameObject followEffect;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        followEffect = Instantiate(followEffectPrefab, transform);
+        followEffect.SetActive(false);
+    }
 
     public void Initialize()
     {
@@ -46,5 +56,11 @@ public class Player : Character
         {
             ChangeState(State.Manual);
         }
+    }
+
+    public void OnFollowCall()
+    {
+        followEffect.SetActive(false);
+        followEffect.SetActive(true);
     }
 }
