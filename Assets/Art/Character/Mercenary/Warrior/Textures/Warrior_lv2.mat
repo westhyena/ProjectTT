@@ -55,6 +55,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: a342b9f71c753d74d88139d24ccca18a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Smoothness_Tex:
+        m_Texture: {fileID: 2800000, guid: b2407567cbd8ecb4dafecbd8abbe2001, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -84,7 +88,7 @@ Material:
     - _Normal_Strength: 2
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 0.8
     - _bending: 0.001
     - _twirl_Strength: 10
     m_Colors:
