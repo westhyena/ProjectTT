@@ -9,15 +9,23 @@ public class InputManager : MonoBehaviour
     public Player player;
 
     HeroManager heroManager;
+
+    public FloatingJoystick joystick;
     
     void Awake()
     {
         heroManager = GetComponent<HeroManager>();
+        joystick = FindObjectOfType<FloatingJoystick>();
     }
 
     void Update()
     {
         movement = Vector2.zero;
+        if (joystick != null)
+        {
+            movement = joystick.Direction;
+        }
+
         if (Input.GetKey(KeyCode.UpArrow))
         {
             movement.y = 1;
