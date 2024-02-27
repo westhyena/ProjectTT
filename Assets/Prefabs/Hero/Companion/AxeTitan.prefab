@@ -119,6 +119,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 673451751458482459, guid: c3ff9fd0ad3ab3a408d8b282d5e12dda, type: 3}
+      propertyPath: mspd
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 673451751458482459, guid: c3ff9fd0ad3ab3a408d8b282d5e12dda, type: 3}
       propertyPath: hpStat
       value: 500
       objectReference: {fileID: 0}
