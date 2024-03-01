@@ -6739,11 +6739,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d78ef081f74945d9a8a24db8ff3f58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mspd: 500
+  mspd: 100
   rangeOfTarget: 6
   attackStat: 10
   defenceStat: 5
-  hpStat: 100
+  hpStat: 500
   attackType: 1
   projectilePrefab: {fileID: 8218466125982187687, guid: 6c11beb1b22f84b0f9fee9abd0430207, type: 3}
   projectileSpawnPoint: {fileID: 5497233610057163979}
