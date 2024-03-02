@@ -41,6 +41,9 @@ public class GameManager : MonoBehaviour
 
     public Player player;
 
+    float companionPoints = 0.0f;
+    float companionPointSpeed = 1.0f;
+
     void Awake()
     {
         heroManager = GetComponent<HeroManager>();
