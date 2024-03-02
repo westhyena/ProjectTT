@@ -41,13 +41,26 @@ public class GameManager : MonoBehaviour
 
     public Player player;
 
-    float companionPoints = 0.0f;
-    float companionPointSpeed = 1.0f;
+    int companionPoints = 0;
+    public int CompanionPoints { get { return companionPoints; } }
+    float companionGauge = 0.0f;
+    public float CompanionGauge { get { return companionGauge; } }
+    float companionGaugeSpeed = 0.1f;
 
     void Awake()
     {
         heroManager = GetComponent<HeroManager>();
         enemyManager = GetComponent<EnemyManager>();
+    }
+
+    void Update()
+    {
+        companionGauge += companionGaugeSpeed * Time.deltaTime;
+        if (companionGauge >= 1.0f)
+        {
+            companionGauge = 0.0f;
+            companionPoints++;
+        }
     }
 
     public Character GetRandomHero()
