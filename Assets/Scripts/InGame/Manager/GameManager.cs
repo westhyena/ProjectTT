@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour
     public float CompanionGauge { get { return companionGauge; } }
     float companionGaugeSpeed = 0.1f;
 
+    int COMPANION_SUMMON_POINT = 1;
+
     void Awake()
     {
         heroManager = GetComponent<HeroManager>();
@@ -61,6 +63,15 @@ public class GameManager : MonoBehaviour
             companionGauge = 0.0f;
             companionPoints++;
         }
+    }
+
+    public void SummonCompanion()
+    {
+        if (companionPoints >= COMPANION_SUMMON_POINT)
+        {
+            companionPoints -= COMPANION_SUMMON_POINT;
+            heroManager.CreateHero();
+        }        
     }
 
     public Character GetRandomHero()

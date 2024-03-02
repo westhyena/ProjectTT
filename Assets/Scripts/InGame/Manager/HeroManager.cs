@@ -27,14 +27,6 @@ public class HeroManager : MonoBehaviour
     public Player player;
     public float spawnRange = 5.0f;
 
-    void Awake()
-    {
-        foreach (GameObject prefab in companionPrefabs)
-        {
-            CreateHero(prefab);
-        }
-    }
-
     Hero CreateHero(GameObject prefab)
     {
         GameObject heroObj = Instantiate(

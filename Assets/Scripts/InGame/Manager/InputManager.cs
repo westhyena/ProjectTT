@@ -48,7 +48,7 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            heroManager.CreateHero();
+            GameManager.instance.SummonCompanion();
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
