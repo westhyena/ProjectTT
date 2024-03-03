@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6570588502807879119}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 20.601133, y: 20.601133, z: 20.601133}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6570588503038805235}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6570588502807879107
 MeshFilter:
@@ -131,7 +131,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6570588503038805233}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -139,6 +138,7 @@ Transform:
   m_Children:
   - {fileID: 6570588502807879118}
   m_Father: {fileID: 0}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6570588503038805232
 Animator:
@@ -170,6 +170,6 @@ SortingGroup:
   m_GameObject: {fileID: 6570588503038805233}
   m_Enabled: 1
   m_SortingLayerID: -953567355
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_SortAtRoot: 1
