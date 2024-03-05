@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
@@ -16,6 +17,9 @@ public class Player : Character
         base.Awake();
         followEffect = Instantiate(followEffectPrefab, transform);
         followEffect.SetActive(false);
+
+        HPBarUI hpBarUI = UIManager.instance.CreateHPBar(this.transform);
+        hpBarUI.Initialize(this);
     }
 
     public void Initialize()

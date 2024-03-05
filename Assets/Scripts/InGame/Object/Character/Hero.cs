@@ -14,6 +14,13 @@ public class Hero : Character
     float followDoneDistance = 0.1f;
     float followSpeed = 50.0f;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        HPBarUI hpBarUI = UIManager.instance.CreateHPBar(this.transform);
+        hpBarUI.Initialize(this);
+    }
+
     public void Initialize(Player player)
     {
         this.player = player;
