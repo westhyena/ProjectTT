@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1091958374374423706, guid: 8962136fdc19b0240b52415236897001, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1091958374374423706, guid: 8962136fdc19b0240b52415236897001, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,45 +56,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warrior
       objectReference: {fileID: 0}
-    - target: {fileID: 3457270753662216101, guid: 8962136fdc19b0240b52415236897001, type: 3}
-      propertyPath: scalingMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736038572409905560, guid: 8962136fdc19b0240b52415236897001, type: 3}
-      propertyPath: m_Name
-      value: VFX_Skill_hit___
-      objectReference: {fileID: 0}
-    - target: {fileID: 6908131837756271985, guid: 8962136fdc19b0240b52415236897001, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6908131837756271985, guid: 8962136fdc19b0240b52415236897001, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8494794647413088573, guid: 8962136fdc19b0240b52415236897001, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
-    - target: {fileID: 8494794647413088573, guid: 8962136fdc19b0240b52415236897001, type: 3}
-      propertyPath: m_RenderMode
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8757793033509191485, guid: 8962136fdc19b0240b52415236897001, type: 3}
-      propertyPath: scalingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8757793033509191485, guid: 8962136fdc19b0240b52415236897001, type: 3}
-      propertyPath: RotationModule.curve.scalar
-      value: -17.453293
-      objectReference: {fileID: 0}
-    - target: {fileID: 8757793033509191485, guid: 8962136fdc19b0240b52415236897001, type: 3}
-      propertyPath: InitialModule.startRotation.scalar
-      value: -0.5235988
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3286266096238187210, guid: 8962136fdc19b0240b52415236897001, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8962136fdc19b0240b52415236897001, type: 3}
