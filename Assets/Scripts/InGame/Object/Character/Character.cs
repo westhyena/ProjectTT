@@ -35,6 +35,7 @@ public abstract class Character : MonoBehaviour
     } }
 
     protected Animator animator;
+    protected Vector3 animatorScale;
     protected Collider2D collider2d;
 
     // Data Table에서 가져올 값들.
@@ -73,11 +74,13 @@ public abstract class Character : MonoBehaviour
 
     protected float hp = 100.0f;
     protected float maxHp = 100.0f;
+    public float HPRatio { get { return hp / maxHp; } }
     public bool IsDead { get { return hp <= 0.0f; } }
 
     protected virtual void Awake()
     {
         this.animator = GetComponentInChildren<Animator>();
+        this.animatorScale = animator.transform.localScale;
         this.collider2d = GetComponent<Collider2D>();
 
         if (this.collider2d.GetType() == typeof(CircleCollider2D))
@@ -114,10 +117,10 @@ public abstract class Character : MonoBehaviour
 
         if (Mathf.Abs(movement.x) > 0)
         {
-            transform.localScale = new Vector3(
-                -Mathf.Sign(movement.x),
-                1.0f,
-                1.0f
+            animator.transform.localScale = new Vector3(
+                this.animatorScale.x * -Mathf.Sign(movement.x),
+                this.animatorScale.y,
+                this.animatorScale.z
             );
         }
 
