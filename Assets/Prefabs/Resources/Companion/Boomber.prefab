@@ -20,6 +20,18 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1062546929563995783, guid: 33f085a90a3dac943bb8752ff275926e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1062546929563995783, guid: 33f085a90a3dac943bb8752ff275926e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1062546929563995783, guid: 33f085a90a3dac943bb8752ff275926e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1424161215461698059, guid: 33f085a90a3dac943bb8752ff275926e, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -35,6 +47,10 @@ PrefabInstance:
     - target: {fileID: 5058692462982381337, guid: 33f085a90a3dac943bb8752ff275926e, type: 3}
       propertyPath: scalingMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366119937207010819, guid: 33f085a90a3dac943bb8752ff275926e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5366119937207010819, guid: 33f085a90a3dac943bb8752ff275926e, type: 3}
       propertyPath: m_LocalPosition.x

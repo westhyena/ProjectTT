@@ -33,7 +33,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Dissolve_Tex:
         m_Texture: {fileID: 2800000, guid: fbf59045a361e9142bd049f911959af3, type: 3}
-        m_Scale: {x: 0.2, y: 0.2}
+        m_Scale: {x: 0.6, y: 0.3}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
@@ -80,7 +80,7 @@ Material:
     - _CameraNearFadeDistance: 1
     - _ColorMode: 1
     - _Cull: 2
-    - _CutOut: 0
+    - _CutOut: -0.01
     - _Cutoff: 0.184
     - _DistortionBlend: 0.5
     - _DistortionEnabled: 0
