@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour
 
     int COMPANION_SUMMON_POINT = 1;
 
+    float gameTimer = 0.0f;
+    public float GameTime { get { return gameTimer; } }
+
     void Awake()
     {
         heroManager = GetComponent<HeroManager>();
@@ -63,6 +66,8 @@ public class GameManager : MonoBehaviour
             companionGauge = 0.0f;
             companionPoints++;
         }
+
+        gameTimer += Time.deltaTime;
     }
 
     public void SummonCompanion()
