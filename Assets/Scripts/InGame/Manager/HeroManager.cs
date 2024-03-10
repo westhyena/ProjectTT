@@ -17,6 +17,13 @@ public class HeroManager : MonoBehaviour
         }
     }
 
+    public class HeroInfo
+    {
+        public string name;
+        public string PrefabName;
+        public string IconName;
+    }
+
     public GameObject[] companionPrefabs;
     public Transform companionRoot;
 
