@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &621687721390038076
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 633660015277966379, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140758307311312974, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140758307311312974, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140758307311312974, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140758307311312974, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140758307311312974, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140758307311312974, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140758307311312974, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140758307311312974, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140758307311312974, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140758307311312974, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140758307311312974, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140758307311312974, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140758307311312974, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839852303601310875, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      propertyPath: m_Name
+      value: Projectile_arrow
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8839852303601310875, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1783299943774356321}
+  m_SourcePrefab: {fileID: 100100000, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+--- !u!1 &8218466125982187687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8839852303601310875, guid: f2551b15b7b408d4187e9a4a026c59d8, type: 3}
+  m_PrefabInstance: {fileID: 621687721390038076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1783299943774356321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8218466125982187687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d3c568a95db04140b25ba887cb502ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
+  positionYOffset: 4
+  positionZOffset: -0.1
+  angleOffset: 90
+  anglegSpeed: 2
