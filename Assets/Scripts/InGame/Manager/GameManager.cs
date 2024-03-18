@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        DataManager inst = DataManager.instance;
         heroManager = GetComponent<HeroManager>();
         enemyManager = GetComponent<EnemyManager>();
     }

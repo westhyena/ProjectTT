@@ -104,6 +104,7 @@ public class DataConverter : MonoBehaviour
 
             newObj.Add("id", id);
             newObj.Add("name", GetString(propertyObj, "name"));
+            newObj.Add("rangeOfTarget", GetInteger(propertyObj, "rangeOfTarget"));
             newObj.Add("baseMSpd", GetInteger(propertyObj, "baseMSpd"));
             newObj.Add("baseMaxHP", GetInteger(propertyObj, "baseMaxHP"));
             newObj.Add("baseAttack", GetInteger(propertyObj, "baseAttack"));
