@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084176922372342972, guid: d349c36a819828f419ed9d4a889bfffe, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1084176922372342972, guid: d349c36a819828f419ed9d4a889bfffe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,8 +56,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_FuryHog
       objectReference: {fileID: 0}
+    - target: {fileID: 6871234303472349896, guid: d349c36a819828f419ed9d4a889bfffe, type: 3}
+      propertyPath: mspd
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 6871234303472349896, guid: d349c36a819828f419ed9d4a889bfffe, type: 3}
+      propertyPath: rangeOfTarget
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7023692366805626167, guid: d349c36a819828f419ed9d4a889bfffe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8697196969053414853}
   m_SourcePrefab: {fileID: 100100000, guid: d349c36a819828f419ed9d4a889bfffe, type: 3}
+--- !u!1 &1202310132338866055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7023692366805626167, guid: d349c36a819828f419ed9d4a889bfffe, type: 3}
+  m_PrefabInstance: {fileID: 8202845267502521008}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8697196969053414853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202310132338866055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7953d7e90654c1ca408a9968817d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
