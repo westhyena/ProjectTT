@@ -12,7 +12,6 @@ public class CharacterData
     public CharacterData(string[,] csvGrid)
     {
         items = new CharacterInfo[csvGrid.GetUpperBound(1) - 1];
-        Debug.Log(items.Length + ", " + csvGrid.GetUpperBound(1));
         for (int i = 0; i < items.Length; ++i)
         {
             try
@@ -34,6 +33,7 @@ public class CharacterInfo
     public string name;
     public float rangeOfTarget;
     public float baseMSpd;
+    public float baseMaxHP;
     public float baseAttack;
     public float baseAtkSpd;
     public float basePDef;
@@ -47,6 +47,7 @@ public class CharacterInfo
         name = csvGrid[idx++, rowidx];
         rangeOfTarget = float.Parse(csvGrid[idx++, rowidx]);
         baseMSpd = float.Parse(csvGrid[idx++, rowidx]);
+        baseMaxHP = float.Parse(csvGrid[idx++, rowidx]);
         baseAttack = float.Parse(csvGrid[idx++, rowidx]);
         baseAtkSpd = float.Parse(csvGrid[idx++, rowidx]);
         basePDef = float.Parse(csvGrid[idx++, rowidx]);

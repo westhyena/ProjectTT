@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class MainCamera : MonoBehaviour
 {
-    public Transform character;
+    Transform character;
     public float smoothSpeed = 0.125f; // 카메라가 캐릭터를 따라가는 속도
     private Vector3 previousCharacterPosition;
     private Vector3 targetCameraPosition;
 
     void Start()
     {
+        character = GameManager.instance.Player.transform;
         if (character != null)
         {
             previousCharacterPosition = character.position;

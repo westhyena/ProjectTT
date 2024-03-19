@@ -5,7 +5,6 @@ using UnityEngine;
 public class BackgroundManager : MonoBehaviour
 {
     public Transform mapRoot;
-    public Player player;
     public GameObject backgroundPrefab;
 
     public float backgroundScale = 200.0f;
@@ -40,6 +39,8 @@ public class BackgroundManager : MonoBehaviour
 
     void UpdateBackground()
     {
+        Player player = GameManager.instance.Player;
+
         int minIndexX = GetMinIndexX(player.transform.position);
         int maxIndexX = GetMaxIndexX(player.transform.position);
 

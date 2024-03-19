@@ -19,7 +19,6 @@ public class EnemyManager : MonoBehaviour
 
     public GameObject enemyPrefab;
 
-    public Player player;
     public Transform enemyRoot;
     readonly List<Enemy> enemyList = new();
     public List<Enemy> EnemyList => enemyList;
@@ -27,6 +26,8 @@ public class EnemyManager : MonoBehaviour
 
     public void CreateEnemy(Vector3 position)
     {
+        Player player = GameManager.instance.Player;
+
         GameObject enemyObj = Instantiate(enemyPrefab, position, Quaternion.identity);
         enemyObj.transform.parent = enemyRoot;
         enemyObj.transform.localRotation = Quaternion.Euler(GameManager.instance.characterRotation);

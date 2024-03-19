@@ -6,8 +6,6 @@ public class InputManager : MonoBehaviour
 {
     Vector2 movement;
 
-    public Player player;
-
     HeroManager heroManager;
 
     public FloatingJoystick joystick;
@@ -20,6 +18,8 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
+        Player player = GameManager.instance.Player;
+
         movement = Vector2.zero;
         if (joystick != null)
         {

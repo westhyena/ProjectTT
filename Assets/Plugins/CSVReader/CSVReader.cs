@@ -27,8 +27,7 @@ public class CSVReader
                 textOutput += "|"; 
             }
             textOutput += "\n"; 
-        }   
-        Debug.Log(textOutput);
+        }
     }
  
     // splits a CSV file into a 2D string array

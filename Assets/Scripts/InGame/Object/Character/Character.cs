@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public abstract class Character : MonoBehaviour
 {
@@ -33,6 +35,8 @@ public abstract class Character : MonoBehaviour
             transform.position.y
         );
     } }
+
+    CharacterInfo characterInfo;
 
     protected Animator animator;
     protected Vector3 animatorScale;
@@ -91,8 +95,22 @@ public abstract class Character : MonoBehaviour
         this.state = State.Idle;
     }
 
+    public void InitializeCharacter(string characterId)
+    {
+        characterInfo = DataManager.instance.GetCharacterInfo(characterId);
+    }
+
     protected void Start()
     {
+        if (characterInfo != null)
+        {
+            this.rangeOfTarget = characterInfo.rangeOfTarget;
+            this.mspd = characterInfo.baseMSpd;
+            this.hpStat = characterInfo.baseMaxHP;
+            this.attackStat = characterInfo.baseAttack;
+            this.defenceStat = characterInfo.basePDef;
+        }
+
         movementSpeed = GameManager.instance.baseColliderWidth * 1000.0f / mspd;
         attackStartDistance = GameManager.instance.baseColliderWidth * rangeOfTarget;
         targetStartDistance = attackStartDistance * 2.0f;

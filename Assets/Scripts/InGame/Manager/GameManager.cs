@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -39,7 +40,8 @@ public class GameManager : MonoBehaviour
 
     public Vector3 characterRotation = new Vector3(-30.0f, 0.0f, 0.0f);
 
-    public Player player;
+    Player player;
+    public Player Player { get { return player; } }
 
     int companionPoints = 0;
     public int CompanionPoints { get { return companionPoints; } }
@@ -57,6 +59,8 @@ public class GameManager : MonoBehaviour
         DataManager inst = DataManager.instance;
         heroManager = GetComponent<HeroManager>();
         enemyManager = GetComponent<EnemyManager>();
+
+        player = heroManager.CreatePlayer();
     }
 
     void Update()

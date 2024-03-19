@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterAnimationEvent : MonoBehaviour
 {
     Character character;
-    void Awake()
+    void Start()
     {
         character = GetComponentInParent<Character>();
     }

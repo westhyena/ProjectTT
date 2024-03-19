@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Resources;
 using UnityEngine;
 
 public class HeroManager : MonoBehaviour
@@ -24,6 +25,8 @@ public class HeroManager : MonoBehaviour
         public string IconName;
     }
 
+    public string playerCharacterId = "10001";
+
     public GameObject[] companionPrefabs;
     public Transform companionRoot;
 
@@ -33,6 +36,20 @@ public class HeroManager : MonoBehaviour
 
     public Player player;
     public float spawnRange = 5.0f;
+
+    public Player CreatePlayer()
+    {
+        CharacterInfo info = DataManager.instance.GetCharacterInfo(playerCharacterId);
+        GameObject prefab = ResourceManager.GetCharacterPrefab(info.prefabKey);
+        GameObject playerObj = Instantiate(
+            prefab,
+            Vector3.zero,
+            Quaternion.Euler(GameManager.instance.characterRotation)
+        );
+        Player player = playerObj.AddComponent<Player>();
+        player.InitializeCharacter(playerCharacterId);
+        return player;
+    }
 
     Hero CreateHero(GameObject prefab)
     {

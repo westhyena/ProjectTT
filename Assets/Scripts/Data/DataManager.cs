@@ -23,7 +23,11 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    Dictionary<string, CharacterInfo> characterMap = new ();
+    readonly Dictionary<string, CharacterInfo> characterMap = new ();
+    public CharacterInfo GetCharacterInfo(string id)
+    {
+        return characterMap.GetValueOrDefault(id, null);
+    }
 
     void Awake()
     {
@@ -55,7 +59,6 @@ public class DataManager : MonoBehaviour
         string filePath = Path.Combine(pathRoot, fileName);
 #if !UNITY_EDITOR && UNITY_ANDROID
         WWW reader = new WWW(filePath);
-        Debug.Log(filePath);
         while (!reader.isDone) {}
         string dataAsJson = reader.text;
 #else

@@ -1,21 +1,16 @@
-using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
-using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class Player : Character
 {
     public float manualEndTime = 1.0f;
     private Vector2 manualMovement = Vector2.zero;
-
-    public GameObject followEffectPrefab;
     GameObject followEffect;
 
     protected override void Awake()
     {
         base.Awake();
-        followEffect = Instantiate(followEffectPrefab, transform);
+        followEffect = Instantiate(EffectManager.instance.followEffectPrefab, transform);
         followEffect.SetActive(false);
 
         HPBarUI hpBarUI = UIManager.instance.CreateHPBar(this.transform);
