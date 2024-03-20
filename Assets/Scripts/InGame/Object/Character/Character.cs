@@ -1,8 +1,6 @@
-using System.Collections;
+
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public abstract class Character : MonoBehaviour
 {

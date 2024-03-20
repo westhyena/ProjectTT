@@ -27,15 +27,25 @@ public class HeroManager : MonoBehaviour
 
     public string playerCharacterId = "10001";
 
-    public GameObject[] companionPrefabs;
+    public string[] companionCharacterIds;
+    CharacterInfo[] companionCharacterInfos;
+
     public Transform companionRoot;
 
     readonly List<Hero> heroList = new();
     public List<Hero> HeroList => heroList;
     public List<Hero> AliveHeroList => heroList.FindAll(hero => !hero.IsDead);
 
-    public Player player;
     public float spawnRange = 5.0f;
+
+    void Start()
+    {
+        companionCharacterInfos = new CharacterInfo[companionCharacterIds.Length];
+        for (int i = 0; i < companionCharacterIds.Length; ++i)
+        {
+            companionCharacterInfos[i] = DataManager.instance.GetCharacterInfo(companionCharacterIds[i]);
+        }
+    }
 
     public Player CreatePlayer()
     {
@@ -51,8 +61,10 @@ public class HeroManager : MonoBehaviour
         return player;
     }
 
-    Hero CreateHero(GameObject prefab)
+    Hero CreateHero(CharacterInfo info)
     {
+        Player player = GameManager.instance.Player;
+        GameObject prefab = ResourceManager.GetCharacterPrefab(info.prefabKey);
         GameObject heroObj = Instantiate(
             prefab,
             player.transform.position,
@@ -67,16 +79,17 @@ public class HeroManager : MonoBehaviour
             0.0f
         );
         heroObj.transform.localRotation = Quaternion.Euler(GameManager.instance.characterRotation);
-        Hero hero = heroObj.GetComponent<Hero>();
+        Hero hero = heroObj.AddComponent<Hero>();
         hero.Initialize(player);
+        hero.InitializeCharacter(info.id);
         heroList.Add(hero);
         return hero;
     }
 
     public Hero CreateHero()
     {
-        // Create a Random hero from companionPrefabs
-        int randomIndex = Random.Range(0, companionPrefabs.Length);
-        return CreateHero(companionPrefabs[randomIndex]);
+        // Create a Random hero
+        int randomIndex = Random.Range(0, companionCharacterInfos.Length); 
+        return CreateHero(companionCharacterInfos[randomIndex]);
     }
 }
