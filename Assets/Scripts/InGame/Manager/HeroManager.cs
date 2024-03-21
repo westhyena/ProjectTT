@@ -29,6 +29,7 @@ public class HeroManager : MonoBehaviour
 
     public string[] companionCharacterIds;
     CharacterInfo[] companionCharacterInfos;
+    public CharacterInfo[] CompanionCharacterInfos => companionCharacterInfos;
 
     public Transform companionRoot;
 

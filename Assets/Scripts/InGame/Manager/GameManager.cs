@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     public float CompanionGauge { get { return companionGauge; } }
     float companionGaugeSpeed = 0.1f;
 
-    int COMPANION_SUMMON_POINT = 1;
+    public int COMPANION_SUMMON_POINT = 1;
 
     float gameTimer = 0.0f;
     public float GameTime { get { return gameTimer; } }

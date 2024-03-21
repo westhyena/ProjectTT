@@ -35,6 +35,7 @@ public abstract class Character : MonoBehaviour
     } }
 
     CharacterInfo characterInfo;
+    public CharacterInfo CharacterInfo { get { return characterInfo; } }
 
     protected Animator animator;
     protected Vector3 animatorScale;

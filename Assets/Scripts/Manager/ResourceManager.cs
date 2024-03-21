@@ -6,4 +6,9 @@ public class ResourceManager
     {
         return Resources.Load<GameObject>($"Character/{name}");
     }
+
+    public static Sprite GetCharacterIcon(string name)
+    {
+        return Resources.Load<Sprite>($"CharacterIcon/{name}");
+    }
 }
