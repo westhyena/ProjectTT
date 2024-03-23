@@ -116,6 +116,19 @@ public abstract class Character : MonoBehaviour
 
         maxHp = hpStat;
         hp = maxHp;
+
+        if (DebugManager.instance.isDebugMode)
+        {
+            GameObject rangeOfTargetObj = Instantiate(
+                DebugManager.instance.circleRangePrefab,
+                Vector3.zero,
+                Quaternion.identity,
+                this.transform
+            );
+            rangeOfTargetObj.transform.localPosition = Vector3.zero;
+            rangeOfTargetObj.transform.localScale = Vector3.one * GameManager.instance.baseColliderWidth * rangeOfTarget * 2;
+            rangeOfTargetObj.GetComponent<SpriteRenderer>().color = Color.red;
+        }
     }
 
     public void Move(Vector2 movement)

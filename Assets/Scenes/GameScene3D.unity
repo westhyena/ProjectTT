@@ -11332,6 +11332,7 @@ GameObject:
   - component: {fileID: 1133609866}
   - component: {fileID: 1133609867}
   - component: {fileID: 1133609868}
+  - component: {fileID: 1133609869}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -11375,6 +11376,7 @@ MonoBehaviour:
   heroFollowSpeed: 50
   enemyAttackCooltime: 3
   characterRotation: {x: -30, y: 0, z: 0}
+  COMPANION_SUMMON_POINT: 1
 --- !u!4 &1133609862
 Transform:
   m_ObjectHideFlags: 0
@@ -11481,6 +11483,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followEffectPrefab: {fileID: 5629332545222375798, guid: 1b723a973dced6c4e9442c63dc019764, type: 3}
+--- !u!114 &1133609869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133609859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c75029765b664bdda59e7a5eafde480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDebugMode: 1
+  circleRangePrefab: {fileID: 573202903070597151, guid: cab996fcc510e4f22b509ae5cd1a13b8, type: 3}
 --- !u!4 &1134163725 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5047553118262099667, guid: 3db6d904588c05f4fa0ba4212c8fb25b, type: 3}
