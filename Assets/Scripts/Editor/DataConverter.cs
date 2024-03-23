@@ -9,7 +9,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Linq;
-using Codice.CM.Common.Serialization;
 
 
 public class DataConverter : MonoBehaviour

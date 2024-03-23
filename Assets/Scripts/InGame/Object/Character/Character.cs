@@ -40,6 +40,7 @@ public abstract class Character : MonoBehaviour
     protected Animator animator;
     protected Vector3 animatorScale;
     protected Collider2D collider2d;
+    protected Rigidbody2D rigidbody2D;
 
     // Data Table에서 가져올 값들.
     public float mspd = 500.0f; 
@@ -85,6 +86,7 @@ public abstract class Character : MonoBehaviour
         this.animator = GetComponentInChildren<Animator>();
         this.animatorScale = animator.transform.localScale;
         this.collider2d = GetComponent<Collider2D>();
+        this.rigidbody2D = GetComponent<Rigidbody2D>();
 
         if (this.collider2d.GetType() == typeof(CircleCollider2D))
         {
@@ -159,10 +161,9 @@ public abstract class Character : MonoBehaviour
             lookingDirection = (movement.x < 0) ? LookDirection.Left : LookDirection.Right;
         }
 
-        transform.position += new Vector3(
+        this.rigidbody2D.position += new Vector2(
             speed * Time.deltaTime * movement.x,
-            speed * Time.deltaTime * movement.y,
-            0.0f
+            speed * Time.deltaTime * movement.y
         );
     }
 
