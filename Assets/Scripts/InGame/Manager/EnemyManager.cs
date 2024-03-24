@@ -1,5 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
@@ -20,11 +20,12 @@ public class EnemyManager : MonoBehaviour
     public GameObject enemyPrefab;
 
     public Transform enemyRoot;
-    readonly List<Enemy> enemyList = new();
-    public List<Enemy> EnemyList => enemyList;
-    public List<Enemy> AliveEnemyList => enemyList.FindAll(enemy => !enemy.IsDead);
 
-    public void CreateEnemy(Vector3 position)
+    readonly Dictionary<int, Enemy> enemyMap = new();
+    public List<Enemy> EnemyList => enemyMap.Values.ToList();
+    public List<Enemy> AliveEnemyList => EnemyList.FindAll(enemy => !enemy.IsDead);
+
+    public Enemy CreateEnemy(Vector3 position)
     {
         Player player = GameManager.instance.Player;
 
@@ -33,6 +34,7 @@ public class EnemyManager : MonoBehaviour
         enemyObj.transform.localRotation = Quaternion.Euler(GameManager.instance.characterRotation);
         Enemy enemy = enemyObj.GetComponent<Enemy>();
         enemy.Initialize(player);
-        enemyList.Add(enemy);
+        enemyMap[enemy.GetInstanceID()] = enemy;
+        return enemy;
     }
 }

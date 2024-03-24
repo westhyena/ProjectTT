@@ -356,11 +356,15 @@ public abstract class Character : MonoBehaviour
 
     protected virtual void UpdateManual() {}
     protected virtual void UpdateFollow() {}
+    protected virtual void OnDead() {
+        gameObject.SetActive(false);
+    }
 
     protected void UpdateDying()
     {
         if (curStateTime > dyingDelay)
         {
+            OnDead();
             ChangeState(State.Dead);
         }
     }

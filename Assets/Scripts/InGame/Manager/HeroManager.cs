@@ -1,6 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Resources;
+using System.Linq;
 using UnityEngine;
 
 public class HeroManager : MonoBehaviour
@@ -33,9 +32,9 @@ public class HeroManager : MonoBehaviour
 
     public Transform companionRoot;
 
-    readonly List<Hero> heroList = new();
-    public List<Hero> HeroList => heroList;
-    public List<Hero> AliveHeroList => heroList.FindAll(hero => !hero.IsDead);
+    readonly Dictionary<int, Hero> heroMap = new();
+    public List<Hero> HeroList => heroMap.Values.ToList();
+    public List<Hero> AliveHeroList => HeroList.FindAll(hero => !hero.IsDead);
 
     public float spawnRange = 5.0f;
 
@@ -83,7 +82,7 @@ public class HeroManager : MonoBehaviour
         Hero hero = heroObj.AddComponent<Hero>();
         hero.Initialize(player);
         hero.InitializeCharacter(info.id);
-        heroList.Add(hero);
+        heroMap[hero.GetInstanceID()] = hero;
         return hero;
     }
 

@@ -57,10 +57,16 @@ public class Hero : Character
         //     Move((followPosition - Position2D).normalized, followSpeed);
         // }
     }
+
     public void FollowPlayer()
     {
         followOffset = Random.insideUnitCircle.normalized * followOffsetRange;
         animator.SetTrigger("CallToArms");
         ChangeState(State.Follow);
+    }
+
+    protected override void OnDead()
+    {
+        base.OnDead();
     }
 }
