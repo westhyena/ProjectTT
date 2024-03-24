@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
@@ -25,14 +26,15 @@ public class EnemyManager : MonoBehaviour
     public List<Enemy> EnemyList => enemyMap.Values.ToList();
     public List<Enemy> AliveEnemyList => EnemyList.FindAll(enemy => !enemy.IsDead);
 
-    public Enemy CreateEnemy(Vector3 position)
+    public Enemy CreateEnemy(CharacterInfo info, Vector3 position)
     {
         Player player = GameManager.instance.Player;
+        GameObject prefab = ResourceManager.GetCharacterPrefab(info.prefabKey);
 
-        GameObject enemyObj = Instantiate(enemyPrefab, position, Quaternion.identity);
+        GameObject enemyObj = Instantiate(prefab, position, Quaternion.identity);
         enemyObj.transform.parent = enemyRoot;
         enemyObj.transform.localRotation = Quaternion.Euler(GameManager.instance.characterRotation);
-        Enemy enemy = enemyObj.GetComponent<Enemy>();
+        Enemy enemy = enemyObj.GetOrAddComponent<Enemy>();
         enemy.Initialize(player);
         enemyMap[enemy.GetInstanceID()] = enemy;
         return enemy;
