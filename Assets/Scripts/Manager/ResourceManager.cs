@@ -11,4 +11,9 @@ public class ResourceManager
     {
         return Resources.Load<Sprite>($"CharacterIcon/{name}");
     }
+
+    public static GameObject GetStagePrefab(string name)
+    {
+        return Resources.Load<GameObject>($"Stage/{name}");
+    }
 }

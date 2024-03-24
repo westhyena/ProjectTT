@@ -33,12 +33,14 @@ public class DataManager : MonoBehaviour
     readonly DataMap<WaveInfo> waveMap = new ();
     public WaveInfo GetWaveInfo(string id)
     {
+        if (id == null) return null;
         return waveMap.GetValueOrDefault(id, null);
     }
 
     readonly DataMap<WaveGroupInfo> waveGroupMap = new ();
     public WaveGroupInfo GetWaveGroupInfo(string id)
     {
+        if (id == null) return null;
         return waveGroupMap.GetValueOrDefault(id, null);
     }
 

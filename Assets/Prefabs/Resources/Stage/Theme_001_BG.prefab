@@ -2189,6 +2189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1742861168187618464}
+  - component: {fileID: 6924773089209373704}
   m_Layer: 0
   m_Name: Theme_001_BG
   m_TagString: Untagged
@@ -2220,6 +2221,31 @@ Transform:
   - {fileID: 1640704239334399236}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6924773089209373704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683228848091182618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c424d04a19c9b432b9e0e9639c09114e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 7699443657093362260}
+  - {fileID: 3550246089871350351}
+  - {fileID: 5134967995296420094}
+  - {fileID: 7897226108005547696}
+  - {fileID: 675806374097549319}
+  - {fileID: 5144698022691340073}
+  - {fileID: 8828545125235953205}
+  - {fileID: 1990818567355898300}
+  - {fileID: 2676775528966592973}
+  - {fileID: 8509219435556014740}
+  - {fileID: 6929860212152174050}
+  - {fileID: 6083056468943130630}
 --- !u!1 &4816897692383958714
 GameObject:
   m_ObjectHideFlags: 0
