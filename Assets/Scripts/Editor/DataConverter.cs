@@ -15,6 +15,7 @@ public class DataConverter : MonoBehaviour
     private static string NOTION_VERSION = "2022-06-28";
 
     private static string CHARACTER_INFO_DATABASE = "7e9bd778c8d340a485aa7a502eb28544";
+    private static string WAVE_INFO_DATABASE = "ea199c438e5b44f8ba9826ee941c4aa7";
     private static string WAVE_GROUP_INFO_DATABASE = "9d942e801ef04543a5924b560ca28416";
     private static string STAGE_INFO_DATABASE = "c94148b20149490ab913824bf675c88a";
 
@@ -23,6 +24,8 @@ public class DataConverter : MonoBehaviour
     {
         Debug.Log("Download data");
         DownloadCharacterData();
+        DownloadWaveData();
+        DownloadWaveGroupData();
         DownloadStageData();
         AssetDatabase.Refresh();
         Debug.Log("Download data done!");
@@ -81,6 +84,14 @@ public class DataConverter : MonoBehaviour
         return typeObj.GetValue("id").ToString();
     }
 
+    static string GetRelationID(JObject propertyObj, string key, Dictionary<string, string> uuidDict)
+    {
+        string uuid = GetRelationUUID(propertyObj, key);
+        if (uuid == null) return null;
+
+        return uuidDict.GetValueOrDefault(uuid, null);
+    }
+
     static JArray DownloadNotionDatabase(string databaseId)
     {
         string url = "https://api.notion.com/v1/databases/" + databaseId + "/query";
@@ -119,6 +130,7 @@ public class DataConverter : MonoBehaviour
 
     static void DownloadCharacterData()
     {
+        Debug.Log("DownloadCharacterData");
         JArray results = DownloadNotionDatabase(CHARACTER_INFO_DATABASE);
         JArray ary = new();
         foreach (JObject obj in results.Cast<JObject>())
@@ -146,8 +158,60 @@ public class DataConverter : MonoBehaviour
         ConvertJArrayToCSV(ary, path);
     }
 
+    static void DownloadWaveData()
+    {
+        Debug.Log("DownloadWaveData");
+        JArray results = DownloadNotionDatabase(WAVE_INFO_DATABASE);
+        Dictionary<string, string> characterDict = GetUUIDDictionary(CHARACTER_INFO_DATABASE);
+        JArray ary = new();
+        foreach (JObject obj in results.Cast<JObject>())
+        {
+            JObject newObj = new();
+
+            JObject propertyObj = obj.GetValue("properties") as JObject;
+            string id = GetString(propertyObj, "id");
+            if (id == null) continue;
+
+            newObj.Add("id", id);
+            newObj.Add("startTime", GetInteger(propertyObj, "startTime"));
+            newObj.Add("monsterId", GetRelationID(propertyObj, "monsterId", characterDict));
+            newObj.Add("totalCount", GetInteger(propertyObj, "totalCount"));
+
+            ary.Add(newObj);
+        }
+        string path = Path.Combine(Application.streamingAssetsPath, "WaveData.csv");
+        ConvertJArrayToCSV(ary, path);
+    }
+
+    static void DownloadWaveGroupData()
+    {
+        Debug.Log("DownloadWaveGroupData");
+        JArray results = DownloadNotionDatabase(WAVE_GROUP_INFO_DATABASE);
+        Dictionary<string, string> waveDict = GetUUIDDictionary(WAVE_INFO_DATABASE);
+        JArray ary = new();
+        foreach (JObject obj in results.Cast<JObject>())
+        {
+            JObject newObj = new();
+            
+            JObject propertyObj = obj.GetValue("properties") as JObject;
+            string id = GetString(propertyObj, "id");
+            if (id == null) continue;
+
+            newObj.Add("id", id);
+            newObj.Add("wave01", GetRelationID(propertyObj, "wave01", waveDict));
+            newObj.Add("wave02", GetRelationID(propertyObj, "wave02", waveDict));
+            newObj.Add("wave03", GetRelationID(propertyObj, "wave03", waveDict));
+            newObj.Add("wave04", GetRelationID(propertyObj, "wave04", waveDict));
+
+            ary.Add(newObj);
+        }
+        string path = Path.Combine(Application.streamingAssetsPath, "WaveGroupData.csv");
+        ConvertJArrayToCSV(ary, path);
+    }
+
     static void DownloadStageData()
     {
+        Debug.Log("DownloadStageData");
         JArray results = DownloadNotionDatabase(STAGE_INFO_DATABASE);
         Dictionary<string, string> waveGroupDict = GetUUIDDictionary(WAVE_GROUP_INFO_DATABASE);
         JArray ary = new();
@@ -159,34 +223,12 @@ public class DataConverter : MonoBehaviour
             string id = GetString(propertyObj, "id");
             if (id == null) continue;
 
-            string phase01waveGroupUUID = GetRelationUUID(propertyObj, "phase01waveGroup");
-            string phase02waveGroupUUID = GetRelationUUID(propertyObj, "phase02waveGroup");
-            string phase03waveGroupUUID = GetRelationUUID(propertyObj, "phase03waveGroup");
-            string phase04waveGroupUUID = GetRelationUUID(propertyObj, "phase04waveGroup");
-            string phase05waveGroupUUID = GetRelationUUID(propertyObj, "phase05waveGroup");
-
             newObj.Add("id", id);
-            newObj.Add(
-                "phase01waveGroup",
-                waveGroupDict.GetValueOrDefault(phase01waveGroupUUID, null)
-            );
-            newObj.Add(
-                "phase02waveGroup",
-                waveGroupDict.GetValueOrDefault(phase02waveGroupUUID, null)
-            );
-            newObj.Add(
-                "phase03waveGroup",
-                waveGroupDict.GetValueOrDefault(phase03waveGroupUUID, null)
-            );
-            newObj.Add(
-                "phase04waveGroup",
-                waveGroupDict.GetValueOrDefault(phase04waveGroupUUID, null)
-            );
-            newObj.Add(
-                "phase05waveGroup",
-                waveGroupDict.GetValueOrDefault(phase05waveGroupUUID, null)
-            );
-
+            newObj.Add("phase01waveGroup", GetRelationID(propertyObj, "phase01waveGroup", waveGroupDict));
+            newObj.Add("phase02waveGroup", GetRelationID(propertyObj, "phase02waveGroup", waveGroupDict));
+            newObj.Add("phase03waveGroup", GetRelationID(propertyObj, "phase03waveGroup", waveGroupDict));
+            newObj.Add("phase04waveGroup", GetRelationID(propertyObj, "phase04waveGroup", waveGroupDict));
+            newObj.Add("phase05waveGroup", GetRelationID(propertyObj, "phase05waveGroup", waveGroupDict));
             newObj.Add("stagePrefab", GetString(propertyObj, "stagePrefab"));
 
             ary.Add(newObj);

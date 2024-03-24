@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,7 +39,7 @@ public abstract class Character : MonoBehaviour
     protected Animator animator;
     protected Vector3 animatorScale;
     protected Collider2D collider2d;
-    protected Rigidbody2D rigidbody2D;
+    protected new Rigidbody2D rigidbody2D;
 
     // Data Table에서 가져올 값들.
     public float mspd = 500.0f; 

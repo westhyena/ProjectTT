@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Hero : Character
@@ -11,8 +9,6 @@ public class Hero : Character
 
     Vector2 followOffset = Vector2.zero;
     float followOffsetRange = 5.0f;
-    float followDoneDistance = 0.1f;
-    float followSpeed = 50.0f;
 
     protected override void Awake()
     {
@@ -42,7 +38,6 @@ public class Hero : Character
     {
         attackCooltime = GameManager.instance.heroAttackCooltime;
         followOffsetRange = GameManager.instance.heroFollowOffsetRange;
-        followSpeed = GameManager.instance.heroFollowSpeed;
     }
 
     protected override void UpdateFollow()
