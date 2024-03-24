@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -107,7 +106,6 @@ public class WaveManager : MonoBehaviour
         waveInfoList.Add(new WaveInfo(new WaveMonsterInfo[] {
             new(0, 1.0f, 2.0f, 30, 10),
         }, 60.0f));
-        
     }
 
     void CheckWave()
