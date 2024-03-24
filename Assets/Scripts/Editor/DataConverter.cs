@@ -17,12 +17,14 @@ public class DataConverter : MonoBehaviour
     private static string NOTION_VERSION = "2022-06-28";
 
     private static string CHARACTER_INFO_DATABASE = "7e9bd778c8d340a485aa7a502eb28544";
+    private static string STAGE_INFO_DATABASE = "c94148b20149490ab913824bf675c88a";
 
     [MenuItem("Data Manager/Download")]
     static void DownloadData()
     {
         Debug.Log("Download data");
         DownloadCharacterData();
+        DownloadStageData();
         AssetDatabase.Refresh();
         Debug.Log("Download data done!");
     }
@@ -93,7 +95,7 @@ public class DataConverter : MonoBehaviour
     {
         JArray results = DownloadNotionDatabase(CHARACTER_INFO_DATABASE);
         JArray ary = new();
-        foreach (JObject obj in results)
+        foreach (JObject obj in results.Cast<JObject>())
         {
             JObject newObj = new();
 
@@ -108,7 +110,7 @@ public class DataConverter : MonoBehaviour
             newObj.Add("baseMaxHP", GetInteger(propertyObj, "baseMaxHP"));
             newObj.Add("baseAttack", GetInteger(propertyObj, "baseAttack"));
             newObj.Add("baseAtkSpd", GetInteger(propertyObj, "baseAtkSpd"));
-            newObj.Add("basePDef", GetInteger(propertyObj, "basePDef"));
+            newObj.Add("baseDefense", GetInteger(propertyObj, "baseDefense"));
             newObj.Add("prefabKey", GetString(propertyObj, "prefabKey"));
             newObj.Add("iconSprite", GetString(propertyObj, "iconSprite"));
 
@@ -116,6 +118,24 @@ public class DataConverter : MonoBehaviour
         }
         string path = Path.Combine(Application.streamingAssetsPath, "CharacterData.csv");
         ConvertJArrayToCSV(ary, path);
+    }
+
+    static void DownloadStageData()
+    {
+        JArray results = DownloadNotionDatabase(STAGE_INFO_DATABASE);
+        JArray ary = new();
+        foreach (JObject obj in results.Cast<JObject>())
+        {
+            JObject newObj = new();
+            Debug.Log(obj);
+            
+            JObject propertyObj = obj.GetValue("properties") as JObject;
+            string id = GetString(propertyObj, "id");
+            if (id == null) continue;
+
+            newObj.Add("id", id);
+            Debug.Log(propertyObj.GetValue("phase01waveGroup"));
+        }
     }
 }
 #endif

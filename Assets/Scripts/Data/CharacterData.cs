@@ -36,7 +36,7 @@ public class CharacterInfo
     public float baseMaxHP;
     public float baseAttack;
     public float baseAtkSpd;
-    public float basePDef;
+    public float baseDefense;
     public string prefabKey;
     public string iconSprite;
     
@@ -50,7 +50,7 @@ public class CharacterInfo
         baseMaxHP = float.Parse(csvGrid[idx++, rowidx]);
         baseAttack = float.Parse(csvGrid[idx++, rowidx]);
         baseAtkSpd = float.Parse(csvGrid[idx++, rowidx]);
-        basePDef = float.Parse(csvGrid[idx++, rowidx]);
+        baseDefense = float.Parse(csvGrid[idx++, rowidx]);
         prefabKey = csvGrid[idx++, rowidx];
         iconSprite = csvGrid[idx++, rowidx];
     }

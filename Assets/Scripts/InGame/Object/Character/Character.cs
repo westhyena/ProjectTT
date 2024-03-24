@@ -109,7 +109,7 @@ public abstract class Character : MonoBehaviour
             this.mspd = characterInfo.baseMSpd;
             this.hpStat = characterInfo.baseMaxHP;
             this.attackStat = characterInfo.baseAttack;
-            this.defenceStat = characterInfo.basePDef;
+            this.defenceStat = characterInfo.baseDefense;
         }
 
         movementSpeed = GameManager.instance.baseColliderWidth * 1000.0f / mspd;
