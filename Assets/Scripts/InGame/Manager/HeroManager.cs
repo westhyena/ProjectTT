@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HeroManager : MonoBehaviour
@@ -79,7 +80,7 @@ public class HeroManager : MonoBehaviour
             0.0f
         );
         heroObj.transform.localRotation = Quaternion.Euler(GameManager.instance.characterRotation);
-        Hero hero = heroObj.AddComponent<Hero>();
+        Hero hero = heroObj.GetOrAddComponent<Hero>();
         hero.Initialize(player);
         hero.InitializeCharacter(info.id);
         heroMap[hero.GetInstanceID()] = hero;

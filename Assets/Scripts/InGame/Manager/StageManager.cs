@@ -14,7 +14,8 @@ public class StageManager : MonoBehaviour
     [Serializable]
     public class Wave
     {
-        public WaveInfo waveInfo;
+        WaveInfo waveInfo;
+        CharacterInfo characterInfo;
         int eachCount;
         int createdCount = 0;
         float intervalTimer = 0.0f;
@@ -22,6 +23,7 @@ public class StageManager : MonoBehaviour
         public Wave(WaveInfo waveInfo)
         {
             this.waveInfo = waveInfo;
+            this.characterInfo = DataManager.instance.GetCharacterInfo(waveInfo.monsterId);
             float summonCount = WAVE_SUMMON_END_TIME / WAVE_SUMMON_INTERVAL;
             this.eachCount = Mathf.CeilToInt(waveInfo.totalCount / summonCount);
         }
@@ -31,14 +33,16 @@ public class StageManager : MonoBehaviour
             int createCount = Math.Min(eachCount, waveInfo.totalCount - createdCount);
             for (int i = 0; i < createCount; ++i)
             {
-                enemyManager.CreateEnemy(spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)].position);
+                enemyManager.CreateEnemy(
+                    characterInfo,
+                    spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)].position
+                );
             }
             createdCount += createCount;
         }
 
         public bool Update(float deltaTime, EnemyManager enemyManager, Transform[] spawnPoints)
         {
-            Debug.Log($"EACH UPDATE {createdCount} {waveInfo.totalCount}");
             if (createdCount >= waveInfo.totalCount) return true;
 
             intervalTimer += deltaTime;
@@ -97,7 +101,6 @@ public class StageManager : MonoBehaviour
 
             bool killedAll = isSpawnEnd && enemyManager.AliveEnemyList.Count == 0;
             bool timeEnd = timer > endTime;
-            Debug.Log($"WAVE UPDATE {isSpawnEnd} {enemyManager.AliveEnemyList.Count} {timer} {endTime}");
             return killedAll || timeEnd;
         }
     }
