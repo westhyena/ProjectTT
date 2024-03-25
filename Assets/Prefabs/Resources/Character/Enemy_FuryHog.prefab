@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_FuryHog
       objectReference: {fileID: 0}
+    - target: {fileID: 4127686660675972606, guid: d349c36a819828f419ed9d4a889bfffe, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6871234303472349896, guid: d349c36a819828f419ed9d4a889bfffe, type: 3}
       propertyPath: mspd
       value: 600
