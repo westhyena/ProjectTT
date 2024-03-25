@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5478216276014279685, guid: 33f085a90a3dac943bb8752ff275926e, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6389409357357589525, guid: 33f085a90a3dac943bb8752ff275926e, type: 3}
       propertyPath: m_Name
       value: Mercenary_Bomber
