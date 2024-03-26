@@ -14,6 +14,8 @@ public class DataConverter : MonoBehaviour
     private static string NOTION_API_KEY = "secret_C3hToHmy8AH1RQvxN8E2DbWpB54jJcz2hfG74laOmz9";
     private static string NOTION_VERSION = "2022-06-28";
 
+    private static string CONST_DATABASE = "8a7b2a32f5744082b60d4f960ffab47a";
+
     private static string CHARACTER_INFO_DATABASE = "7e9bd778c8d340a485aa7a502eb28544";
     private static string WAVE_INFO_DATABASE = "ea199c438e5b44f8ba9826ee941c4aa7";
     private static string WAVE_GROUP_INFO_DATABASE = "9d942e801ef04543a5924b560ca28416";
@@ -23,6 +25,7 @@ public class DataConverter : MonoBehaviour
     static void DownloadData()
     {
         Debug.Log("Download data");
+        DownloadConstData();
         DownloadCharacterData();
         DownloadWaveData();
         DownloadWaveGroupData();
@@ -126,6 +129,28 @@ public class DataConverter : MonoBehaviour
             uuidDict[uuid] = id;
         }
         return uuidDict;
+    }
+
+    static void DownloadConstData()
+    {
+        Debug.Log("DownloadConstData");
+        JArray results = DownloadNotionDatabase(CONST_DATABASE);
+        JArray ary = new();
+        foreach (JObject obj in results.Cast<JObject>())
+        {
+            JObject newObj = new();
+
+            JObject propertyObj = obj.GetValue("properties") as JObject;
+            string constName = GetString(propertyObj, "constName");
+            if (constName == null) continue;
+            
+            newObj.Add("constName", constName);
+            newObj.Add("value", GetString(propertyObj, "value"));
+
+            ary.Add(newObj);
+        }
+        string path = Path.Combine(Application.streamingAssetsPath, "ConstData.csv");
+        ConvertJArrayToCSV(ary, path);
     }
 
     static void DownloadCharacterData()

@@ -24,6 +24,8 @@ public class DataManager : MonoBehaviour
 
     public class DataMap<T>: Dictionary<string, T> {}
 
+    readonly DataMap<string> constMap = new ();
+
     readonly DataMap<CharacterInfo> characterMap = new ();
     public CharacterInfo GetCharacterInfo(string id)
     {
@@ -58,10 +60,24 @@ public class DataManager : MonoBehaviour
 
     void ReadData()
     {
+        ReadConstData();
         ReadCharacterData();
         ReadWaveData();
         ReadWaveGroupData();
         ReadStageData();
+    }
+
+    void ReadConstData()
+    {
+        constMap.Clear();
+        ConstData loadedData = new(ReadCSV("ConstData.csv"));
+        foreach (ConstInfo item in loadedData.items)
+        {
+            if (item == null || string.IsNullOrEmpty(item.constName))
+                continue;
+
+            constMap.Add(item.constName, item.value);
+        }
     }
 
     void ReadCharacterData()
