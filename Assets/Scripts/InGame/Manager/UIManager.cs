@@ -17,13 +17,20 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    protected GameObject hpBarPrefab;
+    [SerializeField]
+    GameObject hpBarPrefab;
     public HPBarUI CreateHPBar(Transform parent)
     {
-        if (null == hpBarPrefab)
-        {
-            hpBarPrefab = Resources.Load<GameObject>("UI/HPBar");
-        }
         return Instantiate(hpBarPrefab, parent).GetComponent<HPBarUI>();
     }
+
+    [SerializeField]
+    GameObject playerHPBarPrefab;
+    public HPBarUI CreatePlayerHPBar(Transform parent)
+    {
+        return Instantiate(playerHPBarPrefab, parent).GetComponent<HPBarUI>();
+    }
+
+    [SerializeField]
+    GameObject damagePrefab;
 }

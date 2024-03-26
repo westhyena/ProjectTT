@@ -13,7 +13,7 @@ public class Player : Character
         followEffect = Instantiate(EffectManager.instance.followEffectPrefab, transform);
         followEffect.SetActive(false);
 
-        HPBarUI hpBarUI = UIManager.instance.CreateHPBar(this.transform);
+        HPBarUI hpBarUI = UIManager.instance.CreatePlayerHPBar(this.transform);
         hpBarUI.Initialize(this);
     }
 
