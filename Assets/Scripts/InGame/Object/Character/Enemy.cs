@@ -28,4 +28,12 @@ public class Enemy : Character
     {
         attackCooltime = GameManager.instance.enemyAttackCooltime;
     }
+
+    protected override void OnDamage(float damage)
+    {
+        base.OnDamage(damage);
+
+        UIManager.instance.CreateDamageUI(transform.position).Initialize(damage);
+
+    }
 }

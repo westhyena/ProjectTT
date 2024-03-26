@@ -318,6 +318,8 @@ public abstract class Character : MonoBehaviour
         projectileComponent.Initialize(this, target);
     }
 
+    protected virtual void OnDamage(float damage) {}
+
     public void Damage(float attackVal)
     {
         if (hp <= 0)
@@ -333,11 +335,12 @@ public abstract class Character : MonoBehaviour
             criticalFactor = GameManager.instance.criticalFactor;
         }
 
-        float damage = attackVal * criticalFactor * (
+        float damage = Mathf.Ceil(attackVal * criticalFactor * (
             GameManager.instance.defenceFactor1 / (
                 GameManager.instance.defenceFactor1 + defenceStat * GameManager.instance.defenceFactor2
             ) * GameManager.instance.defenceFactor2
-        );
+        ));
+        OnDamage(damage);
 
         animator.SetTrigger("DAMAGE");
         hp -= damage;

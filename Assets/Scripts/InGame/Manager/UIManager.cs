@@ -33,4 +33,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     GameObject damagePrefab;
+    public DamageUI CreateDamageUI(Vector3 position)
+    {
+        return Instantiate(damagePrefab, position, Quaternion.identity).GetComponent<DamageUI>();
+    }
 }
