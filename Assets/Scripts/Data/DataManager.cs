@@ -25,6 +25,10 @@ public class DataManager : MonoBehaviour
     public class DataMap<T>: Dictionary<string, T> {}
 
     readonly DataMap<string> constMap = new ();
+    public string GetConstValue(string constName)
+    {
+        return constMap.GetValueOrDefault(constName, null);
+    }
 
     readonly DataMap<CharacterInfo> characterMap = new ();
     public CharacterInfo GetCharacterInfo(string id)

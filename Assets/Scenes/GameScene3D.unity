@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2b54a8a4972474e9986bb5521b0baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  needPointText: {fileID: 628908032}
 --- !u!95 &23497693
 Animator:
   serializedVersion: 5
@@ -5838,7 +5839,6 @@ MonoBehaviour:
   heroFollowSpeed: 50
   enemyAttackCooltime: 3
   characterRotation: {x: -30, y: 0, z: 0}
-  COMPANION_SUMMON_POINT: 1
 --- !u!4 &1133609862
 Transform:
   m_ObjectHideFlags: 0

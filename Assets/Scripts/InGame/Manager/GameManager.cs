@@ -49,7 +49,11 @@ public class GameManager : MonoBehaviour
     public float CompanionGauge { get { return companionGauge; } }
     float companionGaugeSpeed = 0.1f;
 
-    public int COMPANION_SUMMON_POINT = 1;
+    int companionPointPerCycle = 1;
+
+    int companionSummonPoint = 20;
+    public int CompanionSummonPoint { get { return companionSummonPoint; } }
+    int companionSummonPointIncrease = 1;
 
     float gameTimer = 0.0f;
     public float GameTime { get { return gameTimer; } }
@@ -61,6 +65,14 @@ public class GameManager : MonoBehaviour
         enemyManager = GetComponent<EnemyManager>();
 
         player = heroManager.CreatePlayer();
+
+        float pointCycle = float.Parse(DataManager.instance.GetConstValue("BATTLE_MERCENARY_POINT_CYCLE"));
+        companionGaugeSpeed = 1000.0f / pointCycle;
+
+        companionPointPerCycle = int.Parse(DataManager.instance.GetConstValue("BATTLE_MERCENARY_POINT_GET_PER_CYCLE"));
+
+        companionSummonPoint = int.Parse(DataManager.instance.GetConstValue("BATTLE_MERCENARY_SUMMON_FIRST_POINT"));
+        companionSummonPointIncrease = int.Parse(DataManager.instance.GetConstValue("BATTLE_MERCENARY_SUMMON_POINT_INCREASE"));
     }
 
     void Update()
@@ -69,7 +81,7 @@ public class GameManager : MonoBehaviour
         if (companionGauge >= 1.0f)
         {
             companionGauge = 0.0f;
-            companionPoints++;
+            companionPoints += companionPointPerCycle;
         }
 
         gameTimer += Time.deltaTime;
@@ -77,9 +89,10 @@ public class GameManager : MonoBehaviour
 
     public void SummonCompanion()
     {
-        if (companionPoints >= COMPANION_SUMMON_POINT)
+        if (companionPoints >= companionSummonPoint)
         {
-            companionPoints -= COMPANION_SUMMON_POINT;
+            companionPoints -= companionSummonPoint;
+            companionSummonPoint += companionSummonPointIncrease;
             heroManager.CreateHero();
         }        
     }

@@ -23,7 +23,7 @@ public class CompanionUI : MonoBehaviour
     {
         this.characterInfo = characterInfo;
         image.sprite = ResourceManager.GetCharacterIcon(characterInfo.iconSprite);;
-        needPointText.text = GameManager.instance.COMPANION_SUMMON_POINT.ToString();
+        needPointText.text = 20.ToString();
         levelText.text = 1.ToString();
     }
 
