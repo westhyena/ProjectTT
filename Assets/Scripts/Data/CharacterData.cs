@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 [Serializable]
 public class CharacterData
@@ -14,8 +15,9 @@ public class CharacterData
             {
                 items[i] = new CharacterInfo(csvGrid, i + 1);
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Debug.LogError($"CharacterData Error: {e.Message}");
                 items[i] = null;
             }
         }
@@ -52,6 +54,8 @@ public class CharacterInfo
         prefabKey = csvGrid[idx++, rowidx];
         iconSprite = csvGrid[idx++, rowidx];
         normalAtk = csvGrid[idx++, rowidx];
-        skillIDs = csvGrid[idx++, rowidx].Split("|");
+
+        string skillStr = csvGrid[idx++, rowidx];
+        skillIDs = skillStr == null ? new string[0] : skillStr.Split("|");
     }
 }

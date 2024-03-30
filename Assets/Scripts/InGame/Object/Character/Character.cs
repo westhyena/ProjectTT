@@ -36,6 +36,8 @@ public abstract class Character : MonoBehaviour
 
     CharacterInfo characterInfo;
     public CharacterInfo CharacterInfo { get { return characterInfo; } }
+    SkillInfo normalSkillInfo;
+    GameObject normalSkillPrefab;
 
     protected Animator animator;
     protected string[] attackTriggers;
@@ -109,6 +111,11 @@ public abstract class Character : MonoBehaviour
     public void InitializeCharacter(string characterId)
     {
         characterInfo = DataManager.instance.GetCharacterInfo(characterId);
+        normalSkillInfo = DataManager.instance.GetSkillInfo(characterInfo.normalAtk);
+        if (normalSkillInfo.atkAnimation != null)
+        {
+            normalSkillPrefab = ResourceManager.GetSkillPrefab(normalSkillInfo.atkAnimation);
+        }
     }
 
     protected void Start()
@@ -200,6 +207,11 @@ public abstract class Character : MonoBehaviour
     {
         state = newState;
         curStateTime = 0.0f;
+
+        if (newState == State.Attack)
+        {
+            OnStartAttack();
+        }
     }
 
     protected virtual void UpdateVariable()
@@ -250,14 +262,27 @@ public abstract class Character : MonoBehaviour
         {
             ChangeState(State.Attack);
             // 바로 공격하게
-            string triggerName = attackTriggers[Random.Range(0, attackTriggers.Length)];
-            animator.SetTrigger(triggerName);
             curStateTime = float.MaxValue;
         }
         else
         {
             Vector3 direction = (target.Position2D - Position2D).normalized;
             Move(direction);
+        }
+    }
+
+    void OnStartAttack()
+    {
+        string triggerName = attackTriggers[Random.Range(0, attackTriggers.Length)];
+        animator.SetTrigger(triggerName);
+        if (normalSkillPrefab != null)
+        {
+            GameObject skillObj = Instantiate(
+                normalSkillPrefab,
+                transform.position,
+                Quaternion.identity,
+                this.transform
+            );
         }
     }
 
@@ -277,7 +302,6 @@ public abstract class Character : MonoBehaviour
             }
             else
             {
-                animator.SetTrigger("attack");
                 ChangeState(State.Attack);
             }
         }

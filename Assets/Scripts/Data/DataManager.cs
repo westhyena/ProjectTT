@@ -24,34 +24,44 @@ public class DataManager : MonoBehaviour
 
     public class DataMap<T>: Dictionary<string, T> {}
 
+    private T GetValueFromMap<T>(DataMap<T> map, string key)
+    {
+        if (map.TryGetValue(key, out T value))
+        {
+            return value;
+        }
+        Debug.LogWarning($"Not found data: {key} {typeof(T).ToString()}");
+        return default(T);
+    }
+
     readonly DataMap<string> constMap = new ();
     public string GetConstValue(string constName)
     {
-        return constMap.GetValueOrDefault(constName, null);
+        return GetValueFromMap(constMap, constName);
     }
 
     readonly DataMap<AttackTypeInfo> attackTypeMap = new ();
     public AttackTypeInfo GetAttackTypeInfo(string id)
     {
-        return attackTypeMap.GetValueOrDefault(id, null);
+        return GetValueFromMap(attackTypeMap, id);
     }
 
     readonly DataMap<CharacterInfo> characterMap = new ();
     public CharacterInfo GetCharacterInfo(string id)
     {
-        return characterMap.GetValueOrDefault(id, null);
+        return GetValueFromMap(characterMap, id);
     }
 
     readonly DataMap<SkillInfo> skillMap = new ();
     public SkillInfo GetSkillInfo(string id)
     {
-        return skillMap.GetValueOrDefault(id, null);
+        return GetValueFromMap(skillMap, id);
     }
 
     readonly DataMap<ProjectileInfo> projectileMap = new ();
     public ProjectileInfo GetProjectileInfo(string id)
     {
-        return projectileMap.GetValueOrDefault(id, null);
+        return GetValueFromMap(projectileMap, id);
     }
 
     readonly List<CharacterLevelInfo> outgameLevelList = new ();
@@ -62,20 +72,20 @@ public class DataManager : MonoBehaviour
     public WaveInfo GetWaveInfo(string id)
     {
         if (id == null) return null;
-        return waveMap.GetValueOrDefault(id, null);
+        return GetValueFromMap(waveMap, id);
     }
 
     readonly DataMap<WaveGroupInfo> waveGroupMap = new ();
     public WaveGroupInfo GetWaveGroupInfo(string id)
     {
         if (id == null) return null;
-        return waveGroupMap.GetValueOrDefault(id, null);
+        return GetValueFromMap(waveGroupMap, id);
     }
 
     readonly DataMap<StageInfo> stageMap = new ();
     public StageInfo GetStageInfo(string id)
     {
-        return stageMap.GetValueOrDefault(id, null);
+        return GetValueFromMap(stageMap, id);
     }
 
     void Awake()
@@ -116,6 +126,7 @@ public class DataManager : MonoBehaviour
         CharacterData loadedData = new(ReadCSV("CharacterData.csv"));
         foreach (CharacterInfo item in loadedData.items)
         {
+            Debug.Log(item);
             if (item == null || string.IsNullOrEmpty(item.id))
                 continue;
 
