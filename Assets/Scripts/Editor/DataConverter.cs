@@ -189,6 +189,7 @@ public class DataConverter : MonoBehaviour
     {
         Debug.Log("DownloadCharacterData");
         JArray results = DownloadNotionDatabase(CHARACTER_INFO_DATABASE);
+        Dictionary<string, string> skillDict = GetUUIDDictionary(SKILL_INFO_DATABASE);
         JArray ary = new();
         foreach (JObject obj in results.Cast<JObject>())
         {
@@ -208,6 +209,16 @@ public class DataConverter : MonoBehaviour
             newObj.Add("baseDefense", GetInteger(propertyObj, "baseDefense"));
             newObj.Add("prefabKey", GetString(propertyObj, "prefabKey"));
             newObj.Add("iconSprite", GetString(propertyObj, "iconSprite"));
+            newObj.Add("normalAtk", GetRelationID(propertyObj, "normalAtk", skillDict));
+            
+            JObject skillIDObj = propertyObj.GetValue("skill_ID") as JObject;
+            JArray typeAry = skillIDObj.GetValue("relation") as JArray;
+            List<string> skillIDList = new ();
+            foreach (JObject typeObj in typeAry.Cast<JObject>())
+            {
+                skillIDList.Add(skillDict[typeObj.GetValue("id").ToString()]);
+            }
+            newObj.Add("skill_ID", string.Join("|", skillIDList));
 
             ary.Add(newObj);
         }
