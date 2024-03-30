@@ -19,6 +19,8 @@ public class DataConverter : MonoBehaviour
     private static readonly string CHARACTER_INFO_DATABASE = "7e9bd778c8d340a485aa7a502eb28544";
     private static readonly string ATTACK_TYPE_DATABASE = "c1251a8f05a74a9db70534afe25663bd";
     private static readonly string ATTACK_ATTRIBUTE_DATEBASE = "cdebc8bb07e04a67954695971beef66c";
+    private static readonly string CHATACTER_LEVEL_INFO_DATABASE = "2ac8a738d91046c1898d54b238305886";
+
     private static readonly string WAVE_INFO_DATABASE = "ea199c438e5b44f8ba9826ee941c4aa7";
     private static readonly string WAVE_GROUP_INFO_DATABASE = "9d942e801ef04543a5924b560ca28416";
     private static readonly string STAGE_INFO_DATABASE = "c94148b20149490ab913824bf675c88a";
@@ -30,6 +32,7 @@ public class DataConverter : MonoBehaviour
         DownloadConstData();
         DownloadCharacterData();
         DownloadAttackTypeData();
+        DownloadCharacterLevelData();
         DownloadWaveData();
         DownloadWaveGroupData();
         DownloadStageData();
@@ -232,6 +235,33 @@ public class DataConverter : MonoBehaviour
             ary.Add(newObj);
         }
         SaveToCsv(ary, "AttackTypeData.csv");
+    }
+
+    static void DownloadCharacterLevelData()
+    {
+        Debug.Log("DownloadCharacterLevelData");
+        JArray results = DownloadNotionDatabase(CHATACTER_LEVEL_INFO_DATABASE);
+        JArray ary = new();
+        foreach (JObject obj in results.Cast<JObject>())
+        {
+            JObject newObj = new();
+
+            JObject propertyObj = obj.GetValue("properties") as JObject;
+            string id = GetString(propertyObj, "id");
+            if (id == null) continue;
+
+            newObj.Add("id", id);
+            newObj.Add("levelType", GetInteger(propertyObj, "levelType"));
+            newObj.Add("level", GetInteger(propertyObj, "level"));
+            newObj.Add("requiredExp", GetInteger(propertyObj, "requiredExp"));
+            newObj.Add("atkMultiple", GetInteger(propertyObj, "atkMultiple"));
+            newObj.Add("atkSpdMultiple", GetInteger(propertyObj, "atkSpdMultiple"));
+            newObj.Add("defMultiple", GetInteger(propertyObj, "defMultiple"));
+            newObj.Add("maxHPMultiple", GetInteger(propertyObj, "maxHPMultiple"));
+
+            ary.Add(newObj);
+        }
+        SaveToCsv(ary, "CharacterLevelData.csv");
     }
 
     static void DownloadWaveData()
