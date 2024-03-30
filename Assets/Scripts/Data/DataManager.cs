@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class DataManager : MonoBehaviour
 {
@@ -42,6 +44,10 @@ public class DataManager : MonoBehaviour
         return characterMap.GetValueOrDefault(id, null);
     }
 
+    readonly List<CharacterLevelInfo> outgameLevelList = new ();
+    readonly List<CharacterLevelInfo> playerLevelList = new ();
+    readonly List<CharacterLevelInfo> companionLevelList = new ();
+
     readonly DataMap<WaveInfo> waveMap = new ();
     public WaveInfo GetWaveInfo(string id)
     {
@@ -72,6 +78,8 @@ public class DataManager : MonoBehaviour
     {
         ReadConstData();
         ReadCharacterData();
+        ReadAttackTypeData();
+        ReadCharacterLevelData();
         ReadWaveData();
         ReadWaveGroupData();
         ReadStageData();
@@ -101,6 +109,49 @@ public class DataManager : MonoBehaviour
 
             characterMap.Add(item.id, item);
         }
+    }
+
+    void ReadAttackTypeData()
+    {
+        attackTypeMap.Clear();
+        AttackTypeData loadedData = new(ReadCSV("AttackTypeData.csv"));
+        foreach (AttackTypeInfo item in loadedData.items)
+        {
+            if (item == null || string.IsNullOrEmpty(item.id))
+                continue;
+
+            attackTypeMap.Add(item.id, item);
+        }
+    }
+
+    void ReadCharacterLevelData()
+    {
+        outgameLevelList.Clear();
+        playerLevelList.Clear();
+        companionLevelList.Clear();
+        CharacterLevelData loadedData = new(ReadCSV("CharacterLevelData.csv"));
+        foreach (CharacterLevelInfo item in loadedData.items)
+        {
+            if (item == null || string.IsNullOrEmpty(item.id))
+                continue;
+
+            if (item.levelType == 0)
+            {
+                outgameLevelList.Add(item);
+            }
+            else if (item.levelType == 1)
+            {
+                playerLevelList.Add(item);
+            }
+            else if (item.levelType == 2)
+            {
+                companionLevelList.Add(item);
+            }
+        }
+
+        outgameLevelList.Sort((a, b) => a.level - b.level);
+        playerLevelList.Sort((a, b) => a.level - b.level);
+        companionLevelList.Sort((a, b) => a.level - b.level);
     }
 
     void ReadWaveData()

@@ -19,9 +19,16 @@ public class DataConverter : MonoBehaviour
     private static readonly string CHARACTER_INFO_DATABASE = "7e9bd778c8d340a485aa7a502eb28544";
     private static readonly string ATTACK_TYPE_DATABASE = "c1251a8f05a74a9db70534afe25663bd";
     private static readonly string ATTACK_ATTRIBUTE_DATEBASE = "cdebc8bb07e04a67954695971beef66c";
+    private static readonly string CHATACTER_LEVEL_INFO_DATABASE = "2ac8a738d91046c1898d54b238305886";
+    private static readonly string SKILL_INFO_DATABASE = "0411623f577541aaa892f39dc63417f3";
+    private static readonly string PROJECTILE_INFO_DATABASE = "fccffcb858874ddf89e955e532e438db";
+    private static readonly string EFFECT_INFO_DATABASE = "d140ce1493e443ea85f09aaa1b56f45e";
+
     private static readonly string WAVE_INFO_DATABASE = "ea199c438e5b44f8ba9826ee941c4aa7";
     private static readonly string WAVE_GROUP_INFO_DATABASE = "9d942e801ef04543a5924b560ca28416";
     private static readonly string STAGE_INFO_DATABASE = "c94148b20149490ab913824bf675c88a";
+
+    private static readonly string ENUM_TARGET_DATABASE = "0e25da75c2894d3188e512ca8d8c250c";
 
     [MenuItem("Data Manager/Download")]
     static void DownloadData()
@@ -30,6 +37,8 @@ public class DataConverter : MonoBehaviour
         DownloadConstData();
         DownloadCharacterData();
         DownloadAttackTypeData();
+        DownloadCharacterLevelData();
+        DownloadSkillData();
         DownloadWaveData();
         DownloadWaveGroupData();
         DownloadStageData();
@@ -232,6 +241,77 @@ public class DataConverter : MonoBehaviour
             ary.Add(newObj);
         }
         SaveToCsv(ary, "AttackTypeData.csv");
+    }
+
+    static void DownloadCharacterLevelData()
+    {
+        Debug.Log("DownloadCharacterLevelData");
+        JArray results = DownloadNotionDatabase(CHATACTER_LEVEL_INFO_DATABASE);
+        JArray ary = new();
+        foreach (JObject obj in results.Cast<JObject>())
+        {
+            JObject newObj = new();
+
+            JObject propertyObj = obj.GetValue("properties") as JObject;
+            string id = GetString(propertyObj, "id");
+            if (id == null) continue;
+
+            newObj.Add("id", id);
+            newObj.Add("levelType", GetInteger(propertyObj, "levelType"));
+            newObj.Add("level", GetInteger(propertyObj, "level"));
+            newObj.Add("requiredExp", GetInteger(propertyObj, "requiredExp"));
+            newObj.Add("atkMultiple", GetInteger(propertyObj, "atkMultiple"));
+            newObj.Add("atkSpdMultiple", GetInteger(propertyObj, "atkSpdMultiple"));
+            newObj.Add("defMultiple", GetInteger(propertyObj, "defMultiple"));
+            newObj.Add("maxHPMultiple", GetInteger(propertyObj, "maxHPMultiple"));
+
+            ary.Add(newObj);
+        }
+        SaveToCsv(ary, "CharacterLevelData.csv");
+    }
+
+    static void DownloadSkillData()
+    {
+        Debug.Log("DownloadSkillData");
+        JArray results = DownloadNotionDatabase(SKILL_INFO_DATABASE);
+        Dictionary<string, string> attackTypeDict = GetUUIDDictionary(ATTACK_TYPE_DATABASE);
+        Dictionary<string, string> targetEnumDict = GetUUIDDictionary(ENUM_TARGET_DATABASE, "const");
+        Dictionary<string, string> projectileDict = GetUUIDDictionary(PROJECTILE_INFO_DATABASE);
+        Dictionary<string, string> effectDict = GetUUIDDictionary(EFFECT_INFO_DATABASE);
+        JArray ary = new ();
+        foreach (JObject obj in results.Cast<JObject>())
+        {
+            JObject newObj = new ();
+
+            JObject propertyObj = obj.GetValue("properties") as JObject;
+            string id = GetString(propertyObj, "id");
+            if (id == null) continue;
+
+            newObj.Add("id", id);
+            newObj.Add("memo", GetString(propertyObj, "memo"));
+            newObj.Add("skillAttribute", GetRelationID(propertyObj, "skillAttribute", attackTypeDict));
+            newObj.Add("isRangeAttack", GetCheckbox(propertyObj, "isRangeAttack"));
+            newObj.Add("coolDown", GetInteger(propertyObj, "coolDown"));
+            newObj.Add("target", GetRelationID(propertyObj, "target", targetEnumDict));
+            newObj.Add("rangeOfSkill", GetInteger(propertyObj, "rangeOfSkill"));
+            newObj.Add("projectileID", GetRelationID(propertyObj, "projectileID", projectileDict));
+            newObj.Add("skillEffects01", GetRelationID(propertyObj, "skillEffects01", effectDict));
+            newObj.Add("effectsValue01", GetInteger(propertyObj, "effectsValue01"));
+            newObj.Add("duration01", GetInteger(propertyObj, "duration01"));
+            newObj.Add("skillEffects02", GetRelationID(propertyObj, "skillEffects02", effectDict));
+            newObj.Add("effectsValue02", GetInteger(propertyObj, "effectsValue02"));
+            newObj.Add("duration02", GetInteger(propertyObj, "duration02"));
+            newObj.Add("skillEffects03", GetRelationID(propertyObj, "skillEffects03", effectDict));
+            newObj.Add("effectsValue03", GetInteger(propertyObj, "effectsValue03"));
+            newObj.Add("duration03", GetInteger(propertyObj, "duration03"));
+            newObj.Add("atkAnimation", GetString(propertyObj, "atkAnimation"));
+            newObj.Add("atkedEffect", GetString(propertyObj, "atkedEffect"));
+            newObj.Add("rangeEffect", GetString(propertyObj, "rangeEffect"));
+            newObj.Add("iconSprite", GetString(propertyObj, "iconSprite"));
+
+            ary.Add(newObj);
+        }
+        SaveToCsv(ary, "SkillData.csv");
     }
 
     static void DownloadWaveData()
