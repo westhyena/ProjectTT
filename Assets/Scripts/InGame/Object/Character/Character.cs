@@ -69,8 +69,11 @@ public abstract class Character : MonoBehaviour
     }
     [SerializeField]
     protected AttackType attackType = AttackType.Melee;
-    public GameObject projectilePrefab;
+
+    ProjectileInfo projectileInfo;
+    GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
+
     protected float attackStartDistance = 5.0f;
     protected float attackCooltime = 3.0f;
     protected float attackDelay = 0.2f;
@@ -112,21 +115,31 @@ public abstract class Character : MonoBehaviour
     {
         characterInfo = DataManager.instance.GetCharacterInfo(characterId);
         normalSkillInfo = DataManager.instance.GetSkillInfo(characterInfo.normalAtk);
-        if (normalSkillInfo.atkAnimation != null)
-        {
-            normalSkillPrefab = ResourceManager.GetSkillPrefab(normalSkillInfo.atkAnimation);
-        }
     }
 
     protected void Start()
     {
         if (characterInfo != null)
         {
-            this.rangeOfTarget = characterInfo.rangeOfTarget;
             this.mspd = characterInfo.baseMSpd;
             this.hpStat = characterInfo.baseMaxHP;
             this.attackStat = characterInfo.baseAttack;
             this.defenceStat = characterInfo.baseDefense;
+
+            this.rangeOfTarget = characterInfo.rangeOfTarget;
+            if (normalSkillInfo != null)
+            {
+                this.rangeOfTarget = normalSkillInfo.rangeOfSkill;
+                if (!string.IsNullOrEmpty(normalSkillInfo.projectileID))
+                {
+                    projectileInfo = DataManager.instance.GetProjectileInfo(normalSkillInfo.projectileID);
+                    projectilePrefab = ResourceManager.GetProjectilePrefab(projectileInfo.projectilePrefab);
+                }
+                if (normalSkillInfo.atkAnimation != null)
+                {
+                    normalSkillPrefab = ResourceManager.GetSkillPrefab(normalSkillInfo.atkAnimation);
+                }
+            }
         }
 
         movementSpeed = GameManager.instance.baseColliderWidth * 1000.0f / mspd;
@@ -351,7 +364,7 @@ public abstract class Character : MonoBehaviour
         projectile.transform.position = projectileSpawnPoint.position;
         projectile.transform.rotation = projectileSpawnPoint.rotation;
         Projectile projectileComponent = projectile.GetComponent<Projectile>();
-        projectileComponent.Initialize(this, target);
+        projectileComponent.Initialize(this, target, projectileInfo);
     }
 
     protected virtual void OnDamage(float damage) {}
