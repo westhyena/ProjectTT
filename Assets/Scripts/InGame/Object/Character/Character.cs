@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public abstract class Character : MonoBehaviour
@@ -37,6 +38,7 @@ public abstract class Character : MonoBehaviour
     public CharacterInfo CharacterInfo { get { return characterInfo; } }
 
     protected Animator animator;
+    protected string[] attackTriggers;
     protected Vector3 animatorScale;
     protected Collider2D collider2d;
     protected new Rigidbody2D rigidbody2D;
@@ -83,6 +85,15 @@ public abstract class Character : MonoBehaviour
     protected virtual void Awake()
     {
         this.animator = GetComponentInChildren<Animator>();
+        List<string> attackTriggerList = new ();
+        foreach (AnimatorControllerParameter parameter in this.animator.parameters)
+        {
+            if (parameter.name.StartsWith("attack"))
+            {
+                attackTriggerList.Add(parameter.name);
+            }
+        }
+        this.attackTriggers = attackTriggerList.ToArray();
         this.animatorScale = animator.transform.localScale;
         this.collider2d = GetComponent<Collider2D>();
         this.rigidbody2D = GetComponent<Rigidbody2D>();
@@ -239,7 +250,8 @@ public abstract class Character : MonoBehaviour
         {
             ChangeState(State.Attack);
             // 바로 공격하게
-            animator.SetTrigger("attack");
+            string triggerName = attackTriggers[Random.Range(0, attackTriggers.Length)];
+            animator.SetTrigger(triggerName);
             curStateTime = float.MaxValue;
         }
         else
