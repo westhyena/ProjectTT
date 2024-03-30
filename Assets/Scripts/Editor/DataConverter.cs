@@ -22,6 +22,7 @@ public class DataConverter : MonoBehaviour
     private static readonly string CHATACTER_LEVEL_INFO_DATABASE = "2ac8a738d91046c1898d54b238305886";
     private static readonly string SKILL_INFO_DATABASE = "0411623f577541aaa892f39dc63417f3";
     private static readonly string PROJECTILE_INFO_DATABASE = "fccffcb858874ddf89e955e532e438db";
+    private static readonly string PROJECTILE_TYPE_DATABASE = "bfac5695d14243359d901a961fe0588c";
     private static readonly string EFFECT_INFO_DATABASE = "d140ce1493e443ea85f09aaa1b56f45e";
 
     private static readonly string WAVE_INFO_DATABASE = "ea199c438e5b44f8ba9826ee941c4aa7";
@@ -39,6 +40,7 @@ public class DataConverter : MonoBehaviour
         DownloadAttackTypeData();
         DownloadCharacterLevelData();
         DownloadSkillData();
+        DownloadProjectileData();
         DownloadWaveData();
         DownloadWaveGroupData();
         DownloadStageData();
@@ -312,6 +314,32 @@ public class DataConverter : MonoBehaviour
             ary.Add(newObj);
         }
         SaveToCsv(ary, "SkillData.csv");
+    }
+
+    static void DownloadProjectileData()
+    {
+        Debug.Log("DownloadProjectileData");
+        JArray results = DownloadNotionDatabase(PROJECTILE_INFO_DATABASE);
+        Dictionary<string, string> projectileTypeDict = GetUUIDDictionary(PROJECTILE_TYPE_DATABASE, "const");
+        JArray ary = new ();
+        foreach (JObject obj in results.Cast<JObject>())
+        {
+            JObject newObj = new ();
+                
+            JObject propertyObj = obj.GetValue("properties") as JObject;
+            string id = GetString(propertyObj, "id");
+            if (id == null) continue;
+
+            newObj.Add("id", id);
+            newObj.Add("memo", GetString(propertyObj, "memo"));
+            newObj.Add("projectilePrefab", GetString(propertyObj, "projectilePrefab"));
+            newObj.Add("scale", GetInteger(propertyObj, "scale"));
+            newObj.Add("speed", GetInteger(propertyObj, "speed"));
+            newObj.Add("startingType", GetRelationID(propertyObj, "startingType", projectileTypeDict)); 
+
+            ary.Add(newObj);
+        }
+        SaveToCsv(ary, "ProjectileData.csv");
     }
 
     static void DownloadWaveData()
