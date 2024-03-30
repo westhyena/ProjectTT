@@ -44,6 +44,18 @@ public class DataManager : MonoBehaviour
         return characterMap.GetValueOrDefault(id, null);
     }
 
+    readonly DataMap<SkillInfo> skillMap = new ();
+    public SkillInfo GetSkillInfo(string id)
+    {
+        return skillMap.GetValueOrDefault(id, null);
+    }
+
+    readonly DataMap<ProjectileInfo> projectileMap = new ();
+    public ProjectileInfo GetProjectileInfo(string id)
+    {
+        return projectileMap.GetValueOrDefault(id, null);
+    }
+
     readonly List<CharacterLevelInfo> outgameLevelList = new ();
     readonly List<CharacterLevelInfo> playerLevelList = new ();
     readonly List<CharacterLevelInfo> companionLevelList = new ();
@@ -80,6 +92,8 @@ public class DataManager : MonoBehaviour
         ReadCharacterData();
         ReadAttackTypeData();
         ReadCharacterLevelData();
+        ReadSkillData();
+        ReadProjectileData();
         ReadWaveData();
         ReadWaveGroupData();
         ReadStageData();
@@ -152,6 +166,32 @@ public class DataManager : MonoBehaviour
         outgameLevelList.Sort((a, b) => a.level - b.level);
         playerLevelList.Sort((a, b) => a.level - b.level);
         companionLevelList.Sort((a, b) => a.level - b.level);
+    }
+
+    void ReadSkillData()
+    {
+        skillMap.Clear();
+        SkillData loadedData = new(ReadCSV("SkillData.csv"));
+        foreach (SkillInfo item in loadedData.items)
+        {
+            if (item == null || string.IsNullOrEmpty(item.id))
+                continue;
+
+            skillMap.Add(item.id, item);
+        }
+    }
+
+    void ReadProjectileData()
+    {
+        projectileMap.Clear();
+        ProjectileData loadedData = new(ReadCSV("ProjectileData.csv"));
+        foreach (ProjectileInfo item in loadedData.items)
+        {
+            if (item == null || string.IsNullOrEmpty(item.id))
+                continue;
+
+            projectileMap.Add(item.id, item);
+        }
     }
 
     void ReadWaveData()
