@@ -35,6 +35,8 @@ public class CharacterInfo
     public float baseDefense;
     public string prefabKey;
     public string iconSprite;
+    public string normalAtk;
+    public string[] skillIDs;
     
     public CharacterInfo(string[,] csvGrid, int rowidx)
     {
@@ -49,5 +51,7 @@ public class CharacterInfo
         baseDefense = float.Parse(csvGrid[idx++, rowidx]);
         prefabKey = csvGrid[idx++, rowidx];
         iconSprite = csvGrid[idx++, rowidx];
+        normalAtk = csvGrid[idx++, rowidx];
+        skillIDs = csvGrid[idx++, rowidx].Split("|");
     }
 }
