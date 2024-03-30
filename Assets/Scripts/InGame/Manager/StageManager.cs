@@ -145,6 +145,16 @@ public class StageManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        StartWave();
+    }
+
+    void StartWave()
+    {
+        UIManager.instance.waveUI.StartWave(curWaveGroupIndex + 1);
+    }
+
     void CheckWave()
     {
         if (curWaveGroupIndex >= waveGroupList.Count) return;
@@ -158,6 +168,7 @@ public class StageManager : MonoBehaviour
         if (waveEnd)
         {
             curWaveGroupIndex++;
+            StartWave();
         }
     }
 

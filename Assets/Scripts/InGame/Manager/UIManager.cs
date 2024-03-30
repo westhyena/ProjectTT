@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public WaveUI waveUI;
+
     [SerializeField]
     GameObject hpBarPrefab;
     public HPBarUI CreateHPBar(Transform parent)
