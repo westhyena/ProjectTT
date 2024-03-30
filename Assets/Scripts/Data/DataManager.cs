@@ -30,6 +30,12 @@ public class DataManager : MonoBehaviour
         return constMap.GetValueOrDefault(constName, null);
     }
 
+    readonly DataMap<AttackTypeInfo> attackTypeMap = new ();
+    public AttackTypeInfo GetAttackTypeInfo(string id)
+    {
+        return attackTypeMap.GetValueOrDefault(id, null);
+    }
+
     readonly DataMap<CharacterInfo> characterMap = new ();
     public CharacterInfo GetCharacterInfo(string id)
     {

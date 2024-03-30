@@ -11,15 +11,17 @@ using System.Linq;
 
 public class DataConverter : MonoBehaviour
 {
-    private static string NOTION_API_KEY = "secret_C3hToHmy8AH1RQvxN8E2DbWpB54jJcz2hfG74laOmz9";
-    private static string NOTION_VERSION = "2022-06-28";
+    private static readonly string NOTION_API_KEY = "secret_C3hToHmy8AH1RQvxN8E2DbWpB54jJcz2hfG74laOmz9";
+    private static readonly string NOTION_VERSION = "2022-06-28";
 
-    private static string CONST_DATABASE = "8a7b2a32f5744082b60d4f960ffab47a";
+    private static readonly string CONST_DATABASE = "8a7b2a32f5744082b60d4f960ffab47a";
 
-    private static string CHARACTER_INFO_DATABASE = "7e9bd778c8d340a485aa7a502eb28544";
-    private static string WAVE_INFO_DATABASE = "ea199c438e5b44f8ba9826ee941c4aa7";
-    private static string WAVE_GROUP_INFO_DATABASE = "9d942e801ef04543a5924b560ca28416";
-    private static string STAGE_INFO_DATABASE = "c94148b20149490ab913824bf675c88a";
+    private static readonly string CHARACTER_INFO_DATABASE = "7e9bd778c8d340a485aa7a502eb28544";
+    private static readonly string ATTACK_TYPE_DATABASE = "c1251a8f05a74a9db70534afe25663bd";
+    private static readonly string ATTACK_ATTRIBUTE_DATEBASE = "cdebc8bb07e04a67954695971beef66c";
+    private static readonly string WAVE_INFO_DATABASE = "ea199c438e5b44f8ba9826ee941c4aa7";
+    private static readonly string WAVE_GROUP_INFO_DATABASE = "9d942e801ef04543a5924b560ca28416";
+    private static readonly string STAGE_INFO_DATABASE = "c94148b20149490ab913824bf675c88a";
 
     [MenuItem("Data Manager/Download")]
     static void DownloadData()
@@ -27,6 +29,7 @@ public class DataConverter : MonoBehaviour
         Debug.Log("Download data");
         DownloadConstData();
         DownloadCharacterData();
+        DownloadAttackTypeData();
         DownloadWaveData();
         DownloadWaveGroupData();
         DownloadStageData();
@@ -77,6 +80,14 @@ public class DataConverter : MonoBehaviour
         return intValue;
     }
 
+    static bool GetCheckbox(JObject propertyObj, string key)
+    {
+        JObject obj = propertyObj.GetValue(key) as JObject;
+        JToken checkboxToken = obj.GetValue("checkbox");
+        if (checkboxToken == null) return false;
+        return obj.GetValue("checkbox").ToString() == "true";
+    }
+
     static string GetRelationUUID(JObject propertyObj, string key)
     {
         JObject obj = propertyObj.GetValue(key) as JObject;
@@ -117,14 +128,24 @@ public class DataConverter : MonoBehaviour
 
     static Dictionary<string, string> GetUUIDDictionary(string databaseId)
     {
+        return GetUUIDDictionary(databaseId, "id");
+    }
+
+    static void SaveToCsv(JArray ary, string fileName)
+    {
+        string path = Path.Combine(Application.streamingAssetsPath, fileName);
+        ConvertJArrayToCSV(ary, path);
+    }
+
+    static Dictionary<string, string> GetUUIDDictionary(string databaseId, string idPropertyKey)
+    {
         JArray results = DownloadNotionDatabase(databaseId);
         Dictionary<string, string> uuidDict = new();
         foreach (JObject obj in results.Cast<JObject>())
         {
             JObject propertyObj = obj.GetValue("properties") as JObject;
-            string id = GetString(propertyObj, "id");
+            string id = GetString(propertyObj, idPropertyKey);
             if (id == null) continue;
-
             string uuid = obj.GetValue("id").ToString();
             uuidDict[uuid] = id;
         }
@@ -179,8 +200,38 @@ public class DataConverter : MonoBehaviour
 
             ary.Add(newObj);
         }
-        string path = Path.Combine(Application.streamingAssetsPath, "CharacterData.csv");
-        ConvertJArrayToCSV(ary, path);
+        SaveToCsv(ary, "CharacterData.csv");
+    }
+
+    static void DownloadAttackTypeData()
+    {
+        Debug.Log("DownloadAttackTypeData");
+        JArray results = DownloadNotionDatabase(ATTACK_TYPE_DATABASE);
+        Dictionary<string, string> attributeDict = GetUUIDDictionary(ATTACK_ATTRIBUTE_DATEBASE, "index");
+
+        JArray ary = new();
+        foreach (JObject obj in results.Cast<JObject>())
+        {
+            JObject newObj = new();
+
+            JObject propertyObj = obj.GetValue("properties") as JObject;
+            string id = GetString(propertyObj, "id");
+            if (id == null) continue;
+
+            newObj.Add("id", id);
+            newObj.Add("memo", GetString(propertyObj, "memo"));
+            newObj.Add("atkAttribute", GetRelationID(propertyObj, "atkAttribute", attributeDict));
+            newObj.Add("isTargetToGround", GetCheckbox(propertyObj, "isTargetToGround"));
+            newObj.Add("isTargetToAir", GetCheckbox(propertyObj, "isTargetToAir"));
+            newObj.Add("isRangeAttack", GetCheckbox(propertyObj, "isRangeAttack"));
+            newObj.Add("atkWeight", GetInteger(propertyObj, "atkWeight"));
+            newObj.Add("atkSpdWeight", GetInteger(propertyObj, "atkSpdWeight"));
+            newObj.Add("hpWeight", GetInteger(propertyObj, "hpWeight"));
+            newObj.Add("defWeight", GetInteger(propertyObj, "defWeight"));
+
+            ary.Add(newObj);
+        }
+        SaveToCsv(ary, "AttackTypeData.csv");
     }
 
     static void DownloadWaveData()
@@ -204,8 +255,7 @@ public class DataConverter : MonoBehaviour
 
             ary.Add(newObj);
         }
-        string path = Path.Combine(Application.streamingAssetsPath, "WaveData.csv");
-        ConvertJArrayToCSV(ary, path);
+        SaveToCsv(ary, "WaveData.csv");
     }
 
     static void DownloadWaveGroupData()
@@ -230,8 +280,7 @@ public class DataConverter : MonoBehaviour
 
             ary.Add(newObj);
         }
-        string path = Path.Combine(Application.streamingAssetsPath, "WaveGroupData.csv");
-        ConvertJArrayToCSV(ary, path);
+        SaveToCsv(ary, "WaveGroupData.csv");
     }
 
     static void DownloadStageData()
@@ -258,8 +307,7 @@ public class DataConverter : MonoBehaviour
 
             ary.Add(newObj);
         }
-        string path = Path.Combine(Application.streamingAssetsPath, "StageData.csv");
-        ConvertJArrayToCSV(ary, path);
+        SaveToCsv(ary, "StageData.csv");
     }
 }
 #endif
