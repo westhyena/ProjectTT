@@ -6309,6 +6309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 586dc8c959bf34e6f9c445f8cce17f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveUI: {fileID: 1228540062}
   hpBarPrefab: {fileID: 1303233818708691970, guid: e996cd1b356ee458088cf0566d81057b, type: 3}
   playerHPBarPrefab: {fileID: 1303233818708691970, guid: 0fa6560b2fba6c8468c87a2e73f36b7c, type: 3}
   damagePrefab: {fileID: 8733567991069426994, guid: d2af5a73ac1e53148a9976d9e64b5c51, type: 3}
@@ -6998,6 +6999,7 @@ GameObject:
   - component: {fileID: 1228540059}
   - component: {fileID: 1228540061}
   - component: {fileID: 1228540060}
+  - component: {fileID: 1228540062}
   m_Layer: 5
   m_Name: Wave
   m_TagString: Untagged
@@ -7054,6 +7056,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228540058}
   m_CullTransparentMesh: 1
+--- !u!114 &1228540062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228540058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a8c869aab4242ebb0698cbfec4b571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveText: {fileID: 556247594}
+  deactiveDuration: 5
 --- !u!1 &1246365938
 GameObject:
   m_ObjectHideFlags: 0

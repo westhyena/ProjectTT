@@ -109,15 +109,6 @@ public class StageManager : MonoBehaviour
 
     int curWaveGroupIndex = 0;
 
-    public float[] WaveEndTime = new float[]
-    {
-        60.0f,
-        60.0f,
-        60.0f,
-        60.0f,
-        60.0f
-    };
-
     Stage stage;
 
     void Awake()
@@ -137,12 +128,43 @@ public class StageManager : MonoBehaviour
             DataManager.instance.GetWaveGroupInfo(stageInfo.phase05waveGroup)
         };
 
+        float waveEnd1 = float.Parse(DataManager.instance.GetConstValue("BATTLE_PHASE_DURATION_2")) / 1000f;
+        float waveEnd2 = float.Parse(DataManager.instance.GetConstValue("BATTLE_PHASE_DURATION_3")) / 1000f;
+        float waveEnd3 = float.Parse(DataManager.instance.GetConstValue("BATTLE_PHASE_DURATION_4")) / 1000f;
+        float waveEnd4 = float.Parse(DataManager.instance.GetConstValue("BATTLE_PHASE_DURATION_5")) / 1000f;
+        float waveEnd5 = (
+            float.Parse(DataManager.instance.GetConstValue("BATTEL_STAGE_DURATION_TIME"))
+            - waveEnd1
+            - waveEnd2
+            - waveEnd3
+            - waveEnd4
+        );
+
+        float[] waveEndTimes = new float[]
+        {
+            waveEnd1,
+            waveEnd2,
+            waveEnd3,
+            waveEnd4,
+            waveEnd5
+        };
+
         foreach (WaveGroupInfo groupInfo in groupInfos)
         {            
             if (groupInfo == null) continue;
 
-            waveGroupList.Add(new WaveGroup(groupInfo, WaveEndTime[curWaveGroupIndex]));
+            waveGroupList.Add(new WaveGroup(groupInfo, waveEndTimes[curWaveGroupIndex]));
         }
+    }
+
+    void Start()
+    {
+        StartWave();
+    }
+
+    void StartWave()
+    {
+        UIManager.instance.waveUI.StartWave(curWaveGroupIndex + 1);
     }
 
     void CheckWave()
@@ -158,6 +180,7 @@ public class StageManager : MonoBehaviour
         if (waveEnd)
         {
             curWaveGroupIndex++;
+            StartWave();
         }
     }
 
