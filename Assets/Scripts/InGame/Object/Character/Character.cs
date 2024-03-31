@@ -353,7 +353,7 @@ public abstract class Character : MonoBehaviour
             }
             if (CheckDistanceUnder(target.Position2D, attackStartDistance))
             {
-                target.Damage(attackStat);
+                target.Damage(this, normalSkillInfo);
             }
         }
     }
@@ -369,8 +369,9 @@ public abstract class Character : MonoBehaviour
 
     protected virtual void OnDamage(float damage) {}
 
-    public void Damage(float attackVal)
+    public void Damage(Character character, SkillInfo skillInfo)
     {
+        float attackVal = character.attackStat;
         if (hp <= 0)
         {
             // already die

@@ -22,6 +22,11 @@ public class ResourceManager
         return Resources.Load<GameObject>($"Projectile/{name}");
     }
 
+    public static GameManager GetHitPrefab(string name)
+    {
+        return Resources.Load<GameManager>($"Hit/{name}");
+    }
+
     public static GameObject GetStagePrefab(string name)
     {
         return Resources.Load<GameObject>($"Stage/{name}");
