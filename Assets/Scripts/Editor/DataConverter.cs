@@ -30,6 +30,9 @@ public class DataConverter : MonoBehaviour
     private static readonly string STAGE_INFO_DATABASE = "c94148b20149490ab913824bf675c88a";
 
     private static readonly string ENUM_TARGET_DATABASE = "0e25da75c2894d3188e512ca8d8c250c";
+    private static readonly string ENUM_EFFECT_DATABASE = "30cb29989c4b4e4d835a9330b104e867";
+    private static readonly string ENUM_STAT_DATABASE = "952a4563bef94d4991481f47834aeca7";
+    private static readonly string ENUM_OPERATOR_DATABASE = "88d5e11c30544ceca7c3dfd49989c46b";
 
     [MenuItem("Data Manager/Download")]
     static void DownloadData()
@@ -41,6 +44,7 @@ public class DataConverter : MonoBehaviour
         DownloadCharacterLevelData();
         DownloadSkillData();
         DownloadProjectileData();
+        DownloadEffectData();
         DownloadWaveData();
         DownloadWaveGroupData();
         DownloadStageData();
@@ -351,6 +355,35 @@ public class DataConverter : MonoBehaviour
             ary.Add(newObj);
         }
         SaveToCsv(ary, "ProjectileData.csv");
+    }
+
+    static void DownloadEffectData()
+    {
+        Debug.Log("DownloadEffectData");
+        JArray results = DownloadNotionDatabase(EFFECT_INFO_DATABASE);
+        Dictionary<string, string> typeDict = GetUUIDDictionary(ENUM_EFFECT_DATABASE, "const");
+        Dictionary<string, string> statDict = GetUUIDDictionary(ENUM_STAT_DATABASE, "const");
+        Dictionary<string, string> operatorDict = GetUUIDDictionary(ENUM_OPERATOR_DATABASE, "operator");
+        JArray ary = new ();
+        foreach (JObject obj in results.Cast<JObject>())
+        {
+            JObject newObj = new ();
+                
+            JObject propertyObj = obj.GetValue("properties") as JObject;
+            string id = GetString(propertyObj, "id");
+            if (id == null) continue;
+
+            newObj.Add("id", id);
+            newObj.Add("memo", GetString(propertyObj, "memo"));
+            newObj.Add("effectsType", GetRelationID(propertyObj, "effectsType", typeDict));
+            newObj.Add("basedStat", GetRelationID(propertyObj, "basedStat", statDict));
+            newObj.Add("applyType", GetRelationID(propertyObj, "applyType", operatorDict));
+            newObj.Add("applyStat", GetRelationID(propertyObj, "applyStat", statDict));
+            newObj.Add("repeatTime", GetInteger(propertyObj, "repeatTime"));
+
+            ary.Add(newObj);
+        }
+        SaveToCsv(ary, "EffectData.csv");
     }
 
     static void DownloadWaveData()

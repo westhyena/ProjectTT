@@ -58,6 +58,12 @@ public class DataManager : MonoBehaviour
         return GetValueFromMap(skillMap, id);
     }
 
+    readonly DataMap<EffectInfo> effectMap = new ();
+    public EffectInfo GetEffectInfo(string id)
+    {
+        return GetValueFromMap(effectMap, id);
+    }
+
     readonly DataMap<ProjectileInfo> projectileMap = new ();
     public ProjectileInfo GetProjectileInfo(string id)
     {
@@ -101,6 +107,7 @@ public class DataManager : MonoBehaviour
         ReadAttackTypeData();
         ReadCharacterLevelData();
         ReadSkillData();
+        ReadEffectData();
         ReadProjectileData();
         ReadWaveData();
         ReadWaveGroupData();
@@ -187,6 +194,19 @@ public class DataManager : MonoBehaviour
                 continue;
 
             skillMap.Add(item.id, item);
+        }
+    }
+
+    void ReadEffectData()
+    {
+        effectMap.Clear();
+        EffectData loadedData = new(ReadCSV("EffectData.csv"));
+        foreach (EffectInfo item in loadedData.items)
+        {
+            if (item == null || string.IsNullOrEmpty(item.id))
+                continue;
+
+            effectMap.Add(item.id, item);
         }
     }
 
