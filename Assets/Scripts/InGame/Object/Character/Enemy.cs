@@ -19,9 +19,14 @@ public class Enemy : Character
         return GameManager.instance.GetNearestHero(position);
     }
 
-    protected override List<Character> GetTargetList()
+    public override List<Character> GetTargetList()
     {
         return GameManager.instance.GetHeroList(true);
+    }
+
+    public override List<Character> GetAllyList()
+    {
+        return GameManager.instance.GetEnemyList();
     }
 
     protected override void UpdateVariable()

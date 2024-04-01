@@ -214,7 +214,8 @@ public abstract class Character : MonoBehaviour
     }
 
     abstract protected Character GetNearestTarget(Vector2 position);
-    abstract protected List<Character> GetTargetList();
+    abstract public List<Character> GetTargetList();
+    abstract public List<Character> GetAllyList();
 
     protected void ChangeState(State newState)
     {
