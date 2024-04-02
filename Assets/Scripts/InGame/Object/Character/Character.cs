@@ -36,8 +36,10 @@ public abstract class Character : MonoBehaviour
 
     CharacterInfo characterInfo;
     public CharacterInfo CharacterInfo { get { return characterInfo; } }
-    SkillInfo normalSkillInfo;
+    Skill normalSkill;
     GameObject normalSkillPrefab;
+
+    List<Skill> skillList = new ();
 
     protected Animator animator;
     protected string[] attackTriggers;
@@ -87,6 +89,8 @@ public abstract class Character : MonoBehaviour
     public float HPRatio { get { return hp / maxHp; } }
     public bool IsDead { get { return hp <= 0.0f; } }
 
+    List<SkillEffect> skillEffectList = new ();
+
     protected virtual void Awake()
     {
         this.animator = GetComponentInChildren<Animator>();
@@ -114,7 +118,18 @@ public abstract class Character : MonoBehaviour
     public void InitializeCharacter(string characterId)
     {
         characterInfo = DataManager.instance.GetCharacterInfo(characterId);
-        normalSkillInfo = DataManager.instance.GetSkillInfo(characterInfo.normalAtk);
+
+        SkillInfo normalSkillInfo = DataManager.instance.GetSkillInfo(characterInfo.normalAtk);
+        normalSkill = new Skill(this, normalSkillInfo);
+
+        foreach (string skillId in characterInfo.skillIDs)
+        {
+            SkillInfo skillInfo = DataManager.instance.GetSkillInfo(skillId);
+            if (skillInfo != null)
+            {
+                skillList.Add(new Skill(this, skillInfo));
+            }
+        }
     }
 
     protected void Start()
@@ -127,17 +142,17 @@ public abstract class Character : MonoBehaviour
             this.defenceStat = characterInfo.baseDefense;
 
             this.rangeOfTarget = characterInfo.rangeOfTarget;
-            if (normalSkillInfo != null)
+            if (normalSkill != null)
             {
-                this.rangeOfTarget = normalSkillInfo.rangeOfSkill;
-                if (!string.IsNullOrEmpty(normalSkillInfo.projectileID))
+                this.rangeOfTarget = normalSkill.SkillInfo.rangeOfSkill;
+                if (!string.IsNullOrEmpty(normalSkill.SkillInfo.projectileID))
                 {
-                    projectileInfo = DataManager.instance.GetProjectileInfo(normalSkillInfo.projectileID);
+                    projectileInfo = DataManager.instance.GetProjectileInfo(normalSkill.SkillInfo.projectileID);
                     projectilePrefab = ResourceManager.GetProjectilePrefab(projectileInfo.projectilePrefab);
                 }
-                if (normalSkillInfo.atkAnimation != null)
+                if (normalSkill.SkillInfo.atkAnimation != null)
                 {
-                    normalSkillPrefab = ResourceManager.GetSkillPrefab(normalSkillInfo.atkAnimation);
+                    normalSkillPrefab = ResourceManager.GetSkillPrefab(normalSkill.SkillInfo.atkAnimation);
                 }
             }
         }
@@ -354,7 +369,7 @@ public abstract class Character : MonoBehaviour
             }
             if (CheckDistanceUnder(target.Position2D, attackStartDistance))
             {
-                target.Damage(this, normalSkillInfo);
+                target.Damage(this.attackStat, normalSkill.SkillInfo);
             }
         }
     }
@@ -370,9 +385,8 @@ public abstract class Character : MonoBehaviour
 
     protected virtual void OnDamage(float damage) {}
 
-    public void Damage(Character character, SkillInfo skillInfo)
+    public void Damage(float attackVal, SkillInfo skillInfo)
     {
-        float attackVal = character.attackStat;
         if (hp <= 0)
         {
             // already die
@@ -423,30 +437,52 @@ public abstract class Character : MonoBehaviour
         }
     }
 
+    protected void UpdateSkill()
+    {
+        foreach (Skill skill in skillList)
+        {
+            skill.UpdateSkill();
+        }
+    }
+
     protected void UpdateState()
     {
         curStateTime += Time.deltaTime;
 
-        switch  (state)
+        switch (state)
         {
             case State.Idle:
+                UpdateSkill();
                 UpdateIdle();
                 break;
             case State.Target:
+                UpdateSkill();
                 UpdateTarget();
                 break;
             case State.Attack:
+                UpdateSkill();
                 UpdateAttack();
                 break;
             case State.Manual:
+                UpdateSkill();
                 UpdateManual();
                 break;
             case State.Follow:
+                UpdateSkill();
                 UpdateFollow();
                 break;
             case State.Dying:
                 UpdateDying();
                 break;
+        }
+    }
+
+    public void AddSkillEffect(SkillEffect skillEffect)
+    {
+        if (skillEffect.isOneTimeEffect)
+        {
+            // Don't Add to List
+            skillEffect.ApplyEffect(this);
         }
     }
 

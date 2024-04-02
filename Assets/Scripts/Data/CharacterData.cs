@@ -17,7 +17,7 @@ public class CharacterData
             }
             catch (Exception e)
             {
-                Debug.LogError($"CharacterData Error: {e.Message}");
+                Debug.LogWarning($"CharacterData Error: {e.Message}");
                 items[i] = null;
             }
         }
