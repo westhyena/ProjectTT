@@ -100,7 +100,7 @@ public class DataConverter : MonoBehaviour
         JObject obj = propertyObj.GetValue(key) as JObject;
         JToken checkboxToken = obj.GetValue("checkbox");
         if (checkboxToken == null) return false;
-        return obj.GetValue("checkbox").ToString() == "true";
+        return obj.GetValue("checkbox").ToString() == "True";
     }
 
     static string GetRelationUUID(JObject propertyObj, string key)

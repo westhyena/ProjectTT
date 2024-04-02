@@ -133,7 +133,6 @@ public class DataManager : MonoBehaviour
         CharacterData loadedData = new(ReadCSV("CharacterData.csv"));
         foreach (CharacterInfo item in loadedData.items)
         {
-            Debug.Log(item);
             if (item == null || string.IsNullOrEmpty(item.id))
                 continue;
 
