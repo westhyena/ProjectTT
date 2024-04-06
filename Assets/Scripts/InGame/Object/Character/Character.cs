@@ -369,6 +369,7 @@ public abstract class Character : MonoBehaviour
             }
             if (CheckDistanceUnder(target.Position2D, attackStartDistance))
             {
+                normalSkill.CreateHitObject(target);
                 target.Damage(this.attackStat, normalSkill.SkillInfo);
             }
         }
@@ -380,7 +381,12 @@ public abstract class Character : MonoBehaviour
         projectile.transform.position = projectileSpawnPoint.position;
         projectile.transform.rotation = projectileSpawnPoint.rotation;
         Projectile projectileComponent = projectile.GetComponent<Projectile>();
-        projectileComponent.Initialize(this, target, projectileInfo);
+        projectileComponent.Initialize(
+            this,
+            target,
+            normalSkill,
+            projectileInfo
+        );
     }
 
     protected virtual void OnDamage(float damage) {}

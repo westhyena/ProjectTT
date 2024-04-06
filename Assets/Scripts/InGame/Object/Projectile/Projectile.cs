@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    Skill skill;
     ProjectileInfo projectileInfo;
     Character source;
     Character target;
@@ -15,10 +16,15 @@ public class Projectile : MonoBehaviour
     public float angleOffset = 90.0f;
     public float angleSpeed = 2.0f;
 
-    public void Initialize(Character source, Character target, ProjectileInfo projectileInfo)
+    public void Initialize(
+        Character source,
+        Character target,
+        Skill skill,
+        ProjectileInfo projectileInfo)
     {
         this.source = source;
         this.target = target;
+        this.skill = skill;
         this.projectileInfo = projectileInfo;
 
         this.speed = projectileInfo.speed / 10000.0f;
@@ -38,7 +44,7 @@ public class Projectile : MonoBehaviour
         float sqrDistance = direction.sqrMagnitude;
         if (sqrDistance < 0.1f * 0.1f)
         {
-            target.Damage(source.AttackStat, null);
+            skill.UseSkillOnTarget(target);
             Destroy(gameObject);
             return;
         }

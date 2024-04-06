@@ -98,7 +98,7 @@ public class Skill
         );
     }
 
-    void CreateHitObject(Character target)
+    public void CreateHitObject(Character target)
     {
         if (hitPrefab == null) return;
 
@@ -143,7 +143,30 @@ public class Skill
 
         Character randomTarget = targets[Random.Range(0, targets.Length)];
         return new Character[] { randomTarget };
+    }
 
+    public void UseSkillOnTarget(Character useTarget)
+    {
+        CreateSkillObject(useTarget);
+        Character[] effectsTargets = GetTarget(
+            skillInfo.effectsTarget,
+            this.character,
+            useTarget.Position2D,
+            skillInfo.rangeOfEffects
+        );
+        foreach (Character effectsTarget in effectsTargets)
+        {
+            CreateHitObject(effectsTarget);
+            foreach (EffectHolder holder in effectList)
+            {
+                effectsTarget.AddSkillEffect(new SkillEffect(
+                    holder.effectInfo,
+                    holder.value,
+                    holder.duration,
+                    character
+                ));
+            }
+        }
     }
 
     public void UpdateSkill()
@@ -166,30 +189,11 @@ public class Skill
                 if (projectilePrefab != null)
                 {
                     Projectile projectile = Object.Instantiate(projectilePrefab).GetComponent<Projectile>();
-                    projectile.Initialize(character, useTarget, projectileInfo);
+                    projectile.Initialize(character, useTarget, this, projectileInfo);
                 }
                 else
                 {
-                    CreateSkillObject(useTarget);
-                    Character[] effectsTargets = GetTarget(
-                        skillInfo.effectsTarget,
-                        this.character,
-                        useTarget.Position2D,
-                        skillInfo.rangeOfEffects
-                    );
-                    foreach (Character effectsTarget in effectsTargets)
-                    {
-                        CreateHitObject(effectsTarget);
-                        foreach (EffectHolder holder in effectList)
-                        {
-                            effectsTarget.AddSkillEffect(new SkillEffect(
-                                holder.effectInfo,
-                                holder.value,
-                                holder.duration,
-                                character
-                            ));
-                        }
-                    }
+                    UseSkillOnTarget(useTarget);
                 }
             }
         }
