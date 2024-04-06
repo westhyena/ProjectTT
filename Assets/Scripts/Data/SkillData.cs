@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 [Serializable]
 public class SkillData
@@ -13,8 +14,9 @@ public class SkillData
             {
                 items[i] = new SkillInfo(csvGrid, i + 1);
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Debug.LogWarning($"CharacterData Error: {e.Message}");
                 items[i] = null;
             }
         }
@@ -29,8 +31,9 @@ public class SkillInfo
     public string skillAttribute;
     public bool isRangeAttack;
     public float coolDown;
-    public string target;
-    public float rangeOfSkill;
+    public string useTarget;
+    public string effectsTarget;
+    public float rangeOfEffects;
     public string projectileID;
     public string skillEffects01;
     public float effectsValue01;
@@ -42,8 +45,8 @@ public class SkillInfo
     public float effectsValue03;
     public float duration03;
     public string atkAnimation;
-    public string atkedEffect;
-    public string rangeEffect;
+    public string atkedVFX;
+    public string rangeVFX;
     public string iconSprite;
     
     public SkillInfo(string[,] csvGrid, int rowIdx)
@@ -54,8 +57,9 @@ public class SkillInfo
         skillAttribute = csvGrid[idx++, rowIdx];
         isRangeAttack = bool.Parse(csvGrid[idx++, rowIdx]);
         coolDown = float.Parse(csvGrid[idx++, rowIdx]);
-        target = csvGrid[idx++, rowIdx];
-        rangeOfSkill = float.Parse(csvGrid[idx++, rowIdx]);
+        useTarget = csvGrid[idx++, rowIdx];
+        effectsTarget = csvGrid[idx++, rowIdx];
+        rangeOfEffects = float.Parse(csvGrid[idx++, rowIdx]);
         projectileID = csvGrid[idx++, rowIdx];
         skillEffects01 = csvGrid[idx++, rowIdx];
         effectsValue01 = float.Parse(csvGrid[idx++, rowIdx]);
@@ -67,8 +71,8 @@ public class SkillInfo
         effectsValue03 = float.Parse(csvGrid[idx++, rowIdx]);
         duration03 = float.Parse(csvGrid[idx++, rowIdx]);
         atkAnimation = csvGrid[idx++, rowIdx];
-        atkedEffect = csvGrid[idx++, rowIdx];
-        rangeEffect = csvGrid[idx++, rowIdx];
+        atkedVFX = csvGrid[idx++, rowIdx];
+        rangeVFX = csvGrid[idx++, rowIdx];
         iconSprite = csvGrid[idx++, rowIdx];
     }
 }

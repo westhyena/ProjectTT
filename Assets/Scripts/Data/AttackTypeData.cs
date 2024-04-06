@@ -29,7 +29,6 @@ public class AttackTypeInfo
     public string atkAttribute;
     public bool isTargetToGround;
     public bool isTargetToAir;
-    public bool isRangeAttack;
     public float atkWeight;
     public float atkSpdWeight;
     public float hpWeight;
@@ -43,7 +42,6 @@ public class AttackTypeInfo
         atkAttribute = csvGrid[idx++, rowIdx];
         isTargetToGround = bool.Parse(csvGrid[idx++, rowIdx]);
         isTargetToAir = bool.Parse(csvGrid[idx++, rowIdx]);
-        isRangeAttack = bool.Parse(csvGrid[idx++, rowIdx]);
         atkWeight = float.Parse(csvGrid[idx++, rowIdx]);
         atkSpdWeight = float.Parse(csvGrid[idx++, rowIdx]);
         hpWeight = float.Parse(csvGrid[idx++, rowIdx]);

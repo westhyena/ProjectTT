@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Skill
@@ -39,9 +40,9 @@ public class Skill
         {
             skillPrefab = ResourceManager.GetSkillPrefab(skillInfo.atkAnimation);
         }
-        if (!string.IsNullOrEmpty(skillInfo.atkedEffect))
+        if (!string.IsNullOrEmpty(skillInfo.atkedVFX))
         {
-            hitPrefab = ResourceManager.GetHitPrefab(skillInfo.atkedEffect);
+            hitPrefab = ResourceManager.GetHitPrefab(skillInfo.atkedVFX );
         }
 
         AddSkillEffect(skillInfo.skillEffects01, skillInfo.effectsValue01, skillInfo.duration01);
@@ -69,15 +70,14 @@ public class Skill
         }
     }
 
-    Character[] PickTargetInRange(List<Character> characterList)
+    Character[] PickTargetInRange(List<Character> characterList, Vector2 position, float range)
     {
-        Vector2 position = character.Position2D;
-        float range = skillInfo.rangeOfSkill * GameManager.instance.baseColliderWidth;
+        float targetDistance = range * GameManager.instance.baseColliderWidth;
         List<Character> insideList = new ();
         foreach (Character target in characterList)
         {
             float distanceSqr = Vector2.SqrMagnitude(position - target.Position2D);
-            if (distanceSqr < range * range)
+            if (distanceSqr < targetDistance * targetDistance)
             {
                 insideList.Add(target);
             }
@@ -86,15 +86,15 @@ public class Skill
         return insideList.ToArray();
     }
 
-    void CreateSkillObject()
+    void CreateSkillObject(Character target)
     {
         if (skillPrefab == null) return;
 
         GameObject.Instantiate(
             skillPrefab,
-            character.transform.position,
+            target.transform.position,
             Quaternion.identity,
-            character.transform
+            target.transform
         );
     }
 
@@ -110,49 +110,82 @@ public class Skill
         );
     }
 
+    Character[] GetTarget(
+        string target,
+        Character source,
+        Vector2 position2D,
+        float range
+    )
+    {
+        if (target == "ToMySelf")
+        {
+            return new Character[] { source };
+        }
+        Character[] targets = new Character[0];
+        Debug.Log(target);
+        if (target.EndsWith("Ally"))
+        {
+            targets = PickTargetInRange(source.GetAllyList(), position2D, range);
+        }
+        else if (target.EndsWith("Enemy") || target.EndsWith("Enemies"))
+        {
+            targets = PickTargetInRange(source.GetTargetList(), position2D, range);
+        }
+        Debug.Log("GET TARGET 1" + targets.Length);
+
+        if (target.StartsWith("ToAll"))
+        {
+            return targets;
+        }
+
+        if (targets.Length == 0)
+        {
+            return targets;
+        }
+
+        Character randomTarget = targets[Random.Range(0, targets.Length)];
+        return new Character[] { randomTarget };
+
+    }
+
     public void UpdateSkill()
     {
         skillTimer += Time.deltaTime;
         if (skillTimer > skillInfo.coolDown / 1000.0f)
         {
-            Character[] targets = new Character[0];
-            if (skillInfo.target == "TOMYSELF")
-            {
-                targets = new Character[] { character };
-            }
-            else if (skillInfo.target == "TOENEMY")
-            {
-                targets = PickTargetInRange(character.GetTargetList());
-            }
-            else if (skillInfo.target == "TOALLY")
-            {
-                targets = PickTargetInRange(character.GetAllyList());
-            }
+            Character[] useTargets = GetTarget(
+                skillInfo.useTarget,
+                character,
+                character.Position2D,
+                character.RangeOfTarget
+            );
 
-            if (targets.Length > 0)
+            if (useTargets.Length == 0) return;
+
+            skillTimer = 0.0f;
+            foreach (Character useTarget in useTargets)
             {
-                if (!skillInfo.isRangeAttack)
+                if (projectilePrefab != null)
                 {
-                    Character randomTarget = targets[Random.Range(0, targets.Length)];
-                    targets = new Character[] { randomTarget };
+                    Projectile projectile = Object.Instantiate(projectilePrefab).GetComponent<Projectile>();
+                    projectile.Initialize(character, useTarget, projectileInfo);
                 }
-
-                skillTimer = 0.0f;
-                CreateSkillObject();
-
-                foreach (Character target in targets)
+                else
                 {
-                    if (projectilePrefab != null)
+                    CreateSkillObject(useTarget);
+                    Character[] effectsTargets = GetTarget(
+                        skillInfo.effectsTarget,
+                        this.character,
+                        useTarget.Position2D,
+                        skillInfo.rangeOfEffects
+                    );
+                    Debug.Log($"EFFECT {skillInfo.memo} {effectsTargets.Length}");
+                    foreach (Character effectsTarget in effectsTargets)
                     {
-                        Projectile projectile = Object.Instantiate(projectilePrefab).GetComponent<Projectile>();
-                        projectile.Initialize(character, target, projectileInfo);
-                    }
-                    else
-                    {
-                        CreateHitObject(target);
+                        CreateHitObject(effectsTarget);
                         foreach (EffectHolder holder in effectList)
                         {
-                            target.AddSkillEffect(new SkillEffect(
+                            effectsTarget.AddSkillEffect(new SkillEffect(
                                 holder.effectInfo,
                                 holder.value,
                                 holder.duration,
@@ -163,6 +196,5 @@ public class Skill
                 }
             }
         }
-
     }
 }

@@ -29,7 +29,7 @@ public class DataConverter : MonoBehaviour
     private static readonly string WAVE_GROUP_INFO_DATABASE = "9d942e801ef04543a5924b560ca28416";
     private static readonly string STAGE_INFO_DATABASE = "c94148b20149490ab913824bf675c88a";
 
-    private static readonly string ENUM_TARGET_DATABASE = "0e25da75c2894d3188e512ca8d8c250c";
+    private static readonly string ENUM_TARGET_DATABASE = "c3299081bb214136944c3c2f58ebb837";
     private static readonly string ENUM_EFFECT_DATABASE = "30cb29989c4b4e4d835a9330b104e867";
     private static readonly string ENUM_STAT_DATABASE = "952a4563bef94d4991481f47834aeca7";
     private static readonly string ENUM_OPERATOR_DATABASE = "88d5e11c30544ceca7c3dfd49989c46b";
@@ -249,7 +249,6 @@ public class DataConverter : MonoBehaviour
             newObj.Add("atkAttribute", GetRelationID(propertyObj, "atkAttribute", attributeDict));
             newObj.Add("isTargetToGround", GetCheckbox(propertyObj, "isTargetToGround"));
             newObj.Add("isTargetToAir", GetCheckbox(propertyObj, "isTargetToAir"));
-            newObj.Add("isRangeAttack", GetCheckbox(propertyObj, "isRangeAttack"));
             newObj.Add("atkWeight", GetInteger(propertyObj, "atkWeight"));
             newObj.Add("atkSpdWeight", GetInteger(propertyObj, "atkSpdWeight"));
             newObj.Add("hpWeight", GetInteger(propertyObj, "hpWeight"));
@@ -292,7 +291,7 @@ public class DataConverter : MonoBehaviour
         Debug.Log("DownloadSkillData");
         JArray results = DownloadNotionDatabase(SKILL_INFO_DATABASE);
         Dictionary<string, string> attackTypeDict = GetUUIDDictionary(ATTACK_TYPE_DATABASE);
-        Dictionary<string, string> targetEnumDict = GetUUIDDictionary(ENUM_TARGET_DATABASE, "const");
+        Dictionary<string, string> targetEnumDict = GetUUIDDictionary(ENUM_TARGET_DATABASE);
         Dictionary<string, string> projectileDict = GetUUIDDictionary(PROJECTILE_INFO_DATABASE);
         Dictionary<string, string> effectDict = GetUUIDDictionary(EFFECT_INFO_DATABASE);
         JArray ary = new ();
@@ -309,21 +308,22 @@ public class DataConverter : MonoBehaviour
             newObj.Add("skillAttribute", GetRelationID(propertyObj, "skillAttribute", attackTypeDict));
             newObj.Add("isRangeAttack", GetCheckbox(propertyObj, "isRangeAttack"));
             newObj.Add("coolDown", GetInteger(propertyObj, "coolDown"));
-            newObj.Add("target", GetRelationID(propertyObj, "target", targetEnumDict));
-            newObj.Add("rangeOfSkill", GetInteger(propertyObj, "rangeOfSkill"));
+            newObj.Add("useTarget", GetRelationID(propertyObj, "useTarget", targetEnumDict));
+            newObj.Add("effectsTarget", GetRelationID(propertyObj, "effectsTarget", targetEnumDict));
+            newObj.Add("rangeOfEffects", GetInteger(propertyObj, "rangeOfEffects"));
             newObj.Add("projectileID", GetRelationID(propertyObj, "projectileID", projectileDict));
             newObj.Add("skillEffects01", GetRelationID(propertyObj, "skillEffects01", effectDict));
-            newObj.Add("effectsValue01", GetInteger(propertyObj, "effectsValue01"));
+            newObj.Add("operationValue01", GetInteger(propertyObj, "operationValue01"));
             newObj.Add("duration01", GetInteger(propertyObj, "duration01"));
             newObj.Add("skillEffects02", GetRelationID(propertyObj, "skillEffects02", effectDict));
-            newObj.Add("effectsValue02", GetInteger(propertyObj, "effectsValue02"));
+            newObj.Add("operationValue02", GetInteger(propertyObj, "operationValue02"));
             newObj.Add("duration02", GetInteger(propertyObj, "duration02"));
             newObj.Add("skillEffects03", GetRelationID(propertyObj, "skillEffects03", effectDict));
-            newObj.Add("effectsValue03", GetInteger(propertyObj, "effectsValue03"));
+            newObj.Add("operationValue03", GetInteger(propertyObj, "operationValue03"));
             newObj.Add("duration03", GetInteger(propertyObj, "duration03"));
             newObj.Add("atkAnimation", GetString(propertyObj, "atkAnimation"));
-            newObj.Add("atkedEffect", GetString(propertyObj, "atkedEffect"));
-            newObj.Add("rangeEffect", GetString(propertyObj, "rangeEffect"));
+            newObj.Add("atkedVFX", GetString(propertyObj, "atkedVFX"));
+            newObj.Add("rangeVFX", GetString(propertyObj, "rangeVFX"));
             newObj.Add("iconSprite", GetString(propertyObj, "iconSprite"));
 
             ary.Add(newObj);

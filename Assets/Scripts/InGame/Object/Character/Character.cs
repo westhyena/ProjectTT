@@ -49,7 +49,8 @@ public abstract class Character : MonoBehaviour
 
     // Data Table에서 가져올 값들.
     public float mspd = 500.0f; 
-    public float rangeOfTarget = 3.0f;
+    float rangeOfTarget = 3.0f;
+    public float RangeOfTarget { get { return rangeOfTarget; } }
 
     public float attackStat = 10.0f;
     public float AttackStat { get { return attackStat; } }
@@ -144,7 +145,6 @@ public abstract class Character : MonoBehaviour
             this.rangeOfTarget = characterInfo.rangeOfTarget;
             if (normalSkill != null)
             {
-                this.rangeOfTarget = normalSkill.SkillInfo.rangeOfSkill;
                 if (!string.IsNullOrEmpty(normalSkill.SkillInfo.projectileID))
                 {
                     projectileInfo = DataManager.instance.GetProjectileInfo(normalSkill.SkillInfo.projectileID);
@@ -173,8 +173,8 @@ public abstract class Character : MonoBehaviour
                 this.transform
             );
             rangeOfTargetObj.transform.localPosition = Vector3.zero;
-            rangeOfTargetObj.transform.localScale = Vector3.one * GameManager.instance.baseColliderWidth * rangeOfTarget * 2;
-            rangeOfTargetObj.GetComponent<SpriteRenderer>().color = Color.red;
+            rangeOfTargetObj.transform.localScale = GameManager.instance.baseColliderWidth * rangeOfTarget * 2 * Vector3.one;
+            rangeOfTargetObj.GetComponent<SpriteRenderer>().color = new Color(Color.red.r, Color.red.g, Color.red.b, 0.5f);
         }
     }
 
