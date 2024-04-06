@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_Tex:
-        m_Texture: {fileID: 2800000, guid: 61b823dca8275b449a8b8af666a4240f, type: 3}
+        m_Texture: {fileID: 2800000, guid: b23d51553b3f0e34d98828ce03437070, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Smoothness_Tex:
@@ -85,7 +85,7 @@ Material:
     - _EnableExternalAlpha: 0
     - _Mask_intensity: 1
     - _Metalic: 0
-    - _Normal_Strength: 1.5
+    - _Normal_Strength: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.5
