@@ -122,7 +122,6 @@ public class Skill
             return new Character[] { source };
         }
         Character[] targets = new Character[0];
-        Debug.Log(target);
         if (target.EndsWith("Ally"))
         {
             targets = PickTargetInRange(source.GetAllyList(), position2D, range);
@@ -131,7 +130,6 @@ public class Skill
         {
             targets = PickTargetInRange(source.GetTargetList(), position2D, range);
         }
-        Debug.Log("GET TARGET 1" + targets.Length);
 
         if (target.StartsWith("ToAll"))
         {
@@ -179,7 +177,6 @@ public class Skill
                         useTarget.Position2D,
                         skillInfo.rangeOfEffects
                     );
-                    Debug.Log($"EFFECT {skillInfo.memo} {effectsTargets.Length}");
                     foreach (Character effectsTarget in effectsTargets)
                     {
                         CreateHitObject(effectsTarget);
