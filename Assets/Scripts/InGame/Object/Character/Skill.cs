@@ -169,9 +169,14 @@ public class Skill
         }
     }
 
-    public void UpdateSkill()
+    public void UpdateSkillTimer()
     {
         skillTimer += Time.deltaTime;
+    }
+
+    public void UpdateSkill()
+    {
+        UpdateSkillTimer();
         if (skillTimer > skillInfo.coolDown / 1000.0f)
         {
             Character[] useTargets = GetTarget(

@@ -456,6 +456,14 @@ public abstract class Character : MonoBehaviour
         }
     }
 
+    protected void UpdateSkillTimerOnly()
+    {
+        foreach (Skill skill in skillList)
+        {
+            skill.UpdateSkillTimer();
+        }
+    }
+
     protected void UpdateState()
     {
         curStateTime += Time.deltaTime;
@@ -475,11 +483,11 @@ public abstract class Character : MonoBehaviour
                 UpdateAttack();
                 break;
             case State.Manual:
-                UpdateSkill();
+                UpdateSkillTimerOnly();
                 UpdateManual();
                 break;
             case State.Follow:
-                UpdateSkill();
+                UpdateSkillTimerOnly();
                 UpdateFollow();
                 break;
             case State.Dying:
