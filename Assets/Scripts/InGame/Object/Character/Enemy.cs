@@ -38,6 +38,11 @@ public class Enemy : Character
         base.OnDamage(damage);
 
         UIManager.instance.CreateDamageUI(transform.position).Initialize(damage);
+    }
 
+    protected override void OnDead()
+    {
+        base.OnDead();
+        
     }
 }

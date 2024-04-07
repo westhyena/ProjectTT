@@ -170,7 +170,7 @@ SortingGroup:
   m_GameObject: {fileID: 4846439}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &4846442
@@ -5950,7 +5950,7 @@ SortingGroup:
   m_GameObject: {fileID: 133862054}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &133862057
@@ -11981,7 +11981,7 @@ SortingGroup:
   m_GameObject: {fileID: 272839385}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &272839388
@@ -22190,7 +22190,7 @@ SortingGroup:
   m_GameObject: {fileID: 427702843}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &427702846
@@ -30050,7 +30050,7 @@ SortingGroup:
   m_GameObject: {fileID: 859078459}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &859078462
@@ -35213,7 +35213,7 @@ SortingGroup:
   m_GameObject: {fileID: 924933316}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &924933319
@@ -40135,7 +40135,7 @@ SortingGroup:
   m_GameObject: {fileID: 973865330}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &973865333
@@ -45646,7 +45646,7 @@ SortingGroup:
   m_GameObject: {fileID: 1052353369}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &1052353372
@@ -55630,12 +55630,8 @@ MonoBehaviour:
   defenceFactor1: 300
   defenceFactor2: 3
   criticalFactor: 1.5
-  playerAttackCooltime: 3
-  heroAttackRangeStartDistance: 30
-  heroAttackCooltime: 3
   heroFollowOffsetRange: 5
   heroFollowSpeed: 50
-  enemyAttackCooltime: 3
   characterRotation: {x: -30, y: 0, z: 0}
 --- !u!4 &1133609862
 Transform:
@@ -61137,7 +61133,7 @@ SortingGroup:
   m_GameObject: {fileID: 1205635252}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &1205635255
@@ -66780,7 +66776,7 @@ SortingGroup:
   m_GameObject: {fileID: 1323351649}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &1323351652
@@ -72911,7 +72907,7 @@ SortingGroup:
   m_GameObject: {fileID: 1572082484}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &1572082487
@@ -78034,7 +78030,7 @@ SortingGroup:
   m_GameObject: {fileID: 1622741720}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &1622741723
@@ -83015,7 +83011,7 @@ SortingGroup:
   m_GameObject: {fileID: 1628647108}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &1628647111
@@ -87996,7 +87992,7 @@ SortingGroup:
   m_GameObject: {fileID: 1664191339}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &1664191342
@@ -93057,7 +93053,7 @@ SortingGroup:
   m_GameObject: {fileID: 1772359421}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &1772359424
@@ -98583,7 +98579,7 @@ SortingGroup:
   m_GameObject: {fileID: 1896425359}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &1896425362
@@ -103815,6 +103811,7 @@ GameObject:
   - component: {fileID: 1992489864}
   - component: {fileID: 1992489866}
   - component: {fileID: 1992489865}
+  - component: {fileID: 1992489867}
   m_Layer: 5
   m_Name: Monster_Number
   m_TagString: Untagged
@@ -103881,6 +103878,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992489863}
   m_CullTransparentMesh: 1
+--- !u!114 &1992489867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992489863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e3d527fa67d4e9ea94cfbf7421dfd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 2100184844}
 --- !u!1 &2004886292
 GameObject:
   m_ObjectHideFlags: 0
@@ -110140,7 +110150,7 @@ SortingGroup:
   m_GameObject: {fileID: 2124049663}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &2124049666
