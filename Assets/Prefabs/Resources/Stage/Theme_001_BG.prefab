@@ -1143,7 +1143,7 @@ SpriteRenderer:
   m_Size: {x: 5.19, y: 10.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2526246816210817213
@@ -2805,6 +2805,8 @@ MonoBehaviour:
   - {fileID: 750910538505809643}
   - {fileID: 2016762639721802691}
   - {fileID: 3733017953688388810}
+  bossSpawnPoints:
+  - {fileID: 1685243023626560297}
 --- !u!1 &4816897692383958714
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,7 +2925,7 @@ SpriteRenderer:
   m_Size: {x: 5.19, y: 10.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4864449208660076358
@@ -4940,7 +4942,7 @@ SpriteRenderer:
   m_Size: {x: 5.19, y: 10.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7447316246880493794
