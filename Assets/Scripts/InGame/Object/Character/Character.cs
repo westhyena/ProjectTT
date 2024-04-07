@@ -48,9 +48,11 @@ public abstract class Character : MonoBehaviour
     protected new Rigidbody2D rigidbody2D;
 
     // Data Table에서 가져올 값들.
-    public float mspd = 500.0f; 
+    float mspd = 500.0f; 
     float rangeOfTarget = 3.0f;
     public float RangeOfTarget { get { return rangeOfTarget; } }
+
+    float attackSpeed = 1.0f;
 
     public float attackStat = 10.0f;
     public float AttackStat { get { return attackStat; } }
@@ -143,6 +145,7 @@ public abstract class Character : MonoBehaviour
             this.defenceStat = characterInfo.baseDefense;
 
             this.rangeOfTarget = characterInfo.rangeOfTarget;
+            this.attackSpeed = characterInfo.baseAtkSpd / 1000.0f;
             if (normalSkill != null)
             {
                 if (!string.IsNullOrEmpty(normalSkill.SkillInfo.projectileID))
@@ -160,6 +163,8 @@ public abstract class Character : MonoBehaviour
         movementSpeed = GameManager.instance.baseColliderWidth * 1000.0f / mspd;
         attackStartDistance = GameManager.instance.baseColliderWidth * rangeOfTarget;
         targetStartDistance = attackStartDistance * 2.0f;
+
+        this.animator.SetFloat("attackSpeed", this.attackSpeed);
 
         maxHp = hpStat;
         hp = maxHp;
