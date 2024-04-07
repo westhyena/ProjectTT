@@ -29,6 +29,7 @@ public class CharacterInfo
 {
     public string id;
     public string name;
+    public string charType;
     public float rangeOfTarget;
     public float baseMSpd;
     public float baseMaxHP;
@@ -45,6 +46,7 @@ public class CharacterInfo
         int idx = 0;
         id = csvGrid[idx++, rowidx];
         name = csvGrid[idx++, rowidx];
+        charType = csvGrid[idx++, rowidx];
         rangeOfTarget = float.Parse(csvGrid[idx++, rowidx]);
         baseMSpd = float.Parse(csvGrid[idx++, rowidx]);
         baseMaxHP = float.Parse(csvGrid[idx++, rowidx]);

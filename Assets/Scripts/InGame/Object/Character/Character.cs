@@ -7,6 +7,7 @@ public abstract class Character : MonoBehaviour
 {
     public enum State
     {
+        Init,  // 등장
         Idle,  // 기본 상태.
         Move,  // 적을 찾아 이동 중
         Target,  // 적이 타겟된 상태
@@ -24,7 +25,7 @@ public abstract class Character : MonoBehaviour
         Right
     }
 
-    protected State state = State.Idle;
+    protected State state = State.Init;
     protected LookDirection lookingDirection = LookDirection.Left;
     protected float curStateTime = 0.0f;
 
@@ -47,6 +48,8 @@ public abstract class Character : MonoBehaviour
     protected Vector3 animatorScale;
     protected Collider2D collider2d;
     protected new Rigidbody2D rigidbody2D;
+
+    protected float initTime = 1.0f;
 
     // Data Table에서 가져올 값들.
     float mspd = 500.0f; 
@@ -116,7 +119,7 @@ public abstract class Character : MonoBehaviour
             CircleCollider2D circleCollider = (CircleCollider2D)this.collider2d;
             circleCollider.radius = GameManager.instance.baseColliderWidth / 2.0f;
         }
-        this.state = State.Idle;
+        this.state = State.Init;
     }
 
     public void InitializeCharacter(string characterId)
@@ -253,6 +256,14 @@ public abstract class Character : MonoBehaviour
     protected virtual void UpdateVariable()
     {
 
+    }
+
+    void UpdateInit()
+    {
+        if (curStateTime > initTime)
+        {
+            ChangeState(State.Idle);
+        }
     }
 
     void UpdateIdle()
@@ -472,6 +483,9 @@ public abstract class Character : MonoBehaviour
 
         switch (state)
         {
+            case State.Init:
+                UpdateInit();
+                break;
             case State.Idle:
                 UpdateSkill();
                 UpdateIdle();

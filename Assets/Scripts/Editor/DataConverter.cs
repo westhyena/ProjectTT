@@ -17,6 +17,7 @@ public class DataConverter : MonoBehaviour
     private static readonly string CONST_DATABASE = "8a7b2a32f5744082b60d4f960ffab47a";
 
     private static readonly string CHARACTER_INFO_DATABASE = "7e9bd778c8d340a485aa7a502eb28544";
+    private static readonly string CAHRACTER_TYPE_DATABASE = "826b8c99d711472d92e1ca9a3ed458d6";
     private static readonly string ATTACK_TYPE_DATABASE = "c1251a8f05a74a9db70534afe25663bd";
     private static readonly string ATTACK_ATTRIBUTE_DATEBASE = "cdebc8bb07e04a67954695971beef66c";
     private static readonly string CHATACTER_LEVEL_INFO_DATABASE = "2ac8a738d91046c1898d54b238305886";
@@ -193,6 +194,7 @@ public class DataConverter : MonoBehaviour
     {
         Debug.Log("DownloadCharacterData");
         JArray results = DownloadNotionDatabase(CHARACTER_INFO_DATABASE);
+        Dictionary<string, string> typeDict = GetUUIDDictionary(CAHRACTER_TYPE_DATABASE, "name");
         Dictionary<string, string> skillDict = GetUUIDDictionary(SKILL_INFO_DATABASE);
         JArray ary = new();
         foreach (JObject obj in results.Cast<JObject>())
@@ -205,6 +207,7 @@ public class DataConverter : MonoBehaviour
 
             newObj.Add("id", id);
             newObj.Add("name", GetString(propertyObj, "name"));
+            newObj.Add("charType", GetRelationID(propertyObj, "charType", typeDict));
             newObj.Add("rangeOfTarget", GetInteger(propertyObj, "rangeOfTarget"));
             newObj.Add("baseMSpd", GetInteger(propertyObj, "baseMSpd"));
             newObj.Add("baseMaxHP", GetInteger(propertyObj, "baseMaxHP"));
