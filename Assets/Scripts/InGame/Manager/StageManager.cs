@@ -16,6 +16,7 @@ public class StageManager : MonoBehaviour
     {
         WaveInfo waveInfo;
         CharacterInfo characterInfo;
+        public bool IsBossWave => characterInfo.charType == "BOSS";
         int eachCount;
         int createdCount = 0;
         float intervalTimer = 0.0f;
@@ -28,11 +29,13 @@ public class StageManager : MonoBehaviour
             this.eachCount = Mathf.CeilToInt(waveInfo.totalCount / summonCount);
         }
 
-        void CreateWave(EnemyManager enemyManager, Transform[] spawnPoints)
+        void CreateWave(EnemyManager enemyManager, Stage stage)
         {
             int createCount = Math.Min(eachCount, waveInfo.totalCount - createdCount);
-
             
+            Transform[] spawnPoints = this.IsBossWave ? stage.bossSpawnPoints : stage.spawnPoints;
+            if (spawnPoints.Length == 0) spawnPoints = stage.spawnPoints;
+
             for (int i = 0; i < createCount; ++i)
             {
                 Vector2 randomOffset = UnityEngine.Random.insideUnitCircle;
@@ -44,7 +47,7 @@ public class StageManager : MonoBehaviour
             createdCount += createCount;
         }
 
-        public bool Update(float deltaTime, EnemyManager enemyManager, Transform[] spawnPoints)
+        public bool Update(float deltaTime, EnemyManager enemyManager, Stage stage)
         {
             if (createdCount >= waveInfo.totalCount) return true;
 
@@ -53,12 +56,12 @@ public class StageManager : MonoBehaviour
             {
                 // 처음 생성
                 intervalTimer -= waveInfo.startTime / 1000.0f;
-                CreateWave(enemyManager, spawnPoints);
+                CreateWave(enemyManager, stage);
             }
             else if (createdCount > 0 && intervalTimer > WAVE_SUMMON_INTERVAL)
             {
                 intervalTimer -= WAVE_SUMMON_INTERVAL;
-                CreateWave(enemyManager, spawnPoints);
+                CreateWave(enemyManager, stage);
             }
             return false;
         }
@@ -69,6 +72,7 @@ public class StageManager : MonoBehaviour
     {
         WaveGroupInfo info;
         List<Wave> waveList = new();
+        public bool IsBossWaveGroup => waveList.Exists(w => w.IsBossWave);
         float endTime;
         float timer = 0.0f;
 
@@ -92,13 +96,13 @@ public class StageManager : MonoBehaviour
             this.endTime = endTime;
         }
 
-        public bool Update(float deltaTime, EnemyManager enemyManager, Transform[] spawnPoints)
+        public bool Update(float deltaTime, EnemyManager enemyManager, Stage stage)
         {
             bool isSpawnEnd = true;
             timer += deltaTime;
             foreach (Wave wave in waveList)
             {
-                bool eachEnd = wave.Update(deltaTime, enemyManager, spawnPoints);
+                bool eachEnd = wave.Update(deltaTime, enemyManager, stage);
                 if (!eachEnd) isSpawnEnd = false;
             }
 
@@ -178,7 +182,7 @@ public class StageManager : MonoBehaviour
         bool waveEnd = waveGroup.Update(
             Time.deltaTime,
             EnemyManager.instance,
-            stage.spawnPoints
+            stage
         );
         if (waveEnd)
         {
