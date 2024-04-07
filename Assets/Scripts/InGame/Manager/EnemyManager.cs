@@ -40,4 +40,10 @@ public class EnemyManager : MonoBehaviour
         enemyMap[enemy.GetInstanceID()] = enemy;
         return enemy;
     }
+
+    public void DestroyEnemy(Enemy enemy)
+    {
+        enemyMap.Remove(enemy.GetInstanceID());
+        Destroy(enemy.gameObject);
+    }
 }

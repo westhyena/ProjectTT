@@ -43,6 +43,6 @@ public class Enemy : Character
     protected override void OnDead()
     {
         base.OnDead();
-        
+        EnemyManager.instance.DestroyEnemy(this);
     }
 }
