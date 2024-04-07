@@ -101,7 +101,7 @@ public abstract class Character : MonoBehaviour
         List<string> attackTriggerList = new ();
         foreach (AnimatorControllerParameter parameter in this.animator.parameters)
         {
-            if (parameter.name.StartsWith("attack"))
+            if (parameter.name.StartsWith("attack") && parameter.type == AnimatorControllerParameterType.Trigger)
             {
                 attackTriggerList.Add(parameter.name);
             }

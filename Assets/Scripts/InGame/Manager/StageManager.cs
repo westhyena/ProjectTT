@@ -31,12 +31,15 @@ public class StageManager : MonoBehaviour
         void CreateWave(EnemyManager enemyManager, Transform[] spawnPoints)
         {
             int createCount = Math.Min(eachCount, waveInfo.totalCount - createdCount);
+
+            
             for (int i = 0; i < createCount; ++i)
             {
+                Vector2 randomOffset = UnityEngine.Random.insideUnitCircle;
+                Vector3 spawnPoint = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)].position;
                 enemyManager.CreateEnemy(
                     characterInfo,
-                    spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)].position
-                );
+                    spawnPoint + (Vector3)randomOffset);
             }
             createdCount += createCount;
         }
