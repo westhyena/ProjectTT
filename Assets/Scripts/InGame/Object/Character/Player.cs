@@ -40,7 +40,6 @@ public class Player : Character
 
     protected override void UpdateVariable()
     {
-        attackCooltime = GameManager.instance.playerAttackCooltime;
     }
 
     protected override void UpdateManual()

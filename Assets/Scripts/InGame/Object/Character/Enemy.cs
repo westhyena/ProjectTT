@@ -31,7 +31,6 @@ public class Enemy : Character
 
     protected override void UpdateVariable()
     {
-        attackCooltime = GameManager.instance.enemyAttackCooltime;
     }
 
     protected override void OnDamage(float damage)

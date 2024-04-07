@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Character : MonoBehaviour
@@ -145,7 +146,8 @@ public abstract class Character : MonoBehaviour
             this.defenceStat = characterInfo.baseDefense;
 
             this.rangeOfTarget = characterInfo.rangeOfTarget;
-            this.attackSpeed = characterInfo.baseAtkSpd / 1000.0f;
+            this.attackSpeed =  1000.0f / characterInfo.baseAtkSpd;
+            this.attackCooltime = characterInfo.baseAtkSpd / 1000.0f + Time.fixedDeltaTime;
             if (normalSkill != null)
             {
                 if (!string.IsNullOrEmpty(normalSkill.SkillInfo.projectileID))
