@@ -87,7 +87,7 @@ public abstract class Character : MonoBehaviour
     protected float attackCooltime = 3.0f;
     protected float attackDelay = 0.2f;
 
-    protected float dyingDelay = 2.0f;
+    protected float dyingDelay = 3.0f;
 
     protected Character target = null;
 
