@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Player : Character
 {
-    public float manualEndTime = 1.0f;
+    float manualEndTime = 0.0f;
     private Vector2 manualMovement = Vector2.zero;
     GameObject followEffect;
 
