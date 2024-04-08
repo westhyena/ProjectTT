@@ -420,8 +420,8 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: ATTACK
-    m_StateMachine: {fileID: 398004605706127442}
+    m_Name: WALK
+    m_StateMachine: {fileID: -2538354659654185392}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -432,8 +432,8 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: WALK
-    m_StateMachine: {fileID: -2538354659654185392}
+    m_Name: ATTACK
+    m_StateMachine: {fileID: 398004605706127442}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []

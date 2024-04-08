@@ -21,17 +21,20 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Enemy_Ghostly_Waapon
-  m_Shader: {fileID: -6465566751694194690, guid: 38b6d11f3a8157c40a9406c72f2668cd, type: 3}
+  m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _ALPHABLEND_ON
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses:
+  - GRABPASS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -44,8 +47,16 @@ Material:
         m_Texture: {fileID: 2800000, guid: f065ef55734d31c44854933c2eecd5f6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Dist_MaskTex:
         m_Texture: {fileID: 2800000, guid: 6d4e6fab96de3b547a638a9902515615, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -87,27 +98,53 @@ Material:
     m_Ints: []
     m_Floats:
     - _Add_strength: 1
+    - _BlendOp: 0
     - _Boolean: 0
+    - _BumpScale: 1
+    - _CameraFadingEnabled: 0
+    - _CameraFarFadeDistance: 2
+    - _CameraNearFadeDistance: 1
+    - _ColorMode: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
     - _Dissolve_Amount: 0
     - _Dissolve_Scale: 10
     - _Dissolve_Thickness: 0.1
     - _Dist_Size: 3
     - _Dist_intensity: 0.015
     - _Dist_speed: 0.2
+    - _DistortionBlend: 0.5
+    - _DistortionEnabled: 0
+    - _DistortionStrength: 1
+    - _DistortionStrengthScaled: 0
     - _Distotion: 1
+    - _DstBlend: 10
+    - _EmissionEnabled: 0
     - _EnableExternalAlpha: 0
+    - _FlipbookMode: 0
+    - _LightingEnabled: 0
     - _Mask_intensity: 1
     - _Metalic: 0
+    - _Mode: 2
     - _Normal_Strength: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.4
+    - _SoftParticlesEnabled: 0
+    - _SoftParticlesFarFadeDistance: 1
+    - _SoftParticlesNearFadeDistance: 0
+    - _SrcBlend: 5
+    - _ZWrite: 0
     - _bending: 0.001
     - _twirl_Strength: 10
     m_Colors:
     - _Add_Color: {r: 1, g: 1, b: 0.7688679, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
+    - _Color: {r: 5.992157, g: 5.2662487, b: 0.98927116, a: 1}
+    - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _Dissolve_Color: {r: 1, g: 0.03301889, b: 0.03301889, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
