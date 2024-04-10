@@ -89,7 +89,16 @@ public class GameManager : MonoBehaviour
         {
             companionPoints -= companionSummonPoint;
             companionSummonPoint += companionSummonPointIncrease;
-            heroManager.CreateHero();
+            Hero hero = heroManager.CreateHero();
+
+            foreach (CompanionUI companionUI in UIManager.instance.companionUIs)
+            {
+                if (companionUI.CharacterInfo.id == hero.CharacterInfo.id)
+                {
+                    companionUI.CreateSummonEffect();
+                    break;
+                }
+            }
         }        
     }
 

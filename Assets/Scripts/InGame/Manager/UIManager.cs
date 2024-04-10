@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -18,6 +19,8 @@ public class UIManager : MonoBehaviour
     }
 
     public WaveUI waveUI;
+
+    public CompanionUI[] companionUIs;
 
     [SerializeField]
     GameObject hpBarPrefab;

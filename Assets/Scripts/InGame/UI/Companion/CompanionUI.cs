@@ -18,6 +18,10 @@ public class CompanionUI : MonoBehaviour
     TMP_Text countText;
 
     CharacterInfo characterInfo;
+    public CharacterInfo CharacterInfo => characterInfo;
+
+    [SerializeField]
+    GameObject summonEffect;
 
     public void Initialize(CharacterInfo characterInfo)
     {
@@ -39,5 +43,11 @@ public class CompanionUI : MonoBehaviour
         });
 
         countText.text = count.ToString();
+    }
+
+    public void CreateSummonEffect()
+    {
+        GameObject obj = Instantiate(summonEffect, transform.position, Quaternion.identity, this.transform);
+        obj.transform.localPosition = Vector3.zero;
     }
 }
