@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Skill
@@ -23,6 +21,7 @@ public class Skill
 
     GameObject skillPrefab;
     GameObject hitPrefab;
+    GameObject rangeHitPrefab;
 
     ProjectileInfo projectileInfo;
     GameObject projectilePrefab;
@@ -43,6 +42,10 @@ public class Skill
         if (!string.IsNullOrEmpty(skillInfo.atkedVFX))
         {
             hitPrefab = ResourceManager.GetHitPrefab(skillInfo.atkedVFX);
+        }
+        if (!string.IsNullOrEmpty(skillInfo.rangeVFX))
+        {
+            rangeHitPrefab = ResourceManager.GetHitPrefab(skillInfo.rangeVFX);
         }
 
         AddSkillEffect(skillInfo.skillEffects01, skillInfo.effectsValue01, skillInfo.duration01);
@@ -107,6 +110,17 @@ public class Skill
             target.transform.position,
             Quaternion.identity,
             target.transform
+        );
+    }
+
+    public void CreateRangeHitObject(Vector2 targetPosition)
+    {
+        if (rangeHitPrefab == null) return;
+
+        GameObject.Instantiate(
+            rangeHitPrefab,
+            (Vector3)targetPosition,
+            Quaternion.identity
         );
     }
 

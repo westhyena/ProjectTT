@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -45,6 +44,7 @@ public class Projectile : MonoBehaviour
         if (sqrDistance < 0.1f * 0.1f)
         {
             skill.UseSkillOnTarget(target);
+            skill.CreateRangeHitObject(target.Position2D);
             Destroy(gameObject);
             return;
         }
