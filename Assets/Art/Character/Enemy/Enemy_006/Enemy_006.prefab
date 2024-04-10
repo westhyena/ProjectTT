@@ -215,6 +215,37 @@ Transform:
   - {fileID: 1388806109159965337}
   m_Father: {fileID: 49270056488330046}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2075722484455531733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6295125761240788815}
+  m_Layer: 0
+  m_Name: weaponslot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6295125761240788815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075722484455531733}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.57, y: 2.04, z: -0.06082139}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 299012232223156733}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095814518818765588
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +602,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 49270056488330046}
+  - {fileID: 6295125761240788815}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!210 &3955525296860023485
@@ -600,8 +632,8 @@ MonoBehaviour:
   attackStat: 10
   defenceStat: 5
   hpStat: 100
-  attackType: 0
-  projectileSpawnPoint: {fileID: 0}
+  attackType: 1
+  projectileSpawnPoint: {fileID: 6295125761240788815}
 --- !u!58 &8692591197471552143
 CircleCollider2D:
   m_ObjectHideFlags: 0
