@@ -22,7 +22,7 @@ public class CompanionUI : MonoBehaviour
     public void Initialize(CharacterInfo characterInfo)
     {
         this.characterInfo = characterInfo;
-        image.sprite = ResourceManager.GetCharacterIcon(characterInfo.iconSprite);;
+        image.sprite = ResourceManager.GetCharacterIcon(characterInfo.iconSprite);
         needPointText.text = 20.ToString();
         levelText.text = 1.ToString();
     }

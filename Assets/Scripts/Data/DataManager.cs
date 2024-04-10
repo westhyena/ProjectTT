@@ -34,61 +34,61 @@ public class DataManager : MonoBehaviour
         return default(T);
     }
 
-    readonly DataMap<string> constMap = new ();
+    protected readonly DataMap<string> constMap = new ();
     public string GetConstValue(string constName)
     {
         return GetValueFromMap(constMap, constName);
     }
 
-    readonly DataMap<AttackTypeInfo> attackTypeMap = new ();
+    protected readonly DataMap<AttackTypeInfo> attackTypeMap = new ();
     public AttackTypeInfo GetAttackTypeInfo(string id)
     {
         return GetValueFromMap(attackTypeMap, id);
     }
 
-    readonly DataMap<CharacterInfo> characterMap = new ();
+    protected readonly DataMap<CharacterInfo> characterMap = new ();
     public CharacterInfo GetCharacterInfo(string id)
     {
         return GetValueFromMap(characterMap, id);
     }
 
-    readonly DataMap<SkillInfo> skillMap = new ();
+    protected readonly DataMap<SkillInfo> skillMap = new ();
     public SkillInfo GetSkillInfo(string id)
     {
         return GetValueFromMap(skillMap, id);
     }
 
-    readonly DataMap<EffectInfo> effectMap = new ();
+    protected readonly DataMap<EffectInfo> effectMap = new ();
     public EffectInfo GetEffectInfo(string id)
     {
         return GetValueFromMap(effectMap, id);
     }
 
-    readonly DataMap<ProjectileInfo> projectileMap = new ();
+    protected readonly DataMap<ProjectileInfo> projectileMap = new ();
     public ProjectileInfo GetProjectileInfo(string id)
     {
         return GetValueFromMap(projectileMap, id);
     }
 
-    readonly List<CharacterLevelInfo> outgameLevelList = new ();
-    readonly List<CharacterLevelInfo> playerLevelList = new ();
-    readonly List<CharacterLevelInfo> companionLevelList = new ();
+    protected readonly List<CharacterLevelInfo> outgameLevelList = new ();
+    protected readonly List<CharacterLevelInfo> playerLevelList = new ();
+    protected readonly List<CharacterLevelInfo> companionLevelList = new ();
 
-    readonly DataMap<WaveInfo> waveMap = new ();
+    protected readonly DataMap<WaveInfo> waveMap = new ();
     public WaveInfo GetWaveInfo(string id)
     {
         if (id == null) return null;
         return GetValueFromMap(waveMap, id);
     }
 
-    readonly DataMap<WaveGroupInfo> waveGroupMap = new ();
+    protected readonly DataMap<WaveGroupInfo> waveGroupMap = new ();
     public WaveGroupInfo GetWaveGroupInfo(string id)
     {
         if (id == null) return null;
         return GetValueFromMap(waveGroupMap, id);
     }
 
-    readonly DataMap<StageInfo> stageMap = new ();
+    protected readonly DataMap<StageInfo> stageMap = new ();
     public StageInfo GetStageInfo(string id)
     {
         return GetValueFromMap(stageMap, id);
@@ -100,7 +100,7 @@ public class DataManager : MonoBehaviour
         ReadData();
     }
 
-    void ReadData()
+    public void ReadData()
     {
         ReadConstData();
         ReadCharacterData();

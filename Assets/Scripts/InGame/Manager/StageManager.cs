@@ -32,7 +32,7 @@ public class StageManager : MonoBehaviour
         void CreateWave(EnemyManager enemyManager, Stage stage)
         {
             int createCount = Math.Min(eachCount, waveInfo.totalCount - createdCount);
-            
+
             Transform[] spawnPoints = this.IsBossWave ? stage.bossSpawnPoints : stage.spawnPoints;
             if (spawnPoints.Length == 0) spawnPoints = stage.spawnPoints;
 

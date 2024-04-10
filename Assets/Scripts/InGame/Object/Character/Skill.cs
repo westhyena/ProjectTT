@@ -42,7 +42,7 @@ public class Skill
         }
         if (!string.IsNullOrEmpty(skillInfo.atkedVFX))
         {
-            hitPrefab = ResourceManager.GetHitPrefab(skillInfo.atkedVFX );
+            hitPrefab = ResourceManager.GetHitPrefab(skillInfo.atkedVFX);
         }
 
         AddSkillEffect(skillInfo.skillEffects01, skillInfo.effectsValue01, skillInfo.duration01);
