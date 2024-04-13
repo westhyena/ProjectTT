@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
@@ -56,6 +57,13 @@ public class InputManager : MonoBehaviour
             foreach (Hero hero in heroManager.HeroList)
             {
                 hero.FollowPlayer();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            foreach (Enemy enemy in EnemyManager.instance.AliveEnemyList)
+            {
+                enemy.Damage(999999999, null);
             }
         }
     }

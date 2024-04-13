@@ -171,7 +171,14 @@ public class StageManager : MonoBehaviour
 
     void StartWave()
     {
-        UIManager.instance.waveUI.StartWave(curWaveGroupIndex + 1);
+        if (waveGroupList[curWaveGroupIndex].IsBossWaveGroup)
+        {
+            UIManager.instance.bossIncomingUI.SetActive(true);
+        }
+        else 
+        {
+            UIManager.instance.waveUI.StartWave(curWaveGroupIndex + 1);
+        }
     }
 
     void CheckWave()

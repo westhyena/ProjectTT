@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public GameObject bossIncomingUI;
     public WaveUI waveUI;
 
     public CompanionUI[] companionUIs;
