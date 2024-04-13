@@ -51,6 +51,9 @@ public class GameManager : MonoBehaviour
     public int CompanionSummonPoint { get { return companionSummonPoint; } }
     int companionSummonPointIncrease = 1;
 
+    int companionCallPoint = 20;
+    public int CompanionCallPoint { get { return companionCallPoint; } }
+
     float gameTimer = 0.0f;
     public float GameTime { get { return gameTimer; } }
 
@@ -100,6 +103,19 @@ public class GameManager : MonoBehaviour
                 }
             }
         }        
+    }
+
+    public void CallCompanion()
+    {
+        if (companionPoints >= companionCallPoint)
+        {
+            companionPoints -= companionCallPoint;
+            player.OnFollowCall();
+            foreach (Hero hero in heroManager.AliveHeroList)
+            {
+                hero.FollowPlayer();
+            }
+        }
     }
 
     public Character GetRandomHero()
