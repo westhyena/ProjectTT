@@ -173,8 +173,15 @@ public class UnityDictionary<TKey, TValue> : IDictionary<TKey, TValue>
   #endregion
 }
 
-[System.Serializable]
-public class TranslationElementDic : UnityDictionary<int, TranslationElement> { }
-
-[System.Serializable]
+[Serializable]
+public class TranslationElementDic : UnityDictionary<string, TranslationElement> { }
+[Serializable]
+public class WaveDataInfoDic : UnityDictionary<int,List<WaveDataInfo>> { }
+[Serializable]
+public class StageWaveDataElementDic : UnityDictionary<int, StageWaveDataElement> { }
+[Serializable]
+public class UserActiveSkillDataElementDic : UnityDictionary<int, UserActiveSkillDataElement> { }
+[Serializable]
+public class SkillDataElementDic : UnityDictionary<int, SkillDataElement> { }
+[Serializable]
 public class PromotionCodeElementDic : UnityDictionary<string, PromotionCodeElement> { }

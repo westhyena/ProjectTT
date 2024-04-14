@@ -14,7 +14,12 @@ public class DataReader : EditorWindow {
   private enum EXls
   {
     TranslationData,
-    Max
+	InGameSystemData,
+	StageWaveData,
+	UserActiveSkillData,
+	SkillData,
+	CharacterData,
+	Max
   }
 
   private static string lastMsg = string.Empty;
@@ -268,78 +273,429 @@ public class DataReader : EditorWindow {
 
   }
 
-  static bool SetXlsData(EXls DataKind)
-  {
-    int breakSheet = 0;
-    int breakRows = 0;
-    List<String> sheetName = new List<string>();
-    try
-    {
-      string DataPath = GetPath(DataKind.ToString() + ".xls");
+	static bool SetXlsData(EXls DataKind)
+	{
+		int breakSheet = 0;
+		int breakRows = 0;
+		List<String> sheetName = new List<string>();
+		try
+		{
+			string DataPath = GetPath(DataKind.ToString() + ".xls");
 
-      switch (DataKind)
-      {
-        case EXls.TranslationData:
-          #region TranslationData
-          string[] TranslationDataSheet = { "Translation", "ShipName", "SkillDesc", "TierName", "GachaName", "GachaDesc", "LoadingTip", "PushMSG" };
+			switch (DataKind)
+			{
+				
+				case EXls.TranslationData:
+					#region TranslationData
+					string[] TranslationDataSheet = { "Text", "HeroName", "HeroDesc", "MercenaryName", "MercenaryDesc", "MonsterName", "MonsterDesc", "MiddleBossName", "MiddleBossDesc","BossName","BossDesc","SkillName","SkillDesc" };
 
-		  for (int i = 0; i < TranslationDataSheet.Length; ++i)
-          {
-            DataTable Table = ReadSingleSheet(TranslationDataSheet[i], DataPath);
-            sheetName.Add(TranslationDataSheet[i]);
+					for (int i = 0; i < TranslationDataSheet.Length; ++i)
+					{
+						DataTable Table = ReadSingleSheet(TranslationDataSheet[i], DataPath);
+						sheetName.Add(TranslationDataSheet[i]);
 
-            if (Table.Rows.Count > 0)
-            {
-              for (int ii = 0; ii < Table.Rows.Count; ii++)
-              {
-                breakRows = ii;
-                object[] obj = Table.Rows[ii].ItemArray;
+						if (Table.Rows.Count > 0)
+						{
+							for (int ii = 0; ii < Table.Rows.Count; ii++)
+							{
+								breakRows = ii;
+								object[] obj = Table.Rows[ii].ItemArray;
 
-                if (string.IsNullOrEmpty(Get<string>(obj, 0)))
-                  continue;
+								if (string.IsNullOrEmpty(Get<string>(obj, 0)))
+								continue;
 
-                TranslationElement te = new TranslationElement();
-                te.ID = Get<int>(obj, 0);
-                te.Kor = Get<string>(obj, 1);
-                te.Eng = Get<string>(obj, 2);
-                te.Jpn = Get<string>(obj, 3);
-                te.Prt = Get<string>(obj, 4);
-                te.Deu = Get<string>(obj, 5);
-                te.Rus = Get<string>(obj, 6);
-                te.Fra = Get<string>(obj, 7);
-                te.Chn_s = Get<string>(obj, 8);
-                te.Chn_t = Get<string>(obj, 9);
-                te.Esp = Get<string>(obj, 10);
-                te.Tha = Get<string>(obj, 11);
-                te.Vnm = Get<string>(obj, 12);
-                te.Mys = Get<string>(obj, 13);
+								TranslationElement te = new TranslationElement();
+								te.ID = Get<string>(obj, 0);
+								te.Kor = Get<string>(obj, 1);
+								te.Eng = Get<string>(obj, 2);
+								//te.Jpn = Get<string>(obj, 3);
+								//te.Prt = Get<string>(obj, 4);
+								//te.Deu = Get<string>(obj, 5);
+								//te.Rus = Get<string>(obj, 6);
+								//te.Fra = Get<string>(obj, 7);
+								//te.Chn_s = Get<string>(obj, 8);
+								//te.Chn_t = Get<string>(obj, 9);
+								//te.Esp = Get<string>(obj, 10);
+								//te.Tha = Get<string>(obj, 11);
+								//te.Vnm = Get<string>(obj, 12);
+								//te.Mys = Get<string>(obj, 13);
                 
-                m_DataMgr.m_TranslationElementDic.Add(te.ID, te);
-              }
-            }
-            breakSheet++;
-          }
-          #endregion
-          break;
-      }
-    }
-    catch (Exception e)
-    {
-      UnityEngine.Debug.Log(e.Message);
-      lastMsg = "Result : fail\nMessage : " + e.Message;
-      lastMsg += "Break Sheet: " + sheetName[breakSheet] + ", Break Rows: " + breakRows;
-      if (DataInstance != null)
-        GameObject.DestroyImmediate(DataInstance);
-      EditorUtility.DisplayDialog("fail", lastMsg, "ok");
-      return false;
-    }
-    return true;
-  }
+								m_DataMgr.m_TranslationElementDic.Add(te.ID, te);
+							}
+						}
+						breakSheet++;
+					}
+					#endregion
+					break;
+				case EXls.InGameSystemData:
+					#region InGameSystemData
+					string[] InGameSystemDataSheet = { "MercenaryPoint", "MercenaryLevelUpPoint", "SummonPoint", "CallPoint"};
 
-  static T Get<T>(object[] value,int index)
-  {
-    if (string.IsNullOrEmpty((string)Convert.ChangeType(value[index], typeof(string))))
-      return default(T);
-    return (T)Convert.ChangeType(value[index],typeof(T));
-  }
+					InGameSystemElement igse = new InGameSystemElement();
+					for (int i = 0; i < InGameSystemDataSheet.Length; ++i)
+					{
+						DataTable Table = ReadSingleSheet(InGameSystemDataSheet[i], DataPath);
+						sheetName.Add(InGameSystemDataSheet[i]);
+
+						if (Table.Rows.Count > 0)
+						{
+							for (int ii = 0; ii < Table.Rows.Count; ii++)
+							{
+								breakRows = ii;
+								object[] obj = Table.Rows[ii].ItemArray;
+
+								if (string.IsNullOrEmpty(Get<string>(obj, 0)))
+									continue;
+								switch(InGameSystemDataSheet[i])
+								{
+									case "MercenaryPoint":
+										igse.MercenaryPointGetTime = Get<int>(obj, 0);
+										igse.GetMercenaryPoint = Get<int>(obj, 1);
+										break;
+									case "MercenaryLevelUpPoint":
+										igse.Mercenary_LevelUp_NeedPoint.Add(Get<int>(obj, 1));
+										break;
+									case "SummonPoint":
+										igse.Summon_NeedPoint = Get<int>(obj, 0);
+										break;
+									case "CallPoint":
+										igse.Call_NeedPoint = Get<int>(obj, 0);
+										break;
+								}
+								m_DataMgr.m_InGameSystemElement = igse;
+							}
+						}
+						breakSheet++;
+					}
+					#endregion
+					break;
+				case EXls.StageWaveData:
+					#region StageWaveData
+					string[] StageWaveDataSheet = { "StageData" };
+
+					
+					for (int i = 0; i < StageWaveDataSheet.Length; ++i)
+					{
+						DataTable Table = ReadSingleSheet(StageWaveDataSheet[i], DataPath);
+						sheetName.Add(StageWaveDataSheet[i]);
+
+						if (Table.Rows.Count > 0)
+						{
+							for (int ii = 0; ii < Table.Rows.Count; ii++)
+							{
+								breakRows = ii;
+								object[] obj = Table.Rows[ii].ItemArray;
+
+								if (string.IsNullOrEmpty(Get<string>(obj, 0)))
+									continue;
+
+								StageWaveDataElement swde = new StageWaveDataElement();
+								swde.id = Get<int>(obj, 0);
+								swde.StageName = Get<string>(obj, 1);
+								swde.StageNameID = Get<string>(obj, 2);
+								swde.StageDescID = Get<string>(obj, 3);
+								swde.PlayTime = Get<float>(obj, 4);
+								int StageID = Get<int>(obj, 5);
+
+								DataTable WaveTable = ReadSingleSheet(string.Format("Stage_{0}",StageID), DataPath);
+								//웨이브 셋팅
+								if (WaveTable.Rows.Count > 0)
+								{
+									for (int iii = 0; iii < WaveTable.Rows.Count; iii++)
+									{
+										breakRows = iii;
+										object[] obj2 = WaveTable.Rows[iii].ItemArray;
+
+										if (string.IsNullOrEmpty(Get<string>(obj2, 0)))
+											continue;
+
+										WaveDataInfo info = new WaveDataInfo();
+										info.WaveID = Get<int>(obj2, 0);
+										info.SummonTime = Get<float>(obj2, 1);
+										info.ObjName = Get<string>(obj2, 2);
+										info.CharacterID = Get<int>(obj2, 3);
+										info.CharacterLevel = Get<int>(obj2, 4);
+										info.SummonCount = Get<int>(obj2, 5);
+
+										switch(info.WaveID)
+										{
+											case 0:
+												swde.Wave0.Add(info);
+												break;
+											case 1:
+												swde.Wave1.Add(info);
+												break;
+											case 2:
+												swde.Wave2.Add(info);
+												break;
+											case 3:
+												swde.Wave3.Add(info);
+												break;
+											case 4:
+												swde.Wave4.Add(info);
+												break;
+										}
+									}
+								}
+
+								m_DataMgr.m_StageWaveDataElementDic.Add(swde.id, swde);
+							}
+						}
+						breakSheet++;
+					}
+					#endregion
+					break;
+				case EXls.UserActiveSkillData:
+					#region UserActiveSkillData
+					string[] UserActiveSkillDataSheet = { "UserSkill"};
+
+					for (int i = 0; i < UserActiveSkillDataSheet.Length; ++i)
+					{
+						DataTable Table = ReadSingleSheet(UserActiveSkillDataSheet[i], DataPath);
+						sheetName.Add(UserActiveSkillDataSheet[i]);
+
+						if (Table.Rows.Count > 0)
+						{
+							for (int ii = 0; ii < Table.Rows.Count; ii++)
+							{
+								breakRows = ii;
+								object[] obj = Table.Rows[ii].ItemArray;
+
+								if (string.IsNullOrEmpty(Get<string>(obj, 0)))
+									continue;
+
+								UserActiveSkillDataElement uasde = new UserActiveSkillDataElement();
+								uasde.ID = Get<int>(obj, 0);
+								uasde.UserSkillName = Get<string>(obj, 1);
+								uasde.UserSkillNameID = Get<string>(obj, 2);
+								uasde.UserSkillDescID = Get<string>(obj, 3);
+								uasde.Rating = Get<int>(obj, 4);
+								uasde.PriceType = Get<int>(obj, 5);
+								uasde.PriceValue = Get<int>(obj, 6);
+								uasde.ActivePosition = Get<int>(obj, 7);
+								uasde.Target = Get<int>(obj, 8);
+								if (string.IsNullOrEmpty(Get<string>(obj, 9)) == false)
+									uasde.CoolTime = Get<float>(obj, 9);
+								uasde.Type = Get<int>(obj, 10);
+								uasde.TargetSelectType = Get<int>(obj, 11);
+								if ( string.IsNullOrEmpty( Get<string>(obj, 12)) == false)
+									uasde.DamageTypeRange = Get<int>(obj, 12);
+
+								int _Value = 0;
+								float _Time = 0f;
+								for ( int sk = 13; sk <= 24; ++sk)
+								{
+									switch(sk)
+									{
+										case 13:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 13)) ? 0 : Get<int>(obj, 13);
+											if ( _Value != 0)
+												uasde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Damage,_Value));
+											break;
+										case 14:
+										case 15:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 14)) ? 0 : Get<int>(obj, 14);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 15)) ? 0 : Get<float>(obj, 15);
+											if (_Value != 0)
+												uasde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.DotDamage,_Value, _Time));
+											++sk;
+											break;
+										case 16:
+										case 17:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 16)) ? 0 : Get<int>(obj, 16);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 17)) ? 0 : Get<float>(obj, 17);
+											if (_Value != 0)
+												uasde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackUp, _Value,_Time));
+											++sk;
+											break;
+										case 18:
+										case 19:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 18)) ? 0 : Get<int>(obj, 18);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 19)) ? 0 : Get<float>(obj, 19);
+											if (_Value != 0)
+												uasde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackSpeedUp,0, _Time));
+											++sk;
+											break;
+										case 20:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 20)) ? 0 : Get<int>(obj, 20);
+											if (_Value != 0)
+												uasde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Heal, _Value));
+											break;
+										case 21:
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 21)) ? 0 : Get<float>(obj, 21);
+											if (_Time != 0)
+												uasde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Immunity, 0,_Time));
+											break;
+										case 22:
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 22)) ? 0 : Get<float>(obj, 22);
+											if (_Time != 0)
+												uasde.SkillData.Add( new SkillDataBase((int)SkillDataKind_E.Stun, 0, _Time));
+											break;
+										case 23:
+										case 24:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 23)) ? 0 : Get<int>(obj, 23);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 24)) ? 0 : Get<float>(obj, 24);
+											if (_Value != 0)
+												uasde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackSpeedDown, _Value, _Time));
+											++sk;
+											break;
+									}
+								}
+
+								DataTable UserSkill_FileTable = ReadSingleSheet("UserSkill_File", DataPath);
+								//파일명 셋팅
+								object[] obj2 = UserSkill_FileTable.Rows[uasde.ID].ItemArray;
+
+								//if (string.IsNullOrEmpty(Get<string>(obj2, 0)))
+								//	continue;
+								uasde.IconName = Get<string>(obj2, 2);
+								uasde.Eff_SkillName = Get<string>(obj2, 3);
+
+								m_DataMgr.m_UserActiveSkillDataElementDic.Add(uasde.ID, uasde);
+							}
+						}
+						breakSheet++;
+					}
+					#endregion
+					break;
+				case EXls.SkillData:
+					#region UserActiveSkillData
+					string[] SkillDataSheet = { "Skill_0", "Skill_1", "Skill_2", "Skill_3", "Skill_4", "Skill_5" };
+
+					for (int i = 0; i < SkillDataSheet.Length; ++i)
+					{
+						DataTable Table = ReadSingleSheet(SkillDataSheet[i], DataPath);
+						sheetName.Add(SkillDataSheet[i]);
+
+						if (Table.Rows.Count > 0)
+						{
+							for (int ii = 0; ii < Table.Rows.Count; ii++)
+							{
+								breakRows = ii;
+								object[] obj = Table.Rows[ii].ItemArray;
+
+								if (string.IsNullOrEmpty(Get<string>(obj, 0)))
+									continue;
+
+								SkillDataElement sde = new SkillDataElement();
+								sde.ID = Get<int>(obj, 0);
+								sde.UserSkillName = Get<string>(obj, 1);
+								sde.UserSkillNameID = Get<string>(obj, 2);
+								sde.UserSkillDescID = Get<string>(obj, 3);
+								if (string.IsNullOrEmpty(Get<string>(obj, 4)) == false)
+									sde.ActivePosition = Get<int>(obj, 4);
+								if (string.IsNullOrEmpty(Get<string>(obj, 5)) == false)
+									sde.Target = Get<int>(obj, 5);
+								if (string.IsNullOrEmpty(Get<string>(obj, 6)) == false)
+									sde.CoolTime = Get<float>(obj, 6);
+								if (string.IsNullOrEmpty(Get<string>(obj, 7)) == false)
+									sde.Type = Get<int>(obj, 7);
+								if (string.IsNullOrEmpty(Get<string>(obj, 8)) == false)
+									sde.TargetSelectType = Get<int>(obj, 8);
+								if (string.IsNullOrEmpty(Get<string>(obj, 9)) == false)
+									sde.DamageTypeRange = Get<int>(obj, 9);
+
+								int _Value = 0;
+								float _Time = 0f;
+								for (int sk = 10; sk <= 21; ++sk)
+								{
+									switch (sk)
+									{
+										case 10:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 10)) ? 0 : Get<int>(obj, 10);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Damage, _Value));
+											break;
+										case 11:
+										case 12:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 11)) ? 0 : Get<int>(obj, 11);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 12)) ? 0 : Get<float>(obj, 12);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.DotDamage, _Value, _Time));
+											++sk;
+											break;
+										case 13:
+										case 14:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 13)) ? 0 : Get<int>(obj, 13);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 14)) ? 0 : Get<float>(obj, 14);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackUp, _Value, _Time));
+											++sk;
+											break;
+										case 15:
+										case 16:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 15)) ? 0 : Get<int>(obj, 15);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 16)) ? 0 : Get<float>(obj, 16);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackSpeedUp, 0, _Time));
+											++sk;
+											break;
+										case 17:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 17)) ? 0 : Get<int>(obj, 17);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Heal, _Value));
+											break;
+										case 18:
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 18)) ? 0 : Get<float>(obj, 18);
+											if (_Time != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Immunity, 0, _Time));
+											break;
+										case 19:
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 19)) ? 0 : Get<float>(obj, 19);
+											if (_Time != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Stun, 0, _Time));
+											break;
+										case 20:
+										case 21:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 20)) ? 0 : Get<int>(obj, 20);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 21)) ? 0 : Get<float>(obj, 21);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackSpeedDown, _Value, _Time));
+											++sk;
+											break;
+									}
+								}
+
+								DataTable UserSkill_FileTable = ReadSingleSheet(string.Format("Skill_{0}File",i), DataPath);
+								//파일명 셋팅
+								object[] obj2 = UserSkill_FileTable.Rows[ii].ItemArray;
+
+								//if (string.IsNullOrEmpty(Get<string>(obj2, 0)))
+								//	continue;
+								sde.IconName = Get<string>(obj2, 2);
+								sde.Eff_SkillName = Get<string>(obj2, 3);
+								sde.Eff_Name = Get<string>(obj2, 4);
+
+								m_DataMgr.m_SkillDataElementDic.Add(sde.ID, sde);
+							}
+						}
+						breakSheet++;
+					}
+					#endregion
+					break;
+				//case EXls.CharacterData:
+
+				//	break;
+			}
+		}
+		catch (Exception e)
+		{
+			UnityEngine.Debug.Log(e.Message);
+			lastMsg = "Result : fail\nMessage : " + e.Message;
+			lastMsg += "Break Sheet: " + sheetName[breakSheet] + ", Break Rows: " + breakRows;
+			if (DataInstance != null)
+			GameObject.DestroyImmediate(DataInstance);
+			EditorUtility.DisplayDialog("fail", lastMsg, "ok");
+			return false;
+		}
+		return true;
+	}
+
+	static T Get<T>(object[] value,int index)
+	{
+		if (string.IsNullOrEmpty((string)Convert.ChangeType(value[index], typeof(string))))
+			return default(T);
+	
+		return (T)Convert.ChangeType(value[index], typeof(T));
+	}
 }
