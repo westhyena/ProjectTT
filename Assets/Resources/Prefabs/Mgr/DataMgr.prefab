@@ -1396,6 +1396,7 @@ MonoBehaviour:
       StageNameID: 
       StageDescID: 0
       PlayTime: 300
+      StartMercenaryPoint: 0
       Wave0:
       - WaveID: 0
         SummonTime: 5
@@ -1478,6 +1479,7 @@ MonoBehaviour:
       StageNameID: 
       StageDescID: 0
       PlayTime: 300
+      StartMercenaryPoint: 1
       Wave0:
       - WaveID: 0
         SummonTime: 5
@@ -1821,7 +1823,7 @@ MonoBehaviour:
         Value: 150
         Time: 0
       - SkillDataKind: 7
-        Value: 20
+        Value: 0.2
         Time: 3
       IconName: 
       Eff_SkillName: 
@@ -1940,3 +1942,1478 @@ MonoBehaviour:
       IconName: 
       Eff_SkillName: 
       Eff_Name: 
+  m_CharacterDataElementDic:
+    _keys: 0000000064000000650000006600000067000000e8030000e9030000ea030000eb030000ec030000ed030000ee030000ef030000f0030000f103000034080000b80b0000
+    _values:
+    - ID: 0
+      CharacterName: "\uD30C\uB780\uBA38\uB9AC \uC601\uC6C5"
+      CharacterNameID: 1000
+      CharacterDescID: 2000
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 2
+      DamageTargetType: 2
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 30
+      HP: 1000
+      PD: 50
+      MD: 20
+      AllSkillList: 01000000020000000a000000140000001f000000290000002b0000003300000034000000
+      Exp: 0
+      Gold: 0
+      iconFileName: sprite_hero_icon_10001
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 100
+      CharacterName: "\uC77C\uBC18 \uC804\uC0AC"
+      CharacterNameID: 3000
+      CharacterDescID: 4000
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 2
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 10
+      HP: 100
+      PD: 50
+      MD: 10
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 101
+      CharacterName: "\uC77C\uBC18 \uAD81\uC218"
+      CharacterNameID: 3001
+      CharacterDescID: 4001
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 1
+      AttackRange: 4
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 100
+      PD: 30
+      MD: 20
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 102
+      CharacterName: "\uC77C\uBC18 \uBC95\uC0AC"
+      CharacterNameID: 3002
+      CharacterDescID: 4002
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 1
+      AttackRange: 3
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 8
+      HP: 100
+      PD: 10
+      MD: 50
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 103
+      CharacterName: "\uB3C4\uB07C \uD22C\uCC99 \uB4DC\uC6CC\uD504"
+      CharacterNameID: 3003
+      CharacterDescID: 4003
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 1
+      AttackRange: 3
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1.5
+      AttackDamage: 10
+      HP: 100
+      PD: 40
+      MD: 10
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1000
+      CharacterName: "\uB098\uC05C \uBC84\uC12F"
+      CharacterNameID: 10000
+      CharacterDescID: 11000
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 1
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1001
+      CharacterName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
+      CharacterNameID: 10001
+      CharacterDescID: 11001
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 1
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1002
+      CharacterName: "\uC804\uC0AC \uBA67\uB3FC\uC9C0"
+      CharacterNameID: 10002
+      CharacterDescID: 11002
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 1
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1003
+      CharacterName: "\uC2AC\uB77C\uC784"
+      CharacterNameID: 10003
+      CharacterDescID: 11003
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 1
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1004
+      CharacterName: "\uB3CC\uD314\uB9E4\uC9C8 \uBA67\uB3FC\uC9C0"
+      CharacterNameID: 10004
+      CharacterDescID: 11004
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 1
+      AttackRange: 4
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1005
+      CharacterName: "\uB208\uC54C \uBC15\uC950"
+      CharacterNameID: 10005
+      CharacterDescID: 11005
+      MoveSpeed: 10
+      Position: 1
+      Type: 0
+      AttackType: 0
+      AttackRange: 1
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1006
+      CharacterName: "\uC8FC\uC220\uC0AC"
+      CharacterNameID: 10006
+      CharacterDescID: 11006
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 1
+      AttackRange: 3
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1007
+      CharacterName: "\uC790\uC774\uC5B8\uD2B8 \uAC70\uBBF8"
+      CharacterNameID: 10007
+      CharacterDescID: 11007
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 2
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1008
+      CharacterName: "\uD63C\uC774\uB098\uAC04 \uC6D0\uC8FC\uBBFC \uCC3D\uBCD1"
+      CharacterNameID: 10008
+      CharacterDescID: 11008
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 1
+      AttackRange: 4
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1009
+      CharacterName: "\uB9C8\uBC95\uC0AC"
+      CharacterNameID: 10009
+      CharacterDescID: 11009
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 1
+      AttackRange: 3
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 2100
+      CharacterName: "\uD63C\uC774\uB098\uAC04 \uC6D0\uC8FC\uBBFC"
+      CharacterNameID: 20000
+      CharacterDescID: 21000
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 2
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 2
+      AttackDamage: 30
+      HP: 5000
+      PD: 100
+      MD: 100
+      AllSkillList: 
+      Exp: 100
+      Gold: 100
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 3000
+      CharacterName: "\uAC70\uB300\uD55C \uAF43\uC78E \uC2DD\uBB3C"
+      CharacterNameID: 30000
+      CharacterDescID: 31000
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 3
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 100
+      HP: 10000
+      PD: 20
+      MD: 20
+      AllSkillList: 
+      Exp: 0
+      Gold: 1000
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+  m_InGame_CharacterGrowDataElement:
+    Hero:
+    - Level: 0
+      MaxExp: 100
+      Add_AttackDamage: 0
+      Add_Hp: 0
+      Add_PD: 0
+      ADD_MD: 0
+    - Level: 1
+      MaxExp: 200
+      Add_AttackDamage: 5
+      Add_Hp: 10
+      Add_PD: 1
+      ADD_MD: 1
+    - Level: 2
+      MaxExp: 300
+      Add_AttackDamage: 10
+      Add_Hp: 20
+      Add_PD: 2
+      ADD_MD: 2
+    - Level: 3
+      MaxExp: 400
+      Add_AttackDamage: 15
+      Add_Hp: 30
+      Add_PD: 3
+      ADD_MD: 3
+    - Level: 4
+      MaxExp: 500
+      Add_AttackDamage: 20
+      Add_Hp: 40
+      Add_PD: 4
+      ADD_MD: 4
+    - Level: 5
+      MaxExp: 600
+      Add_AttackDamage: 25
+      Add_Hp: 50
+      Add_PD: 5
+      ADD_MD: 5
+    - Level: 6
+      MaxExp: 700
+      Add_AttackDamage: 30
+      Add_Hp: 60
+      Add_PD: 6
+      ADD_MD: 6
+    - Level: 7
+      MaxExp: 800
+      Add_AttackDamage: 35
+      Add_Hp: 70
+      Add_PD: 7
+      ADD_MD: 7
+    - Level: 8
+      MaxExp: 900
+      Add_AttackDamage: 40
+      Add_Hp: 80
+      Add_PD: 8
+      ADD_MD: 8
+    - Level: 9
+      MaxExp: 1000
+      Add_AttackDamage: 45
+      Add_Hp: 90
+      Add_PD: 9
+      ADD_MD: 9
+    - Level: 10
+      MaxExp: 1100
+      Add_AttackDamage: 50
+      Add_Hp: 100
+      Add_PD: 10
+      ADD_MD: 10
+    - Level: 11
+      MaxExp: 1200
+      Add_AttackDamage: 55
+      Add_Hp: 110
+      Add_PD: 11
+      ADD_MD: 11
+    - Level: 12
+      MaxExp: 1300
+      Add_AttackDamage: 60
+      Add_Hp: 120
+      Add_PD: 12
+      ADD_MD: 12
+    - Level: 13
+      MaxExp: 1400
+      Add_AttackDamage: 65
+      Add_Hp: 130
+      Add_PD: 13
+      ADD_MD: 13
+    - Level: 14
+      MaxExp: 1500
+      Add_AttackDamage: 70
+      Add_Hp: 140
+      Add_PD: 14
+      ADD_MD: 14
+    - Level: 15
+      MaxExp: 1600
+      Add_AttackDamage: 75
+      Add_Hp: 150
+      Add_PD: 15
+      ADD_MD: 15
+    - Level: 16
+      MaxExp: 1700
+      Add_AttackDamage: 80
+      Add_Hp: 160
+      Add_PD: 16
+      ADD_MD: 16
+    - Level: 17
+      MaxExp: 1800
+      Add_AttackDamage: 85
+      Add_Hp: 170
+      Add_PD: 17
+      ADD_MD: 17
+    - Level: 18
+      MaxExp: 1900
+      Add_AttackDamage: 90
+      Add_Hp: 180
+      Add_PD: 18
+      ADD_MD: 18
+    - Level: 19
+      MaxExp: 2000
+      Add_AttackDamage: 95
+      Add_Hp: 190
+      Add_PD: 19
+      ADD_MD: 19
+    - Level: 20
+      MaxExp: 2100
+      Add_AttackDamage: 100
+      Add_Hp: 200
+      Add_PD: 20
+      ADD_MD: 20
+    - Level: 21
+      MaxExp: 2200
+      Add_AttackDamage: 105
+      Add_Hp: 210
+      Add_PD: 21
+      ADD_MD: 21
+    - Level: 22
+      MaxExp: 2300
+      Add_AttackDamage: 110
+      Add_Hp: 220
+      Add_PD: 22
+      ADD_MD: 22
+    - Level: 23
+      MaxExp: 2400
+      Add_AttackDamage: 115
+      Add_Hp: 230
+      Add_PD: 23
+      ADD_MD: 23
+    - Level: 24
+      MaxExp: 2500
+      Add_AttackDamage: 120
+      Add_Hp: 240
+      Add_PD: 24
+      ADD_MD: 24
+    - Level: 25
+      MaxExp: 2600
+      Add_AttackDamage: 125
+      Add_Hp: 250
+      Add_PD: 25
+      ADD_MD: 25
+    - Level: 26
+      MaxExp: 2700
+      Add_AttackDamage: 130
+      Add_Hp: 260
+      Add_PD: 26
+      ADD_MD: 26
+    - Level: 27
+      MaxExp: 2800
+      Add_AttackDamage: 135
+      Add_Hp: 270
+      Add_PD: 27
+      ADD_MD: 27
+    - Level: 28
+      MaxExp: 2900
+      Add_AttackDamage: 140
+      Add_Hp: 280
+      Add_PD: 28
+      ADD_MD: 28
+    - Level: 29
+      MaxExp: 3000
+      Add_AttackDamage: 145
+      Add_Hp: 290
+      Add_PD: 29
+      ADD_MD: 29
+    - Level: 30
+      MaxExp: 3100
+      Add_AttackDamage: 150
+      Add_Hp: 300
+      Add_PD: 30
+      ADD_MD: 30
+    Mercenary:
+    - Level: 0
+      MaxExp: 100
+      Add_AttackDamage: 0
+      Add_Hp: 0
+      Add_PD: 0
+      ADD_MD: 0
+    - Level: 1
+      MaxExp: 200
+      Add_AttackDamage: 5
+      Add_Hp: 10
+      Add_PD: 1
+      ADD_MD: 1
+    - Level: 2
+      MaxExp: 300
+      Add_AttackDamage: 10
+      Add_Hp: 20
+      Add_PD: 2
+      ADD_MD: 2
+    - Level: 3
+      MaxExp: 400
+      Add_AttackDamage: 15
+      Add_Hp: 30
+      Add_PD: 3
+      ADD_MD: 3
+    - Level: 4
+      MaxExp: 500
+      Add_AttackDamage: 20
+      Add_Hp: 40
+      Add_PD: 4
+      ADD_MD: 4
+    - Level: 5
+      MaxExp: 600
+      Add_AttackDamage: 25
+      Add_Hp: 50
+      Add_PD: 5
+      ADD_MD: 5
+    - Level: 6
+      MaxExp: 700
+      Add_AttackDamage: 30
+      Add_Hp: 60
+      Add_PD: 6
+      ADD_MD: 6
+    - Level: 7
+      MaxExp: 800
+      Add_AttackDamage: 35
+      Add_Hp: 70
+      Add_PD: 7
+      ADD_MD: 7
+    - Level: 8
+      MaxExp: 900
+      Add_AttackDamage: 40
+      Add_Hp: 80
+      Add_PD: 8
+      ADD_MD: 8
+    - Level: 9
+      MaxExp: 1000
+      Add_AttackDamage: 45
+      Add_Hp: 90
+      Add_PD: 9
+      ADD_MD: 9
+    - Level: 10
+      MaxExp: 1100
+      Add_AttackDamage: 50
+      Add_Hp: 100
+      Add_PD: 10
+      ADD_MD: 10
+    - Level: 11
+      MaxExp: 1200
+      Add_AttackDamage: 55
+      Add_Hp: 110
+      Add_PD: 11
+      ADD_MD: 11
+    - Level: 12
+      MaxExp: 1300
+      Add_AttackDamage: 60
+      Add_Hp: 120
+      Add_PD: 12
+      ADD_MD: 12
+    - Level: 13
+      MaxExp: 1400
+      Add_AttackDamage: 65
+      Add_Hp: 130
+      Add_PD: 13
+      ADD_MD: 13
+    - Level: 14
+      MaxExp: 1500
+      Add_AttackDamage: 70
+      Add_Hp: 140
+      Add_PD: 14
+      ADD_MD: 14
+    - Level: 15
+      MaxExp: 1600
+      Add_AttackDamage: 75
+      Add_Hp: 150
+      Add_PD: 15
+      ADD_MD: 15
+    - Level: 16
+      MaxExp: 1700
+      Add_AttackDamage: 80
+      Add_Hp: 160
+      Add_PD: 16
+      ADD_MD: 16
+    - Level: 17
+      MaxExp: 1800
+      Add_AttackDamage: 85
+      Add_Hp: 170
+      Add_PD: 17
+      ADD_MD: 17
+    - Level: 18
+      MaxExp: 1900
+      Add_AttackDamage: 90
+      Add_Hp: 180
+      Add_PD: 18
+      ADD_MD: 18
+    - Level: 19
+      MaxExp: 2000
+      Add_AttackDamage: 95
+      Add_Hp: 190
+      Add_PD: 19
+      ADD_MD: 19
+    - Level: 20
+      MaxExp: 2100
+      Add_AttackDamage: 100
+      Add_Hp: 200
+      Add_PD: 20
+      ADD_MD: 20
+    - Level: 21
+      MaxExp: 2200
+      Add_AttackDamage: 105
+      Add_Hp: 210
+      Add_PD: 21
+      ADD_MD: 21
+    - Level: 22
+      MaxExp: 2300
+      Add_AttackDamage: 110
+      Add_Hp: 220
+      Add_PD: 22
+      ADD_MD: 22
+    - Level: 23
+      MaxExp: 2400
+      Add_AttackDamage: 115
+      Add_Hp: 230
+      Add_PD: 23
+      ADD_MD: 23
+    - Level: 24
+      MaxExp: 2500
+      Add_AttackDamage: 120
+      Add_Hp: 240
+      Add_PD: 24
+      ADD_MD: 24
+    - Level: 25
+      MaxExp: 2600
+      Add_AttackDamage: 125
+      Add_Hp: 250
+      Add_PD: 25
+      ADD_MD: 25
+    - Level: 26
+      MaxExp: 2700
+      Add_AttackDamage: 130
+      Add_Hp: 260
+      Add_PD: 26
+      ADD_MD: 26
+    - Level: 27
+      MaxExp: 2800
+      Add_AttackDamage: 135
+      Add_Hp: 270
+      Add_PD: 27
+      ADD_MD: 27
+    - Level: 28
+      MaxExp: 2900
+      Add_AttackDamage: 140
+      Add_Hp: 280
+      Add_PD: 28
+      ADD_MD: 28
+    - Level: 29
+      MaxExp: 3000
+      Add_AttackDamage: 145
+      Add_Hp: 290
+      Add_PD: 29
+      ADD_MD: 29
+    - Level: 30
+      MaxExp: 3100
+      Add_AttackDamage: 150
+      Add_Hp: 300
+      Add_PD: 30
+      ADD_MD: 30
+    Monster:
+    - Level: 0
+      MaxExp: 100
+      Add_AttackDamage: 0
+      Add_Hp: 0
+      Add_PD: 0
+      ADD_MD: 0
+    - Level: 1
+      MaxExp: 200
+      Add_AttackDamage: 5
+      Add_Hp: 10
+      Add_PD: 1
+      ADD_MD: 1
+    - Level: 2
+      MaxExp: 300
+      Add_AttackDamage: 10
+      Add_Hp: 20
+      Add_PD: 2
+      ADD_MD: 2
+    - Level: 3
+      MaxExp: 400
+      Add_AttackDamage: 15
+      Add_Hp: 30
+      Add_PD: 3
+      ADD_MD: 3
+    - Level: 4
+      MaxExp: 500
+      Add_AttackDamage: 20
+      Add_Hp: 40
+      Add_PD: 4
+      ADD_MD: 4
+    - Level: 5
+      MaxExp: 600
+      Add_AttackDamage: 25
+      Add_Hp: 50
+      Add_PD: 5
+      ADD_MD: 5
+    - Level: 6
+      MaxExp: 700
+      Add_AttackDamage: 30
+      Add_Hp: 60
+      Add_PD: 6
+      ADD_MD: 6
+    - Level: 7
+      MaxExp: 800
+      Add_AttackDamage: 35
+      Add_Hp: 70
+      Add_PD: 7
+      ADD_MD: 7
+    - Level: 8
+      MaxExp: 900
+      Add_AttackDamage: 40
+      Add_Hp: 80
+      Add_PD: 8
+      ADD_MD: 8
+    - Level: 9
+      MaxExp: 1000
+      Add_AttackDamage: 45
+      Add_Hp: 90
+      Add_PD: 9
+      ADD_MD: 9
+    - Level: 10
+      MaxExp: 1100
+      Add_AttackDamage: 50
+      Add_Hp: 100
+      Add_PD: 10
+      ADD_MD: 10
+    - Level: 11
+      MaxExp: 1200
+      Add_AttackDamage: 55
+      Add_Hp: 110
+      Add_PD: 11
+      ADD_MD: 11
+    - Level: 12
+      MaxExp: 1300
+      Add_AttackDamage: 60
+      Add_Hp: 120
+      Add_PD: 12
+      ADD_MD: 12
+    - Level: 13
+      MaxExp: 1400
+      Add_AttackDamage: 65
+      Add_Hp: 130
+      Add_PD: 13
+      ADD_MD: 13
+    - Level: 14
+      MaxExp: 1500
+      Add_AttackDamage: 70
+      Add_Hp: 140
+      Add_PD: 14
+      ADD_MD: 14
+    - Level: 15
+      MaxExp: 1600
+      Add_AttackDamage: 75
+      Add_Hp: 150
+      Add_PD: 15
+      ADD_MD: 15
+    - Level: 16
+      MaxExp: 1700
+      Add_AttackDamage: 80
+      Add_Hp: 160
+      Add_PD: 16
+      ADD_MD: 16
+    - Level: 17
+      MaxExp: 1800
+      Add_AttackDamage: 85
+      Add_Hp: 170
+      Add_PD: 17
+      ADD_MD: 17
+    - Level: 18
+      MaxExp: 1900
+      Add_AttackDamage: 90
+      Add_Hp: 180
+      Add_PD: 18
+      ADD_MD: 18
+    - Level: 19
+      MaxExp: 2000
+      Add_AttackDamage: 95
+      Add_Hp: 190
+      Add_PD: 19
+      ADD_MD: 19
+    - Level: 20
+      MaxExp: 2100
+      Add_AttackDamage: 100
+      Add_Hp: 200
+      Add_PD: 20
+      ADD_MD: 20
+    - Level: 21
+      MaxExp: 2200
+      Add_AttackDamage: 105
+      Add_Hp: 210
+      Add_PD: 21
+      ADD_MD: 21
+    - Level: 22
+      MaxExp: 2300
+      Add_AttackDamage: 110
+      Add_Hp: 220
+      Add_PD: 22
+      ADD_MD: 22
+    - Level: 23
+      MaxExp: 2400
+      Add_AttackDamage: 115
+      Add_Hp: 230
+      Add_PD: 23
+      ADD_MD: 23
+    - Level: 24
+      MaxExp: 2500
+      Add_AttackDamage: 120
+      Add_Hp: 240
+      Add_PD: 24
+      ADD_MD: 24
+    - Level: 25
+      MaxExp: 2600
+      Add_AttackDamage: 125
+      Add_Hp: 250
+      Add_PD: 25
+      ADD_MD: 25
+    - Level: 26
+      MaxExp: 2700
+      Add_AttackDamage: 130
+      Add_Hp: 260
+      Add_PD: 26
+      ADD_MD: 26
+    - Level: 27
+      MaxExp: 2800
+      Add_AttackDamage: 135
+      Add_Hp: 270
+      Add_PD: 27
+      ADD_MD: 27
+    - Level: 28
+      MaxExp: 2900
+      Add_AttackDamage: 140
+      Add_Hp: 280
+      Add_PD: 28
+      ADD_MD: 28
+    - Level: 29
+      MaxExp: 3000
+      Add_AttackDamage: 145
+      Add_Hp: 290
+      Add_PD: 29
+      ADD_MD: 29
+    - Level: 30
+      MaxExp: 3100
+      Add_AttackDamage: 150
+      Add_Hp: 300
+      Add_PD: 30
+      ADD_MD: 30
+    MiddleBoss:
+    - Level: 0
+      MaxExp: 100
+      Add_AttackDamage: 0
+      Add_Hp: 0
+      Add_PD: 0
+      ADD_MD: 0
+    - Level: 1
+      MaxExp: 200
+      Add_AttackDamage: 5
+      Add_Hp: 10
+      Add_PD: 1
+      ADD_MD: 1
+    - Level: 2
+      MaxExp: 300
+      Add_AttackDamage: 10
+      Add_Hp: 20
+      Add_PD: 2
+      ADD_MD: 2
+    - Level: 3
+      MaxExp: 400
+      Add_AttackDamage: 15
+      Add_Hp: 30
+      Add_PD: 3
+      ADD_MD: 3
+    - Level: 4
+      MaxExp: 500
+      Add_AttackDamage: 20
+      Add_Hp: 40
+      Add_PD: 4
+      ADD_MD: 4
+    - Level: 5
+      MaxExp: 600
+      Add_AttackDamage: 25
+      Add_Hp: 50
+      Add_PD: 5
+      ADD_MD: 5
+    - Level: 6
+      MaxExp: 700
+      Add_AttackDamage: 30
+      Add_Hp: 60
+      Add_PD: 6
+      ADD_MD: 6
+    - Level: 7
+      MaxExp: 800
+      Add_AttackDamage: 35
+      Add_Hp: 70
+      Add_PD: 7
+      ADD_MD: 7
+    - Level: 8
+      MaxExp: 900
+      Add_AttackDamage: 40
+      Add_Hp: 80
+      Add_PD: 8
+      ADD_MD: 8
+    - Level: 9
+      MaxExp: 1000
+      Add_AttackDamage: 45
+      Add_Hp: 90
+      Add_PD: 9
+      ADD_MD: 9
+    - Level: 10
+      MaxExp: 1100
+      Add_AttackDamage: 50
+      Add_Hp: 100
+      Add_PD: 10
+      ADD_MD: 10
+    - Level: 11
+      MaxExp: 1200
+      Add_AttackDamage: 55
+      Add_Hp: 110
+      Add_PD: 11
+      ADD_MD: 11
+    - Level: 12
+      MaxExp: 1300
+      Add_AttackDamage: 60
+      Add_Hp: 120
+      Add_PD: 12
+      ADD_MD: 12
+    - Level: 13
+      MaxExp: 1400
+      Add_AttackDamage: 65
+      Add_Hp: 130
+      Add_PD: 13
+      ADD_MD: 13
+    - Level: 14
+      MaxExp: 1500
+      Add_AttackDamage: 70
+      Add_Hp: 140
+      Add_PD: 14
+      ADD_MD: 14
+    - Level: 15
+      MaxExp: 1600
+      Add_AttackDamage: 75
+      Add_Hp: 150
+      Add_PD: 15
+      ADD_MD: 15
+    - Level: 16
+      MaxExp: 1700
+      Add_AttackDamage: 80
+      Add_Hp: 160
+      Add_PD: 16
+      ADD_MD: 16
+    - Level: 17
+      MaxExp: 1800
+      Add_AttackDamage: 85
+      Add_Hp: 170
+      Add_PD: 17
+      ADD_MD: 17
+    - Level: 18
+      MaxExp: 1900
+      Add_AttackDamage: 90
+      Add_Hp: 180
+      Add_PD: 18
+      ADD_MD: 18
+    - Level: 19
+      MaxExp: 2000
+      Add_AttackDamage: 95
+      Add_Hp: 190
+      Add_PD: 19
+      ADD_MD: 19
+    - Level: 20
+      MaxExp: 2100
+      Add_AttackDamage: 100
+      Add_Hp: 200
+      Add_PD: 20
+      ADD_MD: 20
+    - Level: 21
+      MaxExp: 2200
+      Add_AttackDamage: 105
+      Add_Hp: 210
+      Add_PD: 21
+      ADD_MD: 21
+    - Level: 22
+      MaxExp: 2300
+      Add_AttackDamage: 110
+      Add_Hp: 220
+      Add_PD: 22
+      ADD_MD: 22
+    - Level: 23
+      MaxExp: 2400
+      Add_AttackDamage: 115
+      Add_Hp: 230
+      Add_PD: 23
+      ADD_MD: 23
+    - Level: 24
+      MaxExp: 2500
+      Add_AttackDamage: 120
+      Add_Hp: 240
+      Add_PD: 24
+      ADD_MD: 24
+    - Level: 25
+      MaxExp: 2600
+      Add_AttackDamage: 125
+      Add_Hp: 250
+      Add_PD: 25
+      ADD_MD: 25
+    - Level: 26
+      MaxExp: 2700
+      Add_AttackDamage: 130
+      Add_Hp: 260
+      Add_PD: 26
+      ADD_MD: 26
+    - Level: 27
+      MaxExp: 2800
+      Add_AttackDamage: 135
+      Add_Hp: 270
+      Add_PD: 27
+      ADD_MD: 27
+    - Level: 28
+      MaxExp: 2900
+      Add_AttackDamage: 140
+      Add_Hp: 280
+      Add_PD: 28
+      ADD_MD: 28
+    - Level: 29
+      MaxExp: 3000
+      Add_AttackDamage: 145
+      Add_Hp: 290
+      Add_PD: 29
+      ADD_MD: 29
+    - Level: 30
+      MaxExp: 3100
+      Add_AttackDamage: 150
+      Add_Hp: 300
+      Add_PD: 30
+      ADD_MD: 30
+    Boss:
+    - Level: 0
+      MaxExp: 100
+      Add_AttackDamage: 0
+      Add_Hp: 0
+      Add_PD: 0
+      ADD_MD: 0
+    - Level: 1
+      MaxExp: 200
+      Add_AttackDamage: 5
+      Add_Hp: 10
+      Add_PD: 1
+      ADD_MD: 1
+    - Level: 2
+      MaxExp: 300
+      Add_AttackDamage: 10
+      Add_Hp: 20
+      Add_PD: 2
+      ADD_MD: 2
+    - Level: 3
+      MaxExp: 400
+      Add_AttackDamage: 15
+      Add_Hp: 30
+      Add_PD: 3
+      ADD_MD: 3
+    - Level: 4
+      MaxExp: 500
+      Add_AttackDamage: 20
+      Add_Hp: 40
+      Add_PD: 4
+      ADD_MD: 4
+    - Level: 5
+      MaxExp: 600
+      Add_AttackDamage: 25
+      Add_Hp: 50
+      Add_PD: 5
+      ADD_MD: 5
+    - Level: 6
+      MaxExp: 700
+      Add_AttackDamage: 30
+      Add_Hp: 60
+      Add_PD: 6
+      ADD_MD: 6
+    - Level: 7
+      MaxExp: 800
+      Add_AttackDamage: 35
+      Add_Hp: 70
+      Add_PD: 7
+      ADD_MD: 7
+    - Level: 8
+      MaxExp: 900
+      Add_AttackDamage: 40
+      Add_Hp: 80
+      Add_PD: 8
+      ADD_MD: 8
+    - Level: 9
+      MaxExp: 1000
+      Add_AttackDamage: 45
+      Add_Hp: 90
+      Add_PD: 9
+      ADD_MD: 9
+    - Level: 10
+      MaxExp: 1100
+      Add_AttackDamage: 50
+      Add_Hp: 100
+      Add_PD: 10
+      ADD_MD: 10
+    - Level: 11
+      MaxExp: 1200
+      Add_AttackDamage: 55
+      Add_Hp: 110
+      Add_PD: 11
+      ADD_MD: 11
+    - Level: 12
+      MaxExp: 1300
+      Add_AttackDamage: 60
+      Add_Hp: 120
+      Add_PD: 12
+      ADD_MD: 12
+    - Level: 13
+      MaxExp: 1400
+      Add_AttackDamage: 65
+      Add_Hp: 130
+      Add_PD: 13
+      ADD_MD: 13
+    - Level: 14
+      MaxExp: 1500
+      Add_AttackDamage: 70
+      Add_Hp: 140
+      Add_PD: 14
+      ADD_MD: 14
+    - Level: 15
+      MaxExp: 1600
+      Add_AttackDamage: 75
+      Add_Hp: 150
+      Add_PD: 15
+      ADD_MD: 15
+    - Level: 16
+      MaxExp: 1700
+      Add_AttackDamage: 80
+      Add_Hp: 160
+      Add_PD: 16
+      ADD_MD: 16
+    - Level: 17
+      MaxExp: 1800
+      Add_AttackDamage: 85
+      Add_Hp: 170
+      Add_PD: 17
+      ADD_MD: 17
+    - Level: 18
+      MaxExp: 1900
+      Add_AttackDamage: 90
+      Add_Hp: 180
+      Add_PD: 18
+      ADD_MD: 18
+    - Level: 19
+      MaxExp: 2000
+      Add_AttackDamage: 95
+      Add_Hp: 190
+      Add_PD: 19
+      ADD_MD: 19
+    - Level: 20
+      MaxExp: 2100
+      Add_AttackDamage: 100
+      Add_Hp: 200
+      Add_PD: 20
+      ADD_MD: 20
+    - Level: 21
+      MaxExp: 2200
+      Add_AttackDamage: 105
+      Add_Hp: 210
+      Add_PD: 21
+      ADD_MD: 21
+    - Level: 22
+      MaxExp: 2300
+      Add_AttackDamage: 110
+      Add_Hp: 220
+      Add_PD: 22
+      ADD_MD: 22
+    - Level: 23
+      MaxExp: 2400
+      Add_AttackDamage: 115
+      Add_Hp: 230
+      Add_PD: 23
+      ADD_MD: 23
+    - Level: 24
+      MaxExp: 2500
+      Add_AttackDamage: 120
+      Add_Hp: 240
+      Add_PD: 24
+      ADD_MD: 24
+    - Level: 25
+      MaxExp: 2600
+      Add_AttackDamage: 125
+      Add_Hp: 250
+      Add_PD: 25
+      ADD_MD: 25
+    - Level: 26
+      MaxExp: 2700
+      Add_AttackDamage: 130
+      Add_Hp: 260
+      Add_PD: 26
+      ADD_MD: 26
+    - Level: 27
+      MaxExp: 2800
+      Add_AttackDamage: 135
+      Add_Hp: 270
+      Add_PD: 27
+      ADD_MD: 27
+    - Level: 28
+      MaxExp: 2900
+      Add_AttackDamage: 140
+      Add_Hp: 280
+      Add_PD: 28
+      ADD_MD: 28
+    - Level: 29
+      MaxExp: 3000
+      Add_AttackDamage: 145
+      Add_Hp: 290
+      Add_PD: 29
+      ADD_MD: 29
+    - Level: 30
+      MaxExp: 3100
+      Add_AttackDamage: 150
+      Add_Hp: 300
+      Add_PD: 30
+      ADD_MD: 30
+  m_UserSelectCardDataElementDic:
+    _keys: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
+    _values:
+    - ID: 0
+      CardName: "\uC601\uC6C5 \uD06C\uB9AC\uD2F0\uCEEC\uC99D\uAC00"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 0
+      CardBuffList:
+      - Type: 0
+        Value: 5
+      CardIconName: 
+      ThisCardBuffColor: {r: 0.8352941, g: 0.8352941, b: 0.8352941, a: 1}
+    - ID: 1
+      CardName: "\uC601\uC6C5 \uD06C\uB9AC\uD2F0\uCEEC \uB370\uBBF8\uC9C0 \uC99D\uAC00"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 0
+      CardBuffList:
+      - Type: 1
+        Value: 10
+      CardIconName: 
+      ThisCardBuffColor: {r: 0.8352941, g: 0.8352941, b: 0.8392157, a: 1}
+    - ID: 2
+      CardName: "\uC601\uC6C5 \uACF5\uACA9\uB825 \uC99D\uAC00"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 0
+      CardBuffList:
+      - Type: 2
+        Value: 10
+      CardIconName: 
+      ThisCardBuffColor: {r: 0.8352941, g: 0.8352941, b: 0.84313726, a: 1}
+    - ID: 3
+      CardName: "\uC601\uC6C5 \uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 0
+      CardBuffList:
+      - Type: 3
+        Value: 0.1
+      CardIconName: 
+      ThisCardBuffColor: {r: 0.8352941, g: 0.8352941, b: 0.84705883, a: 1}
+    - ID: 4
+      CardName: "\uC601\uC6C5 \uD68C\uBCF5"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 0
+      CardBuffList: []
+      CardIconName: 
+      ThisCardBuffColor: {r: 0.8352941, g: 0.8352941, b: 0.8509804, a: 1}
+    - ID: 5
+      CardName: "\uC6A9\uBCD1 \uD06C\uB9AC\uD2F0\uCEEC \uC99D\uAC00"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 1
+      CardBuffList:
+      - Type: 0
+        Value: 5
+      CardIconName: 
+      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+    - ID: 6
+      CardName: "\uC6A9\uBCD1 \uD06C\uB9AC\uD2F0\uCEEC \uB370\uBBF8\uC9C0 \uC99D\uAC00"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 1
+      CardBuffList:
+      - Type: 1
+        Value: 10
+      CardIconName: 
+      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+    - ID: 7
+      CardName: "\uC6A9\uBCD1 \uACF5\uACA9\uB825 \uC99D\uAC00"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 1
+      CardBuffList:
+      - Type: 2
+        Value: 10
+      CardIconName: 
+      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+    - ID: 8
+      CardName: "\uC6A9\uBCD1 \uACF5\uACA9 \uC18D\uB3C4 \uC99D\uAC00"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 1
+      CardBuffList:
+      - Type: 3
+        Value: 0.1
+      CardIconName: 
+      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+    - ID: 9
+      CardName: "\uC6A9\uBCD1 \uD68C\uBCF5"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 1
+      CardBuffList: []
+      CardIconName: 
+      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+    - ID: 10
+      CardName: "\uC804\uCCB4 \uD06C\uB9AC\uD2F0\uCEEC \uC99D\uAC00"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 2
+      CardBuffList:
+      - Type: 0
+        Value: 5
+      CardIconName: 
+      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+    - ID: 11
+      CardName: "\uC804\uCCB4 \uD06C\uB9AC\uD2F0\uCEEC \uB370\uBBF8\uC9C0 \uC99D\uAC00"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 2
+      CardBuffList:
+      - Type: 1
+        Value: 10
+      CardIconName: 
+      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+    - ID: 12
+      CardName: "\uC804\uCCB4 \uACF5\uACA9\uB825 \uC99D\uAC00"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 2
+      CardBuffList:
+      - Type: 2
+        Value: 10
+      CardIconName: 
+      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+    - ID: 13
+      CardName: "\uC804\uCCB4 \uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 2
+      CardBuffList:
+      - Type: 3
+        Value: 0.1
+      CardIconName: 
+      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+    - ID: 14
+      CardName: "\uC804\uCCB4 \uD68C\uBCF5"
+      CardNameID: 
+      CardDescID: 
+      CardRating: 0
+      TargetSelect: 2
+      CardBuffList: []
+      CardIconName: 
+      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}

@@ -184,4 +184,8 @@ public class UserActiveSkillDataElementDic : UnityDictionary<int, UserActiveSkil
 [Serializable]
 public class SkillDataElementDic : UnityDictionary<int, SkillDataElement> { }
 [Serializable]
+public class CharacterDataElementDic : UnityDictionary<int, CharacterDataElement> { }
+[Serializable]
+public class UserSelectCardDataElementDic : UnityDictionary<int, UserSelectCardDataElement> { }
+[Serializable]
 public class PromotionCodeElementDic : UnityDictionary<string, PromotionCodeElement> { }

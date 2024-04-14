@@ -19,6 +19,8 @@ public class DataReader : EditorWindow {
 	UserActiveSkillData,
 	SkillData,
 	CharacterData,
+	Ingame_CharacterGrowData,
+	UserSelectCard,
 	Max
   }
 
@@ -395,6 +397,7 @@ public class DataReader : EditorWindow {
 								swde.StageNameID = Get<string>(obj, 2);
 								swde.StageDescID = Get<string>(obj, 3);
 								swde.PlayTime = Get<float>(obj, 4);
+								swde.StartMercenaryPoint = Get<int>(obj, 5);
 								int StageID = Get<int>(obj, 5);
 
 								DataTable WaveTable = ReadSingleSheet(string.Format("Stage_{0}",StageID), DataPath);
@@ -469,15 +472,15 @@ public class DataReader : EditorWindow {
 								uasde.UserSkillName = Get<string>(obj, 1);
 								uasde.UserSkillNameID = Get<string>(obj, 2);
 								uasde.UserSkillDescID = Get<string>(obj, 3);
-								uasde.Rating = Get<int>(obj, 4);
-								uasde.PriceType = Get<int>(obj, 5);
+								uasde.Rating = (Rating_E)Get<int>(obj, 4);
+								uasde.PriceType = (Goods_E)Get<int>(obj, 5);
 								uasde.PriceValue = Get<int>(obj, 6);
-								uasde.ActivePosition = Get<int>(obj, 7);
-								uasde.Target = Get<int>(obj, 8);
+								uasde.ActivePosition = (ActivePosition_E)Get<int>(obj, 7);
+								uasde.Target = (Target_E)Get<int>(obj, 8);
 								if (string.IsNullOrEmpty(Get<string>(obj, 9)) == false)
 									uasde.CoolTime = Get<float>(obj, 9);
-								uasde.Type = Get<int>(obj, 10);
-								uasde.TargetSelectType = Get<int>(obj, 11);
+								uasde.Type = (DamageType_E)Get<int>(obj, 10);
+								uasde.TargetSelectType = (TargetSelect_E)Get<int>(obj, 11);
 								if ( string.IsNullOrEmpty( Get<string>(obj, 12)) == false)
 									uasde.DamageTypeRange = Get<int>(obj, 12);
 
@@ -583,32 +586,32 @@ public class DataReader : EditorWindow {
 								sde.UserSkillNameID = Get<string>(obj, 2);
 								sde.UserSkillDescID = Get<string>(obj, 3);
 								if (string.IsNullOrEmpty(Get<string>(obj, 4)) == false)
-									sde.ActivePosition = Get<int>(obj, 4);
+									sde.ActivePosition = (ActivePosition_E)Get<int>(obj, 4);
 								if (string.IsNullOrEmpty(Get<string>(obj, 5)) == false)
-									sde.Target = Get<int>(obj, 5);
+									sde.Target = (Target_E)Get<int>(obj, 5);
 								if (string.IsNullOrEmpty(Get<string>(obj, 6)) == false)
 									sde.CoolTime = Get<float>(obj, 6);
 								if (string.IsNullOrEmpty(Get<string>(obj, 7)) == false)
-									sde.Type = Get<int>(obj, 7);
+									sde.Type = (DamageType_E)Get<int>(obj, 7);
 								if (string.IsNullOrEmpty(Get<string>(obj, 8)) == false)
-									sde.TargetSelectType = Get<int>(obj, 8);
+									sde.TargetSelectType = (TargetSelect_E)Get<int>(obj, 8);
 								if (string.IsNullOrEmpty(Get<string>(obj, 9)) == false)
-									sde.DamageTypeRange = Get<int>(obj, 9);
+									sde.DamageTypeRange = Get<float>(obj, 9);
 
-								int _Value = 0;
+								float _Value = 0f;
 								float _Time = 0f;
 								for (int sk = 10; sk <= 21; ++sk)
 								{
 									switch (sk)
 									{
 										case 10:
-											_Value = string.IsNullOrEmpty(Get<string>(obj, 10)) ? 0 : Get<int>(obj, 10);
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 10)) ? 0 : Get<float>(obj, 10);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Damage, _Value));
 											break;
 										case 11:
 										case 12:
-											_Value = string.IsNullOrEmpty(Get<string>(obj, 11)) ? 0 : Get<int>(obj, 11);
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 11)) ? 0 : Get<float>(obj, 11);
 											_Time = string.IsNullOrEmpty(Get<string>(obj, 12)) ? 0 : Get<float>(obj, 12);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.DotDamage, _Value, _Time));
@@ -616,7 +619,7 @@ public class DataReader : EditorWindow {
 											break;
 										case 13:
 										case 14:
-											_Value = string.IsNullOrEmpty(Get<string>(obj, 13)) ? 0 : Get<int>(obj, 13);
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 13)) ? 0 : Get<float>(obj, 13);
 											_Time = string.IsNullOrEmpty(Get<string>(obj, 14)) ? 0 : Get<float>(obj, 14);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackUp, _Value, _Time));
@@ -624,14 +627,14 @@ public class DataReader : EditorWindow {
 											break;
 										case 15:
 										case 16:
-											_Value = string.IsNullOrEmpty(Get<string>(obj, 15)) ? 0 : Get<int>(obj, 15);
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 15)) ? 0 : Get<float>(obj, 15);
 											_Time = string.IsNullOrEmpty(Get<string>(obj, 16)) ? 0 : Get<float>(obj, 16);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackSpeedUp, 0, _Time));
 											++sk;
 											break;
 										case 17:
-											_Value = string.IsNullOrEmpty(Get<string>(obj, 17)) ? 0 : Get<int>(obj, 17);
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 17)) ? 0 : Get<float>(obj, 17);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Heal, _Value));
 											break;
@@ -647,7 +650,7 @@ public class DataReader : EditorWindow {
 											break;
 										case 20:
 										case 21:
-											_Value = string.IsNullOrEmpty(Get<string>(obj, 20)) ? 0 : Get<int>(obj, 20);
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 20)) ? 0 : Get<float>(obj, 20);
 											_Time = string.IsNullOrEmpty(Get<string>(obj, 21)) ? 0 : Get<float>(obj, 21);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackSpeedDown, _Value, _Time));
@@ -656,7 +659,7 @@ public class DataReader : EditorWindow {
 									}
 								}
 
-								DataTable UserSkill_FileTable = ReadSingleSheet(string.Format("Skill_{0}File",i), DataPath);
+								DataTable UserSkill_FileTable = ReadSingleSheet(string.Format("Skill_{0}File", i), DataPath);
 								//파일명 셋팅
 								object[] obj2 = UserSkill_FileTable.Rows[ii].ItemArray;
 
@@ -673,9 +676,176 @@ public class DataReader : EditorWindow {
 					}
 					#endregion
 					break;
-				//case EXls.CharacterData:
+				case EXls.CharacterData:
+					#region CharacterData
+					string[] CharacterDataSheet = { "Hero", "Mercenary", "Monster", "MiddleBoss", "Boss"};
 
-				//	break;
+					for (int i = 0; i < CharacterDataSheet.Length; ++i)
+					{
+						DataTable Table = ReadSingleSheet(CharacterDataSheet[i], DataPath);
+						sheetName.Add(CharacterDataSheet[i]);
+
+						if (Table.Rows.Count > 0)
+						{
+							for (int ii = 0; ii < Table.Rows.Count; ii++)
+							{
+								breakRows = ii;
+								object[] obj = Table.Rows[ii].ItemArray;
+
+								if (string.IsNullOrEmpty(Get<string>(obj, 0)))
+									continue;
+
+								CharacterDataElement cde = new CharacterDataElement();
+								cde.ID = Get<int>(obj, 0);
+								cde.CharacterName = Get<string>(obj, 1);
+								cde.CharacterNameID = Get<string>(obj, 2);
+								cde.CharacterDescID = Get<string>(obj, 3);
+								cde.MoveSpeed = Get<float>(obj, 4);
+								cde.Position = (StancePosition_E)Get<int>(obj, 5);
+								cde.Type = (DamageType_E)Get<int>(obj, 6);
+								cde.AttackType = (AttackType_E)Get<int>(obj, 7);
+								cde.AttackRange = Get<float>(obj, 8);
+								cde.DamageTargetType = (DamageTargetType_E)Get<int>(obj, 9);
+								cde.DamageTypeRange = Get<float>(obj, 10);
+								cde.AttackSpeed = Get<float>(obj, 11);
+								cde.AttackDamage = Get<int>(obj, 12);
+								cde.HP = Get<int>(obj, 13);
+								cde.PD = Get<int>(obj, 14);
+								cde.MD = Get<int>(obj, 15);
+								cde.AllSkillList = new List<int>();
+								if (string.IsNullOrEmpty(Get<string>(obj, 16)) == false)
+								{
+									string[] Skills = Get<string>(obj, 16).Split(",");
+									for (int asl = 0; asl < Skills.Length; ++asl)
+										cde.AllSkillList.Add(int.Parse(Skills[asl]));
+								}
+								if (string.IsNullOrEmpty(Get<string>(obj, 17)) == false)
+									cde.Exp = Get<int>(obj, 17);
+								if (string.IsNullOrEmpty(Get<string>(obj, 18)) == false)
+									cde.Gold = Get<int>(obj, 18);
+
+								DataTable Character_FileTable = ReadSingleSheet(string.Format("{0}_File", CharacterDataSheet[i]), DataPath);
+								//파일명 셋팅
+								object[] obj2 = Character_FileTable.Rows[ii].ItemArray;
+
+								cde.iconFileName = Get<string>(obj2, 2);
+								cde.ObjectFileName = Get<string>(obj2, 3);
+								cde.ObjectEffFileName = Get<string>(obj2, 4);
+
+								m_DataMgr.m_CharacterDataElementDic.Add(cde.ID,cde);
+							}
+						}
+						breakSheet++;
+					}
+					#endregion
+					break;
+				case EXls.Ingame_CharacterGrowData:
+					#region Ingame_CharacterGrowData
+					string[] Ingame_CharacterGrowDataSheet = { "Hero", "Mercenary", "Monster", "MiddleBoss", "Boss" };
+
+					InGame_CharacterGrowDataElement element = new InGame_CharacterGrowDataElement();
+					for (int i = 0; i < Ingame_CharacterGrowDataSheet.Length; ++i)
+					{
+						DataTable Table = ReadSingleSheet(Ingame_CharacterGrowDataSheet[i], DataPath);
+						sheetName.Add(Ingame_CharacterGrowDataSheet[i]);
+						List<InGame_CharacterGrowData> DataList = new List<InGame_CharacterGrowData>();
+						if (Table.Rows.Count > 0)
+						{
+							for (int ii = 0; ii < Table.Rows.Count; ii++)
+							{
+								breakRows = ii;
+								object[] obj = Table.Rows[ii].ItemArray;
+
+								if (string.IsNullOrEmpty(Get<string>(obj, 0)))
+									continue;
+
+								InGame_CharacterGrowData icgde = new InGame_CharacterGrowData();
+								icgde.Level = Get<int>(obj, 0);
+								icgde.MaxExp = Get<int>(obj, 1);
+								icgde.Add_AttackDamage = Get<int>(obj, 2);
+								icgde.Add_Hp = Get<int>(obj, 3);
+								icgde.Add_PD = Get<int>(obj, 4);
+								icgde.ADD_MD = Get<int>(obj, 5);
+
+								DataList.Add(icgde);
+								
+							}
+						}
+						switch(i)
+						{
+							case 0:
+								m_DataMgr.m_InGame_CharacterGrowDataElement.Hero = new List<InGame_CharacterGrowData>( DataList);
+								break;
+							case 1:
+								m_DataMgr.m_InGame_CharacterGrowDataElement.Mercenary = new List<InGame_CharacterGrowData>(DataList);
+								break;
+							case 2:
+								m_DataMgr.m_InGame_CharacterGrowDataElement.Monster = new List<InGame_CharacterGrowData>(DataList);
+								break;
+							case 3:
+								m_DataMgr.m_InGame_CharacterGrowDataElement.MiddleBoss = new List<InGame_CharacterGrowData>(DataList);
+								break;
+							case 4:
+								m_DataMgr.m_InGame_CharacterGrowDataElement.Boss = new List<InGame_CharacterGrowData>(DataList);
+								break;
+						}
+						
+						breakSheet++;
+					}
+					#endregion
+					break;
+				case EXls.UserSelectCard:
+					#region UserSelectCard
+					string[] UserSelectCardDataSheet = { "UserCard" };
+
+					for (int i = 0; i < UserSelectCardDataSheet.Length; ++i)
+					{
+						DataTable Table = ReadSingleSheet(UserSelectCardDataSheet[i], DataPath);
+						sheetName.Add(UserSelectCardDataSheet[i]);
+
+						if (Table.Rows.Count > 0)
+						{
+							for (int ii = 0; ii < Table.Rows.Count; ii++)
+							{
+								breakRows = ii;
+								object[] obj = Table.Rows[ii].ItemArray;
+
+								if (string.IsNullOrEmpty(Get<string>(obj, 0)))
+									continue;
+
+								UserSelectCardDataElement ce = new UserSelectCardDataElement();
+								ce.ID = Get<int>(obj, 0); ;
+								ce.CardName = Get<string>(obj, 1);
+								ce.CardNameID = Get<string>(obj, 2);
+								ce.CardDescID = Get<string>(obj, 3);
+								ce.CardRating = (Rating_E)Get<int>(obj, 4);
+								ce.TargetSelect = (TargetSelect_E)Get<int>(obj, 5);
+								
+								for(int b = 6; b <= 9; ++b )
+								{
+									CardBuff card = new CardBuff();
+									if (string.IsNullOrEmpty(Get<string>(obj, b)) == false)
+									{
+										card.Type = (CardBuffType_E)(b - 6);
+										card.Value = Get<float>(obj, b);
+										ce.CardBuffList.Add(card);
+									}
+								}
+								DataTable Character_FileTable = ReadSingleSheet("UserCard_File", DataPath);
+								//파일명 셋팅
+								object[] obj2 = Character_FileTable.Rows[ii].ItemArray;
+
+								ce.CardIconName = Get<string>(obj2, 2);
+								string ColorValue = Get<string>(obj2, Get<int>(obj, 4) + 3);
+								ColorUtility.TryParseHtmlString(ColorValue, out ce.ThisCardBuffColor);
+
+								m_DataMgr.m_UserSelectCardDataElementDic.Add(ce.ID, ce);
+							}
+						}
+						breakSheet++;
+					}
+					#endregion
+					break;
 			}
 		}
 		catch (Exception e)

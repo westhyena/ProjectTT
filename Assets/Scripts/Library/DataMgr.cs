@@ -5,18 +5,122 @@ using System.Collections.Generic;
 using CodeStage.AntiCheat.ObscuredTypes;
 using UnityEngine.SceneManagement;
 
+#region Enums
+
+public enum Rating_E
+{
+	Normal,
+	HighGrade,
+	Rare,
+	Epic
+}
+
+public enum Goods_E
+{
+	Gold,
+	Cash
+}
+
+public enum ActivePosition_E
+{
+	/// <summary>
+	/// 타겟
+	/// </summary>
+	Target,
+	/// <summary>
+	/// 시전자
+	/// </summary>
+	Me,
+}
+
+public enum Target_E
+{
+	/// <summary>
+	/// 적
+	/// </summary>
+	Enemy,
+	/// <summary>
+	/// 아군
+	/// </summary>
+	Our
+}
+
+public enum DamageType_E
+{
+	/// <summary>
+	/// 물리
+	/// </summary>
+	Physics,
+	/// <summary>
+	/// 마법
+	/// </summary>
+	Magic
+}
+
+public enum TargetSelect_E
+{
+	/// <summary>
+	/// 단일
+	/// </summary>
+	One,
+	/// <summary>
+	/// 범위
+	/// </summary>
+	Area,
+	/// <summary>
+	/// 전체
+	/// </summary>
+	All
+}
+
+public enum StancePosition_E
+{
+	Ground,
+	Fly
+}
+
+public enum AttackType_E
+{
+	/// <summary>
+	/// 근거리
+	/// </summary>
+	Melee,
+	/// <summary>
+	/// 원거리
+	/// </summary>
+	Ranged
+}
+
+public enum DamageTargetType_E
+{
+	/// <summary>
+	/// 단일
+	/// </summary>
+	One,
+	/// <summary>
+	/// 범위
+	/// </summary>
+	Area,
+	/// <summary>
+	/// 공격범위 절반크기
+	/// </summary>
+	Range_HalfArea
+}
+
+#endregion
+
 #region 스킬정보 베이스
 
 [Serializable]
 public class SkillDataBase
 {
-	public int SkillDataKind;
-	public int Value;
+	public SkillDataKind_E SkillDataKind;
+	public float Value;
 	public float Time;
 
-	public SkillDataBase(int _SkillDataKind,int _Value,float _Time = 0f)
+	public SkillDataBase(int _SkillDataKind,float _Value,float _Time = 0f)
 	{
-		SkillDataKind = _SkillDataKind;
+		SkillDataKind = (SkillDataKind_E)_SkillDataKind;
 		Value = _Value;
 		Time = _Time;
 	}
@@ -162,6 +266,10 @@ public class StageWaveDataElement
 	/// </summary>
 	public float PlayTime;
 	/// <summary>
+	/// 시작 용병 포인트
+	/// </summary>
+	public int StartMercenaryPoint;
+	/// <summary>
 	/// 스테이지 웨이브 정보 
 	/// </summary>
 	public List<WaveDataInfo> Wave0 = new List<WaveDataInfo>();
@@ -185,45 +293,35 @@ public class UserActiveSkillDataElement
 	/// <summary>
 	/// 등급
 	/// </summary>
-	public int Rating;
+	public Rating_E Rating;
 	/// <summary>
 	/// 사용될 재화 타입
-	/// 0 골드
-	/// 1 캐시재화(다이아)
 	/// </summary>
-	public int PriceType;
+	public Goods_E PriceType;
 	/// <summary>
 	/// 필요 재화갯수
 	/// </summary>
 	public int PriceValue;
 	/// <summary>
 	/// 시전 위치
-	/// 0 타겟
-	/// 1 자기자신
 	/// </summary>
-	public int ActivePosition;
+	public ActivePosition_E ActivePosition;
 	/// <summary>
-	/// 0 적
-	/// 1 아군
+	/// 대상
 	/// </summary>
-	public int Target;
+	public Target_E Target;
 	/// <summary>
 	/// 쿨타임 (초)
 	/// </summary>
 	public float CoolTime;
 	/// <summary>
 	/// 타입
-	/// 0 물리
-	/// 1 마법
 	/// </summary>
-	public int Type;
+	public DamageType_E Type;
 	/// <summary>
 	/// 시전타입
-	/// 0 단일
-	/// 1 범위
-	/// 2 전체
 	/// </summary>
-	public int TargetSelectType;
+	public TargetSelect_E TargetSelectType;
 	/// <summary>
 	/// 범위일때 ActivePosition의 기준에서의 범위
 	/// </summary>
@@ -253,32 +351,24 @@ public class SkillDataElement
 
 	/// <summary>
 	/// 시전 위치
-	/// 0 타겟
-	/// 1 자기자신
 	/// </summary>
-	public int ActivePosition;
+	public ActivePosition_E ActivePosition;
 	/// <summary>
-	/// 0 적
-	/// 1 아군
+	/// 대상 구분
 	/// </summary>
-	public int Target;
+	public Target_E Target;
 	/// <summary>
 	/// 쿨타임 (초)
 	/// </summary>
 	public float CoolTime;
 	/// <summary>
-	/// 타입
-	/// 0 물리
-	/// 1 마법
+	/// 데미지 타입
 	/// </summary>
-	public int Type;
+	public DamageType_E Type;
 	/// <summary>
 	/// 시전타입
-	/// 0 단일
-	/// 1 범위
-	/// 2 전체
 	/// </summary>
-	public int TargetSelectType;
+	public TargetSelect_E TargetSelectType;
 	/// <summary>
 	/// 범위일때 ActivePosition의 기준에서의 범위
 	/// </summary>
@@ -300,6 +390,183 @@ public class SkillDataElement
 
 #endregion
 
+#region CharacterData
+
+[Serializable]
+public class CharacterDataElement
+{
+	public int ID;
+	public string CharacterName;
+	public string CharacterNameID;
+	public string CharacterDescID;
+
+	public float MoveSpeed;
+	/// <summary>
+	/// 유닛 스텐스( 지상이냐 공중이냐 )
+	/// </summary>
+	public StancePosition_E Position;
+	/// <summary>
+	/// 공격타입
+	/// </summary>
+	public DamageType_E Type;
+	/// <summary>
+	/// 공격 타입
+	/// </summary>
+	public AttackType_E AttackType;
+	/// <summary>
+	/// 공격 범위
+	/// </summary>
+	public float AttackRange;
+	/// <summary>
+	/// 공격대상 구분 범위
+	/// </summary>
+	public DamageTargetType_E DamageTargetType;
+	/// <summary>
+	/// 타겟에 도착후 범위 공격 범위
+	/// DamageType이 1일때만 유효
+	/// </summary>
+	public float DamageTypeRange;
+	public float AttackSpeed;
+	public int AttackDamage;
+	public int HP;
+	/// <summary>
+	/// 물리 방어력
+	/// </summary>
+	public int PD;
+	/// <summary>
+	/// 마법 방어력
+	/// </summary>
+	public int MD;
+	/// <summary>
+	/// 영웅별 전체 스킬 리스트
+	/// </summary>
+	public List<int> AllSkillList = new List<int>();
+	/// <summary>
+	/// 지급 경험치 (몬스터만 유효)
+	/// </summary>
+	public int Exp;
+	/// <summary>
+	/// 지급 골드 (몬스터만 유효)
+	/// </summary>
+	public int Gold;
+
+	public string iconFileName;
+	/// <summary>
+	/// 오브젝트 파일명
+	/// </summary>
+	public string ObjectFileName;
+	/// <summary>
+	/// 투사체 파일명
+	/// </summary>
+	public string ObjectEffFileName;
+
+}
+
+#endregion
+
+#region InGame_ChracterGrowData
+[Serializable]
+public class InGame_CharacterGrowData
+{
+	public int Level;
+	/// <summary>
+	/// 현재레벨의 Max경험치
+	/// </summary>
+	public int MaxExp;
+	/// <summary>
+	/// 추가되는 공격력
+	/// </summary>
+	public int Add_AttackDamage;
+	/// <summary>
+	/// 추가되는 체력
+	/// </summary>
+	public int Add_Hp;
+	/// <summary>
+	/// 추가되는 물방
+	/// </summary>
+	public int Add_PD;
+	/// <summary>
+	/// 추가되는 마방
+	/// </summary>
+	public int ADD_MD;
+}
+
+[Serializable]
+public class InGame_CharacterGrowDataElement
+{
+	/// <summary>
+	/// 영웅
+	/// </summary>
+	public List<InGame_CharacterGrowData> Hero = new List<InGame_CharacterGrowData>();
+	/// <summary>
+	/// 용병
+	/// </summary>
+	public List<InGame_CharacterGrowData> Mercenary = new List<InGame_CharacterGrowData>();
+	/// <summary>
+	/// 몬스터
+	/// </summary>
+	public List<InGame_CharacterGrowData> Monster = new List<InGame_CharacterGrowData>();
+	/// <summary>
+	/// 중간보스
+	/// </summary>
+	public List<InGame_CharacterGrowData> MiddleBoss = new List<InGame_CharacterGrowData>();
+	/// <summary>
+	/// 보스
+	/// </summary>
+	public List<InGame_CharacterGrowData> Boss = new List<InGame_CharacterGrowData>();
+}
+
+#endregion
+
+#region UserSelectCard_E
+
+public enum CardBuffType_E
+{
+	Critical_Percent,
+	Critical_Damage,
+	AttackUp_Percent,
+	AttackSpeed_Percent,
+	Heal
+}
+
+[Serializable]
+public struct CardBuff
+{
+	/// <summary>
+	/// 적용 버프
+	/// </summary>
+	public CardBuffType_E Type;
+	public float Value;
+}
+
+[Serializable]
+public class UserSelectCardDataElement
+{
+	public int ID;
+	public string CardName;
+	public string CardNameID;
+	public string CardDescID;
+	/// <summary>
+	/// 카드 등급
+	/// </summary>
+	public Rating_E CardRating;
+	/// <summary>
+	/// 대상
+	/// </summary>
+	public TargetSelect_E TargetSelect;
+	public List<CardBuff> CardBuffList = new List<CardBuff>();
+	/// <summary>
+	/// 카드 아이콘
+	/// </summary>
+	public string CardIconName;
+	/// <summary>
+	/// 카드 등급 컬러 (현재 등급에 맞게 셋팅되있음)
+	/// </summary>
+	public Color ThisCardBuffColor = new Color();
+
+}
+
+#endregion
 
 #region 쿠폰
 [System.Serializable]
@@ -331,20 +598,41 @@ public class DataMgr : MonoBehaviour
 	/// 로컬라인징 text
 	/// </summary>
     public TranslationElementDic m_TranslationElementDic = new TranslationElementDic();
+
 	/// <summary>
 	/// 인게임 정보 (용병 포인트 사용량)
 	/// </summary>
     public InGameSystemElement m_InGameSystemElement = new InGameSystemElement();
+
 	/// <summary>
 	/// 스테이지 정보 (웨이브 포함)
 	/// </summary>
 	public StageWaveDataElementDic m_StageWaveDataElementDic = new StageWaveDataElementDic();
+
 	/// <summary>
 	/// 유저 엑티브 스킬 정보
 	/// </summary>
 	public UserActiveSkillDataElementDic m_UserActiveSkillDataElementDic = new UserActiveSkillDataElementDic();
 
+	/// <summary>
+	/// 스킬 정보
+	/// </summary>
 	public SkillDataElementDic m_SkillDataElementDic = new SkillDataElementDic();
+
+	/// <summary>
+	/// 케릭터 정보
+	/// </summary>
+	public CharacterDataElementDic m_CharacterDataElementDic = new CharacterDataElementDic();
+
+	/// <summary>
+	/// 케릭터 성장 정보
+	/// </summary>
+	public InGame_CharacterGrowDataElement m_InGame_CharacterGrowDataElement = new InGame_CharacterGrowDataElement();
+
+	/// <summary>
+	/// 영웅 레벨업 유저 셀렉트 카드
+	/// </summary>
+	public UserSelectCardDataElementDic m_UserSelectCardDataElementDic = new UserSelectCardDataElementDic();
 	private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
