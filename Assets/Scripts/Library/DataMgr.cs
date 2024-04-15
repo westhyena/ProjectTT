@@ -118,7 +118,7 @@ public class SkillDataBase
 	public float Value;
 	public float Time;
 
-	public SkillDataBase(int _SkillDataKind,float _Value,float _Time = 0f)
+	public SkillDataBase(int _SkillDataKind, float _Value, float _Time = 0f)
 	{
 		SkillDataKind = (SkillDataKind_E)_SkillDataKind;
 		Value = _Value;
@@ -167,20 +167,20 @@ public enum SkillDataKind_E
 [Serializable]
 public class TranslationElement
 {
-  public string ID;
-  public string Kor;
-  public string Eng;
-  public string Jpn;
-  public string Prt;//포르투갈
-  public string Deu;//독일
-  public string Rus;//러시아
-  public string Fra;//프랑스
-  public string Chn_s;//중 간체
-  public string Chn_t;//중 번체
-  public string Esp; //스페인
-  public string Tha; //태국
-  public string Vnm;//베트남
-  public string Mys;//말레이시아
+	public string ID;
+	public string Kor;
+	public string Eng;
+	public string Jpn;
+	public string Prt;//포르투갈
+	public string Deu;//독일
+	public string Rus;//러시아
+	public string Fra;//프랑스
+	public string Chn_s;//중 간체
+	public string Chn_t;//중 번체
+	public string Esp; //스페인
+	public string Tha; //태국
+	public string Vnm;//베트남
+	public string Mys;//말레이시아
 }
 #endregion
 
@@ -277,6 +277,15 @@ public class StageWaveDataElement
 	public List<WaveDataInfo> Wave2 = new List<WaveDataInfo>();
 	public List<WaveDataInfo> Wave3 = new List<WaveDataInfo>();
 	public List<WaveDataInfo> Wave4 = new List<WaveDataInfo>();
+
+	/// <summary>
+	/// 맵 아이콘 파일명
+	/// </summary>
+	public string IconName;
+	/// <summary>
+	/// 맵 오브젝트 파일명
+	/// </summary>
+	public string StageMapObjectName;
 }
 
 #endregion
@@ -572,10 +581,10 @@ public class UserSelectCardDataElement
 [System.Serializable]
 public class PromotionCodeElement
 {
-  public string Code;
-  public string UserID;
-  public int InAppItemID;
-  public string ImageName;
+	public string Code;
+	public string UserID;
+	public int InAppItemID;
+	public string ImageName;
 }
 
 #endregion
@@ -584,10 +593,10 @@ public class PromotionCodeElement
 [System.Serializable]
 public class VersionElement
 {
-  public float AppVersion;
-  public int XlsVersion;
-  public int ADCount;
-  public int ADProb;
+	public float AppVersion;
+	public int XlsVersion;
+	public int ADCount;
+	public int ADProb;
 }
 
 #endregion
@@ -597,12 +606,12 @@ public class DataMgr : MonoBehaviour
 	/// <summary>
 	/// 로컬라인징 text
 	/// </summary>
-    public TranslationElementDic m_TranslationElementDic = new TranslationElementDic();
+	public TranslationElementDic m_TranslationElementDic = new TranslationElementDic();
 
 	/// <summary>
 	/// 인게임 정보 (용병 포인트 사용량)
 	/// </summary>
-    public InGameSystemElement m_InGameSystemElement = new InGameSystemElement();
+	public InGameSystemElement m_InGameSystemElement = new InGameSystemElement();
 
 	/// <summary>
 	/// 스테이지 정보 (웨이브 포함)
@@ -634,11 +643,11 @@ public class DataMgr : MonoBehaviour
 	/// </summary>
 	public UserSelectCardDataElementDic m_UserSelectCardDataElementDic = new UserSelectCardDataElementDic();
 	private void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
+	{
+		DontDestroyOnLoad(this.gameObject);
 
-		Debug.Log( m_UserActiveSkillDataElementDic[0].UserSkillName);
-    }
+		Debug.Log(m_UserActiveSkillDataElementDic[0].UserSkillName);
+	}
 
 	private static DataMgr _instance;
 	public static DataMgr instance
