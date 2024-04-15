@@ -639,4 +639,17 @@ public class DataMgr : MonoBehaviour
 
 		Debug.Log( m_UserActiveSkillDataElementDic[0].UserSkillName);
     }
+
+	private static DataMgr _instance;
+	public static DataMgr instance
+	{
+		get
+		{
+			if (_instance == null)
+			{
+				_instance = FindObjectOfType<DataMgr>();
+			}
+			return _instance;
+		}
+	}
 }

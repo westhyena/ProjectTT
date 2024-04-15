@@ -65,13 +65,14 @@ public class GameManager : MonoBehaviour
 
         player = heroManager.CreatePlayer();
 
-        float pointCycle = float.Parse(DataManager.instance.GetConstValue("BATTLE_MERCENARY_POINT_CYCLE"));
-        companionGaugeSpeed = 1000.0f / pointCycle;
+        companionGaugeSpeed = 1.0f / DataMgr.instance.m_InGameSystemElement.MercenaryPointGetTime;
 
-        companionPointPerCycle = int.Parse(DataManager.instance.GetConstValue("BATTLE_MERCENARY_POINT_GET_PER_CYCLE"));
+        companionPointPerCycle = DataMgr.instance.m_InGameSystemElement.GetMercenaryPoint;
 
-        companionSummonPoint = int.Parse(DataManager.instance.GetConstValue("BATTLE_MERCENARY_SUMMON_FIRST_POINT"));
-        companionSummonPointIncrease = int.Parse(DataManager.instance.GetConstValue("BATTLE_MERCENARY_SUMMON_POINT_INCREASE"));
+        companionSummonPoint = DataMgr.instance.m_InGameSystemElement.Summon_NeedPoint;
+        companionSummonPointIncrease = 0;
+
+        companionCallPoint = DataMgr.instance.m_InGameSystemElement.Call_NeedPoint;
     }
 
     void Update()
