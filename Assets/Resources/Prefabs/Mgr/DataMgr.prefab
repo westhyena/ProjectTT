@@ -66,6 +66,18 @@ MonoBehaviour:
     - 3001
     - 3002
     - 3003
+    - 3004
+    - 3005
+    - 3006
+    - 3007
+    - 3008
+    - 3009
+    - 3010
+    - 3011
+    - 3012
+    - 3013
+    - 3014
+    - 3015
     - 4000
     - 4001
     - 4002
@@ -80,6 +92,56 @@ MonoBehaviour:
     - 10007
     - 10008
     - 10009
+    - 10010
+    - 10011
+    - 10012
+    - 10013
+    - 10014
+    - 10015
+    - 10016
+    - 10017
+    - 10018
+    - 10019
+    - 10020
+    - 10021
+    - 10022
+    - 10023
+    - 10024
+    - 10025
+    - 10026
+    - 10027
+    - 10028
+    - 10029
+    - 10030
+    - 10031
+    - 10032
+    - 10033
+    - 10034
+    - 10035
+    - 10036
+    - 10037
+    - 10038
+    - 10039
+    - 10040
+    - 10041
+    - 10042
+    - 10043
+    - 10044
+    - 10045
+    - 10046
+    - 10047
+    - 10048
+    - 10049
+    - 10050
+    - 10051
+    - 10052
+    - 10053
+    - 10054
+    - 10055
+    - 10056
+    - 10057
+    - 10058
+    - 10059
     - 11000
     - 11001
     - 11002
@@ -91,8 +153,10 @@ MonoBehaviour:
     - 11008
     - 11009
     - 20000
+    - 20001
     - 21000
     - 30000
+    - 30001
     - 31000
     - 5000
     - 5001
@@ -113,6 +177,16 @@ MonoBehaviour:
     - 5016
     - 5017
     - 5018
+    - 5019
+    - 5020
+    - 5021
+    - 5022
+    - 5023
+    - 5024
+    - 5025
+    - 5026
+    - 5027
+    - 5028
     - 6000
     - 6001
     - 6002
@@ -135,6 +209,13 @@ MonoBehaviour:
     - 6019
     - 6020
     - 6021
+    - 6022
+    - 6023
+    - 6024
+    - 6025
+    - 6026
+    - 6027
+    - 6028
     _values:
     - ID: 0
       Kor: "\uD655\uC778"
@@ -362,7 +443,7 @@ MonoBehaviour:
       Mys: 
     - ID: 3000
       Kor: "\uC77C\uBC18 \uC804\uC0AC"
-      Eng: 
+      Eng: Warrior
       Jpn: 
       Prt: 
       Deu: 
@@ -376,7 +457,7 @@ MonoBehaviour:
       Mys: 
     - ID: 3001
       Kor: "\uC77C\uBC18 \uAD81\uC218"
-      Eng: 
+      Eng: Archer
       Jpn: 
       Prt: 
       Deu: 
@@ -390,7 +471,7 @@ MonoBehaviour:
       Mys: 
     - ID: 3002
       Kor: "\uC77C\uBC18 \uBC95\uC0AC"
-      Eng: 
+      Eng: Wizard
       Jpn: 
       Prt: 
       Deu: 
@@ -404,6 +485,174 @@ MonoBehaviour:
       Mys: 
     - ID: 3003
       Kor: "\uB3C4\uB07C \uD22C\uCC99 \uB4DC\uC6CC\uD504"
+      Eng: DwarfAxe
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 3004
+      Kor: "\uD3ED\uD0C4\uBCD1"
+      Eng: Bomber
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 3005
+      Kor: "\uD070\uB3C4\uB07C\uBCD1"
+      Eng: AxeTitan
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 3006
+      Kor: "\uCC3D\uBCD1"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 3007
+      Kor: "\uC11D\uAD81\uBCD1"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 3008
+      Kor: "\uC554\uD751\uBC95\uC0AC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 3009
+      Kor: "\uCD1D\uC0AC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 3010
+      Kor: "\uB4DC\uC6CC\uD504 \uBC95\uC0AC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 3011
+      Kor: "\uD790\uB7EC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 3012
+      Kor: "\uB3C4\uC801"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 3013
+      Kor: "\uC0C1\uD07C\uC694\uC815"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 3014
+      Kor: "\uC554\uD751\uAE30\uC0AC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 3015
+      Kor: "\uB9C8\uBC95\uC0AC"
       Eng: 
       Jpn: 
       Prt: 
@@ -487,7 +736,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 10001
-      Kor: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
+      Kor: "\uCD08\uC6D0\uC758 \uB3FC\uC9C0  "
       Eng: Fury hog
       Jpn: 
       Prt: 
@@ -501,7 +750,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 10002
-      Kor: "\uC804\uC0AC \uBA67\uB3FC\uC9C0"
+      Kor: "\uD654\uB09C \uB3FC\uC9C0 \uC804\uC0AC   "
       Eng: HogWarrior
       Jpn: 
       Prt: 
@@ -515,7 +764,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 10003
-      Kor: "\uC2AC\uB77C\uC784"
+      Kor: "\uD3C9\uC57C \uC2AC\uB77C\uC784"
       Eng: Slime
       Jpn: 
       Prt: 
@@ -529,8 +778,8 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 10004
-      Kor: "\uB3CC\uD314\uB9E4\uC9C8 \uBA67\uB3FC\uC9C0"
-      Eng: Raging Boar
+      Kor: "\uC0C8\uCD1D\uC744 \uB4E0 \uB9F7\uB3FC\uC9C0"
+      Eng: 
       Jpn: 
       Prt: 
       Deu: 
@@ -543,6 +792,132 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 10005
+      Kor: "\uD3C9\uC57C\uC758 \uB4DC\uB8E8\uC774\uB4DC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10006
+      Kor: "\uC815\uAE00 \uB450\uB354\uC9C0"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10007
+      Kor: "\uB179\uC0C9 \uC2AC\uB77C\uC784"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10008
+      Kor: "\uC815\uAE00 \uAC70\uBBF8"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10009
+      Kor: "\uAD34\uC0C1\uD55C \uACF5\uC911\uC0C8"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10010
+      Kor: "\uD63C\uC774 \uB098\uAC04 \uC8FC\uC220\uC0AC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10011
+      Kor: "\uD63C\uC774 \uB098\uAC04 \uCC3D\uBCD1 "
+      Eng: GhostlyJavelin
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10012
+      Kor: "\uC9C0\uD558\uC758 \uAD11\uBD80 \uC720\uB839"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10013
+      Kor: "\uC545\uB784\uD55C \uC2AC\uB77C\uC784"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10014
       Kor: "\uB208\uC54C \uBC15\uC950"
       Eng: BigEyeBat
       Jpn: 
@@ -556,9 +931,9 @@ MonoBehaviour:
       Tha: 
       Vnm: 
       Mys: 
-    - ID: 10006
-      Kor: "\uC8FC\uC220\uC0AC"
-      Eng: Shaman
+    - ID: 10015
+      Kor: "\uC9C0\uD558 \uAC70\uBBF8"
+      Eng: 
       Jpn: 
       Prt: 
       Deu: 
@@ -570,9 +945,9 @@ MonoBehaviour:
       Tha: 
       Vnm: 
       Mys: 
-    - ID: 10007
-      Kor: "\uC790\uC774\uC5B8\uD2B8 \uAC70\uBBF8"
-      Eng: Giant spider
+    - ID: 10016
+      Kor: "\uAD11\uBD80 \uCD1D\uC7A1\uC774"
+      Eng: 
       Jpn: 
       Prt: 
       Deu: 
@@ -584,9 +959,9 @@ MonoBehaviour:
       Tha: 
       Vnm: 
       Mys: 
-    - ID: 10008
-      Kor: "\uD63C\uC774\uB098\uAC04 \uC6D0\uC8FC\uBBFC \uCC3D\uBCD1"
-      Eng: Battered indigenous spearhead
+    - ID: 10017
+      Kor: "\uC5B4\uB450\uC6B4 \uB4DC\uB8E8\uC774\uB4DC"
+      Eng: 
       Jpn: 
       Prt: 
       Deu: 
@@ -598,9 +973,583 @@ MonoBehaviour:
       Tha: 
       Vnm: 
       Mys: 
-    - ID: 10009
-      Kor: "\uB9C8\uBC95\uC0AC"
-      Eng: Wizard
+    - ID: 10018
+      Kor: "\uACE0\uC0B0\uC758 \uB3FC\uC9C0"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10019
+      Kor: "\uACE0\uC0B0 \uB291\uB300"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10020
+      Kor: "\uACE0\uC0B0 \uACE0\uBE14\uB9B0 \uAD81\uC218"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10021
+      Kor: "\uACE0\uC0B0 \uAC70\uB300 \uD2B8\uB864"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10022
+      Kor: "\uACE0\uC0B0 \uD558\uD53C"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10023
+      Kor: "\uACE0\uC0B0 \uB3C5\uC218\uB9AC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10024
+      Kor: "\uBD89\uC740 \uB291\uB300"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10025
+      Kor: "\uBD89\uC740 \uB4DC\uB8E8\uC774\uB4DC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10026
+      Kor: "\uBD89\uC740 \uB3FC\uC9C0 \uC804\uC0AC   "
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10027
+      Kor: "\uD654\uC0B0 \uB4DC\uB798\uACE4"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10028
+      Kor: "\uC6A9\uC554 \uBC14\uC704"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10029
+      Kor: "\uD654\uC0B0 \uD558\uD53C"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10030
+      Kor: "\uC0AC\uB9C9 \uC5EC\uC6B0"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10031
+      Kor: "\uC0AC\uB9C9 \uB450\uB354\uC9C0"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10032
+      Kor: "\uBAA8\uB798 \uB3C5\uC0AC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10033
+      Kor: "\uC0AC\uB9C9 \uB9AC\uC790\uB4DC \uCC3D\uBCD1"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10034
+      Kor: "\uC0AC\uB9C9\uC758 \uCD1D\uC7A1\uC774 \uB3FC\uC9C0 "
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10035
+      Kor: "\uBAA8\uB798 \uB4DC\uB8E8\uC774\uB4DC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10036
+      Kor: "\uC9C0\uB3C5\uD55C \uD5A5\uC774 \uB098\uB294 \uC2AC\uB77C\uC784"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10037
+      Kor: "\uB2AA\uC9C0\uB300 \uB3C5\uC0AC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10038
+      Kor: "\uD5A5\uC744 \uBFDC\uB294 \uBC84\uC12F"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10039
+      Kor: "\uB2AA\uC9C0\uB300 \uAC70\uBBF8"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10040
+      Kor: "\uC815\uAE00 \uAC70\uB300 \uD2B8\uB864"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10041
+      Kor: "\uB2AA\uC9C0\uB300 \uB208\uC54C \uBC15\uC950"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10042
+      Kor: "\uC678\uB85C\uC6B4 \uAD11\uBD80 \uC720\uB839"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10043
+      Kor: "\uD574\uC801 \uC720\uB839"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10044
+      Kor: "\uBC14\uB78C\uC758 \uB4DC\uB8E8\uC774\uB4DC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10045
+      Kor: "\uC2E0\uBE44\uD55C \uC2AC\uB77C\uC784"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10046
+      Kor: "\uCF54\uCF54\uB11B \uD3ED\uD0C4 \uB098\uBB34"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10047
+      Kor: "\uACF5\uC911 \uC5F4\uB300 \uC870\uB958"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10048
+      Kor: "\uC5BC\uC74C \uC5EC\uC6B0"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10049
+      Kor: "\uCC28\uAC00\uC6B4 \uB3C5\uC0AC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10050
+      Kor: "\uC5BC\uC74C \uD558\uD53C"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10051
+      Kor: "\uBE59\uD558 \uB291\uB300"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10052
+      Kor: "\uCC28\uAC00\uC6B4 \uB4DC\uB8E8\uC774\uB4DC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10053
+      Kor: "\uCC28\uAC11\uACE0 \uC774\uC0C1\uD55C \uC0C8"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10054
+      Kor: "\uACE0\uB300 \uAD11\uBD80 \uC720\uB839"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10055
+      Kor: "\uACE0\uB300 \uD558\uD53C"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10056
+      Kor: "\uC804\uC124\uC758 \uB4DC\uB8E8\uC774\uB4DC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10057
+      Kor: "\uACE0\uB300 \uC57C\uC218"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10058
+      Kor: "\uC720\uC801\uC758 \uAC15\uB839\uC220\uC0AC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 10059
+      Kor: "\uB450\uAC1C\uC758 \uBA38\uB9AC \uB3C5\uC0AC"
+      Eng: 
       Jpn: 
       Prt: 
       Deu: 
@@ -766,6 +1715,20 @@ MonoBehaviour:
       Tha: 
       Vnm: 
       Mys: 
+    - ID: 20001
+      Kor: "\uD3C9\uC57C\uC758 \uAC70\uB300 \uD2B8\uB864"
+      Eng: BossM_ColossalTroll
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
     - ID: 21000
       Kor: "\uC124\uBA85"
       Eng: Description
@@ -781,7 +1744,21 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 30000
-      Kor: "\uAC70\uB300\uD55C \uAF43\uC78E \uC2DD\uBB3C"
+      Kor: "\uD3C9\uC57C\uC758 \uACE0\uB300 \uC804\uC0AC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 30001
+      Kor: "\uAC70\uB300 \uAF43\uC78E \uC624\uB4DC\uB9AC"
       Eng: Audrey
       Jpn: 
       Prt: 
@@ -809,7 +1786,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5000
-      Kor: "\uB9C8\uB825\uC9D1\uC911"
+      Kor: "\uB9C8\uB825 \uC9D1\uC911"
       Eng: 
       Jpn: 
       Prt: 
@@ -823,7 +1800,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5001
-      Kor: "\uBB34\uAE30\uAC15\uD654"
+      Kor: "\uBB34\uAE30 \uAC15\uD654"
       Eng: 
       Jpn: 
       Prt: 
@@ -837,7 +1814,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5002
-      Kor: "\uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00"
+      Kor: "\uACF5\uC18D \uC99D\uAC00"
       Eng: 
       Jpn: 
       Prt: 
@@ -893,7 +1870,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5006
-      Kor: "\uBE45\uC2A4\uC719"
+      Kor: "\uD3ED\uD0C4\uD654\uC0B4"
       Eng: 
       Jpn: 
       Prt: 
@@ -907,7 +1884,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5007
-      Kor: "\uBE45\uC0F7"
+      Kor: "\uB3C5\uD654\uC0B4"
       Eng: 
       Jpn: 
       Prt: 
@@ -921,7 +1898,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5008
-      Kor: "\uD30C\uC774\uC5B4\uBCFC"
+      Kor: "\uC74C\uD30C \uD0C0\uACA9"
       Eng: 
       Jpn: 
       Prt: 
@@ -935,7 +1912,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5009
-      Kor: "\uD3ED\uC8FC"
+      Kor: "\uBE45\uC2A4\uC719"
       Eng: 
       Jpn: 
       Prt: 
@@ -949,7 +1926,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5010
-      Kor: "\uBD88\uB048\uBD88\uB048"
+      Kor: "\uBE45\uC0F7"
       Eng: 
       Jpn: 
       Prt: 
@@ -963,7 +1940,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5011
-      Kor: "\uD790"
+      Kor: "\uD30C\uC774\uC5B4\uBCFC"
       Eng: 
       Jpn: 
       Prt: 
@@ -977,7 +1954,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5012
-      Kor: "\uBE14\uB9AC\uC790\uB4DC"
+      Kor: "\uD790"
       Eng: 
       Jpn: 
       Prt: 
@@ -991,7 +1968,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5013
-      Kor: "\uC2E0\uC758\uB9DD\uCE58"
+      Kor: "\uC544\uC774\uC2A4\uBCFC"
       Eng: 
       Jpn: 
       Prt: 
@@ -1005,7 +1982,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5014
-      Kor: "\uBA54\uD14C\uC624"
+      Kor: "\uC36C\uB354\uD3F4\uD2B8"
       Eng: 
       Jpn: 
       Prt: 
@@ -1019,7 +1996,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5015
-      Kor: "\uC0AC\uC790\uD6C4"
+      Kor: "\uD504\uB85C\uC98C"
       Eng: 
       Jpn: 
       Prt: 
@@ -1033,7 +2010,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5016
-      Kor: "\uADF8\uB808\uC774\uD2B8 \uD790"
+      Kor: "\uB3C5\uC9C0\uB300"
       Eng: 
       Jpn: 
       Prt: 
@@ -1047,7 +2024,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5017
-      Kor: "\uACA9\uB824"
+      Kor: "\uD5E4\uB4DC\uC0F7"
       Eng: 
       Jpn: 
       Prt: 
@@ -1061,6 +2038,146 @@ MonoBehaviour:
       Vnm: 
       Mys: 
     - ID: 5018
+      Kor: "\uD3ED\uC8FC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 5019
+      Kor: "\uD765\uBD84\uC0C1\uD0DC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 5020
+      Kor: "\uC57D\uC810\uAC15\uD0C0"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 5021
+      Kor: "\uBE14\uB9AC\uC790\uB4DC"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 5022
+      Kor: "\uC2E0\uC758\uB9DD\uCE58"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 5023
+      Kor: "\uBA54\uD14C\uC624"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 5024
+      Kor: "\uC0AC\uC790\uD6C4"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 5025
+      Kor: "\uBC88\uAC1C\uD3ED\uD48D"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 5026
+      Kor: "\uADF8\uB808\uC774\uD2B8 \uD790"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 5027
+      Kor: "\uACA9\uB824"
+      Eng: 
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 5028
       Kor: "\uC2E0\uC758\uAC00\uD638"
       Eng: 
       Jpn: 
@@ -1382,6 +2499,104 @@ MonoBehaviour:
       Tha: 
       Vnm: 
       Mys: 
+    - ID: 6022
+      Kor: "\uC124\uBA85"
+      Eng: Description
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 6023
+      Kor: "\uC124\uBA85"
+      Eng: Description
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 6024
+      Kor: "\uC124\uBA85"
+      Eng: Description
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 6025
+      Kor: "\uC124\uBA85"
+      Eng: Description
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 6026
+      Kor: "\uC124\uBA85"
+      Eng: Description
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 6027
+      Kor: "\uC124\uBA85"
+      Eng: Description
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
+    - ID: 6028
+      Kor: "\uC124\uBA85"
+      Eng: Description
+      Jpn: 
+      Prt: 
+      Deu: 
+      Rus: 
+      Fra: 
+      Chn_s: 
+      Chn_t: 
+      Esp: 
+      Tha: 
+      Vnm: 
+      Mys: 
   m_InGameSystemElement:
     MercenaryPointGetTime: 2
     GetMercenaryPoint: 5
@@ -1562,7 +2777,7 @@ MonoBehaviour:
       IconName: "\uC544\uC774\uCF58 \uD30C\uC77C \uBA85"
       StageMapObjectName: "\uB9F5 \uC624\uBE0C\uC81D\uD2B8 \uD30C\uC77C\uBA85"
   m_UserActiveSkillDataElementDic:
-    _keys: 0000000001000000
+    _keys: 000000000100000002000000030000000400000005000000
     _values:
     - ID: 0
       UserSkillName: "\uC804\uCCB4 \uAC15\uD0C0"
@@ -1582,7 +2797,7 @@ MonoBehaviour:
         Value: 1000
         Time: 0
       IconName: 
-      Eff_SkillName: 
+      Eff_SkillName: UAS_AoEAttack
     - ID: 1
       UserSkillName: "\uC804\uCCB4 \uD68C\uBCF5"
       UserSkillNameID: 
@@ -1601,9 +2816,73 @@ MonoBehaviour:
         Value: 1000
         Time: 0
       IconName: 
+      Eff_SkillName: UAS_FullRecovery
+    - ID: 2
+      UserSkillName: "\uC2E0\uC758 \uC77C\uACA9"
+      UserSkillNameID: 
+      UserSkillDescID: 
+      Rating: 0
+      PriceType: 0
+      PriceValue: 0
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 0
+      Type: 0
+      TargetSelectType: 0
+      DamageTypeRange: 0
+      SkillData: []
+      IconName: 
+      Eff_SkillName: 
+    - ID: 3
+      UserSkillName: "\uAE08\uAC15\uBD88\uAD18"
+      UserSkillNameID: 
+      UserSkillDescID: 
+      Rating: 0
+      PriceType: 0
+      PriceValue: 0
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 0
+      Type: 0
+      TargetSelectType: 0
+      DamageTypeRange: 0
+      SkillData: []
+      IconName: 
+      Eff_SkillName: 
+    - ID: 4
+      UserSkillName: "\uBC84\uC11C\uCEE4"
+      UserSkillNameID: 
+      UserSkillDescID: 
+      Rating: 0
+      PriceType: 0
+      PriceValue: 0
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 0
+      Type: 0
+      TargetSelectType: 0
+      DamageTypeRange: 0
+      SkillData: []
+      IconName: 
+      Eff_SkillName: 
+    - ID: 5
+      UserSkillName: "\uC288\uD37C\uB9E8"
+      UserSkillNameID: 
+      UserSkillDescID: 
+      Rating: 0
+      PriceType: 0
+      PriceValue: 0
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 0
+      Type: 0
+      TargetSelectType: 0
+      DamageTypeRange: 0
+      SkillData: []
+      IconName: 
       Eff_SkillName: 
   m_SkillDataElementDic:
-    _keys: 0000000001000000020000000a0000000b0000000c000000140000001500000016000000170000001e0000001f00000028000000290000002a0000002b000000320000003300000034000000
+    _keys: 0000000001000000020000000a0000000b0000000c0000000d0000000e0000000f0000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001e0000001f0000002000000028000000290000002a0000002b0000002c000000320000003300000034000000
     _values:
     - ID: 0
       UserSkillName: "\uB9C8\uB825 \uC9D1\uC911"
@@ -1672,7 +2951,7 @@ MonoBehaviour:
         Time: 0
       IconName: 
       Eff_SkillName: 
-      Eff_Name: 
+      Eff_Name: Hit_Base_A
     - ID: 11
       UserSkillName: "\uB9E4\uC9C1\uBCFC"
       UserSkillNameID: 5004
@@ -1688,8 +2967,8 @@ MonoBehaviour:
         Value: 50
         Time: 0
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      Eff_SkillName: Projectile_MagicBall
+      Eff_Name: Hit_Base_A
     - ID: 12
       UserSkillName: "\uD30C\uC6CC\uC0F7"
       UserSkillNameID: 5005
@@ -1706,11 +2985,65 @@ MonoBehaviour:
         Time: 0
       IconName: 
       Eff_SkillName: 
+      Eff_Name: Hit_PowerShot
+    - ID: 13
+      UserSkillName: "\uD3ED\uD0C4\uD654\uC0B4"
+      UserSkillNameID: 5006
+      UserSkillDescID: 6006
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 5
+      Type: 0
+      TargetSelectType: 1
+      DamageTypeRange: 2
+      SkillData:
+      - SkillDataKind: 0
+        Value: 50
+        Time: 0
+      IconName: 
+      Eff_SkillName: Projectile_BombArrow
+      Eff_Name: 
+    - ID: 14
+      UserSkillName: "\uB3C5\uD654\uC0B4"
+      UserSkillNameID: 5007
+      UserSkillDescID: 6007
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 5
+      Type: 0
+      TargetSelectType: 0
+      DamageTypeRange: 0
+      SkillData:
+      - SkillDataKind: 0
+        Value: 20
+        Time: 0
+      - SkillDataKind: 1
+        Value: 30
+        Time: 2
+      IconName: 
+      Eff_SkillName: Projectile_Poison
+      Eff_Name: Hit_Poison_S
+    - ID: 15
+      UserSkillName: "\uC74C\uD30C \uD0C0\uACA9"
+      UserSkillNameID: 5008
+      UserSkillDescID: 6008
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 5
+      Type: 1
+      TargetSelectType: 0
+      DamageTypeRange: 0
+      SkillData:
+      - SkillDataKind: 0
+        Value: 50
+        Time: 0
+      IconName: 
+      Eff_SkillName: Projectile_BatwaveBlast
       Eff_Name: 
     - ID: 20
       UserSkillName: "\uBE45\uC2A4\uC719"
-      UserSkillNameID: 5006
-      UserSkillDescID: 6006
+      UserSkillNameID: 5009
+      UserSkillDescID: 6009
       ActivePosition: 0
       Target: 0
       CoolTime: 7
@@ -1723,11 +3056,11 @@ MonoBehaviour:
         Time: 0
       IconName: 
       Eff_SkillName: 
-      Eff_Name: 
+      Eff_Name: Hit_Base_A
     - ID: 21
       UserSkillName: "\uBE45\uC0F7"
-      UserSkillNameID: 5007
-      UserSkillDescID: 6007
+      UserSkillNameID: 5010
+      UserSkillDescID: 6010
       ActivePosition: 0
       Target: 0
       CoolTime: 7
@@ -1743,8 +3076,8 @@ MonoBehaviour:
       Eff_Name: 
     - ID: 22
       UserSkillName: "\uD30C\uC774\uC5B4\uBCFC"
-      UserSkillNameID: 5008
-      UserSkillDescID: 6008
+      UserSkillNameID: 5011
+      UserSkillDescID: 6011
       ActivePosition: 0
       Target: 0
       CoolTime: 7
@@ -1756,12 +3089,12 @@ MonoBehaviour:
         Value: 80
         Time: 0
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      Eff_SkillName: Projectile_FireBall
+      Eff_Name: Hit_Explosion_S
     - ID: 23
       UserSkillName: "\uD790"
-      UserSkillNameID: 5011
-      UserSkillDescID: 6011
+      UserSkillNameID: 5012
+      UserSkillDescID: 6012
       ActivePosition: 1
       Target: 1
       CoolTime: 10
@@ -1774,11 +3107,102 @@ MonoBehaviour:
         Time: 0
       IconName: 
       Eff_SkillName: 
+      Eff_Name: Hit_Heal_S
+    - ID: 24
+      UserSkillName: "\uC544\uC774\uC2A4\uBCFC"
+      UserSkillNameID: 5013
+      UserSkillDescID: 6013
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 7
+      Type: 1
+      TargetSelectType: 0
+      DamageTypeRange: 0
+      SkillData:
+      - SkillDataKind: 0
+        Value: 100
+        Time: 0
+      IconName: 
+      Eff_SkillName: Projectile_IceBall
+      Eff_Name: Hit_IceBall_S
+    - ID: 25
+      UserSkillName: "\uC36C\uB354\uBCFC\uD2B8"
+      UserSkillNameID: 5014
+      UserSkillDescID: 6014
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 7
+      Type: 1
+      TargetSelectType: 1
+      DamageTypeRange: 3
+      SkillData:
+      - SkillDataKind: 0
+        Value: 75
+        Time: 0
+      IconName: 
+      Eff_SkillName: Projectile_Thunderbolt
+      Eff_Name: Hit_Thunderbolt_S
+    - ID: 26
+      UserSkillName: "\uD504\uB85C\uC98C"
+      UserSkillNameID: 5015
+      UserSkillDescID: 6015
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 7
+      Type: 1
+      TargetSelectType: 1
+      DamageTypeRange: 3
+      SkillData:
+      - SkillDataKind: 0
+        Value: 75
+        Time: 0
+      - SkillDataKind: 6
+        Value: 0
+        Time: 2
+      IconName: 
+      Eff_SkillName: 
       Eff_Name: 
+    - ID: 27
+      UserSkillName: "\uB3C5\uC9C0\uB300"
+      UserSkillNameID: 5016
+      UserSkillDescID: 6016
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 7
+      Type: 1
+      TargetSelectType: 1
+      DamageTypeRange: 3
+      SkillData:
+      - SkillDataKind: 0
+        Value: 40
+        Time: 0
+      - SkillDataKind: 1
+        Value: 40
+        Time: 3
+      IconName: 
+      Eff_SkillName: 
+      Eff_Name: 
+    - ID: 28
+      UserSkillName: "\uD5E4\uB4DC\uC0F7"
+      UserSkillNameID: 5017
+      UserSkillDescID: 6017
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 7
+      Type: 0
+      TargetSelectType: 0
+      DamageTypeRange: 0
+      SkillData:
+      - SkillDataKind: 0
+        Value: 100
+        Time: 0
+      IconName: 
+      Eff_SkillName: 
+      Eff_Name: Hit_HeadShot
     - ID: 30
       UserSkillName: "\uD3ED\uC8FC"
-      UserSkillNameID: 5009
-      UserSkillDescID: 6009
+      UserSkillNameID: 5018
+      UserSkillDescID: 6018
       ActivePosition: 1
       Target: 1
       CoolTime: 10
@@ -1796,9 +3220,9 @@ MonoBehaviour:
       Eff_SkillName: 
       Eff_Name: 
     - ID: 31
-      UserSkillName: "\uBD88\uB048\uBD88\uB048"
-      UserSkillNameID: 5010
-      UserSkillDescID: 6010
+      UserSkillName: "\uD765\uBD84\uC0C1\uD0DC"
+      UserSkillNameID: 5019
+      UserSkillDescID: 6019
       ActivePosition: 1
       Target: 1
       CoolTime: 10
@@ -1812,10 +3236,27 @@ MonoBehaviour:
       IconName: 
       Eff_SkillName: 
       Eff_Name: 
+    - ID: 32
+      UserSkillName: "\uC57D\uC810\uAC15\uD0C0"
+      UserSkillNameID: 5020
+      UserSkillDescID: 6020
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 10
+      Type: 0
+      TargetSelectType: 0
+      DamageTypeRange: 0
+      SkillData:
+      - SkillDataKind: 0
+        Value: 150
+        Time: 0
+      IconName: 
+      Eff_SkillName: 
+      Eff_Name: Hit_WeakPointHit
     - ID: 40
       UserSkillName: "\uBE14\uB9AC\uC790\uB4DC"
-      UserSkillNameID: 5012
-      UserSkillDescID: 6012
+      UserSkillNameID: 5021
+      UserSkillDescID: 6021
       ActivePosition: 0
       Target: 0
       CoolTime: 10
@@ -1834,8 +3275,8 @@ MonoBehaviour:
       Eff_Name: 
     - ID: 41
       UserSkillName: "\uC2E0\uC758\uB9DD\uCE58"
-      UserSkillNameID: 5013
-      UserSkillDescID: 6013
+      UserSkillNameID: 5022
+      UserSkillDescID: 6022
       ActivePosition: 0
       Target: 0
       CoolTime: 10
@@ -1854,8 +3295,8 @@ MonoBehaviour:
       Eff_Name: 
     - ID: 42
       UserSkillName: "\uBA54\uD14C\uC624"
-      UserSkillNameID: 5014
-      UserSkillDescID: 6014
+      UserSkillNameID: 5023
+      UserSkillDescID: 6023
       ActivePosition: 0
       Target: 0
       CoolTime: 10
@@ -1874,8 +3315,8 @@ MonoBehaviour:
       Eff_Name: 
     - ID: 43
       UserSkillName: "\uC0AC\uC790\uD6C4"
-      UserSkillNameID: 5015
-      UserSkillDescID: 6015
+      UserSkillNameID: 5024
+      UserSkillDescID: 6024
       ActivePosition: 1
       Target: 0
       CoolTime: 10
@@ -1892,10 +3333,27 @@ MonoBehaviour:
       IconName: 
       Eff_SkillName: 
       Eff_Name: 
+    - ID: 44
+      UserSkillName: "\uBC88\uAC1C\uD3ED\uD48D"
+      UserSkillNameID: 5025
+      UserSkillDescID: 6025
+      ActivePosition: 0
+      Target: 0
+      CoolTime: 10
+      Type: 1
+      TargetSelectType: 1
+      DamageTypeRange: 5
+      SkillData:
+      - SkillDataKind: 0
+        Value: 150
+        Time: 0
+      IconName: 
+      Eff_SkillName: 
+      Eff_Name: 
     - ID: 50
       UserSkillName: "\uADF8\uB808\uC774\uD2B8 \uD790"
-      UserSkillNameID: 5016
-      UserSkillDescID: 6016
+      UserSkillNameID: 5026
+      UserSkillDescID: 6026
       ActivePosition: 1
       Target: 1
       CoolTime: 10
@@ -1911,8 +3369,8 @@ MonoBehaviour:
       Eff_Name: 
     - ID: 51
       UserSkillName: "\uACA9\uB824"
-      UserSkillNameID: 5017
-      UserSkillDescID: 6017
+      UserSkillNameID: 5027
+      UserSkillDescID: 6027
       ActivePosition: 1
       Target: 1
       CoolTime: 10
@@ -1931,8 +3389,8 @@ MonoBehaviour:
       Eff_Name: 
     - ID: 52
       UserSkillName: "\uC2E0\uC758\uAC00\uD638"
-      UserSkillNameID: 5018
-      UserSkillDescID: 6018
+      UserSkillNameID: 5028
+      UserSkillDescID: 6028
       ActivePosition: 1
       Target: 1
       CoolTime: 10
@@ -1947,7 +3405,7 @@ MonoBehaviour:
       Eff_SkillName: 
       Eff_Name: 
   m_CharacterDataElementDic:
-    _keys: 0000000064000000650000006600000067000000e8030000e9030000ea030000eb030000ec030000ed030000ee030000ef030000f0030000f103000034080000b80b0000
+    _keys: 0000000064000000650000006600000067000000e8030000e9030000ea030000eb030000ec030000ed030000ee030000ef030000f0030000f1030000f2030000f3030000f4030000f5030000f6030000f7030000f8030000f9030000fa030000fb030000fc030000fd030000fe030000ff030000000400000104000002040000030400000404000005040000060400000704000008040000090400000a0400000b0400000c0400000d0400000e0400000f040000100400001104000012040000130400001404000015040000160400001704000018040000190400001a0400001b0400001c0400001d0400001e0400001f0400002004000021040000220400002304000034080000b80b0000b90b0000
     _values:
     - ID: 0
       CharacterName: "\uD30C\uB780\uBA38\uB9AC \uC601\uC6C5"
@@ -1968,8 +3426,8 @@ MonoBehaviour:
       AllSkillList: 01000000020000000a000000140000001f000000290000002b0000003300000034000000
       Exp: 0
       Gold: 0
-      iconFileName: sprite_hero_icon_10001
-      ObjectFileName: 
+      iconFileName: Hero_CyonKnight
+      ObjectFileName: Hero_CyonKnight
       ObjectEffFileName: 
     - ID: 100
       CharacterName: "\uC77C\uBC18 \uC804\uC0AC"
@@ -1990,8 +3448,8 @@ MonoBehaviour:
       AllSkillList: 
       Exp: 0
       Gold: 0
-      iconFileName: 
-      ObjectFileName: 
+      iconFileName: Mercenary_Warrior
+      ObjectFileName: Mercenary_Warrior
       ObjectEffFileName: 
     - ID: 101
       CharacterName: "\uC77C\uBC18 \uAD81\uC218"
@@ -2012,9 +3470,9 @@ MonoBehaviour:
       AllSkillList: 
       Exp: 0
       Gold: 0
-      iconFileName: 
-      ObjectFileName: 
-      ObjectEffFileName: 
+      iconFileName: Mercenary_Archer
+      ObjectFileName: Mercenary_Archer
+      ObjectEffFileName: Projectile_arrow
     - ID: 102
       CharacterName: "\uC77C\uBC18 \uBC95\uC0AC"
       CharacterNameID: 3002
@@ -2034,9 +3492,9 @@ MonoBehaviour:
       AllSkillList: 
       Exp: 0
       Gold: 0
-      iconFileName: 
-      ObjectFileName: 
-      ObjectEffFileName: 
+      iconFileName: Mercenary_Wizard
+      ObjectFileName: Mercenary_Wizard
+      ObjectEffFileName: Projectile_FireBall
     - ID: 103
       CharacterName: "\uB3C4\uB07C \uD22C\uCC99 \uB4DC\uC6CC\uD504"
       CharacterNameID: 3003
@@ -2056,9 +3514,9 @@ MonoBehaviour:
       AllSkillList: 
       Exp: 0
       Gold: 0
-      iconFileName: 
-      ObjectFileName: 
-      ObjectEffFileName: 
+      iconFileName: Mercenary_DwarfAxe
+      ObjectFileName: Mercenary_DwarfAxe
+      ObjectEffFileName: Projectile_Dwarf_axe
     - ID: 1000
       CharacterName: "\uB098\uC05C \uBC84\uC12F"
       CharacterNameID: 10000
@@ -2079,10 +3537,10 @@ MonoBehaviour:
       Exp: 10
       Gold: 5
       iconFileName: 
-      ObjectFileName: 
+      ObjectFileName: Enemy_FungiPurplecap
       ObjectEffFileName: 
     - ID: 1001
-      CharacterName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
+      CharacterName: "\uCD08\uC6D0\uC758 \uB3FC\uC9C0  "
       CharacterNameID: 10001
       CharacterDescID: 11001
       MoveSpeed: 10
@@ -2101,10 +3559,10 @@ MonoBehaviour:
       Exp: 10
       Gold: 5
       iconFileName: 
-      ObjectFileName: 
+      ObjectFileName: Enemy_FuryHog
       ObjectEffFileName: 
     - ID: 1002
-      CharacterName: "\uC804\uC0AC \uBA67\uB3FC\uC9C0"
+      CharacterName: "\uD654\uB09C \uB3FC\uC9C0 \uC804\uC0AC   "
       CharacterNameID: 10002
       CharacterDescID: 11002
       MoveSpeed: 10
@@ -2123,10 +3581,10 @@ MonoBehaviour:
       Exp: 10
       Gold: 5
       iconFileName: 
-      ObjectFileName: 
+      ObjectFileName: Enemy_HogWarrior
       ObjectEffFileName: 
     - ID: 1003
-      CharacterName: "\uC2AC\uB77C\uC784"
+      CharacterName: "\uD3C9\uC57C \uC2AC\uB77C\uC784"
       CharacterNameID: 10003
       CharacterDescID: 11003
       MoveSpeed: 10
@@ -2145,10 +3603,10 @@ MonoBehaviour:
       Exp: 10
       Gold: 5
       iconFileName: 
-      ObjectFileName: 
+      ObjectFileName: Enemy_Slime
       ObjectEffFileName: 
     - ID: 1004
-      CharacterName: "\uB3CC\uD314\uB9E4\uC9C8 \uBA67\uB3FC\uC9C0"
+      CharacterName: "\uC0C8\uCD1D\uC744 \uB4E0 \uB9F7\uB3FC\uC9C0"
       CharacterNameID: 10004
       CharacterDescID: 11004
       MoveSpeed: 10
@@ -2170,7 +3628,7 @@ MonoBehaviour:
       ObjectFileName: 
       ObjectEffFileName: 
     - ID: 1005
-      CharacterName: "\uB208\uC54C \uBC15\uC950"
+      CharacterName: "\uD3C9\uC57C\uC758 \uB4DC\uB8E8\uC774\uB4DC"
       CharacterNameID: 10005
       CharacterDescID: 11005
       MoveSpeed: 10
@@ -2192,7 +3650,7 @@ MonoBehaviour:
       ObjectFileName: 
       ObjectEffFileName: 
     - ID: 1006
-      CharacterName: "\uC8FC\uC220\uC0AC"
+      CharacterName: "\uC815\uAE00 \uB450\uB354\uC9C0"
       CharacterNameID: 10006
       CharacterDescID: 11006
       MoveSpeed: 10
@@ -2214,7 +3672,7 @@ MonoBehaviour:
       ObjectFileName: 
       ObjectEffFileName: 
     - ID: 1007
-      CharacterName: "\uC790\uC774\uC5B8\uD2B8 \uAC70\uBBF8"
+      CharacterName: "\uB179\uC0C9 \uC2AC\uB77C\uC784"
       CharacterNameID: 10007
       CharacterDescID: 11007
       MoveSpeed: 10
@@ -2236,7 +3694,7 @@ MonoBehaviour:
       ObjectFileName: 
       ObjectEffFileName: 
     - ID: 1008
-      CharacterName: "\uD63C\uC774\uB098\uAC04 \uC6D0\uC8FC\uBBFC \uCC3D\uBCD1"
+      CharacterName: "\uC815\uAE00 \uAC70\uBBF8"
       CharacterNameID: 10008
       CharacterDescID: 11008
       MoveSpeed: 10
@@ -2258,7 +3716,7 @@ MonoBehaviour:
       ObjectFileName: 
       ObjectEffFileName: 
     - ID: 1009
-      CharacterName: "\uB9C8\uBC95\uC0AC"
+      CharacterName: "\uAD34\uC0C1\uD55C \uACF5\uC911\uC0C8"
       CharacterNameID: 10009
       CharacterDescID: 11009
       MoveSpeed: 10
@@ -2279,10 +3737,1110 @@ MonoBehaviour:
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
+    - ID: 1010
+      CharacterName: "\uD63C\uC774 \uB098\uAC04 \uC8FC\uC220\uC0AC"
+      CharacterNameID: 10010
+      CharacterDescID: 11010
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 1
+      AttackRange: 3
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1011
+      CharacterName: "\uD63C\uC774 \uB098\uAC04 \uCC3D\uBCD1 "
+      CharacterNameID: 10011
+      CharacterDescID: 11011
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 1
+      AttackRange: 8
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: Enemy_GhostlyJavelin
+      ObjectEffFileName: Projectile_GhostlyJavelin
+    - ID: 1012
+      CharacterName: "\uC9C0\uD558\uC758 \uAD11\uBD80 \uC720\uB839"
+      CharacterNameID: 10012
+      CharacterDescID: 11012
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 1
+      AttackRange: 3
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1013
+      CharacterName: "\uC545\uB784\uD55C \uC2AC\uB77C\uC784"
+      CharacterNameID: 10013
+      CharacterDescID: 11013
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 1
+      AttackRange: 3
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1014
+      CharacterName: "\uB208\uC54C \uBC15\uC950"
+      CharacterNameID: 10014
+      CharacterDescID: 11014
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 1
+      AttackRange: 3
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 5
+      HP: 50
+      PD: 10
+      MD: 10
+      AllSkillList: 
+      Exp: 10
+      Gold: 5
+      iconFileName: 
+      ObjectFileName: Enemy_BigEyeBat
+      ObjectEffFileName: Projectile_BatwaveBlast
+    - ID: 1015
+      CharacterName: "\uC9C0\uD558 \uAC70\uBBF8"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1016
+      CharacterName: "\uAD11\uBD80 \uCD1D\uC7A1\uC774"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1017
+      CharacterName: "\uC5B4\uB450\uC6B4 \uB4DC\uB8E8\uC774\uB4DC"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1018
+      CharacterName: "\uACE0\uC0B0\uC758 \uB3FC\uC9C0"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1019
+      CharacterName: "\uACE0\uC0B0 \uB291\uB300"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1020
+      CharacterName: "\uACE0\uC0B0 \uACE0\uBE14\uB9B0 \uAD81\uC218"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1021
+      CharacterName: "\uACE0\uC0B0 \uAC70\uB300 \uD2B8\uB864"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1022
+      CharacterName: "\uACE0\uC0B0 \uD558\uD53C"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1023
+      CharacterName: "\uACE0\uC0B0 \uB3C5\uC218\uB9AC"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1024
+      CharacterName: "\uBD89\uC740 \uB291\uB300"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1025
+      CharacterName: "\uBD89\uC740 \uB4DC\uB8E8\uC774\uB4DC"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1026
+      CharacterName: "\uBD89\uC740 \uB3FC\uC9C0 \uC804\uC0AC   "
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1027
+      CharacterName: "\uD654\uC0B0 \uB4DC\uB798\uACE4"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1028
+      CharacterName: "\uC6A9\uC554 \uBC14\uC704"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1029
+      CharacterName: "\uD654\uC0B0 \uD558\uD53C"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1030
+      CharacterName: "\uC0AC\uB9C9 \uC5EC\uC6B0"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1031
+      CharacterName: "\uC0AC\uB9C9 \uB450\uB354\uC9C0"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1032
+      CharacterName: "\uBAA8\uB798 \uB3C5\uC0AC"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1033
+      CharacterName: "\uC0AC\uB9C9 \uB9AC\uC790\uB4DC \uCC3D\uBCD1"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1034
+      CharacterName: "\uC0AC\uB9C9\uC758 \uCD1D\uC7A1\uC774 \uB3FC\uC9C0 "
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1035
+      CharacterName: "\uBAA8\uB798 \uB4DC\uB8E8\uC774\uB4DC"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1036
+      CharacterName: "\uC9C0\uB3C5\uD55C \uD5A5\uC774 \uB098\uB294 \uC2AC\uB77C\uC784"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1037
+      CharacterName: "\uB2AA\uC9C0\uB300 \uB3C5\uC0AC"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1038
+      CharacterName: "\uD5A5\uC744 \uBFDC\uB294 \uBC84\uC12F"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1039
+      CharacterName: "\uB2AA\uC9C0\uB300 \uAC70\uBBF8"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1040
+      CharacterName: "\uC815\uAE00 \uAC70\uB300 \uD2B8\uB864"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1041
+      CharacterName: "\uB2AA\uC9C0\uB300 \uB208\uC54C \uBC15\uC950"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1042
+      CharacterName: "\uC678\uB85C\uC6B4 \uAD11\uBD80 \uC720\uB839"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1043
+      CharacterName: "\uD574\uC801 \uC720\uB839"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1044
+      CharacterName: "\uBC14\uB78C\uC758 \uB4DC\uB8E8\uC774\uB4DC"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1045
+      CharacterName: "\uC2E0\uBE44\uD55C \uC2AC\uB77C\uC784"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1046
+      CharacterName: "\uCF54\uCF54\uB11B \uD3ED\uD0C4 \uB098\uBB34"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1047
+      CharacterName: "\uACF5\uC911 \uC5F4\uB300 \uC870\uB958"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1048
+      CharacterName: "\uC5BC\uC74C \uC5EC\uC6B0"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1049
+      CharacterName: "\uCC28\uAC00\uC6B4 \uB3C5\uC0AC"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1050
+      CharacterName: "\uC5BC\uC74C \uD558\uD53C"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1051
+      CharacterName: "\uBE59\uD558 \uB291\uB300"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1052
+      CharacterName: "\uCC28\uAC00\uC6B4 \uB4DC\uB8E8\uC774\uB4DC"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1053
+      CharacterName: "\uCC28\uAC11\uACE0 \uC774\uC0C1\uD55C \uC0C8"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1054
+      CharacterName: "\uACE0\uB300 \uAD11\uBD80 \uC720\uB839"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1055
+      CharacterName: "\uACE0\uB300 \uD558\uD53C"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1056
+      CharacterName: "\uC804\uC124\uC758 \uB4DC\uB8E8\uC774\uB4DC"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1057
+      CharacterName: "\uACE0\uB300 \uC57C\uC218"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1058
+      CharacterName: "\uC720\uC801\uC758 \uAC15\uB839\uC220\uC0AC"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
+    - ID: 1059
+      CharacterName: "\uB450\uAC1C\uC758 \uBA38\uB9AC \uB3C5\uC0AC"
+      CharacterNameID: 
+      CharacterDescID: 
+      MoveSpeed: 0
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 0
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 0
+      AttackDamage: 0
+      HP: 0
+      PD: 0
+      MD: 0
+      AllSkillList: 
+      Exp: 0
+      Gold: 0
+      iconFileName: 
+      ObjectFileName: 
+      ObjectEffFileName: 
     - ID: 2100
-      CharacterName: "\uD63C\uC774\uB098\uAC04 \uC6D0\uC8FC\uBBFC"
-      CharacterNameID: 20000
-      CharacterDescID: 21000
+      CharacterName: "\uD3C9\uC57C\uC758 \uAC70\uB300 \uD2B8\uB864"
+      CharacterNameID: 20001
+      CharacterDescID: 21001
       MoveSpeed: 10
       Position: 0
       Type: 0
@@ -2299,10 +4857,10 @@ MonoBehaviour:
       Exp: 100
       Gold: 100
       iconFileName: 
-      ObjectFileName: 
+      ObjectFileName: BossM_ColossalTroll
       ObjectEffFileName: 
     - ID: 3000
-      CharacterName: "\uAC70\uB300\uD55C \uAF43\uC78E \uC2DD\uBB3C"
+      CharacterName: "\uD3C9\uC57C\uC758 \uACE0\uB300 \uC804\uC0AC"
       CharacterNameID: 30000
       CharacterDescID: 31000
       MoveSpeed: 10
@@ -2323,6 +4881,28 @@ MonoBehaviour:
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
+    - ID: 3001
+      CharacterName: "\uAC70\uB300 \uAF43\uC78E \uC624\uB4DC\uB9AC"
+      CharacterNameID: 30001
+      CharacterDescID: 31001
+      MoveSpeed: 10
+      Position: 0
+      Type: 0
+      AttackType: 0
+      AttackRange: 3
+      DamageTargetType: 0
+      DamageTypeRange: 0
+      AttackSpeed: 1
+      AttackDamage: 100
+      HP: 10000
+      PD: 20
+      MD: 20
+      AllSkillList: 
+      Exp: 0
+      Gold: 1000
+      iconFileName: 
+      ObjectFileName: Boss_Audrey
+      ObjectEffFileName: Projectile_MagicBall
   m_InGame_CharacterGrowDataElement:
     Hero:
     - Level: 0
