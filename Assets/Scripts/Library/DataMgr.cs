@@ -107,6 +107,22 @@ public enum DamageTargetType_E
 	Range_HalfArea
 }
 
+public enum MonsterType_E
+{
+	/// <summary>
+	/// 일반
+	/// </summary>
+	Normal,
+	/// <summary>
+	/// 중간보스
+	/// </summary>
+	MiddleBoss,
+	/// <summary>
+	/// 보스
+	/// </summary>
+	Boss
+}
+
 #endregion
 
 #region 스킬정보 베이스
@@ -232,6 +248,10 @@ public struct WaveDataInfo
 	/// 소환 오브젝트 ID
 	/// </summary>
 	public int CharacterID;
+	/// <summary>
+	/// 몬스터 타입
+	/// </summary>
+	public MonsterType_E MonsterType;
 	/// <summary>
 	/// 소환 오브젝트 레벨
 	/// </summary>

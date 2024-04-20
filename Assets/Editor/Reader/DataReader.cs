@@ -425,8 +425,9 @@ public class DataReader : EditorWindow
 										info.SummonTime = Get<float>(obj2, 1);
 										info.ObjName = Get<string>(obj2, 2);
 										info.CharacterID = Get<int>(obj2, 3);
-										info.CharacterLevel = Get<int>(obj2, 4);
-										info.SummonCount = Get<int>(obj2, 5);
+										info.MonsterType = (MonsterType_E)Get<int>(obj2, 4);
+										info.CharacterLevel = Get<int>(obj2, 5);
+										info.SummonCount = Get<int>(obj2, 6);
 
 										switch (info.WaveID)
 										{

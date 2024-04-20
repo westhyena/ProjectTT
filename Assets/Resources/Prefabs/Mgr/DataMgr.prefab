@@ -2617,18 +2617,21 @@ MonoBehaviour:
         SummonTime: 5
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
+        MonsterType: 0
         CharacterLevel: 1
         SummonCount: 30
       - WaveID: 0
         SummonTime: 10
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
+        MonsterType: 0
         CharacterLevel: 1
         SummonCount: 50
       - WaveID: 0
         SummonTime: 30
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
+        MonsterType: 0
         CharacterLevel: 5
         SummonCount: 20
       Wave1:
@@ -2636,12 +2639,14 @@ MonoBehaviour:
         SummonTime: 60
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
+        MonsterType: 0
         CharacterLevel: 5
         SummonCount: 50
       - WaveID: 1
         SummonTime: 65
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
+        MonsterType: 0
         CharacterLevel: 5
         SummonCount: 50
       Wave2:
@@ -2649,12 +2654,14 @@ MonoBehaviour:
         SummonTime: 120
         ObjName: "\uD63C\uC774\uB098\uAC04 \uC6D0\uC8FC\uBBFC"
         CharacterID: 2000
+        MonsterType: 1
         CharacterLevel: 15
         SummonCount: 1
       - WaveID: 2
         SummonTime: 120
         ObjName: "\uC804\uC0AC \uBA67\uB3FC\uC9C0"
         CharacterID: 1002
+        MonsterType: 0
         CharacterLevel: 5
         SummonCount: 30
       Wave3:
@@ -2662,12 +2669,14 @@ MonoBehaviour:
         SummonTime: 180
         ObjName: "\uC2AC\uB77C\uC784"
         CharacterID: 1003
+        MonsterType: 0
         CharacterLevel: 10
         SummonCount: 50
       - WaveID: 3
         SummonTime: 200
         ObjName: "\uC2AC\uB77C\uC784"
         CharacterID: 1003
+        MonsterType: 0
         CharacterLevel: 5
         SummonCount: 100
       Wave4:
@@ -2675,18 +2684,21 @@ MonoBehaviour:
         SummonTime: 240
         ObjName: "\uAC70\uB300\uD55C \uAF43\uC78E \uC2DD\uBB3C"
         CharacterID: 3000
+        MonsterType: 2
         CharacterLevel: 20
         SummonCount: 1
       - WaveID: 4
         SummonTime: 250
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
+        MonsterType: 0
         CharacterLevel: 10
         SummonCount: 100
       - WaveID: 4
         SummonTime: 260
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
+        MonsterType: 0
         CharacterLevel: 10
         SummonCount: 100
       IconName: "\uC544\uC774\uCF58 \uD30C\uC77C \uBA85"
@@ -2702,18 +2714,21 @@ MonoBehaviour:
         SummonTime: 5
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
+        MonsterType: 0
         CharacterLevel: 1
         SummonCount: 30
       - WaveID: 0
         SummonTime: 10
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
+        MonsterType: 0
         CharacterLevel: 1
         SummonCount: 50
       - WaveID: 0
         SummonTime: 30
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
+        MonsterType: 0
         CharacterLevel: 5
         SummonCount: 20
       Wave1:
@@ -2721,12 +2736,14 @@ MonoBehaviour:
         SummonTime: 60
         ObjName: "\uC804\uC0AC \uBA67\uB3FC\uC9C0"
         CharacterID: 1002
+        MonsterType: 0
         CharacterLevel: 5
         SummonCount: 50
       - WaveID: 1
         SummonTime: 65
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
+        MonsterType: 0
         CharacterLevel: 5
         SummonCount: 50
       Wave2:
@@ -2734,12 +2751,14 @@ MonoBehaviour:
         SummonTime: 120
         ObjName: "\uD63C\uC774\uB098\uAC04 \uC6D0\uC8FC\uBBFC"
         CharacterID: 2001
+        MonsterType: 1
         CharacterLevel: 15
         SummonCount: 1
       - WaveID: 2
         SummonTime: 120
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
+        MonsterType: 0
         CharacterLevel: 5
         SummonCount: 30
       Wave3:
@@ -2747,12 +2766,14 @@ MonoBehaviour:
         SummonTime: 180
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
+        MonsterType: 0
         CharacterLevel: 10
         SummonCount: 50
       - WaveID: 3
         SummonTime: 200
         ObjName: "\uC2AC\uB77C\uC784"
         CharacterID: 1003
+        MonsterType: 0
         CharacterLevel: 5
         SummonCount: 100
       Wave4:
@@ -2760,18 +2781,21 @@ MonoBehaviour:
         SummonTime: 240
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
+        MonsterType: 0
         CharacterLevel: 10
         SummonCount: 100
       - WaveID: 4
         SummonTime: 250
         ObjName: "\uC804\uC0AC \uBA67\uB3FC\uC9C0"
         CharacterID: 1002
+        MonsterType: 0
         CharacterLevel: 10
         SummonCount: 100
       - WaveID: 4
         SummonTime: 260
         ObjName: "\uC2AC\uB77C\uC784"
         CharacterID: 1003
+        MonsterType: 0
         CharacterLevel: 10
         SummonCount: 100
       IconName: "\uC544\uC774\uCF58 \uD30C\uC77C \uBA85"
