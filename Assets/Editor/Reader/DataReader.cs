@@ -780,7 +780,7 @@ public class DataReader : EditorWindow
 								icgde.Add_AttackDamage = Get<int>(obj, 2);
 								icgde.Add_Hp = Get<int>(obj, 3);
 								icgde.Add_PD = Get<int>(obj, 4);
-								icgde.ADD_MD = Get<int>(obj, 5);
+								icgde.Add_MD = Get<int>(obj, 5);
 
 								DataList.Add(icgde);
 

@@ -517,7 +517,7 @@ public class InGame_CharacterGrowData
 	/// <summary>
 	/// 추가되는 마방
 	/// </summary>
-	public int ADD_MD;
+	public int Add_MD;
 }
 
 [Serializable]
@@ -667,6 +667,67 @@ public class DataMgr : MonoBehaviour
 		DontDestroyOnLoad(this.gameObject);
 
 		Debug.Log(m_UserActiveSkillDataElementDic[0].UserSkillName);
+
+
+	}
+
+	/// <summary>
+	/// 최종 데미지
+	/// </summary>
+	/// <param name="Damage">데미지</param>
+	/// <param name="DamageType">데미지 타입</param>
+	/// <param name="TargetIndex">대상 CharacterIndex</param>
+	/// <param name="TargetLevel">대상 레벨</param>
+	/// <returns></returns>
+	public int GetFinalDamage(int Damage,DamageType_E DamageType,int TargetIndex,int TargetLevel)
+	{
+		int returnDamage = 0;
+		float RValue = 0.1f;
+		List<InGame_CharacterGrowData> TargetGrowDataList = GetGrowData(TargetIndex);
+		switch (DamageType)
+		{
+			case DamageType_E.Physics:
+				int TargetMaxPD = m_CharacterDataElementDic[TargetIndex].PD + TargetGrowDataList[TargetGrowDataList.Count - 1].Add_PD; // 타겟의 최고레벨의 방어력을 가져옴
+				int TargetPD = m_CharacterDataElementDic[TargetIndex].PD + TargetGrowDataList[TargetLevel].Add_PD; // 타겟의 현재 방어력
+				float TotalPDValue = ((float)TargetPD / (float)TargetMaxPD) * RValue; // 저항값을 구하기위한 최대방어력 대비 비율
+				int MaxresistancePValue = (int)(Damage * TotalPDValue); //데미지에 비례한 최대 저항값
+				int RndMaxResistancePValue = UnityEngine.Random.Range(0, MaxresistancePValue); // 0~저항값 사이 랜덤값
+				returnDamage = Damage - (TargetPD + RndMaxResistancePValue); //기본 방어 + 랜덤한 저항값으로 데미지에서 상쇄시켜준다.
+				break;
+			case DamageType_E.Magic:
+				int TargetMaxMD = m_CharacterDataElementDic[TargetIndex].MD + TargetGrowDataList[TargetGrowDataList.Count - 1].Add_MD;
+				int TargetMD = m_CharacterDataElementDic[TargetIndex].MD + TargetGrowDataList[TargetLevel].Add_MD;
+				float TotalMDValue = ((float)TargetMD / (float)TargetMaxMD) * RValue;
+				int resistanceMValue = (int)(Damage * TotalMDValue);
+				int RndMaxResistanceMValue = UnityEngine.Random.Range(0, resistanceMValue);
+				returnDamage = Damage - (TargetMD + RndMaxResistanceMValue);
+				break;
+			default:
+				return Damage;
+		}
+
+		return returnDamage <= 0 ? 1 : returnDamage;
+	}
+
+	/// <summary>
+	/// 해당 Character 타입의 성장 테이블을 가져온다.
+	/// </summary>
+	/// <param name="CharacterIndex">대상의 CharacterIndex</param>
+	/// <returns></returns>
+	public List<InGame_CharacterGrowData> GetGrowData(int CharacterIndex)
+	{
+		if (CharacterIndex >= 0 && CharacterIndex < 100) //hero
+			return m_InGame_CharacterGrowDataElement.Hero;
+		else if (CharacterIndex >= 100 && CharacterIndex < 1000) //Mercenary
+			return m_InGame_CharacterGrowDataElement.Mercenary;
+		else if (CharacterIndex >= 1000 && CharacterIndex < 2000) //Monster
+			return m_InGame_CharacterGrowDataElement.Monster;
+		else if (CharacterIndex >= 2000 && CharacterIndex < 3000) //MiddleBoss
+			return m_InGame_CharacterGrowDataElement.MiddleBoss;
+		else if (CharacterIndex >= 3000 && CharacterIndex < 4000) //Boss
+			return m_InGame_CharacterGrowDataElement.Boss;
+
+		return null;
 	}
 
 	private static DataMgr _instance;

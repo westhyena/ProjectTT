@@ -3556,7 +3556,7 @@ MonoBehaviour:
       AttackDamage: 5
       HP: 50
       PD: 10
-      MD: 10
+      MD: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3578,7 +3578,7 @@ MonoBehaviour:
       AttackDamage: 5
       HP: 50
       PD: 10
-      MD: 10
+      MD: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3599,7 +3599,7 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
+      PD: 5
       MD: 10
       AllSkillList: 
       Exp: 10
@@ -4934,935 +4934,935 @@ MonoBehaviour:
       Add_AttackDamage: 0
       Add_Hp: 0
       Add_PD: 0
-      ADD_MD: 0
+      Add_MD: 0
     - Level: 1
       MaxExp: 200
       Add_AttackDamage: 5
       Add_Hp: 10
       Add_PD: 1
-      ADD_MD: 1
+      Add_MD: 1
     - Level: 2
       MaxExp: 300
       Add_AttackDamage: 10
       Add_Hp: 20
       Add_PD: 2
-      ADD_MD: 2
+      Add_MD: 2
     - Level: 3
       MaxExp: 400
       Add_AttackDamage: 15
       Add_Hp: 30
       Add_PD: 3
-      ADD_MD: 3
+      Add_MD: 3
     - Level: 4
       MaxExp: 500
       Add_AttackDamage: 20
       Add_Hp: 40
       Add_PD: 4
-      ADD_MD: 4
+      Add_MD: 4
     - Level: 5
       MaxExp: 600
       Add_AttackDamage: 25
       Add_Hp: 50
       Add_PD: 5
-      ADD_MD: 5
+      Add_MD: 5
     - Level: 6
       MaxExp: 700
       Add_AttackDamage: 30
       Add_Hp: 60
       Add_PD: 6
-      ADD_MD: 6
+      Add_MD: 6
     - Level: 7
       MaxExp: 800
       Add_AttackDamage: 35
       Add_Hp: 70
       Add_PD: 7
-      ADD_MD: 7
+      Add_MD: 7
     - Level: 8
       MaxExp: 900
       Add_AttackDamage: 40
       Add_Hp: 80
       Add_PD: 8
-      ADD_MD: 8
+      Add_MD: 8
     - Level: 9
       MaxExp: 1000
       Add_AttackDamage: 45
       Add_Hp: 90
       Add_PD: 9
-      ADD_MD: 9
+      Add_MD: 9
     - Level: 10
       MaxExp: 1100
       Add_AttackDamage: 50
       Add_Hp: 100
       Add_PD: 10
-      ADD_MD: 10
+      Add_MD: 10
     - Level: 11
       MaxExp: 1200
       Add_AttackDamage: 55
       Add_Hp: 110
       Add_PD: 11
-      ADD_MD: 11
+      Add_MD: 11
     - Level: 12
       MaxExp: 1300
       Add_AttackDamage: 60
       Add_Hp: 120
       Add_PD: 12
-      ADD_MD: 12
+      Add_MD: 12
     - Level: 13
       MaxExp: 1400
       Add_AttackDamage: 65
       Add_Hp: 130
       Add_PD: 13
-      ADD_MD: 13
+      Add_MD: 13
     - Level: 14
       MaxExp: 1500
       Add_AttackDamage: 70
       Add_Hp: 140
       Add_PD: 14
-      ADD_MD: 14
+      Add_MD: 14
     - Level: 15
       MaxExp: 1600
       Add_AttackDamage: 75
       Add_Hp: 150
       Add_PD: 15
-      ADD_MD: 15
+      Add_MD: 15
     - Level: 16
       MaxExp: 1700
       Add_AttackDamage: 80
       Add_Hp: 160
       Add_PD: 16
-      ADD_MD: 16
+      Add_MD: 16
     - Level: 17
       MaxExp: 1800
       Add_AttackDamage: 85
       Add_Hp: 170
       Add_PD: 17
-      ADD_MD: 17
+      Add_MD: 17
     - Level: 18
       MaxExp: 1900
       Add_AttackDamage: 90
       Add_Hp: 180
       Add_PD: 18
-      ADD_MD: 18
+      Add_MD: 18
     - Level: 19
       MaxExp: 2000
       Add_AttackDamage: 95
       Add_Hp: 190
       Add_PD: 19
-      ADD_MD: 19
+      Add_MD: 19
     - Level: 20
       MaxExp: 2100
       Add_AttackDamage: 100
       Add_Hp: 200
       Add_PD: 20
-      ADD_MD: 20
+      Add_MD: 20
     - Level: 21
       MaxExp: 2200
       Add_AttackDamage: 105
       Add_Hp: 210
       Add_PD: 21
-      ADD_MD: 21
+      Add_MD: 21
     - Level: 22
       MaxExp: 2300
       Add_AttackDamage: 110
       Add_Hp: 220
       Add_PD: 22
-      ADD_MD: 22
+      Add_MD: 22
     - Level: 23
       MaxExp: 2400
       Add_AttackDamage: 115
       Add_Hp: 230
       Add_PD: 23
-      ADD_MD: 23
+      Add_MD: 23
     - Level: 24
       MaxExp: 2500
       Add_AttackDamage: 120
       Add_Hp: 240
       Add_PD: 24
-      ADD_MD: 24
+      Add_MD: 24
     - Level: 25
       MaxExp: 2600
       Add_AttackDamage: 125
       Add_Hp: 250
       Add_PD: 25
-      ADD_MD: 25
+      Add_MD: 25
     - Level: 26
       MaxExp: 2700
       Add_AttackDamage: 130
       Add_Hp: 260
       Add_PD: 26
-      ADD_MD: 26
+      Add_MD: 26
     - Level: 27
       MaxExp: 2800
       Add_AttackDamage: 135
       Add_Hp: 270
       Add_PD: 27
-      ADD_MD: 27
+      Add_MD: 27
     - Level: 28
       MaxExp: 2900
       Add_AttackDamage: 140
       Add_Hp: 280
       Add_PD: 28
-      ADD_MD: 28
+      Add_MD: 28
     - Level: 29
       MaxExp: 3000
       Add_AttackDamage: 145
       Add_Hp: 290
       Add_PD: 29
-      ADD_MD: 29
+      Add_MD: 29
     - Level: 30
       MaxExp: 3100
       Add_AttackDamage: 150
       Add_Hp: 300
       Add_PD: 30
-      ADD_MD: 30
+      Add_MD: 30
     Mercenary:
     - Level: 0
       MaxExp: 100
       Add_AttackDamage: 0
       Add_Hp: 0
       Add_PD: 0
-      ADD_MD: 0
+      Add_MD: 0
     - Level: 1
       MaxExp: 200
       Add_AttackDamage: 5
       Add_Hp: 10
       Add_PD: 1
-      ADD_MD: 1
+      Add_MD: 1
     - Level: 2
       MaxExp: 300
       Add_AttackDamage: 10
       Add_Hp: 20
       Add_PD: 2
-      ADD_MD: 2
+      Add_MD: 2
     - Level: 3
       MaxExp: 400
       Add_AttackDamage: 15
       Add_Hp: 30
       Add_PD: 3
-      ADD_MD: 3
+      Add_MD: 3
     - Level: 4
       MaxExp: 500
       Add_AttackDamage: 20
       Add_Hp: 40
       Add_PD: 4
-      ADD_MD: 4
+      Add_MD: 4
     - Level: 5
       MaxExp: 600
       Add_AttackDamage: 25
       Add_Hp: 50
       Add_PD: 5
-      ADD_MD: 5
+      Add_MD: 5
     - Level: 6
       MaxExp: 700
       Add_AttackDamage: 30
       Add_Hp: 60
       Add_PD: 6
-      ADD_MD: 6
+      Add_MD: 6
     - Level: 7
       MaxExp: 800
       Add_AttackDamage: 35
       Add_Hp: 70
       Add_PD: 7
-      ADD_MD: 7
+      Add_MD: 7
     - Level: 8
       MaxExp: 900
       Add_AttackDamage: 40
       Add_Hp: 80
       Add_PD: 8
-      ADD_MD: 8
+      Add_MD: 8
     - Level: 9
       MaxExp: 1000
       Add_AttackDamage: 45
       Add_Hp: 90
       Add_PD: 9
-      ADD_MD: 9
+      Add_MD: 9
     - Level: 10
       MaxExp: 1100
       Add_AttackDamage: 50
       Add_Hp: 100
       Add_PD: 10
-      ADD_MD: 10
+      Add_MD: 10
     - Level: 11
       MaxExp: 1200
       Add_AttackDamage: 55
       Add_Hp: 110
       Add_PD: 11
-      ADD_MD: 11
+      Add_MD: 11
     - Level: 12
       MaxExp: 1300
       Add_AttackDamage: 60
       Add_Hp: 120
       Add_PD: 12
-      ADD_MD: 12
+      Add_MD: 12
     - Level: 13
       MaxExp: 1400
       Add_AttackDamage: 65
       Add_Hp: 130
       Add_PD: 13
-      ADD_MD: 13
+      Add_MD: 13
     - Level: 14
       MaxExp: 1500
       Add_AttackDamage: 70
       Add_Hp: 140
       Add_PD: 14
-      ADD_MD: 14
+      Add_MD: 14
     - Level: 15
       MaxExp: 1600
       Add_AttackDamage: 75
       Add_Hp: 150
       Add_PD: 15
-      ADD_MD: 15
+      Add_MD: 15
     - Level: 16
       MaxExp: 1700
       Add_AttackDamage: 80
       Add_Hp: 160
       Add_PD: 16
-      ADD_MD: 16
+      Add_MD: 16
     - Level: 17
       MaxExp: 1800
       Add_AttackDamage: 85
       Add_Hp: 170
       Add_PD: 17
-      ADD_MD: 17
+      Add_MD: 17
     - Level: 18
       MaxExp: 1900
       Add_AttackDamage: 90
       Add_Hp: 180
       Add_PD: 18
-      ADD_MD: 18
+      Add_MD: 18
     - Level: 19
       MaxExp: 2000
       Add_AttackDamage: 95
       Add_Hp: 190
       Add_PD: 19
-      ADD_MD: 19
+      Add_MD: 19
     - Level: 20
       MaxExp: 2100
       Add_AttackDamage: 100
       Add_Hp: 200
       Add_PD: 20
-      ADD_MD: 20
+      Add_MD: 20
     - Level: 21
       MaxExp: 2200
       Add_AttackDamage: 105
       Add_Hp: 210
       Add_PD: 21
-      ADD_MD: 21
+      Add_MD: 21
     - Level: 22
       MaxExp: 2300
       Add_AttackDamage: 110
       Add_Hp: 220
       Add_PD: 22
-      ADD_MD: 22
+      Add_MD: 22
     - Level: 23
       MaxExp: 2400
       Add_AttackDamage: 115
       Add_Hp: 230
       Add_PD: 23
-      ADD_MD: 23
+      Add_MD: 23
     - Level: 24
       MaxExp: 2500
       Add_AttackDamage: 120
       Add_Hp: 240
       Add_PD: 24
-      ADD_MD: 24
+      Add_MD: 24
     - Level: 25
       MaxExp: 2600
       Add_AttackDamage: 125
       Add_Hp: 250
       Add_PD: 25
-      ADD_MD: 25
+      Add_MD: 25
     - Level: 26
       MaxExp: 2700
       Add_AttackDamage: 130
       Add_Hp: 260
       Add_PD: 26
-      ADD_MD: 26
+      Add_MD: 26
     - Level: 27
       MaxExp: 2800
       Add_AttackDamage: 135
       Add_Hp: 270
       Add_PD: 27
-      ADD_MD: 27
+      Add_MD: 27
     - Level: 28
       MaxExp: 2900
       Add_AttackDamage: 140
       Add_Hp: 280
       Add_PD: 28
-      ADD_MD: 28
+      Add_MD: 28
     - Level: 29
       MaxExp: 3000
       Add_AttackDamage: 145
       Add_Hp: 290
       Add_PD: 29
-      ADD_MD: 29
+      Add_MD: 29
     - Level: 30
       MaxExp: 3100
       Add_AttackDamage: 150
       Add_Hp: 300
       Add_PD: 30
-      ADD_MD: 30
+      Add_MD: 30
     Monster:
     - Level: 0
       MaxExp: 100
       Add_AttackDamage: 0
       Add_Hp: 0
       Add_PD: 0
-      ADD_MD: 0
+      Add_MD: 0
     - Level: 1
       MaxExp: 200
       Add_AttackDamage: 5
       Add_Hp: 10
       Add_PD: 1
-      ADD_MD: 1
+      Add_MD: 1
     - Level: 2
       MaxExp: 300
       Add_AttackDamage: 10
       Add_Hp: 20
       Add_PD: 2
-      ADD_MD: 2
+      Add_MD: 2
     - Level: 3
       MaxExp: 400
       Add_AttackDamage: 15
       Add_Hp: 30
       Add_PD: 3
-      ADD_MD: 3
+      Add_MD: 3
     - Level: 4
       MaxExp: 500
       Add_AttackDamage: 20
       Add_Hp: 40
       Add_PD: 4
-      ADD_MD: 4
+      Add_MD: 4
     - Level: 5
       MaxExp: 600
       Add_AttackDamage: 25
       Add_Hp: 50
       Add_PD: 5
-      ADD_MD: 5
+      Add_MD: 5
     - Level: 6
       MaxExp: 700
       Add_AttackDamage: 30
       Add_Hp: 60
       Add_PD: 6
-      ADD_MD: 6
+      Add_MD: 6
     - Level: 7
       MaxExp: 800
       Add_AttackDamage: 35
       Add_Hp: 70
       Add_PD: 7
-      ADD_MD: 7
+      Add_MD: 7
     - Level: 8
       MaxExp: 900
       Add_AttackDamage: 40
       Add_Hp: 80
       Add_PD: 8
-      ADD_MD: 8
+      Add_MD: 8
     - Level: 9
       MaxExp: 1000
       Add_AttackDamage: 45
       Add_Hp: 90
       Add_PD: 9
-      ADD_MD: 9
+      Add_MD: 9
     - Level: 10
       MaxExp: 1100
       Add_AttackDamage: 50
       Add_Hp: 100
       Add_PD: 10
-      ADD_MD: 10
+      Add_MD: 10
     - Level: 11
       MaxExp: 1200
       Add_AttackDamage: 55
       Add_Hp: 110
       Add_PD: 11
-      ADD_MD: 11
+      Add_MD: 11
     - Level: 12
       MaxExp: 1300
       Add_AttackDamage: 60
       Add_Hp: 120
       Add_PD: 12
-      ADD_MD: 12
+      Add_MD: 12
     - Level: 13
       MaxExp: 1400
       Add_AttackDamage: 65
       Add_Hp: 130
       Add_PD: 13
-      ADD_MD: 13
+      Add_MD: 13
     - Level: 14
       MaxExp: 1500
       Add_AttackDamage: 70
       Add_Hp: 140
       Add_PD: 14
-      ADD_MD: 14
+      Add_MD: 14
     - Level: 15
       MaxExp: 1600
       Add_AttackDamage: 75
       Add_Hp: 150
       Add_PD: 15
-      ADD_MD: 15
+      Add_MD: 15
     - Level: 16
       MaxExp: 1700
       Add_AttackDamage: 80
       Add_Hp: 160
       Add_PD: 16
-      ADD_MD: 16
+      Add_MD: 16
     - Level: 17
       MaxExp: 1800
       Add_AttackDamage: 85
       Add_Hp: 170
       Add_PD: 17
-      ADD_MD: 17
+      Add_MD: 17
     - Level: 18
       MaxExp: 1900
       Add_AttackDamage: 90
       Add_Hp: 180
       Add_PD: 18
-      ADD_MD: 18
+      Add_MD: 18
     - Level: 19
       MaxExp: 2000
       Add_AttackDamage: 95
       Add_Hp: 190
       Add_PD: 19
-      ADD_MD: 19
+      Add_MD: 19
     - Level: 20
       MaxExp: 2100
       Add_AttackDamage: 100
       Add_Hp: 200
       Add_PD: 20
-      ADD_MD: 20
+      Add_MD: 20
     - Level: 21
       MaxExp: 2200
       Add_AttackDamage: 105
       Add_Hp: 210
       Add_PD: 21
-      ADD_MD: 21
+      Add_MD: 21
     - Level: 22
       MaxExp: 2300
       Add_AttackDamage: 110
       Add_Hp: 220
       Add_PD: 22
-      ADD_MD: 22
+      Add_MD: 22
     - Level: 23
       MaxExp: 2400
       Add_AttackDamage: 115
       Add_Hp: 230
       Add_PD: 23
-      ADD_MD: 23
+      Add_MD: 23
     - Level: 24
       MaxExp: 2500
       Add_AttackDamage: 120
       Add_Hp: 240
       Add_PD: 24
-      ADD_MD: 24
+      Add_MD: 24
     - Level: 25
       MaxExp: 2600
       Add_AttackDamage: 125
       Add_Hp: 250
       Add_PD: 25
-      ADD_MD: 25
+      Add_MD: 25
     - Level: 26
       MaxExp: 2700
       Add_AttackDamage: 130
       Add_Hp: 260
       Add_PD: 26
-      ADD_MD: 26
+      Add_MD: 26
     - Level: 27
       MaxExp: 2800
       Add_AttackDamage: 135
       Add_Hp: 270
       Add_PD: 27
-      ADD_MD: 27
+      Add_MD: 27
     - Level: 28
       MaxExp: 2900
       Add_AttackDamage: 140
       Add_Hp: 280
       Add_PD: 28
-      ADD_MD: 28
+      Add_MD: 28
     - Level: 29
       MaxExp: 3000
       Add_AttackDamage: 145
       Add_Hp: 290
       Add_PD: 29
-      ADD_MD: 29
+      Add_MD: 29
     - Level: 30
       MaxExp: 3100
       Add_AttackDamage: 150
       Add_Hp: 300
       Add_PD: 30
-      ADD_MD: 30
+      Add_MD: 30
     MiddleBoss:
     - Level: 0
       MaxExp: 100
       Add_AttackDamage: 0
       Add_Hp: 0
       Add_PD: 0
-      ADD_MD: 0
+      Add_MD: 0
     - Level: 1
       MaxExp: 200
       Add_AttackDamage: 5
       Add_Hp: 10
       Add_PD: 1
-      ADD_MD: 1
+      Add_MD: 1
     - Level: 2
       MaxExp: 300
       Add_AttackDamage: 10
       Add_Hp: 20
       Add_PD: 2
-      ADD_MD: 2
+      Add_MD: 2
     - Level: 3
       MaxExp: 400
       Add_AttackDamage: 15
       Add_Hp: 30
       Add_PD: 3
-      ADD_MD: 3
+      Add_MD: 3
     - Level: 4
       MaxExp: 500
       Add_AttackDamage: 20
       Add_Hp: 40
       Add_PD: 4
-      ADD_MD: 4
+      Add_MD: 4
     - Level: 5
       MaxExp: 600
       Add_AttackDamage: 25
       Add_Hp: 50
       Add_PD: 5
-      ADD_MD: 5
+      Add_MD: 5
     - Level: 6
       MaxExp: 700
       Add_AttackDamage: 30
       Add_Hp: 60
       Add_PD: 6
-      ADD_MD: 6
+      Add_MD: 6
     - Level: 7
       MaxExp: 800
       Add_AttackDamage: 35
       Add_Hp: 70
       Add_PD: 7
-      ADD_MD: 7
+      Add_MD: 7
     - Level: 8
       MaxExp: 900
       Add_AttackDamage: 40
       Add_Hp: 80
       Add_PD: 8
-      ADD_MD: 8
+      Add_MD: 8
     - Level: 9
       MaxExp: 1000
       Add_AttackDamage: 45
       Add_Hp: 90
       Add_PD: 9
-      ADD_MD: 9
+      Add_MD: 9
     - Level: 10
       MaxExp: 1100
       Add_AttackDamage: 50
       Add_Hp: 100
       Add_PD: 10
-      ADD_MD: 10
+      Add_MD: 10
     - Level: 11
       MaxExp: 1200
       Add_AttackDamage: 55
       Add_Hp: 110
       Add_PD: 11
-      ADD_MD: 11
+      Add_MD: 11
     - Level: 12
       MaxExp: 1300
       Add_AttackDamage: 60
       Add_Hp: 120
       Add_PD: 12
-      ADD_MD: 12
+      Add_MD: 12
     - Level: 13
       MaxExp: 1400
       Add_AttackDamage: 65
       Add_Hp: 130
       Add_PD: 13
-      ADD_MD: 13
+      Add_MD: 13
     - Level: 14
       MaxExp: 1500
       Add_AttackDamage: 70
       Add_Hp: 140
       Add_PD: 14
-      ADD_MD: 14
+      Add_MD: 14
     - Level: 15
       MaxExp: 1600
       Add_AttackDamage: 75
       Add_Hp: 150
       Add_PD: 15
-      ADD_MD: 15
+      Add_MD: 15
     - Level: 16
       MaxExp: 1700
       Add_AttackDamage: 80
       Add_Hp: 160
       Add_PD: 16
-      ADD_MD: 16
+      Add_MD: 16
     - Level: 17
       MaxExp: 1800
       Add_AttackDamage: 85
       Add_Hp: 170
       Add_PD: 17
-      ADD_MD: 17
+      Add_MD: 17
     - Level: 18
       MaxExp: 1900
       Add_AttackDamage: 90
       Add_Hp: 180
       Add_PD: 18
-      ADD_MD: 18
+      Add_MD: 18
     - Level: 19
       MaxExp: 2000
       Add_AttackDamage: 95
       Add_Hp: 190
       Add_PD: 19
-      ADD_MD: 19
+      Add_MD: 19
     - Level: 20
       MaxExp: 2100
       Add_AttackDamage: 100
       Add_Hp: 200
       Add_PD: 20
-      ADD_MD: 20
+      Add_MD: 20
     - Level: 21
       MaxExp: 2200
       Add_AttackDamage: 105
       Add_Hp: 210
       Add_PD: 21
-      ADD_MD: 21
+      Add_MD: 21
     - Level: 22
       MaxExp: 2300
       Add_AttackDamage: 110
       Add_Hp: 220
       Add_PD: 22
-      ADD_MD: 22
+      Add_MD: 22
     - Level: 23
       MaxExp: 2400
       Add_AttackDamage: 115
       Add_Hp: 230
       Add_PD: 23
-      ADD_MD: 23
+      Add_MD: 23
     - Level: 24
       MaxExp: 2500
       Add_AttackDamage: 120
       Add_Hp: 240
       Add_PD: 24
-      ADD_MD: 24
+      Add_MD: 24
     - Level: 25
       MaxExp: 2600
       Add_AttackDamage: 125
       Add_Hp: 250
       Add_PD: 25
-      ADD_MD: 25
+      Add_MD: 25
     - Level: 26
       MaxExp: 2700
       Add_AttackDamage: 130
       Add_Hp: 260
       Add_PD: 26
-      ADD_MD: 26
+      Add_MD: 26
     - Level: 27
       MaxExp: 2800
       Add_AttackDamage: 135
       Add_Hp: 270
       Add_PD: 27
-      ADD_MD: 27
+      Add_MD: 27
     - Level: 28
       MaxExp: 2900
       Add_AttackDamage: 140
       Add_Hp: 280
       Add_PD: 28
-      ADD_MD: 28
+      Add_MD: 28
     - Level: 29
       MaxExp: 3000
       Add_AttackDamage: 145
       Add_Hp: 290
       Add_PD: 29
-      ADD_MD: 29
+      Add_MD: 29
     - Level: 30
       MaxExp: 3100
       Add_AttackDamage: 150
       Add_Hp: 300
       Add_PD: 30
-      ADD_MD: 30
+      Add_MD: 30
     Boss:
     - Level: 0
       MaxExp: 100
       Add_AttackDamage: 0
       Add_Hp: 0
       Add_PD: 0
-      ADD_MD: 0
+      Add_MD: 0
     - Level: 1
       MaxExp: 200
       Add_AttackDamage: 5
       Add_Hp: 10
       Add_PD: 1
-      ADD_MD: 1
+      Add_MD: 1
     - Level: 2
       MaxExp: 300
       Add_AttackDamage: 10
       Add_Hp: 20
       Add_PD: 2
-      ADD_MD: 2
+      Add_MD: 2
     - Level: 3
       MaxExp: 400
       Add_AttackDamage: 15
       Add_Hp: 30
       Add_PD: 3
-      ADD_MD: 3
+      Add_MD: 3
     - Level: 4
       MaxExp: 500
       Add_AttackDamage: 20
       Add_Hp: 40
       Add_PD: 4
-      ADD_MD: 4
+      Add_MD: 4
     - Level: 5
       MaxExp: 600
       Add_AttackDamage: 25
       Add_Hp: 50
       Add_PD: 5
-      ADD_MD: 5
+      Add_MD: 5
     - Level: 6
       MaxExp: 700
       Add_AttackDamage: 30
       Add_Hp: 60
       Add_PD: 6
-      ADD_MD: 6
+      Add_MD: 6
     - Level: 7
       MaxExp: 800
       Add_AttackDamage: 35
       Add_Hp: 70
       Add_PD: 7
-      ADD_MD: 7
+      Add_MD: 7
     - Level: 8
       MaxExp: 900
       Add_AttackDamage: 40
       Add_Hp: 80
       Add_PD: 8
-      ADD_MD: 8
+      Add_MD: 8
     - Level: 9
       MaxExp: 1000
       Add_AttackDamage: 45
       Add_Hp: 90
       Add_PD: 9
-      ADD_MD: 9
+      Add_MD: 9
     - Level: 10
       MaxExp: 1100
       Add_AttackDamage: 50
       Add_Hp: 100
       Add_PD: 10
-      ADD_MD: 10
+      Add_MD: 10
     - Level: 11
       MaxExp: 1200
       Add_AttackDamage: 55
       Add_Hp: 110
       Add_PD: 11
-      ADD_MD: 11
+      Add_MD: 11
     - Level: 12
       MaxExp: 1300
       Add_AttackDamage: 60
       Add_Hp: 120
       Add_PD: 12
-      ADD_MD: 12
+      Add_MD: 12
     - Level: 13
       MaxExp: 1400
       Add_AttackDamage: 65
       Add_Hp: 130
       Add_PD: 13
-      ADD_MD: 13
+      Add_MD: 13
     - Level: 14
       MaxExp: 1500
       Add_AttackDamage: 70
       Add_Hp: 140
       Add_PD: 14
-      ADD_MD: 14
+      Add_MD: 14
     - Level: 15
       MaxExp: 1600
       Add_AttackDamage: 75
       Add_Hp: 150
       Add_PD: 15
-      ADD_MD: 15
+      Add_MD: 15
     - Level: 16
       MaxExp: 1700
       Add_AttackDamage: 80
       Add_Hp: 160
       Add_PD: 16
-      ADD_MD: 16
+      Add_MD: 16
     - Level: 17
       MaxExp: 1800
       Add_AttackDamage: 85
       Add_Hp: 170
       Add_PD: 17
-      ADD_MD: 17
+      Add_MD: 17
     - Level: 18
       MaxExp: 1900
       Add_AttackDamage: 90
       Add_Hp: 180
       Add_PD: 18
-      ADD_MD: 18
+      Add_MD: 18
     - Level: 19
       MaxExp: 2000
       Add_AttackDamage: 95
       Add_Hp: 190
       Add_PD: 19
-      ADD_MD: 19
+      Add_MD: 19
     - Level: 20
       MaxExp: 2100
       Add_AttackDamage: 100
       Add_Hp: 200
       Add_PD: 20
-      ADD_MD: 20
+      Add_MD: 20
     - Level: 21
       MaxExp: 2200
       Add_AttackDamage: 105
       Add_Hp: 210
       Add_PD: 21
-      ADD_MD: 21
+      Add_MD: 21
     - Level: 22
       MaxExp: 2300
       Add_AttackDamage: 110
       Add_Hp: 220
       Add_PD: 22
-      ADD_MD: 22
+      Add_MD: 22
     - Level: 23
       MaxExp: 2400
       Add_AttackDamage: 115
       Add_Hp: 230
       Add_PD: 23
-      ADD_MD: 23
+      Add_MD: 23
     - Level: 24
       MaxExp: 2500
       Add_AttackDamage: 120
       Add_Hp: 240
       Add_PD: 24
-      ADD_MD: 24
+      Add_MD: 24
     - Level: 25
       MaxExp: 2600
       Add_AttackDamage: 125
       Add_Hp: 250
       Add_PD: 25
-      ADD_MD: 25
+      Add_MD: 25
     - Level: 26
       MaxExp: 2700
       Add_AttackDamage: 130
       Add_Hp: 260
       Add_PD: 26
-      ADD_MD: 26
+      Add_MD: 26
     - Level: 27
       MaxExp: 2800
       Add_AttackDamage: 135
       Add_Hp: 270
       Add_PD: 27
-      ADD_MD: 27
+      Add_MD: 27
     - Level: 28
       MaxExp: 2900
       Add_AttackDamage: 140
       Add_Hp: 280
       Add_PD: 28
-      ADD_MD: 28
+      Add_MD: 28
     - Level: 29
       MaxExp: 3000
       Add_AttackDamage: 145
       Add_Hp: 290
       Add_PD: 29
-      ADD_MD: 29
+      Add_MD: 29
     - Level: 30
       MaxExp: 3100
       Add_AttackDamage: 150
       Add_Hp: 300
       Add_PD: 30
-      ADD_MD: 30
+      Add_MD: 30
   m_UserSelectCardDataElementDic:
     _keys: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
     _values:
