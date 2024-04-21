@@ -681,4 +681,17 @@ public class DataMgr : MonoBehaviour
 			return _instance;
 		}
 	}
+
+	public CharacterDataElement GetCharacterDataElement(int id)
+	{
+		if (m_CharacterDataElementDic.ContainsKey(id))
+		{
+			return m_CharacterDataElementDic[id];
+		}
+		else
+		{
+			Debug.LogError("CharacterDataElementDic에 없는 ID입니다. ID : " + id);
+			return null;
+		}
+	}
 }

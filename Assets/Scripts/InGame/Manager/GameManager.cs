@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
 
             foreach (CompanionUI companionUI in UIManager.instance.companionUIs)
             {
-                if (companionUI.CharacterInfo.id == hero.CharacterInfo.id)
+                if (companionUI.CharacterInfo.ID == hero.CharacterInfo.ID)
                 {
                     companionUI.CreateSummonEffect();
                     break;

@@ -17,16 +17,16 @@ public class CompanionUI : MonoBehaviour
     [SerializeField]
     TMP_Text countText;
 
-    CharacterInfo characterInfo;
-    public CharacterInfo CharacterInfo => characterInfo;
+    CharacterDataElement characterInfo;
+    public CharacterDataElement CharacterInfo => characterInfo;
 
     [SerializeField]
     GameObject summonEffect;
 
-    public void Initialize(CharacterInfo characterInfo)
+    public void Initialize(CharacterDataElement characterInfo)
     {
         this.characterInfo = characterInfo;
-        image.sprite = ResourceManager.GetCharacterIcon(characterInfo.iconSprite);
+        image.sprite = ResourceManager.GetCharacterIcon(characterInfo.iconFileName);
         needPointText.text = 20.ToString();
         levelText.text = 1.ToString();
     }
@@ -36,7 +36,7 @@ public class CompanionUI : MonoBehaviour
         int count = 0;
         HeroManager.instance.HeroList.ForEach(hero =>
         {
-            if (hero.CharacterInfo.id == characterInfo.id)
+            if (hero.CharacterInfo.ID == characterInfo.ID)
             {
                 count++;
             }

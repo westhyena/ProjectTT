@@ -36,8 +36,8 @@ public abstract class Character : MonoBehaviour
         );
     } }
 
-    CharacterInfo characterInfo;
-    public CharacterInfo CharacterInfo { get { return characterInfo; } }
+    CharacterDataElement characterInfo;
+    public CharacterDataElement CharacterInfo { get { return characterInfo; } }
     Skill normalSkill;
     GameObject normalSkillPrefab;
 
@@ -58,10 +58,12 @@ public abstract class Character : MonoBehaviour
 
     float attackSpeed = 1.0f;
 
-    public float attackStat = 10.0f;
+    float attackStat = 10.0f;
     public float AttackStat { get { return attackStat; } }
-    public float defenceStat = 5.0f;
-    public float DefenceStat { get { return defenceStat; } }
+    float physicDefenceStat = 5.0f;
+    public float PhysicDefenceStat { get { return physicDefenceStat; } }
+    float magicDefenceStat = 5.0f;
+    public float MagicDefenceStat { get { return magicDefenceStat; } }
     public float hpStat = 100.0f;
     public float HpStat { get { return hpStat; } }
 
@@ -122,35 +124,36 @@ public abstract class Character : MonoBehaviour
         this.state = State.Init;
     }
 
-    public void InitializeCharacter(string characterId)
+    public void InitializeCharacter(int characterId)
     {
-        characterInfo = DataManager.instance.GetCharacterInfo(characterId);
+        characterInfo = DataMgr.instance.GetCharacterDataElement(characterId);
 
-        SkillInfo normalSkillInfo = DataManager.instance.GetSkillInfo(characterInfo.normalAtk);
-        normalSkill = new Skill(this, normalSkillInfo);
+        // SkillInfo normalSkillInfo = DataManager.instance.GetSkillInfo(characterInfo.normalAtk);
+        // normalSkill = new Skill(this, normalSkillInfo);
 
-        foreach (string skillId in characterInfo.skillIDs)
-        {
-            SkillInfo skillInfo = DataManager.instance.GetSkillInfo(skillId);
-            if (skillInfo != null)
-            {
-                skillList.Add(new Skill(this, skillInfo));
-            }
-        }
+        // foreach (string skillId in characterInfo.skillIDs)
+        // {
+        //     SkillInfo skillInfo = DataManager.instance.GetSkillInfo(skillId);
+        //     if (skillInfo != null)
+        //     {
+        //         skillList.Add(new Skill(this, skillInfo));
+        //     }
+        // }
     }
 
     protected void Start()
     {
         if (characterInfo != null)
         {
-            this.mspd = characterInfo.baseMSpd;
-            this.hpStat = characterInfo.baseMaxHP;
-            this.attackStat = characterInfo.baseAttack;
-            this.defenceStat = characterInfo.baseDefense;
+            this.mspd = characterInfo.MoveSpeed;
+            this.hpStat = characterInfo.HP;
+            this.attackStat = characterInfo.AttackDamage;
+            this.physicDefenceStat = characterInfo.PD;
+            this.magicDefenceStat = characterInfo.MD;
 
-            this.rangeOfTarget = characterInfo.rangeOfTarget;
-            this.attackSpeed =  1000.0f / characterInfo.baseAtkSpd;
-            this.attackCooltime = characterInfo.baseAtkSpd / 1000.0f + Time.fixedDeltaTime;
+            this.rangeOfTarget = characterInfo.AttackRange;
+            this.attackSpeed =  characterInfo.AttackSpeed;
+            this.attackCooltime = 1.0f / characterInfo.AttackSpeed + Time.fixedDeltaTime;
             if (normalSkill != null)
             {
                 if (!string.IsNullOrEmpty(normalSkill.SkillInfo.projectileID))
@@ -165,7 +168,7 @@ public abstract class Character : MonoBehaviour
             }
         }
 
-        movementSpeed = GameManager.instance.baseColliderWidth * 1000.0f / mspd;
+        movementSpeed = GameManager.instance.baseColliderWidth * this.mspd;
         attackStartDistance = GameManager.instance.baseColliderWidth * rangeOfTarget;
         targetStartDistance = attackStartDistance * 2.0f;
 
@@ -426,7 +429,7 @@ public abstract class Character : MonoBehaviour
 
         float damage = Mathf.Ceil(attackVal * criticalFactor * (
             GameManager.instance.defenceFactor1 / (
-                GameManager.instance.defenceFactor1 + defenceStat * GameManager.instance.defenceFactor2
+                GameManager.instance.defenceFactor1 + physicDefenceStat * GameManager.instance.defenceFactor2
             ) * GameManager.instance.defenceFactor2
         ));
         OnDamage(damage);

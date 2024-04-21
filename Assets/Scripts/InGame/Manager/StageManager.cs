@@ -7,31 +7,37 @@ public class StageManager : MonoBehaviour
     public static float WAVE_SUMMON_END_TIME = 10.0f;
     public static float WAVE_SUMMON_INTERVAL = 1.0f;
 
-    public string stageId = "999901";
+    public int stageId = 0;
 
-    StageInfo stageInfo;
+    StageWaveDataElement stageInfo;
 
     [Serializable]
     public class Wave
     {
-        WaveInfo waveInfo;
-        CharacterInfo characterInfo;
-        public bool IsBossWave => characterInfo.charType == "BOSS";
+        WaveDataInfo waveInfo;
+        CharacterDataElement characterInfo;
+        public bool IsBossWave => waveInfo.MonsterType == MonsterType_E.Boss;
         int eachCount;
         int createdCount = 0;
         float intervalTimer = 0.0f;
 
-        public Wave(WaveInfo waveInfo)
+        public Wave(WaveDataInfo waveInfo)
         {
             this.waveInfo = waveInfo;
-            this.characterInfo = DataManager.instance.GetCharacterInfo(waveInfo.monsterId);
+            // TODO Level
+            this.characterInfo = DataMgr.instance.GetCharacterDataElement(waveInfo.CharacterID);
+            if (this.characterInfo == null)
+            {
+                this.characterInfo = DataMgr.instance.GetCharacterDataElement(1000);
+            }
+
             float summonCount = WAVE_SUMMON_END_TIME / WAVE_SUMMON_INTERVAL;
-            this.eachCount = Mathf.CeilToInt(waveInfo.totalCount / summonCount);
+            this.eachCount = Mathf.CeilToInt(waveInfo.SummonCount / summonCount);
         }
 
         void CreateWave(EnemyManager enemyManager, Stage stage)
         {
-            int createCount = Math.Min(eachCount, waveInfo.totalCount - createdCount);
+            int createCount = Math.Min(eachCount, waveInfo.SummonCount - createdCount);
 
             Transform[] spawnPoints = this.IsBossWave ? stage.bossSpawnPoints : stage.spawnPoints;
             if (spawnPoints.Length == 0) spawnPoints = stage.spawnPoints;
@@ -49,13 +55,13 @@ public class StageManager : MonoBehaviour
 
         public bool Update(float deltaTime, EnemyManager enemyManager, Stage stage)
         {
-            if (createdCount >= waveInfo.totalCount) return true;
+            if (createdCount >= waveInfo.SummonCount) return true;
 
             intervalTimer += deltaTime;
-            if (createdCount == 0 && intervalTimer > (waveInfo.startTime / 1000.0f))
+            if (createdCount == 0 && intervalTimer > waveInfo.SummonTime)
             {
                 // 처음 생성
-                intervalTimer -= waveInfo.startTime / 1000.0f;
+                intervalTimer -= waveInfo.SummonTime;
                 CreateWave(enemyManager, stage);
             }
             else if (createdCount > 0 && intervalTimer > WAVE_SUMMON_INTERVAL)
@@ -70,27 +76,18 @@ public class StageManager : MonoBehaviour
     [Serializable]
     public class WaveGroup
     {
+        // List<WaveDataInfo> waveList = new ();
         WaveGroupInfo info;
         List<Wave> waveList = new();
         public bool IsBossWaveGroup => waveList.Exists(w => w.IsBossWave);
         float endTime;
         float timer = 0.0f;
 
-        public WaveGroup(WaveGroupInfo info, float endTime)
+        public WaveGroup(List<WaveDataInfo> waveDataList, float endTime)
         {
-            this.info = info;
-
-            WaveInfo[] waveInfos = new WaveInfo[]
+            foreach (WaveDataInfo waveData in waveDataList)
             {
-                DataManager.instance.GetWaveInfo(info.wave01),
-                DataManager.instance.GetWaveInfo(info.wave02),
-                DataManager.instance.GetWaveInfo(info.wave03),
-                DataManager.instance.GetWaveInfo(info.wave04),
-            };
-            foreach (WaveInfo waveInfo in waveInfos)
-            {
-                if (waveInfo == null) continue;
-                waveList.Add(new Wave(waveInfo));
+                waveList.Add(new Wave(waveData));
             }
 
             this.endTime = endTime;
@@ -120,47 +117,26 @@ public class StageManager : MonoBehaviour
 
     void Awake()
     {
-        stageInfo = DataManager.instance.GetStageInfo(stageId);
+        StageWaveDataElement stageInfo = DataMgr.instance.m_StageWaveDataElementDic[stageId];
 
-        GameObject stagePrefab = ResourceManager.GetStagePrefab(stageInfo.stagePrefab);
+        GameObject stagePrefab = ResourceManager.GetStagePrefab(stageInfo.StageMapObjectName);
         GameObject stageObject = Instantiate(stagePrefab);
         this.stage = stageObject.GetComponent<Stage>();
 
-        WaveGroupInfo[] groupInfos = new WaveGroupInfo[]
+        List<WaveDataInfo>[] groupInfos = new List<WaveDataInfo>[]
         {
-            DataManager.instance.GetWaveGroupInfo(stageInfo.phase01waveGroup),
-            DataManager.instance.GetWaveGroupInfo(stageInfo.phase02waveGroup),
-            DataManager.instance.GetWaveGroupInfo(stageInfo.phase03waveGroup),
-            DataManager.instance.GetWaveGroupInfo(stageInfo.phase04waveGroup),
-            DataManager.instance.GetWaveGroupInfo(stageInfo.phase05waveGroup)
+            stageInfo.Wave0,
+            stageInfo.Wave1,
+            stageInfo.Wave2,
+            stageInfo.Wave3,
+            stageInfo.Wave4,
         };
 
-        float waveEnd1 = float.Parse(DataManager.instance.GetConstValue("BATTLE_PHASE_DURATION_2")) / 1000f;
-        float waveEnd2 = float.Parse(DataManager.instance.GetConstValue("BATTLE_PHASE_DURATION_3")) / 1000f;
-        float waveEnd3 = float.Parse(DataManager.instance.GetConstValue("BATTLE_PHASE_DURATION_4")) / 1000f;
-        float waveEnd4 = float.Parse(DataManager.instance.GetConstValue("BATTLE_PHASE_DURATION_5")) / 1000f;
-        float waveEnd5 = (
-            float.Parse(DataManager.instance.GetConstValue("BATTEL_STAGE_DURATION_TIME"))
-            - waveEnd1
-            - waveEnd2
-            - waveEnd3
-            - waveEnd4
-        );
-
-        float[] waveEndTimes = new float[]
+        foreach (List<WaveDataInfo> groupInfo in groupInfos)
         {
-            waveEnd1,
-            waveEnd2,
-            waveEnd3,
-            waveEnd4,
-            waveEnd5
-        };
-
-        foreach (WaveGroupInfo groupInfo in groupInfos)
-        {            
             if (groupInfo == null) continue;
 
-            waveGroupList.Add(new WaveGroup(groupInfo, waveEndTimes[curWaveGroupIndex]));
+            waveGroupList.Add(new WaveGroup(groupInfo, 60.0f));
         }
     }
 

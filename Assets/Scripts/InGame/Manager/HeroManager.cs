@@ -25,11 +25,11 @@ public class HeroManager : MonoBehaviour
         public string IconName;
     }
 
-    public string playerCharacterId = "10001";
+    public int playerCharacterId = 0;
 
-    public string[] companionCharacterIds;
-    CharacterInfo[] companionCharacterInfos;
-    public CharacterInfo[] CompanionCharacterInfos => companionCharacterInfos;
+    public int[] companionCharacterIds;
+    CharacterDataElement[] companionCharacterInfos;
+    public CharacterDataElement[] CompanionCharacterInfos => companionCharacterInfos;
 
     public Transform companionRoot;
 
@@ -41,17 +41,17 @@ public class HeroManager : MonoBehaviour
 
     void Start()
     {
-        companionCharacterInfos = new CharacterInfo[companionCharacterIds.Length];
+        companionCharacterInfos = new CharacterDataElement[companionCharacterIds.Length];
         for (int i = 0; i < companionCharacterIds.Length; ++i)
         {
-            companionCharacterInfos[i] = DataManager.instance.GetCharacterInfo(companionCharacterIds[i]);
+            companionCharacterInfos[i] = DataMgr.instance.GetCharacterDataElement(companionCharacterIds[i]);
         }
     }
 
     public Player CreatePlayer()
     {
-        CharacterInfo info = DataManager.instance.GetCharacterInfo(playerCharacterId);
-        GameObject prefab = ResourceManager.GetCharacterPrefab(info.prefabKey);
+        CharacterDataElement info = DataMgr.instance.GetCharacterDataElement(playerCharacterId);
+        GameObject prefab = ResourceManager.GetCharacterPrefab(info.ObjectFileName);
         GameObject playerObj = Instantiate(
             prefab,
             Vector3.zero,
@@ -62,10 +62,10 @@ public class HeroManager : MonoBehaviour
         return player;
     }
 
-    Hero CreateHero(CharacterInfo info)
+    Hero CreateHero(CharacterDataElement info)
     {
         Player player = GameManager.instance.Player;
-        GameObject prefab = ResourceManager.GetCharacterPrefab(info.prefabKey);
+        GameObject prefab = ResourceManager.GetCharacterPrefab(info.ObjectFileName);
         GameObject heroObj = Instantiate(
             prefab,
             player.transform.position,
@@ -82,7 +82,7 @@ public class HeroManager : MonoBehaviour
         heroObj.transform.localRotation = Quaternion.Euler(GameManager.instance.characterRotation);
         Hero hero = heroObj.GetOrAddComponent<Hero>();
         hero.Initialize(player);
-        hero.InitializeCharacter(info.id);
+        hero.InitializeCharacter(info.ID);
         heroMap[hero.GetInstanceID()] = hero;
         return hero;
     }
