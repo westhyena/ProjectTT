@@ -407,14 +407,31 @@ public class SkillDataElement
 	//public Dictionary<SkillDataKind_E, SkillDataBase> SkillData = new Dictionary<SkillDataKind_E, SkillDataBase>();
 
 	public string IconName;
+	///// <summary>
+	///// 스킬 이펙트
+	///// </summary>
+	//public string Eff_SkillName;
+	///// <summary>
+	///// 피격 이펙트
+	///// </summary>
+	//public string Eff_Name;
+
 	/// <summary>
-	/// 스킬 이펙트
+	/// 시전자 중심 이펙트
 	/// </summary>
-	public string Eff_SkillName;
+	public string MyPositionEffectName;
 	/// <summary>
-	/// 피격 이펙트
+	/// 투사체 이펙트
 	/// </summary>
-	public string Eff_Name;
+	public string ProjectileEffectName;
+	/// <summary>
+	/// 목표지점 이펙트
+	/// </summary>
+	public string TargetPointEffectName;
+	/// <summary>
+	/// 대상 오브젝트에 표시되는 이펙트
+	/// </summary>
+	public string ObjectDamageEffectName;
 }
 
 #endregion
