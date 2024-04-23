@@ -681,8 +681,10 @@ public class DataReader : EditorWindow
 								//if (string.IsNullOrEmpty(Get<string>(obj2, 0)))
 								//	continue;
 								sde.IconName = Get<string>(obj2, 2);
-								sde.Eff_SkillName = Get<string>(obj2, 3);
-								sde.Eff_Name = Get<string>(obj2, 4);
+								sde.ProjectileEffectName = Get<string>(obj2, 3);
+								sde.ObjectDamageEffectName = Get<string>(obj2, 4);
+								sde.MyPositionEffectName = Get<string>(obj2, 5);
+								sde.TargetPointEffectName = Get<string>(obj2, 6);
 
 								m_DataMgr.m_SkillDataElementDic.Add(sde.ID, sde);
 							}

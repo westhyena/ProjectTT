@@ -2923,8 +2923,10 @@ MonoBehaviour:
         Value: 10
         Time: 5
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: Skill_MagicATKup
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: 
     - ID: 1
       UserSkillName: "\uBB34\uAE30 \uAC15\uD654"
       UserSkillNameID: 5001
@@ -2940,8 +2942,10 @@ MonoBehaviour:
         Value: 10
         Time: 5
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: Skill_WeaponATKup
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: 
     - ID: 2
       UserSkillName: "\uACF5\uC18D \uC99D\uAC00"
       UserSkillNameID: 5002
@@ -2957,8 +2961,10 @@ MonoBehaviour:
         Value: 0
         Time: 5
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: 
     - ID: 10
       UserSkillName: "\uC2A4\uB9E4\uC2DC"
       UserSkillNameID: 5003
@@ -2974,8 +2980,10 @@ MonoBehaviour:
         Value: 50
         Time: 0
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: Hit_Base_A
+      MyPositionEffectName: Skill_smash
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: Hit_Base_A
     - ID: 11
       UserSkillName: "\uB9E4\uC9C1\uBCFC"
       UserSkillNameID: 5004
@@ -2991,8 +2999,10 @@ MonoBehaviour:
         Value: 50
         Time: 0
       IconName: 
-      Eff_SkillName: Projectile_MagicBall
-      Eff_Name: Hit_Base_A
+      MyPositionEffectName: 
+      ProjectileEffectName: Projectile_MagicBall
+      TargetPointEffectName: 
+      ObjectDamageEffectName: Hit_Base_A
     - ID: 12
       UserSkillName: "\uD30C\uC6CC\uC0F7"
       UserSkillNameID: 5005
@@ -3008,8 +3018,10 @@ MonoBehaviour:
         Value: 50
         Time: 0
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: Hit_PowerShot
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: Hit_PowerShot
     - ID: 13
       UserSkillName: "\uD3ED\uD0C4\uD654\uC0B4"
       UserSkillNameID: 5006
@@ -3025,8 +3037,10 @@ MonoBehaviour:
         Value: 50
         Time: 0
       IconName: 
-      Eff_SkillName: Projectile_BombArrow
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: Projectile_BombArrow
+      TargetPointEffectName: Hit_Explosion_S
+      ObjectDamageEffectName: 
     - ID: 14
       UserSkillName: "\uB3C5\uD654\uC0B4"
       UserSkillNameID: 5007
@@ -3045,8 +3059,10 @@ MonoBehaviour:
         Value: 30
         Time: 2
       IconName: 
-      Eff_SkillName: Projectile_Poison
-      Eff_Name: Hit_Poison_S
+      MyPositionEffectName: 
+      ProjectileEffectName: Projectile_Poison
+      TargetPointEffectName: 
+      ObjectDamageEffectName: Hit_Poison_S
     - ID: 15
       UserSkillName: "\uC74C\uD30C \uD0C0\uACA9"
       UserSkillNameID: 5008
@@ -3062,8 +3078,10 @@ MonoBehaviour:
         Value: 50
         Time: 0
       IconName: 
-      Eff_SkillName: Projectile_BatwaveBlast
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: Projectile_BatwaveBlast
+      TargetPointEffectName: 
+      ObjectDamageEffectName: 
     - ID: 20
       UserSkillName: "\uBE45\uC2A4\uC719"
       UserSkillNameID: 5009
@@ -3079,8 +3097,10 @@ MonoBehaviour:
         Value: 80
         Time: 0
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: Hit_Base_A
+      MyPositionEffectName: Skill_BigSwing
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: Hit_Base_A
     - ID: 21
       UserSkillName: "\uBE45\uC0F7"
       UserSkillNameID: 5010
@@ -3096,8 +3116,10 @@ MonoBehaviour:
         Value: 80
         Time: 0
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: Hit_BigShot
+      ObjectDamageEffectName: 
     - ID: 22
       UserSkillName: "\uD30C\uC774\uC5B4\uBCFC"
       UserSkillNameID: 5011
@@ -3113,8 +3135,10 @@ MonoBehaviour:
         Value: 80
         Time: 0
       IconName: 
-      Eff_SkillName: Projectile_FireBall
-      Eff_Name: Hit_Explosion_S
+      MyPositionEffectName: 
+      ProjectileEffectName: Projectile_FireBall
+      TargetPointEffectName: 
+      ObjectDamageEffectName: Hit_Explosion_S
     - ID: 23
       UserSkillName: "\uD790"
       UserSkillNameID: 5012
@@ -3130,8 +3154,10 @@ MonoBehaviour:
         Value: 100
         Time: 0
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: Hit_Heal_S
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: Hit_Heal_S
     - ID: 24
       UserSkillName: "\uC544\uC774\uC2A4\uBCFC"
       UserSkillNameID: 5013
@@ -3147,8 +3173,10 @@ MonoBehaviour:
         Value: 100
         Time: 0
       IconName: 
-      Eff_SkillName: Projectile_IceBall
-      Eff_Name: Hit_IceBall_S
+      MyPositionEffectName: 
+      ProjectileEffectName: Projectile_IceBall
+      TargetPointEffectName: 
+      ObjectDamageEffectName: Hit_IceBall_S
     - ID: 25
       UserSkillName: "\uC36C\uB354\uBCFC\uD2B8"
       UserSkillNameID: 5014
@@ -3164,8 +3192,10 @@ MonoBehaviour:
         Value: 75
         Time: 0
       IconName: 
-      Eff_SkillName: Projectile_Thunderbolt
-      Eff_Name: Hit_Thunderbolt_S
+      MyPositionEffectName: 
+      ProjectileEffectName: Projectile_Thunderbolt
+      TargetPointEffectName: 
+      ObjectDamageEffectName: Hit_Thunderbolt_S
     - ID: 26
       UserSkillName: "\uD504\uB85C\uC98C"
       UserSkillNameID: 5015
@@ -3184,8 +3214,10 @@ MonoBehaviour:
         Value: 0
         Time: 2
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: Hit_Frozen_S
+      ObjectDamageEffectName: 
     - ID: 27
       UserSkillName: "\uB3C5\uC9C0\uB300"
       UserSkillNameID: 5016
@@ -3204,8 +3236,10 @@ MonoBehaviour:
         Value: 40
         Time: 3
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: Hit_PoisonZone
+      ObjectDamageEffectName: 
     - ID: 28
       UserSkillName: "\uD5E4\uB4DC\uC0F7"
       UserSkillNameID: 5017
@@ -3221,8 +3255,10 @@ MonoBehaviour:
         Value: 100
         Time: 0
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: Hit_HeadShot
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: Hit_HeadShot
     - ID: 30
       UserSkillName: "\uD3ED\uC8FC"
       UserSkillNameID: 5018
@@ -3241,8 +3277,10 @@ MonoBehaviour:
         Value: 0
         Time: 5
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: 
     - ID: 31
       UserSkillName: "\uD765\uBD84\uC0C1\uD0DC"
       UserSkillNameID: 5019
@@ -3258,8 +3296,10 @@ MonoBehaviour:
         Value: 100
         Time: 5
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: Skill_Excitement
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: 
     - ID: 32
       UserSkillName: "\uC57D\uC810\uAC15\uD0C0"
       UserSkillNameID: 5020
@@ -3275,8 +3315,10 @@ MonoBehaviour:
         Value: 150
         Time: 0
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: Hit_WeakPointHit
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: Hit_WeakPointHit
     - ID: 40
       UserSkillName: "\uBE14\uB9AC\uC790\uB4DC"
       UserSkillNameID: 5021
@@ -3295,8 +3337,10 @@ MonoBehaviour:
         Value: 0.2
         Time: 3
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: 
     - ID: 41
       UserSkillName: "\uC2E0\uC758\uB9DD\uCE58"
       UserSkillNameID: 5022
@@ -3315,8 +3359,10 @@ MonoBehaviour:
         Value: 0
         Time: 2
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: 
     - ID: 42
       UserSkillName: "\uBA54\uD14C\uC624"
       UserSkillNameID: 5023
@@ -3335,8 +3381,10 @@ MonoBehaviour:
         Value: 20
         Time: 3
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: Hit_Meteor
+      ObjectDamageEffectName: 
     - ID: 43
       UserSkillName: "\uC0AC\uC790\uD6C4"
       UserSkillNameID: 5024
@@ -3355,8 +3403,10 @@ MonoBehaviour:
         Value: 0
         Time: 2
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: Skill_LionPower
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: 
     - ID: 44
       UserSkillName: "\uBC88\uAC1C\uD3ED\uD48D"
       UserSkillNameID: 5025
@@ -3372,8 +3422,10 @@ MonoBehaviour:
         Value: 150
         Time: 0
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: Hit_Thunderstorm
+      ObjectDamageEffectName: 
     - ID: 50
       UserSkillName: "\uADF8\uB808\uC774\uD2B8 \uD790"
       UserSkillNameID: 5026
@@ -3389,8 +3441,10 @@ MonoBehaviour:
         Value: 500
         Time: 0
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: 
     - ID: 51
       UserSkillName: "\uACA9\uB824"
       UserSkillNameID: 5027
@@ -3409,8 +3463,10 @@ MonoBehaviour:
         Value: 0
         Time: 5
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: 
     - ID: 52
       UserSkillName: "\uC2E0\uC758\uAC00\uD638"
       UserSkillNameID: 5028
@@ -3426,8 +3482,10 @@ MonoBehaviour:
         Value: 0
         Time: 5
       IconName: 
-      Eff_SkillName: 
-      Eff_Name: 
+      MyPositionEffectName: 
+      ProjectileEffectName: 
+      TargetPointEffectName: 
+      ObjectDamageEffectName: 
   m_CharacterDataElementDic:
     _keys: 0000000064000000650000006600000067000000e8030000e9030000ea030000eb030000ec030000ed030000ee030000ef030000f0030000f1030000f2030000f3030000f4030000f5030000f6030000f7030000f8030000f9030000fa030000fb030000fc030000fd030000fe030000ff030000000400000104000002040000030400000404000005040000060400000704000008040000090400000a0400000b0400000c0400000d0400000e0400000f040000100400001104000012040000130400001404000015040000160400001704000018040000190400001a0400001b0400001c0400001d0400001e0400001f0400002004000021040000220400002304000034080000b80b0000b90b0000
     _values:
