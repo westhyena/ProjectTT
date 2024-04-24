@@ -495,6 +495,22 @@ public class CharacterDataElement
 	/// 지급 골드 (몬스터만 유효)
 	/// </summary>
 	public int Gold;
+	/// <summary>
+	/// 케릭터 고유 특별 추가 체력 성장 값
+	/// </summary>
+	public int GrowHp;
+	/// <summary>
+	/// 케릭터 고유 특별 추가 공격데미지 성장 값
+	/// </summary>
+	public int GrowAttackDamage;
+	/// <summary>
+	/// 케릭터 고유 특별 추가 물리방어력 성장 값
+	/// </summary>
+	public int GrowPD;
+	/// <summary>
+	/// 케릭터 고유 특별 추가 마법방어력 성장 값
+	/// </summary>
+	public int GrowMD;
 
 	public string iconFileName;
 	/// <summary>
@@ -614,6 +630,17 @@ public class UserSelectCardDataElement
 
 #endregion
 
+#region UserSelectCardRandomTable
+
+[Serializable]
+public struct UserSelectCardTableDataElement
+{
+	public int UserSelectCardID;
+	public string CardName;
+	public float Ratio;
+}
+
+#endregion
 #region 쿠폰
 [System.Serializable]
 public class PromotionCodeElement
@@ -679,6 +706,25 @@ public class DataMgr : MonoBehaviour
 	/// 영웅 레벨업 유저 셀렉트 카드
 	/// </summary>
 	public UserSelectCardDataElementDic m_UserSelectCardDataElementDic = new UserSelectCardDataElementDic();
+
+	/// <summary>
+	/// 영웅 레벨업 유저 셀렉트 카드 테이블리스트
+	/// </summary>
+	public List<UserSelectCardTableDataElement> m_UserSelectCardTableDataElementList = new List<UserSelectCardTableDataElement>();
+
+	private static DataMgr _instance;
+	public static DataMgr instance
+	{
+		get
+		{
+			if (_instance == null)
+			{
+				_instance = FindObjectOfType<DataMgr>();
+			}
+			return _instance;
+		}
+	}
+
 	private void Awake()
 	{
 		DontDestroyOnLoad(this.gameObject);
@@ -704,16 +750,16 @@ public class DataMgr : MonoBehaviour
 		switch (DamageType)
 		{
 			case DamageType_E.Physics:
-				int TargetMaxPD = m_CharacterDataElementDic[TargetIndex].PD + TargetGrowDataList[TargetGrowDataList.Count - 1].Add_PD; // 타겟의 최고레벨의 방어력을 가져옴
-				int TargetPD = m_CharacterDataElementDic[TargetIndex].PD + TargetGrowDataList[TargetLevel].Add_PD; // 타겟의 현재 방어력
+				int TargetMaxPD = m_CharacterDataElementDic[TargetIndex].PD + (m_CharacterDataElementDic[TargetIndex].GrowPD * TargetLevel) + (TargetGrowDataList[TargetGrowDataList.Count - 1].Add_PD ); // 타겟의 최고레벨의 방어력을 가져옴
+				int TargetPD = m_CharacterDataElementDic[TargetIndex].PD + (m_CharacterDataElementDic[TargetIndex].GrowPD * TargetLevel) + TargetGrowDataList[TargetLevel].Add_PD; // 타겟의 현재 방어력
 				float TotalPDValue = ((float)TargetPD / (float)TargetMaxPD) * RValue; // 저항값을 구하기위한 최대방어력 대비 비율
 				int MaxresistancePValue = (int)(Damage * TotalPDValue); //데미지에 비례한 최대 저항값
 				int RndMaxResistancePValue = UnityEngine.Random.Range(0, MaxresistancePValue); // 0~저항값 사이 랜덤값
 				returnDamage = Damage - (TargetPD + RndMaxResistancePValue); //기본 방어 + 랜덤한 저항값으로 데미지에서 상쇄시켜준다.
 				break;
 			case DamageType_E.Magic:
-				int TargetMaxMD = m_CharacterDataElementDic[TargetIndex].MD + TargetGrowDataList[TargetGrowDataList.Count - 1].Add_MD;
-				int TargetMD = m_CharacterDataElementDic[TargetIndex].MD + TargetGrowDataList[TargetLevel].Add_MD;
+				int TargetMaxMD = m_CharacterDataElementDic[TargetIndex].MD + (m_CharacterDataElementDic[TargetIndex].GrowMD * TargetLevel) + TargetGrowDataList[TargetGrowDataList.Count - 1].Add_MD;
+				int TargetMD = m_CharacterDataElementDic[TargetIndex].MD + (m_CharacterDataElementDic[TargetIndex].GrowMD * TargetLevel) + TargetGrowDataList[TargetLevel].Add_MD;
 				float TotalMDValue = ((float)TargetMD / (float)TargetMaxMD) * RValue;
 				int resistanceMValue = (int)(Damage * TotalMDValue);
 				int RndMaxResistanceMValue = UnityEngine.Random.Range(0, resistanceMValue);
@@ -747,16 +793,60 @@ public class DataMgr : MonoBehaviour
 		return null;
 	}
 
-	private static DataMgr _instance;
-	public static DataMgr instance
+	/// <summary>
+	/// 레벨에 따른 스페셜 Grow수치를 반환
+	/// </summary>
+	public void GetCharacterSpecialGrowData(int CharacterID,int CharacterLevel,ref int GrowHP,ref int GrowAttackDmg, ref int GrowPD, ref int GrowMD)
 	{
-		get
+		GrowHP = m_CharacterDataElementDic[CharacterID].GrowHp * CharacterLevel;
+		GrowAttackDmg = m_CharacterDataElementDic[CharacterID].GrowHp * CharacterLevel;
+		GrowPD = m_CharacterDataElementDic[CharacterID].GrowPD * CharacterLevel;
+		GrowMD = m_CharacterDataElementDic[CharacterID].GrowMD * CharacterLevel;
+	}
+
+	/// <summary>
+	/// 랜덤한 5개의 유저셀렉트 카드 리스트를 반환한다.
+	/// </summary>
+	/// <returns></returns>
+	public List<UserSelectCardDataElement> GetUserSelectCardList()
+	{
+		List<UserSelectCardDataElement> UserCard = new List<UserSelectCardDataElement>();
+		float MaxRatio = 0;
+		for (int i = 0; i < m_UserSelectCardTableDataElementList.Count; ++i)
+			MaxRatio += m_UserSelectCardTableDataElementList[i].Ratio;
+
+		while (UserCard.Count < 5)
 		{
-			if (_instance == null)
+			float ratio = UnityEngine.Random.Range(0, MaxRatio + 1);
+			float AddRatio = 0;
+			for (int i = 0; i < m_UserSelectCardTableDataElementList.Count; ++i)
 			{
-				_instance = FindObjectOfType<DataMgr>();
+				AddRatio += m_UserSelectCardTableDataElementList[i].Ratio;
+				if ( ratio <= AddRatio)
+				{
+					UserSelectCardDataElement card = m_UserSelectCardDataElementDic[m_UserSelectCardTableDataElementList[i].UserSelectCardID];
+					if (!UserCard.Contains(card))
+					{
+
+						UserCard.Add(card);
+						break;
+					}
+					else
+						break;
+				}
 			}
-			return _instance;
 		}
+
+		Debug.Log("----------------------------------------------");
+		for (int i = 0; i < UserCard.Count; ++i)
+			Debug.LogFormat("{0} {1}", UserCard[i].ID,UserCard[i].CardName);
+
+		return UserCard;
+	}
+
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.C))
+			GetUserSelectCardList();
 	}
 }
