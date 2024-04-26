@@ -22,6 +22,7 @@ public class DataReader : EditorWindow
 		CharacterData,
 		Ingame_CharacterGrowData,
 		UserSelectCard,
+		UserSelectCardRandomTable,
 		Max
 	}
 
@@ -577,7 +578,7 @@ public class DataReader : EditorWindow
 					#endregion
 					break;
 				case EXls.SkillData:
-					#region UserActiveSkillData
+					#region SkillData
 					string[] SkillDataSheet = { "Skill_0", "Skill_1", "Skill_2", "Skill_3", "Skill_4", "Skill_5" };
 
 					for (int i = 0; i < SkillDataSheet.Length; ++i)
@@ -741,6 +742,11 @@ public class DataReader : EditorWindow
 								if (string.IsNullOrEmpty(Get<string>(obj, 18)) == false)
 									cde.Gold = Get<int>(obj, 18);
 
+								cde.GrowHp = Get<int>(obj, 19);
+								cde.GrowAttackDamage = Get<int>(obj, 20);
+								cde.GrowPD = Get<int>(obj, 21);
+								cde.GrowMD = Get<int>(obj, 22);
+
 								DataTable Character_FileTable = ReadSingleSheet(string.Format("{0}_File", CharacterDataSheet[i]), DataPath);
 								//파일명 셋팅
 								object[] obj2 = Character_FileTable.Rows[ii].ItemArray;
@@ -857,6 +863,37 @@ public class DataReader : EditorWindow
 								ColorUtility.TryParseHtmlString(ColorValue, out ce.ThisCardBuffColor);
 
 								m_DataMgr.m_UserSelectCardDataElementDic.Add(ce.ID, ce);
+							}
+						}
+						breakSheet++;
+					}
+					#endregion
+					break;
+				case EXls.UserSelectCardRandomTable:
+					#region UserSelectCardRandomTable
+					string[] UserSelectCardRandomTableDataSheet = { "UserCardTable" };
+
+					for (int i = 0; i < UserSelectCardRandomTableDataSheet.Length; ++i)
+					{
+						DataTable Table = ReadSingleSheet(UserSelectCardRandomTableDataSheet[i], DataPath);
+						sheetName.Add(UserSelectCardRandomTableDataSheet[i]);
+
+						if (Table.Rows.Count > 0)
+						{
+							for (int ii = 0; ii < Table.Rows.Count; ii++)
+							{
+								breakRows = ii;
+								object[] obj = Table.Rows[ii].ItemArray;
+
+								if (string.IsNullOrEmpty(Get<string>(obj, 0)))
+									continue;
+
+								UserSelectCardTableDataElement ce = new UserSelectCardTableDataElement();
+								ce.UserSelectCardID = Get<int>(obj, 0);
+								ce.CardName = Get<string>(obj, 1);
+								ce.Ratio = Get<float>(obj, 2);
+
+								m_DataMgr.m_UserSelectCardTableDataElementList.Add(ce);
 							}
 						}
 						breakSheet++;
