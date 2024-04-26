@@ -4,20 +4,31 @@ using UnityEngine;
 
 public class SkillEffect
 {
-    EffectInfo effectInfo;
-    public string Memo => effectInfo.memo;
+    public enum EffectType
+    {
+        DAMAGE,
+        DOT_DAMAGE,
+        ATK_UP,
+        ATK_SP,
+        HEAL,
+        IMMUNITY,
+        STUN,
+        ATK_DOWN
+    }
+    EffectType effectType;
+
     float value;
     float duration;
     public bool isOneTimeEffect => duration == 0.0f;
     Character source;
     public SkillEffect(
-        EffectInfo effectInfo,
+        EffectType effectType,
         float value,
         float duration,
         Character source
     )
     {
-        this.effectInfo = effectInfo;
+        this.effectType = effectType;
         this.value = value;
         this.duration = duration;
         this.source = source;
@@ -25,20 +36,14 @@ public class SkillEffect
 
     void ApplyDamage(Character target)
     {
-        float damage = 0.0f;
-        if (effectInfo.basedStat == "ATTACK")
-        {
-            damage = source.AttackStat * value / 10000.0f;
-        }
-
-        target.Damage(damage, null);
+        target.Damage(value, null);
     }
 
     public void ApplyEffect(Character target)
     {
-        switch (effectInfo.effectType)
+        switch (effectType)
         {
-            case "DAMAGE":
+            case EffectType.DAMAGE:
                 ApplyDamage(target);
                 break;
         }

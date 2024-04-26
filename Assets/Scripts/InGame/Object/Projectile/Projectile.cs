@@ -4,7 +4,6 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     Skill skill;
-    ProjectileInfo projectileInfo;
     Character source;
     Character target;
     Vector2 targetPosition2D;
@@ -15,19 +14,12 @@ public class Projectile : MonoBehaviour
     public float angleOffset = 90.0f;
     public float angleSpeed = 2.0f;
 
-    public void Initialize(
-        Character source,
-        Character target,
-        Skill skill,
-        ProjectileInfo projectileInfo)
+    public void Initialize(Character source, Character target, Skill skill)
     {
         this.source = source;
         this.target = target;
         this.skill = skill;
-        this.projectileInfo = projectileInfo;
 
-        this.speed = projectileInfo.speed / 10000.0f;
-        this.transform.localScale = projectileInfo.scale / 10000.0f * Vector3.one;
         this.transform.position = source.transform.position + new Vector3(0.0f, positionYOffset, positionZOffset);
     }
 

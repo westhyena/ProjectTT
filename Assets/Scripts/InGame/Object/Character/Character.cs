@@ -131,6 +131,12 @@ public abstract class Character : MonoBehaviour
         // SkillInfo normalSkillInfo = DataManager.instance.GetSkillInfo(characterInfo.normalAtk);
         // normalSkill = new Skill(this, normalSkillInfo);
 
+        characterInfo.AllSkillList.ForEach(skillId => {
+            SkillDataElement skillInfo = DataMgr.instance.m_SkillDataElementDic[skillId];
+            Skill skill = new Skill(this, skillInfo);
+            skillList.Add(skill);
+        });
+
         // foreach (string skillId in characterInfo.skillIDs)
         // {
         //     SkillInfo skillInfo = DataManager.instance.GetSkillInfo(skillId);
@@ -156,15 +162,15 @@ public abstract class Character : MonoBehaviour
             this.attackCooltime = 1.0f / characterInfo.AttackSpeed + Time.fixedDeltaTime;
             if (normalSkill != null)
             {
-                if (!string.IsNullOrEmpty(normalSkill.SkillInfo.projectileID))
-                {
-                    projectileInfo = DataManager.instance.GetProjectileInfo(normalSkill.SkillInfo.projectileID);
-                    projectilePrefab = ResourceManager.GetProjectilePrefab(projectileInfo.projectilePrefab);
-                }
-                if (normalSkill.SkillInfo.atkAnimation != null)
-                {
-                    normalSkillPrefab = ResourceManager.GetSkillPrefab(normalSkill.SkillInfo.atkAnimation);
-                }
+                // if (!string.IsNullOrEmpty(normalSkill.SkillInfo.projectileID))
+                // {
+                //     projectileInfo = DataManager.instance.GetProjectileInfo(normalSkill.SkillInfo.projectileID);
+                //     projectilePrefab = ResourceManager.GetProjectilePrefab(projectileInfo.projectilePrefab);
+                // }
+                // if (normalSkill.SkillInfo.atkAnimation != null)
+                // {
+                //     normalSkillPrefab = ResourceManager.GetSkillPrefab(normalSkill.SkillInfo.atkAnimation);
+                // }
             }
         }
 
@@ -391,7 +397,7 @@ public abstract class Character : MonoBehaviour
             if (CheckDistanceUnder(target.Position2D, attackStartDistance))
             {
                 normalSkill.CreateHitObject(target);
-                target.Damage(this.attackStat, normalSkill.SkillInfo);
+                target.Damage(this.attackStat, null);
             }
         }
     }
@@ -402,12 +408,7 @@ public abstract class Character : MonoBehaviour
         projectile.transform.position = projectileSpawnPoint.position;
         projectile.transform.rotation = projectileSpawnPoint.rotation;
         Projectile projectileComponent = projectile.GetComponent<Projectile>();
-        projectileComponent.Initialize(
-            this,
-            target,
-            normalSkill,
-            projectileInfo
-        );
+        projectileComponent.Initialize(this, target, normalSkill);
     }
 
     protected virtual void OnDamage(float damage) {}

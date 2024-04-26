@@ -16,8 +16,8 @@ public class Skill
         }
     }
     Character character;
-    SkillInfo skillInfo;
-    public SkillInfo SkillInfo => skillInfo;
+    SkillDataElement skillInfo;
+    public SkillDataElement SkillInfo => skillInfo;
 
     GameObject skillPrefab;
     GameObject hitPrefab;
@@ -30,32 +30,33 @@ public class Skill
 
     float skillTimer = 0.0f;
 
-    public Skill(Character character, SkillInfo skillInfo)
+    public Skill(Character character, SkillDataElement skillInfo)
     {
         this.character = character;
         this.skillInfo = skillInfo;
 
-        if (!string.IsNullOrEmpty(skillInfo.atkAnimation))
+        if (!string.IsNullOrEmpty(skillInfo.MyPositionEffectName))
         {
-            skillPrefab = ResourceManager.GetSkillPrefab(skillInfo.atkAnimation);
+            skillPrefab = ResourceManager.GetSkillPrefab(skillInfo.MyPositionEffectName);
         }
-        if (!string.IsNullOrEmpty(skillInfo.atkedVFX))
+        if (!string.IsNullOrEmpty(skillInfo.ObjectDamageEffectName))
         {
-            hitPrefab = ResourceManager.GetHitPrefab(skillInfo.atkedVFX);
+            hitPrefab = ResourceManager.GetHitPrefab(skillInfo.ObjectDamageEffectName);
         }
-        if (!string.IsNullOrEmpty(skillInfo.rangeVFX))
+        if (!string.IsNullOrEmpty(skillInfo.TargetPointEffectName))
         {
-            rangeHitPrefab = ResourceManager.GetHitPrefab(skillInfo.rangeVFX);
+            rangeHitPrefab = ResourceManager.GetHitPrefab(skillInfo.TargetPointEffectName);
         }
 
-        AddSkillEffect(skillInfo.skillEffects01, skillInfo.effectsValue01, skillInfo.duration01);
-        AddSkillEffect(skillInfo.skillEffects02, skillInfo.effectsValue02, skillInfo.duration02);
-        AddSkillEffect(skillInfo.skillEffects03, skillInfo.effectsValue03, skillInfo.duration03);
 
-        if (!string.IsNullOrEmpty(skillInfo.projectileID))
+        // AddSkillEffect(skillInfo.skillEffects01, skillInfo.effectsValue01, skillInfo.duration01);
+        // AddSkillEffect(skillInfo.skillEffects02, skillInfo.effectsValue02, skillInfo.duration02);
+        // AddSkillEffect(skillInfo.skillEffects03, skillInfo.effectsValue03, skillInfo.duration03);
+
+        if (!string.IsNullOrEmpty(skillInfo.ProjectileEffectName))
         {
-            projectileInfo = DataManager.instance.GetProjectileInfo(skillInfo.projectileID);
-            projectilePrefab = ResourceManager.GetProjectilePrefab(projectileInfo.projectilePrefab);
+            // projectileInfo = DataManager.instance.GetProjectileInfo(skillInfo.projectileID);
+            // projectilePrefab = ResourceManager.GetProjectilePrefab(projectileInfo.ProjectileEffectName);
         }
     }
 
@@ -125,29 +126,25 @@ public class Skill
     }
 
     Character[] GetTarget(
-        string target,
+        ActivePosition_E activePosition,
+        Target_E target,
         Character source,
         Vector2 position2D,
         float range
     )
     {
-        if (target == "ToMySelf")
+        if (activePosition == ActivePosition_E.Me)
         {
             return new Character[] { source };
         }
         Character[] targets = new Character[0];
-        if (target.EndsWith("Ally"))
+        if (target == Target_E.Our)
         {
             targets = PickTargetInRange(source.GetAllyList(), position2D, range);
         }
-        else if (target.EndsWith("Enemy") || target.EndsWith("Enemies"))
+        else if (target == Target_E.Enemy)
         {
             targets = PickTargetInRange(source.GetTargetList(), position2D, range);
-        }
-
-        if (target.StartsWith("ToAll"))
-        {
-            return targets;
         }
 
         if (targets.Length == 0)
@@ -163,24 +160,25 @@ public class Skill
     {
         CreateSkillObject(useTarget);
         Character[] effectsTargets = GetTarget(
-            skillInfo.effectsTarget,
+            skillInfo.ActivePosition,
+            skillInfo.Target,
             this.character,
             useTarget.Position2D,
-            skillInfo.rangeOfEffects
+            skillInfo.DamageTypeRange
         );
-        foreach (Character effectsTarget in effectsTargets)
-        {
-            CreateHitObject(effectsTarget);
-            foreach (EffectHolder holder in effectList)
-            {
-                effectsTarget.AddSkillEffect(new SkillEffect(
-                    holder.effectInfo,
-                    holder.value,
-                    holder.duration,
-                    character
-                ));
-            }
-        }
+        // foreach (Character effectsTarget in effectsTargets)
+        // {
+        //     CreateHitObject(effectsTarget);
+        //     foreach (EffectHolder holder in effectList)
+        //     {
+        //         effectsTarget.AddSkillEffect(new SkillEffect(
+        //             holder.effectInfo,
+        //             holder.value,
+        //             holder.duration,
+        //             character
+        //         ));
+        //     }
+        // }
     }
 
     public void UpdateSkillTimer()
@@ -191,13 +189,14 @@ public class Skill
     public void UpdateSkill()
     {
         UpdateSkillTimer();
-        if (skillTimer > skillInfo.coolDown / 1000.0f)
+        if (skillTimer > skillInfo.CoolTime)
         {
             Character[] useTargets = GetTarget(
-                skillInfo.useTarget,
-                character,
-                character.Position2D,
-                character.RangeOfTarget
+                skillInfo.ActivePosition,
+                skillInfo.Target,
+                this.character,
+                this.character.Position2D,
+                skillInfo.DamageTypeRange
             );
 
             if (useTargets.Length == 0) return;
@@ -208,7 +207,7 @@ public class Skill
                 if (projectilePrefab != null)
                 {
                     Projectile projectile = Object.Instantiate(projectilePrefab).GetComponent<Projectile>();
-                    projectile.Initialize(character, useTarget, this, projectileInfo);
+                    projectile.Initialize(character, useTarget, this);
                 }
                 else
                 {
