@@ -59,7 +59,7 @@ public class InputManager : MonoBehaviour
         {
             foreach (Enemy enemy in EnemyManager.instance.AliveEnemyList)
             {
-                enemy.Damage(999999999, null);
+                enemy.Damage(999999999);
             }
         }
     }

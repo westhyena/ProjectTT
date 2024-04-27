@@ -26,7 +26,7 @@ public class Skill
     ProjectileInfo projectileInfo;
     GameObject projectilePrefab;
 
-    List<EffectHolder> effectList = new ();
+    List<SkillEffect> effectList = new ();
 
     float skillTimer = 0.0f;
 
@@ -48,29 +48,20 @@ public class Skill
             rangeHitPrefab = ResourceManager.GetHitPrefab(skillInfo.TargetPointEffectName);
         }
 
-
-        // AddSkillEffect(skillInfo.skillEffects01, skillInfo.effectsValue01, skillInfo.duration01);
-        // AddSkillEffect(skillInfo.skillEffects02, skillInfo.effectsValue02, skillInfo.duration02);
-        // AddSkillEffect(skillInfo.skillEffects03, skillInfo.effectsValue03, skillInfo.duration03);
+        foreach (SkillDataBase skillEffect in skillInfo.SkillData)
+        {
+            effectList.Add(new SkillEffect(
+                skillEffect.SkillDataKind,
+                skillEffect.Value,
+                skillEffect.Time,
+                this.character
+            ));
+        }
 
         if (!string.IsNullOrEmpty(skillInfo.ProjectileEffectName))
         {
             // projectileInfo = DataManager.instance.GetProjectileInfo(skillInfo.projectileID);
             // projectilePrefab = ResourceManager.GetProjectilePrefab(projectileInfo.ProjectileEffectName);
-        }
-    }
-
-    private void AddSkillEffect(string effectId, float value, float duration)
-    {
-        if (!string.IsNullOrEmpty(effectId))
-        {
-            effectList.Add(
-                new EffectHolder(
-                    DataManager.instance.GetEffectInfo(effectId),
-                    value,
-                    duration
-                )
-            );
         }
     }
 
@@ -166,19 +157,14 @@ public class Skill
             useTarget.Position2D,
             skillInfo.DamageTypeRange
         );
-        // foreach (Character effectsTarget in effectsTargets)
-        // {
-        //     CreateHitObject(effectsTarget);
-        //     foreach (EffectHolder holder in effectList)
-        //     {
-        //         effectsTarget.AddSkillEffect(new SkillEffect(
-        //             holder.effectInfo,
-        //             holder.value,
-        //             holder.duration,
-        //             character
-        //         ));
-        //     }
-        // }
+        foreach (Character effectsTarget in effectsTargets)
+        {
+            CreateHitObject(effectsTarget);
+            foreach (SkillEffect effect in effectList)
+            {
+                effectsTarget.AddSkillEffect(effect);
+            }
+        }
     }
 
     public void UpdateSkillTimer()

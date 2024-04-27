@@ -6885,12 +6885,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f537173e125e441f9bf649c444565942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCharacterId: 10001
-  companionCharacterIds:
-  - 20001
-  - 20002
-  - 20003
-  - 20004
+  playerCharacterId: 0
+  companionCharacterIds: 64000000650000006600000067000000
   companionRoot: {fileID: 1528238749}
   spawnRange: 5
 --- !u!114 &1133609867
@@ -6954,7 +6950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6a304cba13c45b7b29fe5f54a7f251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageId: 999901
+  stageId: 0
 --- !u!1 &1140123181
 GameObject:
   m_ObjectHideFlags: 0
@@ -7556,6 +7552,10 @@ PrefabInstance:
     - target: {fileID: 1729696770254206460, guid: cdabdd3915c67a04087621bf626e41d4, type: 3}
       propertyPath: m_Name
       value: DataMgr
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907822577359141218, guid: cdabdd3915c67a04087621bf626e41d4, type: 3}
+      propertyPath: m_StageWaveDataElementDic._values.Array.data[0].StageMapObjectName
+      value: Theme_002_Jungle
       objectReference: {fileID: 0}
     - target: {fileID: 8660123338349193829, guid: cdabdd3915c67a04087621bf626e41d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9717,7 +9717,7 @@ SortingGroup:
   m_GameObject: {fileID: 1628647108}
   m_Enabled: 1
   m_SortingLayerID: -1065978383
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_SortAtRoot: 1
 --- !u!199 &1628647111

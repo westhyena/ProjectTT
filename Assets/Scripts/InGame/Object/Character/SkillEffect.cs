@@ -4,25 +4,14 @@ using UnityEngine;
 
 public class SkillEffect
 {
-    public enum EffectType
-    {
-        DAMAGE,
-        DOT_DAMAGE,
-        ATK_UP,
-        ATK_SP,
-        HEAL,
-        IMMUNITY,
-        STUN,
-        ATK_DOWN
-    }
-    EffectType effectType;
+    SkillDataKind_E effectType;
 
     float value;
     float duration;
     public bool isOneTimeEffect => duration == 0.0f;
     Character source;
     public SkillEffect(
-        EffectType effectType,
+        SkillDataKind_E effectType,
         float value,
         float duration,
         Character source
@@ -36,14 +25,14 @@ public class SkillEffect
 
     void ApplyDamage(Character target)
     {
-        target.Damage(value, null);
+        target.Damage(value);
     }
 
     public void ApplyEffect(Character target)
     {
         switch (effectType)
         {
-            case EffectType.DAMAGE:
+            case SkillDataKind_E.Damage:
                 ApplyDamage(target);
                 break;
         }

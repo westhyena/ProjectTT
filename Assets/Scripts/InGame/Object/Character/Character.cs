@@ -38,6 +38,8 @@ public abstract class Character : MonoBehaviour
 
     CharacterDataElement characterInfo;
     public CharacterDataElement CharacterInfo { get { return characterInfo; } }
+
+    GameObject normalHitPrefab;
     Skill normalSkill;
     GameObject normalSkillPrefab;
 
@@ -81,7 +83,6 @@ public abstract class Character : MonoBehaviour
     [SerializeField]
     protected AttackType attackType = AttackType.Melee;
 
-    ProjectileInfo projectileInfo;
     GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
 
@@ -102,6 +103,7 @@ public abstract class Character : MonoBehaviour
 
     protected virtual void Awake()
     {
+        Debug.Log("AWAKE " + this.name);
         this.animator = GetComponentInChildren<Animator>();
         List<string> attackTriggerList = new ();
         foreach (AnimatorControllerParameter parameter in this.animator.parameters)
@@ -126,12 +128,12 @@ public abstract class Character : MonoBehaviour
 
     public void InitializeCharacter(int characterId)
     {
-        characterInfo = DataMgr.instance.GetCharacterDataElement(characterId);
+        this.characterInfo = DataMgr.instance.GetCharacterDataElement(characterId);
 
         // SkillInfo normalSkillInfo = DataManager.instance.GetSkillInfo(characterInfo.normalAtk);
         // normalSkill = new Skill(this, normalSkillInfo);
 
-        characterInfo.AllSkillList.ForEach(skillId => {
+        this.characterInfo.AllSkillList.ForEach(skillId => {
             SkillDataElement skillInfo = DataMgr.instance.m_SkillDataElementDic[skillId];
             Skill skill = new Skill(this, skillInfo);
             skillList.Add(skill);
@@ -149,7 +151,7 @@ public abstract class Character : MonoBehaviour
 
     protected void Start()
     {
-        if (characterInfo != null)
+        if (this.characterInfo != null)
         {
             this.mspd = characterInfo.MoveSpeed;
             this.hpStat = characterInfo.HP;
@@ -160,6 +162,14 @@ public abstract class Character : MonoBehaviour
             this.rangeOfTarget = characterInfo.AttackRange;
             this.attackSpeed =  characterInfo.AttackSpeed;
             this.attackCooltime = 1.0f / characterInfo.AttackSpeed + Time.fixedDeltaTime;
+
+            
+            normalHitPrefab = ResourceManager.GetHitPrefab("Hit_Base_A");
+            if (!string.IsNullOrEmpty(characterInfo.ObjectEffFileName))
+            {
+                this.projectilePrefab = ResourceManager.GetProjectilePrefab(characterInfo.ObjectEffFileName);
+                Debug.Log("LOAD PROJECTILE PREFAB " + this.name + " - " + projectilePrefab);
+            }
             if (normalSkill != null)
             {
                 // if (!string.IsNullOrEmpty(normalSkill.SkillInfo.projectileID))
@@ -363,6 +373,18 @@ public abstract class Character : MonoBehaviour
         }
     }
 
+    public void CreateNormalHitObject(Character target)
+    {
+        if (normalHitPrefab == null) return;
+
+        GameObject.Instantiate(
+            normalHitPrefab,
+            target.transform.position,
+            Quaternion.identity,
+            target.transform
+        );
+    }
+
     public void Attack()
     {
         if (attackType == AttackType.Melee)
@@ -396,14 +418,16 @@ public abstract class Character : MonoBehaviour
             }
             if (CheckDistanceUnder(target.Position2D, attackStartDistance))
             {
-                normalSkill.CreateHitObject(target);
-                target.Damage(this.attackStat, null);
+                CreateNormalHitObject(target);
+                target.Damage(this.attackStat);
             }
         }
     }
 
     protected void AttackRange()
     {
+        projectilePrefab = ResourceManager.GetProjectilePrefab(characterInfo.ObjectEffFileName);
+        Debug.Log("ATTACK RANGE " + this.name + " - " + projectilePrefab);
         GameObject projectile = Instantiate(projectilePrefab);
         projectile.transform.position = projectileSpawnPoint.position;
         projectile.transform.rotation = projectileSpawnPoint.rotation;
@@ -413,7 +437,7 @@ public abstract class Character : MonoBehaviour
 
     protected virtual void OnDamage(float damage) {}
 
-    public void Damage(float attackVal, SkillInfo skillInfo)
+    public void Damage(float attackVal)
     {
         if (hp <= 0)
         {

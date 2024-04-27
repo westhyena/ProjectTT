@@ -35,8 +35,16 @@ public class Projectile : MonoBehaviour
         float sqrDistance = direction.sqrMagnitude;
         if (sqrDistance < 0.1f * 0.1f)
         {
-            skill.UseSkillOnTarget(target);
-            skill.CreateRangeHitObject(target.Position2D);
+            if (skill != null)
+            {
+                skill.UseSkillOnTarget(target);
+                skill.CreateRangeHitObject(target.Position2D);
+            }
+            else
+            { // 일반공격
+                source.CreateNormalHitObject(target);
+                target.Damage(source.AttackStat);
+            }
             Destroy(gameObject);
             return;
         }
