@@ -2632,7 +2632,7 @@ MonoBehaviour:
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
         MonsterType: 0
-        CharacterLevel: 5
+        CharacterLevel: 1
         SummonCount: 20
       Wave1:
       - WaveID: 1
@@ -2640,14 +2640,14 @@ MonoBehaviour:
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
         MonsterType: 0
-        CharacterLevel: 5
+        CharacterLevel: 1
         SummonCount: 50
       - WaveID: 1
         SummonTime: 65
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
         MonsterType: 0
-        CharacterLevel: 5
+        CharacterLevel: 1
         SummonCount: 50
       Wave2:
       - WaveID: 2
@@ -2655,14 +2655,14 @@ MonoBehaviour:
         ObjName: "\uD63C\uC774\uB098\uAC04 \uC6D0\uC8FC\uBBFC"
         CharacterID: 2000
         MonsterType: 1
-        CharacterLevel: 15
+        CharacterLevel: 1
         SummonCount: 1
       - WaveID: 2
         SummonTime: 120
         ObjName: "\uC804\uC0AC \uBA67\uB3FC\uC9C0"
         CharacterID: 1002
         MonsterType: 0
-        CharacterLevel: 5
+        CharacterLevel: 1
         SummonCount: 30
       Wave3:
       - WaveID: 3
@@ -2670,14 +2670,14 @@ MonoBehaviour:
         ObjName: "\uC2AC\uB77C\uC784"
         CharacterID: 1003
         MonsterType: 0
-        CharacterLevel: 10
+        CharacterLevel: 1
         SummonCount: 50
       - WaveID: 3
         SummonTime: 200
         ObjName: "\uC2AC\uB77C\uC784"
         CharacterID: 1003
         MonsterType: 0
-        CharacterLevel: 5
+        CharacterLevel: 1
         SummonCount: 100
       Wave4:
       - WaveID: 4
@@ -2685,21 +2685,21 @@ MonoBehaviour:
         ObjName: "\uAC70\uB300\uD55C \uAF43\uC78E \uC2DD\uBB3C"
         CharacterID: 3000
         MonsterType: 2
-        CharacterLevel: 20
+        CharacterLevel: 1
         SummonCount: 1
       - WaveID: 4
         SummonTime: 250
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
         MonsterType: 0
-        CharacterLevel: 10
+        CharacterLevel: 1
         SummonCount: 100
       - WaveID: 4
         SummonTime: 260
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
         MonsterType: 0
-        CharacterLevel: 10
+        CharacterLevel: 1
         SummonCount: 100
       IconName: "\uC544\uC774\uCF58 \uD30C\uC77C \uBA85"
       StageMapObjectName: "\uB9F5 \uC624\uBE0C\uC81D\uD2B8 \uD30C\uC77C\uBA85"
@@ -3493,7 +3493,7 @@ MonoBehaviour:
       CharacterName: "\uD30C\uB780\uBA38\uB9AC \uC601\uC6C5"
       CharacterNameID: 1000
       CharacterDescID: 2000
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 0
@@ -3519,7 +3519,7 @@ MonoBehaviour:
       CharacterName: "\uC77C\uBC18 \uC804\uC0AC"
       CharacterNameID: 3000
       CharacterDescID: 4000
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 0
@@ -3545,7 +3545,7 @@ MonoBehaviour:
       CharacterName: "\uC77C\uBC18 \uAD81\uC218"
       CharacterNameID: 3001
       CharacterDescID: 4001
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 1
@@ -3571,7 +3571,7 @@ MonoBehaviour:
       CharacterName: "\uC77C\uBC18 \uBC95\uC0AC"
       CharacterNameID: 3002
       CharacterDescID: 4002
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 1
@@ -3597,7 +3597,7 @@ MonoBehaviour:
       CharacterName: "\uB3C4\uB07C \uD22C\uCC99 \uB4DC\uC6CC\uD504"
       CharacterNameID: 3003
       CharacterDescID: 4003
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 1
@@ -3623,7 +3623,7 @@ MonoBehaviour:
       CharacterName: "\uB098\uC05C \uBC84\uC12F"
       CharacterNameID: 10000
       CharacterDescID: 11000
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 0
@@ -3633,14 +3633,14 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
+      PD: 1
       MD: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
       GrowHp: 5
       GrowAttackDamage: 2
-      GrowPD: 2
+      GrowPD: 1
       GrowMD: 1
       iconFileName: 
       ObjectFileName: Enemy_FungiPurplecap
@@ -3649,7 +3649,7 @@ MonoBehaviour:
       CharacterName: "\uCD08\uC6D0\uC758 \uB3FC\uC9C0  "
       CharacterNameID: 10001
       CharacterDescID: 11001
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 0
@@ -3659,7 +3659,7 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
+      PD: 1
       MD: 0
       AllSkillList: 
       Exp: 10
@@ -3675,7 +3675,7 @@ MonoBehaviour:
       CharacterName: "\uD654\uB09C \uB3FC\uC9C0 \uC804\uC0AC   "
       CharacterNameID: 10002
       CharacterDescID: 11002
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 0
@@ -3685,8 +3685,8 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 5
-      MD: 10
+      PD: 1
+      MD: 1
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3701,7 +3701,7 @@ MonoBehaviour:
       CharacterName: "\uD3C9\uC57C \uC2AC\uB77C\uC784"
       CharacterNameID: 10003
       CharacterDescID: 11003
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 0
@@ -3711,8 +3711,8 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
-      MD: 10
+      PD: 1
+      MD: 1
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3727,7 +3727,7 @@ MonoBehaviour:
       CharacterName: "\uC0C8\uCD1D\uC744 \uB4E0 \uB9F7\uB3FC\uC9C0"
       CharacterNameID: 10004
       CharacterDescID: 11004
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 1
@@ -3737,8 +3737,8 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
-      MD: 10
+      PD: 1
+      MD: 1
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3753,7 +3753,7 @@ MonoBehaviour:
       CharacterName: "\uD3C9\uC57C\uC758 \uB4DC\uB8E8\uC774\uB4DC"
       CharacterNameID: 10005
       CharacterDescID: 11005
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 1
       Type: 0
       AttackType: 0
@@ -3763,8 +3763,8 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
-      MD: 10
+      PD: 1
+      MD: 1
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3779,7 +3779,7 @@ MonoBehaviour:
       CharacterName: "\uC815\uAE00 \uB450\uB354\uC9C0"
       CharacterNameID: 10006
       CharacterDescID: 11006
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 1
@@ -3789,8 +3789,8 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
-      MD: 10
+      PD: 1
+      MD: 1
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3805,7 +3805,7 @@ MonoBehaviour:
       CharacterName: "\uB179\uC0C9 \uC2AC\uB77C\uC784"
       CharacterNameID: 10007
       CharacterDescID: 11007
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 0
@@ -3815,8 +3815,8 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
-      MD: 10
+      PD: 1
+      MD: 1
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3831,7 +3831,7 @@ MonoBehaviour:
       CharacterName: "\uC815\uAE00 \uAC70\uBBF8"
       CharacterNameID: 10008
       CharacterDescID: 11008
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 1
@@ -3841,8 +3841,8 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
-      MD: 10
+      PD: 1
+      MD: 1
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3857,7 +3857,7 @@ MonoBehaviour:
       CharacterName: "\uAD34\uC0C1\uD55C \uACF5\uC911\uC0C8"
       CharacterNameID: 10009
       CharacterDescID: 11009
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 1
@@ -3867,8 +3867,8 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
-      MD: 10
+      PD: 1
+      MD: 1
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3883,7 +3883,7 @@ MonoBehaviour:
       CharacterName: "\uD63C\uC774 \uB098\uAC04 \uC8FC\uC220\uC0AC"
       CharacterNameID: 10010
       CharacterDescID: 11010
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 1
@@ -3893,8 +3893,8 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
-      MD: 10
+      PD: 1
+      MD: 1
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3909,7 +3909,7 @@ MonoBehaviour:
       CharacterName: "\uD63C\uC774 \uB098\uAC04 \uCC3D\uBCD1 "
       CharacterNameID: 10011
       CharacterDescID: 11011
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 1
@@ -3919,8 +3919,8 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
-      MD: 10
+      PD: 1
+      MD: 1
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3935,7 +3935,7 @@ MonoBehaviour:
       CharacterName: "\uC9C0\uD558\uC758 \uAD11\uBD80 \uC720\uB839"
       CharacterNameID: 10012
       CharacterDescID: 11012
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 1
@@ -3945,8 +3945,8 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
-      MD: 10
+      PD: 1
+      MD: 1
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3961,7 +3961,7 @@ MonoBehaviour:
       CharacterName: "\uC545\uB784\uD55C \uC2AC\uB77C\uC784"
       CharacterNameID: 10013
       CharacterDescID: 11013
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 1
@@ -3971,8 +3971,8 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
-      MD: 10
+      PD: 1
+      MD: 1
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -3987,7 +3987,7 @@ MonoBehaviour:
       CharacterName: "\uB208\uC54C \uBC15\uC950"
       CharacterNameID: 10014
       CharacterDescID: 11014
-      MoveSpeed: 10
+      MoveSpeed: 4
       Position: 0
       Type: 0
       AttackType: 1
@@ -3997,8 +3997,8 @@ MonoBehaviour:
       AttackSpeed: 1
       AttackDamage: 5
       HP: 50
-      PD: 10
-      MD: 10
+      PD: 1
+      MD: 1
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -5193,13 +5193,13 @@ MonoBehaviour:
       AttackSpeed: 2
       AttackDamage: 30
       HP: 5000
-      PD: 100
+      PD: 10
       MD: 100
       AllSkillList: 
       Exp: 100
       Gold: 100
       GrowHp: 20
-      GrowAttackDamage: 10
+      GrowAttackDamage: 5
       GrowPD: 10
       GrowMD: 5
       iconFileName: 
@@ -5225,7 +5225,7 @@ MonoBehaviour:
       Exp: 0
       Gold: 1000
       GrowHp: 100
-      GrowAttackDamage: 20
+      GrowAttackDamage: 10
       GrowPD: 20
       GrowMD: 5
       iconFileName: 
@@ -6206,7 +6206,7 @@ MonoBehaviour:
       - Type: 0
         Value: 5
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 1
       CardName: "\uC601\uC6C5 \uD06C\uB9AC\uD2F0\uCEEC \uB370\uBBF8\uC9C0 \uC99D\uAC00"
       CardNameID: 
@@ -6217,7 +6217,7 @@ MonoBehaviour:
       - Type: 1
         Value: 10
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 2
       CardName: "\uC601\uC6C5 \uACF5\uACA9\uB825 \uC99D\uAC00"
       CardNameID: 
@@ -6228,7 +6228,7 @@ MonoBehaviour:
       - Type: 2
         Value: 10
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 3
       CardName: "\uC601\uC6C5 \uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00"
       CardNameID: 
@@ -6239,7 +6239,7 @@ MonoBehaviour:
       - Type: 3
         Value: 0.1
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 4
       CardName: "\uC601\uC6C5 \uD68C\uBCF5"
       CardNameID: 
@@ -6248,7 +6248,7 @@ MonoBehaviour:
       TargetSelect: 0
       CardBuffList: []
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 5
       CardName: "\uC6A9\uBCD1 \uD06C\uB9AC\uD2F0\uCEEC \uC99D\uAC00"
       CardNameID: 
@@ -6259,7 +6259,7 @@ MonoBehaviour:
       - Type: 0
         Value: 5
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 6
       CardName: "\uC6A9\uBCD1 \uD06C\uB9AC\uD2F0\uCEEC \uB370\uBBF8\uC9C0 \uC99D\uAC00"
       CardNameID: 
@@ -6270,7 +6270,7 @@ MonoBehaviour:
       - Type: 1
         Value: 10
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 7
       CardName: "\uC6A9\uBCD1 \uACF5\uACA9\uB825 \uC99D\uAC00"
       CardNameID: 
@@ -6281,7 +6281,7 @@ MonoBehaviour:
       - Type: 2
         Value: 10
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 8
       CardName: "\uC6A9\uBCD1 \uACF5\uACA9 \uC18D\uB3C4 \uC99D\uAC00"
       CardNameID: 
@@ -6292,7 +6292,7 @@ MonoBehaviour:
       - Type: 3
         Value: 0.1
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 9
       CardName: "\uC6A9\uBCD1 \uD68C\uBCF5"
       CardNameID: 
@@ -6301,7 +6301,7 @@ MonoBehaviour:
       TargetSelect: 1
       CardBuffList: []
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 10
       CardName: "\uC804\uCCB4 \uD06C\uB9AC\uD2F0\uCEEC \uC99D\uAC00"
       CardNameID: 
@@ -6312,7 +6312,7 @@ MonoBehaviour:
       - Type: 0
         Value: 5
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 11
       CardName: "\uC804\uCCB4 \uD06C\uB9AC\uD2F0\uCEEC \uB370\uBBF8\uC9C0 \uC99D\uAC00"
       CardNameID: 
@@ -6323,7 +6323,7 @@ MonoBehaviour:
       - Type: 1
         Value: 10
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 12
       CardName: "\uC804\uCCB4 \uACF5\uACA9\uB825 \uC99D\uAC00"
       CardNameID: 
@@ -6334,7 +6334,7 @@ MonoBehaviour:
       - Type: 2
         Value: 10
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 13
       CardName: "\uC804\uCCB4 \uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00"
       CardNameID: 
@@ -6345,7 +6345,7 @@ MonoBehaviour:
       - Type: 3
         Value: 0.1
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
     - ID: 14
       CardName: "\uC804\uCCB4 \uD68C\uBCF5"
       CardNameID: 
@@ -6354,7 +6354,7 @@ MonoBehaviour:
       TargetSelect: 2
       CardBuffList: []
       CardIconName: 
-      ThisCardBuffColor: {r: 1, g: 1, b: 1, a: 1}
+      BuffCardFileName: NORMAL_Card
   m_UserSelectCardTableDataElementList:
   - UserSelectCardID: 0
     CardName: "\uC601\uC6C5 \uD06C\uB9AC\uD2F0\uCEEC\uC99D\uAC00"
