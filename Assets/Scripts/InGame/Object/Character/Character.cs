@@ -39,7 +39,6 @@ public abstract class Character : MonoBehaviour
     CharacterDataElement characterInfo;
     public CharacterDataElement CharacterInfo { get { return characterInfo; } }
     int characterLevel = 1;
-    List<InGame_CharacterGrowData> growthList = new ();
 
     GameObject normalHitPrefab;
     GameObject normalSkillPrefab;
@@ -64,7 +63,7 @@ public abstract class Character : MonoBehaviour
     float baseAttackStat = 10.0f;
     public float AttackStat { get {
         int growHP = 0, growAttackDamge = 0, growPD = 0, growMD = 0;
-        DataMgr.instance.GetCharacterSpecialGrowData(
+        DataMgr.instance.GetCharacterGrowData(
             characterInfo.ID,
             characterLevel,
             ref growHP,
@@ -74,7 +73,7 @@ public abstract class Character : MonoBehaviour
         );
         return (
             baseAttackStat + 
-            growthList[characterLevel].Add_AttackDamage + growAttackDamge
+            growAttackDamge
         );
     } }
     float basePhysicDefenceStat = 5.0f;
@@ -143,7 +142,6 @@ public abstract class Character : MonoBehaviour
     public void InitializeCharacter(int characterId, int characterLevel)
     {
         this.characterInfo = DataMgr.instance.GetCharacterDataElement(characterId);
-        this.growthList = DataMgr.instance.GetGrowData(characterId);
         this.characterLevel = characterLevel;
 
         this.characterInfo.AllSkillList.ForEach(skillId => {
