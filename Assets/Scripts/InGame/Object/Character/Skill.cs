@@ -51,6 +51,7 @@ public class Skill
         {
             effectList.Add(new SkillEffect(
                 skillEffect.SkillDataKind,
+                skillInfo.Type,
                 skillEffect.Value,
                 skillEffect.Time,
                 this.character

@@ -392,7 +392,7 @@ public abstract class Character : MonoBehaviour
             if (CheckDistanceUnder(target.Position2D, attackStartDistance))
             {
                 CreateNormalHitObject(target);
-                target.Damage(this.attackStat);
+                target.Damage(this.attackStat, this.characterInfo.Type);
             }
         }
     }
@@ -408,26 +408,21 @@ public abstract class Character : MonoBehaviour
 
     protected virtual void OnDamage(float damage) {}
 
-    public void Damage(float attackVal)
+    public void Damage(float attackVal, DamageType_E damageType)
     {
         if (hp <= 0)
         {
             // already die
             return;
         }
-        // TODO Critical 발동 확률
-        bool isCritical = false;
-        float criticalFactor = 1.0f;
-        if (isCritical)
-        {
-            criticalFactor = GameManager.instance.criticalFactor;
-        }
 
-        float damage = Mathf.Ceil(attackVal * criticalFactor * (
-            GameManager.instance.defenceFactor1 / (
-                GameManager.instance.defenceFactor1 + physicDefenceStat * GameManager.instance.defenceFactor2
-            ) * GameManager.instance.defenceFactor2
-        ));
+        int damage = DataMgr.instance.GetFinalDamage(
+            (int)attackVal,
+            damageType,
+            this.characterInfo.ID,
+            1
+        );
+
         OnDamage(damage);
 
         animator.SetTrigger("DAMAGE");
