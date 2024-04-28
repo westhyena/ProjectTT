@@ -23,7 +23,6 @@ public class Skill
     GameObject hitPrefab;
     GameObject rangeHitPrefab;
 
-    ProjectileInfo projectileInfo;
     GameObject projectilePrefab;
 
     List<SkillEffect> effectList = new ();
@@ -60,8 +59,7 @@ public class Skill
 
         if (!string.IsNullOrEmpty(skillInfo.ProjectileEffectName))
         {
-            // projectileInfo = DataManager.instance.GetProjectileInfo(skillInfo.projectileID);
-            // projectilePrefab = ResourceManager.GetProjectilePrefab(projectileInfo.ProjectileEffectName);
+            projectilePrefab = ResourceManager.GetProjectilePrefab(skillInfo.ProjectileEffectName);
         }
     }
 

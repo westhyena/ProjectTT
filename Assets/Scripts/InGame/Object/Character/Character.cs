@@ -40,7 +40,6 @@ public abstract class Character : MonoBehaviour
     public CharacterDataElement CharacterInfo { get { return characterInfo; } }
 
     GameObject normalHitPrefab;
-    Skill normalSkill;
     GameObject normalSkillPrefab;
 
     List<Skill> skillList = new ();
@@ -129,23 +128,11 @@ public abstract class Character : MonoBehaviour
     {
         this.characterInfo = DataMgr.instance.GetCharacterDataElement(characterId);
 
-        // SkillInfo normalSkillInfo = DataManager.instance.GetSkillInfo(characterInfo.normalAtk);
-        // normalSkill = new Skill(this, normalSkillInfo);
-
         this.characterInfo.AllSkillList.ForEach(skillId => {
             SkillDataElement skillInfo = DataMgr.instance.m_SkillDataElementDic[skillId];
             Skill skill = new Skill(this, skillInfo);
             skillList.Add(skill);
         });
-
-        // foreach (string skillId in characterInfo.skillIDs)
-        // {
-        //     SkillInfo skillInfo = DataManager.instance.GetSkillInfo(skillId);
-        //     if (skillInfo != null)
-        //     {
-        //         skillList.Add(new Skill(this, skillInfo));
-        //     }
-        // }
     }
 
     protected void Start()
@@ -167,18 +154,6 @@ public abstract class Character : MonoBehaviour
             if (!string.IsNullOrEmpty(characterInfo.ObjectEffFileName))
             {
                 this.projectilePrefab = ResourceManager.GetProjectilePrefab(characterInfo.ObjectEffFileName);
-            }
-            if (normalSkill != null)
-            {
-                // if (!string.IsNullOrEmpty(normalSkill.SkillInfo.projectileID))
-                // {
-                //     projectileInfo = DataManager.instance.GetProjectileInfo(normalSkill.SkillInfo.projectileID);
-                //     projectilePrefab = ResourceManager.GetProjectilePrefab(projectileInfo.projectilePrefab);
-                // }
-                // if (normalSkill.SkillInfo.atkAnimation != null)
-                // {
-                //     normalSkillPrefab = ResourceManager.GetSkillPrefab(normalSkill.SkillInfo.atkAnimation);
-                // }
             }
         }
 
@@ -428,7 +403,7 @@ public abstract class Character : MonoBehaviour
         projectile.transform.position = projectileSpawnPoint.position;
         projectile.transform.rotation = projectileSpawnPoint.rotation;
         Projectile projectileComponent = projectile.GetComponent<Projectile>();
-        projectileComponent.Initialize(this, target, normalSkill);
+        projectileComponent.Initialize(this, target, null);
     }
 
     protected virtual void OnDamage(float damage) {}
