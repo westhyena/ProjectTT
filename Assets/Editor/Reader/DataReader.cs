@@ -859,8 +859,9 @@ public class DataReader : EditorWindow
 								object[] obj2 = Character_FileTable.Rows[ii].ItemArray;
 
 								ce.CardIconName = Get<string>(obj2, 2);
-								string ColorValue = Get<string>(obj2, Get<int>(obj, 4) + 3);
-								ColorUtility.TryParseHtmlString(ColorValue, out ce.ThisCardBuffColor);
+								ce.BuffCardFileName = Get<string>(obj2, 3 + (int)ce.CardRating);
+								//string ColorValue = Get<string>(obj2, Get<int>(obj, 4) + 3);
+								//ColorUtility.TryParseHtmlString(ColorValue, out ce.ThisCardBuffColor);
 
 								m_DataMgr.m_UserSelectCardDataElementDic.Add(ce.ID, ce);
 							}

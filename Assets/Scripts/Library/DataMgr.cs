@@ -624,7 +624,7 @@ public class UserSelectCardDataElement
 	/// <summary>
 	/// 카드 등급 컬러 (현재 등급에 맞게 셋팅되있음)
 	/// </summary>
-	public Color ThisCardBuffColor = new Color();
+	public string BuffCardFileName;
 
 }
 
@@ -750,7 +750,7 @@ public class DataMgr : MonoBehaviour
 		switch (DamageType)
 		{
 			case DamageType_E.Physics:
-				int TargetMaxPD = m_CharacterDataElementDic[TargetIndex].PD + (m_CharacterDataElementDic[TargetIndex].GrowPD * TargetLevel) + (TargetGrowDataList[TargetGrowDataList.Count - 1].Add_PD ); // 타겟의 최고레벨의 방어력을 가져옴
+				int TargetMaxPD = m_CharacterDataElementDic[TargetIndex].PD + (m_CharacterDataElementDic[TargetIndex].GrowPD * (TargetGrowDataList.Count - 1)) + (TargetGrowDataList[TargetGrowDataList.Count - 1].Add_PD ); // 타겟의 최고레벨의 방어력을 가져옴
 				int TargetPD = m_CharacterDataElementDic[TargetIndex].PD + (m_CharacterDataElementDic[TargetIndex].GrowPD * TargetLevel) + TargetGrowDataList[TargetLevel].Add_PD; // 타겟의 현재 방어력
 				float TotalPDValue = ((float)TargetPD / (float)TargetMaxPD) * RValue; // 저항값을 구하기위한 최대방어력 대비 비율
 				int MaxresistancePValue = (int)(Damage * TotalPDValue); //데미지에 비례한 최대 저항값
@@ -758,7 +758,7 @@ public class DataMgr : MonoBehaviour
 				returnDamage = Damage - (TargetPD + RndMaxResistancePValue); //기본 방어 + 랜덤한 저항값으로 데미지에서 상쇄시켜준다.
 				break;
 			case DamageType_E.Magic:
-				int TargetMaxMD = m_CharacterDataElementDic[TargetIndex].MD + (m_CharacterDataElementDic[TargetIndex].GrowMD * TargetLevel) + TargetGrowDataList[TargetGrowDataList.Count - 1].Add_MD;
+				int TargetMaxMD = m_CharacterDataElementDic[TargetIndex].MD + (m_CharacterDataElementDic[TargetIndex].GrowMD * (TargetGrowDataList.Count - 1)) + TargetGrowDataList[TargetGrowDataList.Count - 1].Add_MD;
 				int TargetMD = m_CharacterDataElementDic[TargetIndex].MD + (m_CharacterDataElementDic[TargetIndex].GrowMD * TargetLevel) + TargetGrowDataList[TargetLevel].Add_MD;
 				float TotalMDValue = ((float)TargetMD / (float)TargetMaxMD) * RValue;
 				int resistanceMValue = (int)(Damage * TotalMDValue);
