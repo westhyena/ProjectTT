@@ -790,14 +790,16 @@ public class DataMgr : MonoBehaviour
 	}
 
 	/// <summary>
-	/// 레벨에 따른 스페셜 Grow수치를 반환
+	/// 레벨에 따른 Grow수치를 적용한 수치 반환
 	/// </summary>
-	public void GetCharacterSpecialGrowData(int CharacterID,int CharacterLevel,ref int GrowHP,ref int GrowAttackDmg, ref int GrowPD, ref int GrowMD)
+	public void GetCharacterGrowData(int CharacterID,int CharacterLevel,ref int HP,ref int AttackDmg, ref int PD, ref int MD)
 	{
-		GrowHP = m_CharacterDataElementDic[CharacterID].GrowHp * CharacterLevel;
-		GrowAttackDmg = m_CharacterDataElementDic[CharacterID].GrowHp * CharacterLevel;
-		GrowPD = m_CharacterDataElementDic[CharacterID].GrowPD * CharacterLevel;
-		GrowMD = m_CharacterDataElementDic[CharacterID].GrowMD * CharacterLevel;
+		List<InGame_CharacterGrowData> TargetGrowDataList = GetGrowData(CharacterID);
+
+		HP = (m_CharacterDataElementDic[CharacterID].GrowHp * CharacterLevel) + TargetGrowDataList[CharacterLevel].Add_Hp;
+		AttackDmg = (m_CharacterDataElementDic[CharacterID].GrowHp * CharacterLevel) + TargetGrowDataList[CharacterLevel].Add_AttackDamage;
+		PD = (m_CharacterDataElementDic[CharacterID].GrowPD * CharacterLevel) + TargetGrowDataList[CharacterLevel].Add_PD;
+		MD = (m_CharacterDataElementDic[CharacterID].GrowMD * CharacterLevel) + TargetGrowDataList[CharacterLevel].Add_MD;
 	}
 
 	/// <summary>
