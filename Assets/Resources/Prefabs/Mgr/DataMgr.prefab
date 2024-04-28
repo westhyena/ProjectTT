@@ -2599,7 +2599,7 @@ MonoBehaviour:
       Mys: 
   m_InGameSystemElement:
     MercenaryPointGetTime: 2
-    GetMercenaryPoint: 5
+    GetMercenaryPoint: 20
     Mercenary_LevelUp_NeedPoint: 01000000030000000500000007000000090000000b0000000d0000000f00000011000000130000001500000017000000190000001b0000001d0000001f000000
     Summon_NeedPoint: 10
     Call_NeedPoint: 5
@@ -3501,7 +3501,7 @@ MonoBehaviour:
       DamageTargetType: 2
       DamageTypeRange: 0
       AttackSpeed: 1
-      AttackDamage: 30
+      AttackDamage: 50
       HP: 1000
       PD: 50
       MD: 20
@@ -3526,8 +3526,8 @@ MonoBehaviour:
       AttackRange: 2
       DamageTargetType: 0
       DamageTypeRange: 0
-      AttackSpeed: 1
-      AttackDamage: 10
+      AttackSpeed: 0.7
+      AttackDamage: 20
       HP: 100
       PD: 50
       MD: 10
@@ -3549,11 +3549,11 @@ MonoBehaviour:
       Position: 0
       Type: 0
       AttackType: 1
-      AttackRange: 4
+      AttackRange: 6
       DamageTargetType: 0
       DamageTypeRange: 0
-      AttackSpeed: 1
-      AttackDamage: 5
+      AttackSpeed: 0.9
+      AttackDamage: 15
       HP: 100
       PD: 30
       MD: 20
@@ -3575,11 +3575,11 @@ MonoBehaviour:
       Position: 0
       Type: 0
       AttackType: 1
-      AttackRange: 3
+      AttackRange: 5
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1
-      AttackDamage: 8
+      AttackDamage: 25
       HP: 100
       PD: 10
       MD: 50
@@ -3601,11 +3601,11 @@ MonoBehaviour:
       Position: 0
       Type: 0
       AttackType: 1
-      AttackRange: 3
+      AttackRange: 4
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1.5
-      AttackDamage: 10
+      AttackDamage: 20
       HP: 100
       PD: 40
       MD: 10
@@ -3632,7 +3632,7 @@ MonoBehaviour:
       DamageTypeRange: 0
       AttackSpeed: 1
       AttackDamage: 5
-      HP: 50
+      HP: 30
       PD: 1
       MD: 0
       AllSkillList: 
@@ -3658,7 +3658,7 @@ MonoBehaviour:
       DamageTypeRange: 0
       AttackSpeed: 1
       AttackDamage: 5
-      HP: 50
+      HP: 35
       PD: 1
       MD: 0
       AllSkillList: 
@@ -3684,7 +3684,7 @@ MonoBehaviour:
       DamageTypeRange: 0
       AttackSpeed: 1
       AttackDamage: 5
-      HP: 50
+      HP: 40
       PD: 1
       MD: 1
       AllSkillList: 
@@ -3710,7 +3710,7 @@ MonoBehaviour:
       DamageTypeRange: 0
       AttackSpeed: 1
       AttackDamage: 5
-      HP: 50
+      HP: 30
       PD: 1
       MD: 1
       AllSkillList: 

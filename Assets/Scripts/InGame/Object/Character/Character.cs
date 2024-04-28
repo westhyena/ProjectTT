@@ -38,9 +38,9 @@ public abstract class Character : MonoBehaviour
 
     CharacterDataElement characterInfo;
     public CharacterDataElement CharacterInfo { get { return characterInfo; } }
+    int characterLevel = 1;
 
     GameObject normalHitPrefab;
-    Skill normalSkill;
     GameObject normalSkillPrefab;
 
     List<Skill> skillList = new ();
@@ -60,12 +60,26 @@ public abstract class Character : MonoBehaviour
 
     float attackSpeed = 1.0f;
 
-    float attackStat = 10.0f;
-    public float AttackStat { get { return attackStat; } }
-    float physicDefenceStat = 5.0f;
-    public float PhysicDefenceStat { get { return physicDefenceStat; } }
-    float magicDefenceStat = 5.0f;
-    public float MagicDefenceStat { get { return magicDefenceStat; } }
+    float baseAttackStat = 10.0f;
+    public float AttackStat { get {
+        int growHP = 0, growAttackDamge = 0, growPD = 0, growMD = 0;
+        DataMgr.instance.GetCharacterGrowData(
+            characterInfo.ID,
+            characterLevel,
+            ref growHP,
+            ref growAttackDamge,
+            ref growPD,
+            ref growMD 
+        );
+        return (
+            baseAttackStat + 
+            growAttackDamge
+        );
+    } }
+    float basePhysicDefenceStat = 5.0f;
+    public float PhysicDefenceStat { get { return basePhysicDefenceStat; } }
+    float baseMagicDefenceStat = 5.0f;
+    public float MagicDefenceStat { get { return baseMagicDefenceStat; } }
     public float hpStat = 100.0f;
     public float HpStat { get { return hpStat; } }
 
@@ -125,27 +139,16 @@ public abstract class Character : MonoBehaviour
         this.state = State.Init;
     }
 
-    public void InitializeCharacter(int characterId)
+    public void InitializeCharacter(int characterId, int characterLevel)
     {
         this.characterInfo = DataMgr.instance.GetCharacterDataElement(characterId);
-
-        // SkillInfo normalSkillInfo = DataManager.instance.GetSkillInfo(characterInfo.normalAtk);
-        // normalSkill = new Skill(this, normalSkillInfo);
+        this.characterLevel = characterLevel;
 
         this.characterInfo.AllSkillList.ForEach(skillId => {
             SkillDataElement skillInfo = DataMgr.instance.m_SkillDataElementDic[skillId];
             Skill skill = new Skill(this, skillInfo);
             skillList.Add(skill);
         });
-
-        // foreach (string skillId in characterInfo.skillIDs)
-        // {
-        //     SkillInfo skillInfo = DataManager.instance.GetSkillInfo(skillId);
-        //     if (skillInfo != null)
-        //     {
-        //         skillList.Add(new Skill(this, skillInfo));
-        //     }
-        // }
     }
 
     protected void Start()
@@ -154,9 +157,9 @@ public abstract class Character : MonoBehaviour
         {
             this.mspd = characterInfo.MoveSpeed;
             this.hpStat = characterInfo.HP;
-            this.attackStat = characterInfo.AttackDamage;
-            this.physicDefenceStat = characterInfo.PD;
-            this.magicDefenceStat = characterInfo.MD;
+            this.baseAttackStat = characterInfo.AttackDamage;
+            this.basePhysicDefenceStat = characterInfo.PD;
+            this.baseMagicDefenceStat = characterInfo.MD;
 
             this.rangeOfTarget = characterInfo.AttackRange;
             this.attackSpeed =  characterInfo.AttackSpeed;
@@ -167,18 +170,6 @@ public abstract class Character : MonoBehaviour
             if (!string.IsNullOrEmpty(characterInfo.ObjectEffFileName))
             {
                 this.projectilePrefab = ResourceManager.GetProjectilePrefab(characterInfo.ObjectEffFileName);
-            }
-            if (normalSkill != null)
-            {
-                // if (!string.IsNullOrEmpty(normalSkill.SkillInfo.projectileID))
-                // {
-                //     projectileInfo = DataManager.instance.GetProjectileInfo(normalSkill.SkillInfo.projectileID);
-                //     projectilePrefab = ResourceManager.GetProjectilePrefab(projectileInfo.projectilePrefab);
-                // }
-                // if (normalSkill.SkillInfo.atkAnimation != null)
-                // {
-                //     normalSkillPrefab = ResourceManager.GetSkillPrefab(normalSkill.SkillInfo.atkAnimation);
-                // }
             }
         }
 
@@ -417,7 +408,7 @@ public abstract class Character : MonoBehaviour
             if (CheckDistanceUnder(target.Position2D, attackStartDistance))
             {
                 CreateNormalHitObject(target);
-                target.Damage(this.attackStat);
+                target.Damage(AttackStat, this.characterInfo.Type);
             }
         }
     }
@@ -428,31 +419,26 @@ public abstract class Character : MonoBehaviour
         projectile.transform.position = projectileSpawnPoint.position;
         projectile.transform.rotation = projectileSpawnPoint.rotation;
         Projectile projectileComponent = projectile.GetComponent<Projectile>();
-        projectileComponent.Initialize(this, target, normalSkill);
+        projectileComponent.Initialize(this, target, null);
     }
 
     protected virtual void OnDamage(float damage) {}
 
-    public void Damage(float attackVal)
+    public void Damage(float attackVal, DamageType_E damageType)
     {
         if (hp <= 0)
         {
             // already die
             return;
         }
-        // TODO Critical 발동 확률
-        bool isCritical = false;
-        float criticalFactor = 1.0f;
-        if (isCritical)
-        {
-            criticalFactor = GameManager.instance.criticalFactor;
-        }
 
-        float damage = Mathf.Ceil(attackVal * criticalFactor * (
-            GameManager.instance.defenceFactor1 / (
-                GameManager.instance.defenceFactor1 + physicDefenceStat * GameManager.instance.defenceFactor2
-            ) * GameManager.instance.defenceFactor2
-        ));
+        int damage = DataMgr.instance.GetFinalDamage(
+            (int)attackVal,
+            damageType,
+            this.characterInfo.ID,
+            1
+        );
+
         OnDamage(damage);
 
         animator.SetTrigger("DAMAGE");

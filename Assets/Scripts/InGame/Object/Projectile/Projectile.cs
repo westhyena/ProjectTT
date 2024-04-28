@@ -43,7 +43,7 @@ public class Projectile : MonoBehaviour
             else
             { // 일반공격
                 source.CreateNormalHitObject(target);
-                target.Damage(source.AttackStat);
+                target.Damage(source.AttackStat, source.CharacterInfo.Type);
             }
             Destroy(gameObject);
             return;

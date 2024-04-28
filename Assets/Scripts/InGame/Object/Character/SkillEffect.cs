@@ -5,6 +5,7 @@ using UnityEngine;
 public class SkillEffect
 {
     SkillDataKind_E effectType;
+    DamageType_E damageType;
 
     float value;
     float duration;
@@ -12,12 +13,14 @@ public class SkillEffect
     Character source;
     public SkillEffect(
         SkillDataKind_E effectType,
+        DamageType_E damageType,
         float value,
         float duration,
         Character source
     )
     {
         this.effectType = effectType;
+        this.damageType = damageType;
         this.value = value;
         this.duration = duration;
         this.source = source;
@@ -25,7 +28,7 @@ public class SkillEffect
 
     void ApplyDamage(Character target)
     {
-        target.Damage(value);
+        target.Damage(value, damageType);
     }
 
     public void ApplyEffect(Character target)
