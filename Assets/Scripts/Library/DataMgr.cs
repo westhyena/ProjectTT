@@ -798,10 +798,12 @@ public class DataMgr : MonoBehaviour
 	/// </summary>
 	public void GetCharacterSpecialGrowData(int CharacterID,int CharacterLevel,ref int GrowHP,ref int GrowAttackDmg, ref int GrowPD, ref int GrowMD)
 	{
-		GrowHP = m_CharacterDataElementDic[CharacterID].GrowHp * CharacterLevel;
-		GrowAttackDmg = m_CharacterDataElementDic[CharacterID].GrowHp * CharacterLevel;
-		GrowPD = m_CharacterDataElementDic[CharacterID].GrowPD * CharacterLevel;
-		GrowMD = m_CharacterDataElementDic[CharacterID].GrowMD * CharacterLevel;
+		List<InGame_CharacterGrowData> TargetGrowDataList = GetGrowData(CharacterID);
+
+		GrowHP = (m_CharacterDataElementDic[CharacterID].GrowHp * CharacterLevel) + TargetGrowDataList[CharacterLevel].Add_Hp;
+		GrowAttackDmg = (m_CharacterDataElementDic[CharacterID].GrowHp * CharacterLevel) + TargetGrowDataList[CharacterLevel].Add_AttackDamage;
+		GrowPD = (m_CharacterDataElementDic[CharacterID].GrowPD * CharacterLevel) + TargetGrowDataList[CharacterLevel].Add_PD;
+		GrowMD = (m_CharacterDataElementDic[CharacterID].GrowMD * CharacterLevel) + TargetGrowDataList[CharacterLevel].Add_MD;
 	}
 
 	/// <summary>
