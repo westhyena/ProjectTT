@@ -794,9 +794,9 @@ public class DataMgr : MonoBehaviour
 	}
 
 	/// <summary>
-	/// 레벨에 따른 스페셜 Grow수치를 반환
+	/// 레벨에 따른 Grow수치를 적용한 수치 반환
 	/// </summary>
-	public void GetCharacterSpecialGrowData(int CharacterID,int CharacterLevel,ref int GrowHP,ref int GrowAttackDmg, ref int GrowPD, ref int GrowMD)
+	public void GetCharacterGrowData(int CharacterID,int CharacterLevel,ref int GrowHP,ref int GrowAttackDmg, ref int GrowPD, ref int GrowMD)
 	{
 		List<InGame_CharacterGrowData> TargetGrowDataList = GetGrowData(CharacterID);
 
