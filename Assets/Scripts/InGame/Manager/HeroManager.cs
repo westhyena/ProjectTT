@@ -58,7 +58,7 @@ public class HeroManager : MonoBehaviour
             Quaternion.Euler(GameManager.instance.characterRotation)
         );
         Player player = playerObj.AddComponent<Player>();
-        player.InitializeCharacter(playerCharacterId);
+        player.InitializeCharacter(playerCharacterId, 0);
         return player;
     }
 
@@ -82,7 +82,7 @@ public class HeroManager : MonoBehaviour
         heroObj.transform.localRotation = Quaternion.Euler(GameManager.instance.characterRotation);
         Hero hero = heroObj.GetOrAddComponent<Hero>();
         hero.Initialize(player);
-        hero.InitializeCharacter(info.ID);
+        hero.InitializeCharacter(info.ID, 0);
         heroMap[hero.GetInstanceID()] = hero;
         return hero;
     }

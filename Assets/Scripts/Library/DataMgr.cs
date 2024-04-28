@@ -728,10 +728,6 @@ public class DataMgr : MonoBehaviour
 	private void Awake()
 	{
 		DontDestroyOnLoad(this.gameObject);
-
-		Debug.Log(m_UserActiveSkillDataElementDic[0].UserSkillName);
-
-
 	}
 
 	/// <summary>

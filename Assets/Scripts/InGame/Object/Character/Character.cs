@@ -38,6 +38,8 @@ public abstract class Character : MonoBehaviour
 
     CharacterDataElement characterInfo;
     public CharacterDataElement CharacterInfo { get { return characterInfo; } }
+    int characterLevel = 1;
+    List<InGame_CharacterGrowData> growthList = new ();
 
     GameObject normalHitPrefab;
     GameObject normalSkillPrefab;
@@ -59,12 +61,26 @@ public abstract class Character : MonoBehaviour
 
     float attackSpeed = 1.0f;
 
-    float attackStat = 10.0f;
-    public float AttackStat { get { return attackStat; } }
-    float physicDefenceStat = 5.0f;
-    public float PhysicDefenceStat { get { return physicDefenceStat; } }
-    float magicDefenceStat = 5.0f;
-    public float MagicDefenceStat { get { return magicDefenceStat; } }
+    float baseAttackStat = 10.0f;
+    public float AttackStat { get {
+        int growHP = 0, growAttackDamge = 0, growPD = 0, growMD = 0;
+        DataMgr.instance.GetCharacterSpecialGrowData(
+            characterInfo.ID,
+            characterLevel,
+            ref growHP,
+            ref growAttackDamge,
+            ref growPD,
+            ref growMD 
+        );
+        return (
+            baseAttackStat + 
+            growthList[characterLevel].Add_AttackDamage + growAttackDamge
+        );
+    } }
+    float basePhysicDefenceStat = 5.0f;
+    public float PhysicDefenceStat { get { return basePhysicDefenceStat; } }
+    float baseMagicDefenceStat = 5.0f;
+    public float MagicDefenceStat { get { return baseMagicDefenceStat; } }
     public float hpStat = 100.0f;
     public float HpStat { get { return hpStat; } }
 
@@ -124,9 +140,11 @@ public abstract class Character : MonoBehaviour
         this.state = State.Init;
     }
 
-    public void InitializeCharacter(int characterId)
+    public void InitializeCharacter(int characterId, int characterLevel)
     {
         this.characterInfo = DataMgr.instance.GetCharacterDataElement(characterId);
+        this.growthList = DataMgr.instance.GetGrowData(characterId);
+        this.characterLevel = characterLevel;
 
         this.characterInfo.AllSkillList.ForEach(skillId => {
             SkillDataElement skillInfo = DataMgr.instance.m_SkillDataElementDic[skillId];
@@ -141,9 +159,9 @@ public abstract class Character : MonoBehaviour
         {
             this.mspd = characterInfo.MoveSpeed;
             this.hpStat = characterInfo.HP;
-            this.attackStat = characterInfo.AttackDamage;
-            this.physicDefenceStat = characterInfo.PD;
-            this.magicDefenceStat = characterInfo.MD;
+            this.baseAttackStat = characterInfo.AttackDamage;
+            this.basePhysicDefenceStat = characterInfo.PD;
+            this.baseMagicDefenceStat = characterInfo.MD;
 
             this.rangeOfTarget = characterInfo.AttackRange;
             this.attackSpeed =  characterInfo.AttackSpeed;
@@ -392,7 +410,7 @@ public abstract class Character : MonoBehaviour
             if (CheckDistanceUnder(target.Position2D, attackStartDistance))
             {
                 CreateNormalHitObject(target);
-                target.Damage(this.attackStat, this.characterInfo.Type);
+                target.Damage(AttackStat, this.characterInfo.Type);
             }
         }
     }

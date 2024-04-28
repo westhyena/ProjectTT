@@ -36,7 +36,7 @@ public class EnemyManager : MonoBehaviour
         enemyObj.transform.localRotation = Quaternion.Euler(GameManager.instance.characterRotation);
         Enemy enemy = enemyObj.GetOrAddComponent<Enemy>();
         enemy.Initialize(player);
-        enemy.InitializeCharacter(info.ID);
+        enemy.InitializeCharacter(info.ID, 0);
         enemyMap[enemy.GetInstanceID()] = enemy;
         return enemy;
     }
