@@ -103,7 +103,6 @@ public abstract class Character : MonoBehaviour
 
     protected virtual void Awake()
     {
-        Debug.Log("AWAKE " + this.name);
         this.animator = GetComponentInChildren<Animator>();
         List<string> attackTriggerList = new ();
         foreach (AnimatorControllerParameter parameter in this.animator.parameters)
@@ -168,7 +167,6 @@ public abstract class Character : MonoBehaviour
             if (!string.IsNullOrEmpty(characterInfo.ObjectEffFileName))
             {
                 this.projectilePrefab = ResourceManager.GetProjectilePrefab(characterInfo.ObjectEffFileName);
-                Debug.Log("LOAD PROJECTILE PREFAB " + this.name + " - " + projectilePrefab);
             }
             if (normalSkill != null)
             {
@@ -426,8 +424,6 @@ public abstract class Character : MonoBehaviour
 
     protected void AttackRange()
     {
-        projectilePrefab = ResourceManager.GetProjectilePrefab(characterInfo.ObjectEffFileName);
-        Debug.Log("ATTACK RANGE " + this.name + " - " + projectilePrefab);
         GameObject projectile = Instantiate(projectilePrefab);
         projectile.transform.position = projectileSpawnPoint.position;
         projectile.transform.rotation = projectileSpawnPoint.rotation;
