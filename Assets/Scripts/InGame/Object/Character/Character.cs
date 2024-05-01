@@ -164,7 +164,7 @@ public abstract class Character : MonoBehaviour
 
             this.rangeOfTarget = characterInfo.AttackRange;
             this.attackSpeed =  characterInfo.AttackSpeed;
-            this.attackCooltime = 1.0f / characterInfo.AttackSpeed + Time.fixedDeltaTime;
+            this.attackCooltime = this.attackSpeed + Time.fixedDeltaTime;
 
             
             normalHitPrefab = ResourceManager.GetHitPrefab("Hit_Base_A");
@@ -178,7 +178,7 @@ public abstract class Character : MonoBehaviour
         attackStartDistance = GameManager.instance.baseColliderWidth * rangeOfTarget;
         targetStartDistance = attackStartDistance * 2.0f;
 
-        this.animator.SetFloat("attackSpeed", this.attackSpeed);
+        this.animator.SetFloat("attackSpeed", 1.0f / this.attackSpeed);
 
         maxHp = hpStat;
         hp = maxHp;
