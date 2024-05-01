@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6908001353646956027}
   - component: {fileID: 3478047504601768184}
+  - component: {fileID: 417605370620466682}
   m_Layer: 0
   m_Name: Hit_IceBall_S
   m_TagString: Untagged
@@ -45,6 +46,19 @@ SortingGroup:
   m_SortingLayer: 2
   m_SortingOrder: 5
   m_SortAtRoot: 0
+--- !u!114 &417605370620466682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65022950407820475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4937d924837454dc0930437abb390825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 5
 --- !u!1 &683739555748856273
 GameObject:
   m_ObjectHideFlags: 0

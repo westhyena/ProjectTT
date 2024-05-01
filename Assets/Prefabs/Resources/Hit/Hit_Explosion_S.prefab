@@ -19580,6 +19580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3667532195845626770}
   - component: {fileID: 1161786093005423876}
+  - component: {fileID: -721778830542871363}
   m_Layer: 0
   m_Name: Hit_Explosion_S
   m_TagString: Untagged
@@ -19615,6 +19616,19 @@ SortingGroup:
   m_SortingLayer: 2
   m_SortingOrder: 5
   m_SortAtRoot: 1
+--- !u!114 &-721778830542871363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3750098477158279545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4937d924837454dc0930437abb390825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 5
 --- !u!1 &6389258822686121534
 GameObject:
   m_ObjectHideFlags: 0

@@ -58826,6 +58826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5753448929600910780}
   - component: {fileID: 3301724353552648159}
+  - component: {fileID: -688324622237186856}
   m_Layer: 0
   m_Name: Hit_BigShot
   m_TagString: Untagged
@@ -58861,6 +58862,19 @@ SortingGroup:
   m_SortingLayer: 2
   m_SortingOrder: 5
   m_SortAtRoot: 1
+--- !u!114 &-688324622237186856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4836174196154596838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4937d924837454dc0930437abb390825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 5
 --- !u!1 &6194934766285787469
 GameObject:
   m_ObjectHideFlags: 0

@@ -4898,6 +4898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3762198667958199524}
   - component: {fileID: 2110730415913411852}
+  - component: {fileID: 428482800462472230}
   m_Layer: 0
   m_Name: Hit_Crash_S
   m_TagString: Untagged
@@ -4933,6 +4934,19 @@ SortingGroup:
   m_SortingLayer: 2
   m_SortingOrder: 5
   m_SortAtRoot: 1
+--- !u!114 &428482800462472230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717071615871548231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4937d924837454dc0930437abb390825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 5
 --- !u!1 &6128709574416219427
 GameObject:
   m_ObjectHideFlags: 0

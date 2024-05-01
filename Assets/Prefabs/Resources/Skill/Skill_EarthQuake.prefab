@@ -4898,6 +4898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 330872759846204551}
   - component: {fileID: 920633260212310643}
+  - component: {fileID: -7494671941614963929}
   m_Layer: 0
   m_Name: Skill_EarthQuake
   m_TagString: Untagged
@@ -4933,6 +4934,19 @@ SortingGroup:
   m_SortingLayer: 2
   m_SortingOrder: 1
   m_SortAtRoot: 1
+--- !u!114 &-7494671941614963929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112906379595551561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4937d924837454dc0930437abb390825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 5
 --- !u!1 &2182221197722296649
 GameObject:
   m_ObjectHideFlags: 0

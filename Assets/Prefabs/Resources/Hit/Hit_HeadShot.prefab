@@ -19615,6 +19615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5376237855642147480}
   - component: {fileID: 7448690336512094675}
+  - component: {fileID: 3774398604190197815}
   m_Layer: 0
   m_Name: Hit_HeadShot
   m_TagString: Untagged
@@ -19650,3 +19651,16 @@ SortingGroup:
   m_SortingLayer: 2
   m_SortingOrder: 5
   m_SortAtRoot: 1
+--- !u!114 &3774398604190197815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8806818096743538837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4937d924837454dc0930437abb390825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 5
