@@ -2614,93 +2614,149 @@ MonoBehaviour:
       StartMercenaryPoint: 0
       Wave0:
       - WaveID: 0
+        SummonTime: 1
+        ObjName: "\uB098\uC05C \uBC84\uC12F"
+        CharacterID: 1000
+        MonsterType: 0
+        CharacterLevel: 1
+        SummonCount: 5
+      - WaveID: 0
         SummonTime: 5
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
         MonsterType: 0
         CharacterLevel: 1
-        SummonCount: 30
+        SummonCount: 10
+      - WaveID: 0
+        SummonTime: 8
+        ObjName: "\uB098\uC05C \uBC84\uC12F"
+        CharacterID: 1000
+        MonsterType: 0
+        CharacterLevel: 1
+        SummonCount: 15
+      - WaveID: 0
+        SummonTime: 9
+        ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
+        CharacterID: 1001
+        MonsterType: 0
+        CharacterLevel: 1
+        SummonCount: 5
       - WaveID: 0
         SummonTime: 10
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
         MonsterType: 0
         CharacterLevel: 1
-        SummonCount: 50
+        SummonCount: 10
       - WaveID: 0
-        SummonTime: 30
+        SummonTime: 12
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
         MonsterType: 0
         CharacterLevel: 1
-        SummonCount: 20
+        SummonCount: 15
+      - WaveID: 0
+        SummonTime: 15
+        ObjName: "\uB098\uC05C \uBC84\uC12F"
+        CharacterID: 1000
+        MonsterType: 0
+        CharacterLevel: 1
+        SummonCount: 10
       Wave1:
       - WaveID: 1
-        SummonTime: 60
+        SummonTime: 1
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
         MonsterType: 0
         CharacterLevel: 1
-        SummonCount: 50
+        SummonCount: 10
       - WaveID: 1
-        SummonTime: 65
+        SummonTime: 4
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
         MonsterType: 0
         CharacterLevel: 1
-        SummonCount: 50
+        SummonCount: 10
+      - WaveID: 1
+        SummonTime: 10
+        ObjName: "\uB098\uC05C \uBC84\uC12F"
+        CharacterID: 1000
+        MonsterType: 0
+        CharacterLevel: 1
+        SummonCount: 10
+      - WaveID: 1
+        SummonTime: 15
+        ObjName: "\uB098\uC05C \uBC84\uC12F"
+        CharacterID: 1000
+        MonsterType: 0
+        CharacterLevel: 1
+        SummonCount: 15
       Wave2:
       - WaveID: 2
-        SummonTime: 120
+        SummonTime: 1
         ObjName: "\uD63C\uC774\uB098\uAC04 \uC6D0\uC8FC\uBBFC"
         CharacterID: 2000
         MonsterType: 1
         CharacterLevel: 1
         SummonCount: 1
       - WaveID: 2
-        SummonTime: 120
+        SummonTime: 5
         ObjName: "\uC804\uC0AC \uBA67\uB3FC\uC9C0"
         CharacterID: 1002
         MonsterType: 0
         CharacterLevel: 1
-        SummonCount: 30
+        SummonCount: 10
+      - WaveID: 2
+        SummonTime: 10
+        ObjName: "\uB208\uC54C \uBC15\uC950"
+        CharacterID: 1014
+        MonsterType: 0
+        CharacterLevel: 1
+        SummonCount: 10
       Wave3:
       - WaveID: 3
-        SummonTime: 180
+        SummonTime: 1
         ObjName: "\uC2AC\uB77C\uC784"
         CharacterID: 1003
         MonsterType: 0
         CharacterLevel: 1
-        SummonCount: 50
+        SummonCount: 20
       - WaveID: 3
-        SummonTime: 200
+        SummonTime: 10
         ObjName: "\uC2AC\uB77C\uC784"
         CharacterID: 1003
         MonsterType: 0
         CharacterLevel: 1
-        SummonCount: 100
+        SummonCount: 30
+      - WaveID: 3
+        SummonTime: 15
+        ObjName: "\uD63C\uC774 \uB098\uAC04 \uCC3D\uBCD1"
+        CharacterID: 1011
+        MonsterType: 0
+        CharacterLevel: 1
+        SummonCount: 10
       Wave4:
       - WaveID: 4
-        SummonTime: 240
+        SummonTime: 1
         ObjName: "\uAC70\uB300\uD55C \uAF43\uC78E \uC2DD\uBB3C"
         CharacterID: 3000
         MonsterType: 2
         CharacterLevel: 1
         SummonCount: 1
       - WaveID: 4
-        SummonTime: 250
+        SummonTime: 5
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
         MonsterType: 0
         CharacterLevel: 1
-        SummonCount: 100
+        SummonCount: 20
       - WaveID: 4
-        SummonTime: 260
+        SummonTime: 10
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
         MonsterType: 0
         CharacterLevel: 1
-        SummonCount: 100
+        SummonCount: 20
       IconName: "\uC544\uC774\uCF58 \uD30C\uC77C \uBA85"
       StageMapObjectName: "\uB9F5 \uC624\uBE0C\uC81D\uD2B8 \uD30C\uC77C\uBA85"
     - id: 1
@@ -3493,7 +3549,7 @@ MonoBehaviour:
       CharacterName: "\uD30C\uB780\uBA38\uB9AC \uC601\uC6C5"
       CharacterNameID: 1000
       CharacterDescID: 2000
-      MoveSpeed: 4
+      MoveSpeed: 5
       Position: 0
       Type: 0
       AttackType: 0
@@ -3519,7 +3575,7 @@ MonoBehaviour:
       CharacterName: "\uC77C\uBC18 \uC804\uC0AC"
       CharacterNameID: 3000
       CharacterDescID: 4000
-      MoveSpeed: 4
+      MoveSpeed: 5
       Position: 0
       Type: 0
       AttackType: 0
@@ -3529,8 +3585,8 @@ MonoBehaviour:
       AttackSpeed: 0.7
       AttackDamage: 20
       HP: 100
-      PD: 50
-      MD: 10
+      PD: 10
+      MD: 5
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -3545,7 +3601,7 @@ MonoBehaviour:
       CharacterName: "\uC77C\uBC18 \uAD81\uC218"
       CharacterNameID: 3001
       CharacterDescID: 4001
-      MoveSpeed: 4
+      MoveSpeed: 3.5
       Position: 0
       Type: 0
       AttackType: 1
@@ -3553,10 +3609,10 @@ MonoBehaviour:
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 0.9
-      AttackDamage: 15
+      AttackDamage: 25
       HP: 100
-      PD: 30
-      MD: 20
+      PD: 6
+      MD: 6
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -3571,7 +3627,7 @@ MonoBehaviour:
       CharacterName: "\uC77C\uBC18 \uBC95\uC0AC"
       CharacterNameID: 3002
       CharacterDescID: 4002
-      MoveSpeed: 4
+      MoveSpeed: 3.5
       Position: 0
       Type: 0
       AttackType: 1
@@ -3579,10 +3635,10 @@ MonoBehaviour:
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1
-      AttackDamage: 25
+      AttackDamage: 30
       HP: 100
-      PD: 10
-      MD: 50
+      PD: 5
+      MD: 10
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -3597,7 +3653,7 @@ MonoBehaviour:
       CharacterName: "\uB3C4\uB07C \uD22C\uCC99 \uB4DC\uC6CC\uD504"
       CharacterNameID: 3003
       CharacterDescID: 4003
-      MoveSpeed: 4
+      MoveSpeed: 3
       Position: 0
       Type: 0
       AttackType: 1
@@ -3605,10 +3661,10 @@ MonoBehaviour:
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1.5
-      AttackDamage: 20
+      AttackDamage: 40
       HP: 100
-      PD: 40
-      MD: 10
+      PD: 8
+      MD: 2
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -3623,15 +3679,15 @@ MonoBehaviour:
       CharacterName: "\uB098\uC05C \uBC84\uC12F"
       CharacterNameID: 10000
       CharacterDescID: 11000
-      MoveSpeed: 4
+      MoveSpeed: 2.75
       Position: 0
       Type: 0
       AttackType: 0
       AttackRange: 1
       DamageTargetType: 0
       DamageTypeRange: 0
-      AttackSpeed: 1
-      AttackDamage: 5
+      AttackSpeed: 0.8
+      AttackDamage: 20
       HP: 30
       PD: 1
       MD: 0
@@ -3649,7 +3705,7 @@ MonoBehaviour:
       CharacterName: "\uCD08\uC6D0\uC758 \uB3FC\uC9C0  "
       CharacterNameID: 10001
       CharacterDescID: 11001
-      MoveSpeed: 4
+      MoveSpeed: 3
       Position: 0
       Type: 0
       AttackType: 0
@@ -3657,7 +3713,7 @@ MonoBehaviour:
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1
-      AttackDamage: 5
+      AttackDamage: 22
       HP: 35
       PD: 1
       MD: 0
@@ -3675,7 +3731,7 @@ MonoBehaviour:
       CharacterName: "\uD654\uB09C \uB3FC\uC9C0 \uC804\uC0AC   "
       CharacterNameID: 10002
       CharacterDescID: 11002
-      MoveSpeed: 4
+      MoveSpeed: 2.5
       Position: 0
       Type: 0
       AttackType: 0
@@ -3683,7 +3739,7 @@ MonoBehaviour:
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1
-      AttackDamage: 5
+      AttackDamage: 30
       HP: 40
       PD: 1
       MD: 1
@@ -3701,15 +3757,15 @@ MonoBehaviour:
       CharacterName: "\uD3C9\uC57C \uC2AC\uB77C\uC784"
       CharacterNameID: 10003
       CharacterDescID: 11003
-      MoveSpeed: 4
+      MoveSpeed: 2
       Position: 0
       Type: 0
       AttackType: 0
       AttackRange: 1
       DamageTargetType: 0
       DamageTypeRange: 0
-      AttackSpeed: 1
-      AttackDamage: 5
+      AttackSpeed: 0.6
+      AttackDamage: 20
       HP: 30
       PD: 1
       MD: 1
@@ -3909,7 +3965,7 @@ MonoBehaviour:
       CharacterName: "\uD63C\uC774 \uB098\uAC04 \uCC3D\uBCD1 "
       CharacterNameID: 10011
       CharacterDescID: 11011
-      MoveSpeed: 4
+      MoveSpeed: 3
       Position: 0
       Type: 0
       AttackType: 1
@@ -3917,8 +3973,8 @@ MonoBehaviour:
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1
-      AttackDamage: 5
-      HP: 50
+      AttackDamage: 10
+      HP: 30
       PD: 1
       MD: 1
       AllSkillList: 
@@ -3987,16 +4043,16 @@ MonoBehaviour:
       CharacterName: "\uB208\uC54C \uBC15\uC950"
       CharacterNameID: 10014
       CharacterDescID: 11014
-      MoveSpeed: 4
-      Position: 0
+      MoveSpeed: 3
+      Position: 1
       Type: 0
       AttackType: 1
       AttackRange: 3
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1
-      AttackDamage: 5
-      HP: 50
+      AttackDamage: 12
+      HP: 20
       PD: 1
       MD: 1
       AllSkillList: 
@@ -5183,7 +5239,7 @@ MonoBehaviour:
       CharacterName: "\uD3C9\uC57C\uC758 \uAC70\uB300 \uD2B8\uB864"
       CharacterNameID: 20001
       CharacterDescID: 21001
-      MoveSpeed: 10
+      MoveSpeed: 2
       Position: 0
       Type: 0
       AttackType: 0
@@ -5191,10 +5247,10 @@ MonoBehaviour:
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 2
-      AttackDamage: 30
-      HP: 5000
-      PD: 10
-      MD: 100
+      AttackDamage: 50
+      HP: 500
+      PD: 5
+      MD: 5
       AllSkillList: 
       Exp: 100
       Gold: 100
@@ -5209,7 +5265,7 @@ MonoBehaviour:
       CharacterName: "\uD3C9\uC57C\uC758 \uACE0\uB300 \uC804\uC0AC"
       CharacterNameID: 30000
       CharacterDescID: 31000
-      MoveSpeed: 10
+      MoveSpeed: 1
       Position: 0
       Type: 0
       AttackType: 0
@@ -5218,9 +5274,9 @@ MonoBehaviour:
       DamageTypeRange: 0
       AttackSpeed: 1
       AttackDamage: 100
-      HP: 10000
-      PD: 20
-      MD: 20
+      HP: 1000
+      PD: 10
+      MD: 10
       AllSkillList: 
       Exp: 0
       Gold: 1000
@@ -5235,7 +5291,7 @@ MonoBehaviour:
       CharacterName: "\uAC70\uB300 \uAF43\uC78E \uC624\uB4DC\uB9AC"
       CharacterNameID: 30001
       CharacterDescID: 31001
-      MoveSpeed: 10
+      MoveSpeed: 1
       Position: 0
       Type: 0
       AttackType: 0
@@ -5244,9 +5300,9 @@ MonoBehaviour:
       DamageTypeRange: 0
       AttackSpeed: 1
       AttackDamage: 100
-      HP: 10000
-      PD: 20
-      MD: 20
+      HP: 1100
+      PD: 10
+      MD: 10
       AllSkillList: 
       Exp: 0
       Gold: 1000
