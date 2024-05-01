@@ -39,6 +39,7 @@ public abstract class Character : MonoBehaviour
     CharacterDataElement characterInfo;
     public CharacterDataElement CharacterInfo { get { return characterInfo; } }
     int characterLevel = 1;
+    public int CharacterLevel { get { return characterLevel; } }
 
     GameObject normalHitPrefab;
     GameObject normalSkillPrefab;
