@@ -21,20 +21,12 @@ public class GameManager : MonoBehaviour
 
     public float baseColliderWidth = 5.0f;
 
-    public float defenceFactor1 = 300.0f;
-    public float defenceFactor2 = 3.0f;
-    public float criticalFactor = 1.5f;
-
-    // For test, 추후엔 Data Table에서 ㄷ불러오게 변경
-
     public float heroFollowOffsetRange = 5.0f;
-    public float heroFollowSpeed = 50.0f;
-
 
     HeroManager heroManager;
     EnemyManager enemyManager;
 
-    public Vector3 characterRotation = new Vector3(-30.0f, 0.0f, 0.0f);
+    public Vector3 characterRotation = new(-30.0f, 0.0f, 0.0f);
 
     Player player;
     public Player Player { get { return player; } }
@@ -56,6 +48,25 @@ public class GameManager : MonoBehaviour
 
     float gameTimer = 0.0f;
     public float GameTime { get { return gameTimer; } }
+
+    int playerExp = 0;
+    public int PlayerExp { get { return playerExp; } }
+    public int MaxExp {
+        get
+        {
+            List<InGame_CharacterGrowData> growList = DataMgr.instance.GetGrowData(player.CharacterInfo.ID);
+            if (this.playerLevel > growList.Count)
+            {
+                return 0;
+            }
+            InGame_CharacterGrowData growData = growList[this.playerLevel];
+            return growData.MaxExp;
+        }
+    }
+
+    int playerLevel = 0;
+    public int PlayerLevel { get { return playerLevel; } }
+
 
     void Awake()
     {
@@ -194,5 +205,17 @@ public class GameManager : MonoBehaviour
         }
         heroList.AddRange(heroManager.AliveHeroList.Cast<Character>());
         return heroList;
+    }
+
+    public void AddPlayerExp(int addExp)
+    {
+        playerExp += addExp;
+        if (playerExp >= MaxExp)
+        {
+            playerExp -= MaxExp;
+            playerLevel++;
+            
+            // player.OnLevelUp();
+        }
     }
 }

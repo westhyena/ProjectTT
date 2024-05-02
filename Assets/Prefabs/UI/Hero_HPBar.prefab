@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 5768548328433725938}
   - component: {fileID: 4227634702485479168}
   - component: {fileID: 3878649869476310860}
+  - component: {fileID: 5682353366765600172}
   m_Layer: 6
   m_Name: Hero_HPBar
   m_TagString: Untagged
@@ -294,6 +295,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpBar: {fileID: 4752862436640778980}
+--- !u!114 &5682353366765600172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303233818708691970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4276baa91ea214de4b479ab7c10bc7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expBar: {fileID: 7777248798782038217}
 --- !u!1 &2351771408617157281
 GameObject:
   m_ObjectHideFlags: 0

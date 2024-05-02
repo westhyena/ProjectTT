@@ -40,6 +40,7 @@ public class Player : Character
 
     protected override void UpdateVariable()
     {
+        this.characterLevel = GameManager.instance.PlayerLevel;
     }
 
     protected override void UpdateManual()

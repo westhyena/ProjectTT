@@ -44,5 +44,7 @@ public class Enemy : Character
     {
         base.OnDead();
         EnemyManager.instance.DestroyEnemy(this);
+
+        GameManager.instance.AddPlayerExp(this.CharacterInfo.Exp);
     }
 }

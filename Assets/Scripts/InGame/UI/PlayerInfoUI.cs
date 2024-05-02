@@ -15,12 +15,12 @@ public class PlayerInfoUI : MonoBehaviour
 
     void Start()
     {
-        player = FindObjectOfType<Player>();
+        player = GameManager.instance.Player;
         image.sprite = ResourceManager.GetCharacterIcon(player.CharacterInfo.iconFileName);
     }
 
     void Update()
     {
-        levelText.text = (player.CharacterLevel + 1).ToString();
+        levelText.text = (GameManager.instance.PlayerLevel + 1).ToString();
     }
 }
