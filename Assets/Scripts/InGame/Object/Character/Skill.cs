@@ -134,7 +134,11 @@ public class Skill
         }
         else if (target == Target_E.Enemy)
         {
-            targets = PickTargetInRange(source.GetTargetList(), position2D, range);
+            targets = PickTargetInRange(
+                source.GetTargetList(this.skillInfo.DoAerialUnitAttack),
+                position2D,
+                range
+            );
         }
 
         if (targets.Length == 0)

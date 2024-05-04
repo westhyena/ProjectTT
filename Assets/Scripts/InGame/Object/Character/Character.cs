@@ -247,7 +247,27 @@ public abstract class Character : MonoBehaviour
         return distanceSqr < distance * distance;
     }
 
-    abstract protected Character GetNearestTarget(Vector2 position);
+    protected Character GetNearestTarget(Vector2 position)
+    {
+        Character nearestTarget = null;
+        float nearestDistanceSqr = Mathf.Infinity;
+        foreach (Character target in GetTargetList(this.characterInfo.DoAerialUnitAttack))
+        {
+            float distanceSqr = Vector2.SqrMagnitude(position - target.Position2D);
+            if (distanceSqr < nearestDistanceSqr)
+            {
+                nearestDistanceSqr = distanceSqr;
+                nearestTarget = target;
+            }
+        }
+        return nearestTarget;
+    }
+    public List<Character> GetTargetList(bool includeAerial)
+    {
+        return GetTargetList().FindAll(
+            character => includeAerial || character.CharacterInfo.Position == StancePosition_E.Ground
+        );
+    }
     abstract public List<Character> GetTargetList();
     abstract public List<Character> GetAllyList();
 
@@ -389,7 +409,7 @@ public abstract class Character : MonoBehaviour
 
     protected void AttackMelee()
     {
-        List<Character> targetList = GetTargetList();
+        List<Character> targetList = GetTargetList(this.characterInfo.DoAerialUnitAttack);
         foreach (Character target in targetList)
         {
             if (lookingDirection == LookDirection.Left)

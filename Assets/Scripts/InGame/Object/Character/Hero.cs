@@ -24,11 +24,6 @@ public class Hero : Character
         hp = maxHp;
     }
 
-    protected override Character GetNearestTarget(Vector2 position)
-    {
-        return GameManager.instance.GetNearestEnemy(position);
-    }
-
     public override List<Character> GetTargetList()
     {
         return GameManager.instance.GetEnemyList();
