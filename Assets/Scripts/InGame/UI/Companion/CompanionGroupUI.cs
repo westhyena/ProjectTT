@@ -10,11 +10,10 @@ public class CompanionGroupUI : MonoBehaviour
     {
         for (int i = 0; i < companionUIs.Length; i++)
         {
-            bool isActive = i < HeroManager.instance.companionCharacterIds.Length;
+            bool isActive = i < GameManager.instance.companionCharacterIds.Length;
             companionUIs[i].gameObject.SetActive(isActive);
             if (isActive)
-            {
-                
+            {                
                 companionUIs[i].Initialize(HeroManager.instance.CompanionCharacterInfos[i]);
             }
         }

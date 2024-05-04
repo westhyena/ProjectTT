@@ -25,9 +25,6 @@ public class HeroManager : MonoBehaviour
         public string IconName;
     }
 
-    public int playerCharacterId = 0;
-
-    public int[] companionCharacterIds;
     CharacterDataElement[] companionCharacterInfos;
     public CharacterDataElement[] CompanionCharacterInfos => companionCharacterInfos;
 
@@ -41,6 +38,7 @@ public class HeroManager : MonoBehaviour
 
     void Start()
     {
+        int[] companionCharacterIds = GameManager.instance.companionCharacterIds;
         companionCharacterInfos = new CharacterDataElement[companionCharacterIds.Length];
         for (int i = 0; i < companionCharacterIds.Length; ++i)
         {
@@ -48,7 +46,7 @@ public class HeroManager : MonoBehaviour
         }
     }
 
-    public Player CreatePlayer()
+    public Player CreatePlayer(int playerCharacterId)
     {
         CharacterDataElement info = DataMgr.instance.GetCharacterDataElement(playerCharacterId);
         GameObject prefab = ResourceManager.GetCharacterPrefab(info.ObjectFileName);

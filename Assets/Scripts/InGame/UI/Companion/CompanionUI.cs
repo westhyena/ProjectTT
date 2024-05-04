@@ -33,7 +33,7 @@ public class CompanionUI : MonoBehaviour
     void Update()
     {
         int count = 0;
-        HeroManager.instance.HeroList.ForEach(hero =>
+        HeroManager.instance.AliveHeroList.ForEach(hero =>
         {
             if (hero.CharacterInfo.ID == characterInfo.ID)
             {
@@ -42,6 +42,9 @@ public class CompanionUI : MonoBehaviour
         });
 
         countText.text = count.ToString();
+
+        int level = GameManager.instance.GetCompanionLevel(characterInfo.ID);
+        levelText.text = (level + 1).ToString();
     }
 
     public void CreateSummonEffect()

@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
 
     public Vector3 characterRotation = new(-30.0f, 0.0f, 0.0f);
 
+    public int playerCharacterId = 0;
+    public int[] companionCharacterIds;
+
     Player player;
     public Player Player { get { return player; } }
 
@@ -67,13 +70,18 @@ public class GameManager : MonoBehaviour
     int playerLevel = 0;
     public int PlayerLevel { get { return playerLevel; } }
 
+    Dictionary<int, int> companionLevelMap = new ();
+    public int GetCompanionLevel(int characterId)
+    {
+        return companionLevelMap[characterId];
+    }
 
     void Awake()
     {
         heroManager = GetComponent<HeroManager>();
         enemyManager = GetComponent<EnemyManager>();
 
-        player = heroManager.CreatePlayer();
+        player = heroManager.CreatePlayer(playerCharacterId);
 
         companionGaugeSpeed = 1.0f / DataMgr.instance.m_InGameSystemElement.MercenaryPointGetTime;
 
@@ -83,6 +91,11 @@ public class GameManager : MonoBehaviour
         companionSummonPointIncrease = 0;
 
         companionCallPoint = DataMgr.instance.m_InGameSystemElement.Call_NeedPoint;
+
+        foreach (int characterId in companionCharacterIds)
+        {
+            companionLevelMap[characterId] = 0;
+        }
     }
 
     void Update()

@@ -6838,12 +6838,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColliderWidth: 5
-  defenceFactor1: 300
-  defenceFactor2: 3
-  criticalFactor: 1.5
   heroFollowOffsetRange: 5
-  heroFollowSpeed: 50
   characterRotation: {x: -30, y: 0, z: 0}
+  playerCharacterId: 0
+  companionCharacterIds: 64000000650000006600000067000000
 --- !u!4 &1133609862
 Transform:
   m_ObjectHideFlags: 0
@@ -6885,8 +6883,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f537173e125e441f9bf649c444565942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCharacterId: 0
-  companionCharacterIds: 64000000650000006600000067000000
   companionRoot: {fileID: 1528238749}
   spawnRange: 5
 --- !u!114 &1133609867
