@@ -1,9 +1,12 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CompanionUI : MonoBehaviour
 {
+    Button button;
+
     [SerializeField]
     Image image;
 
@@ -21,6 +24,28 @@ public class CompanionUI : MonoBehaviour
 
     [SerializeField]
     GameObject summonEffect;
+
+    void Awake()
+    {
+        button = GetComponent<Button>();
+        button.onClick.AddListener(this.OnClick);
+    }
+
+    void OnClick()
+    {
+        int level = GameManager.instance.GetCompanionLevel(characterInfo.ID);
+        List<int> needPointList = DataMgr.instance.m_InGameSystemElement.Mercenary_LevelUp_NeedPoint;
+        if (level >= needPointList.Count)
+        {
+            return;
+        }
+
+        int needPoint = needPointList[level];
+        if (GameManager.instance.CompanionPoints >= needPoint)
+        {
+            GameManager.instance.CompanionLevelUp(characterInfo.ID);
+        }
+    }
 
     public void Initialize(CharacterDataElement characterInfo)
     {
@@ -45,6 +70,17 @@ public class CompanionUI : MonoBehaviour
 
         int level = GameManager.instance.GetCompanionLevel(characterInfo.ID);
         levelText.text = (level + 1).ToString();
+
+        List<int> needPointList = DataMgr.instance.m_InGameSystemElement.Mercenary_LevelUp_NeedPoint;
+        if (level >= needPointList.Count)
+        {
+            needPointText.text = "MAX";
+        } 
+        else
+        {
+            int needPoint = needPointList[level];
+            needPointText.text = needPoint.ToString();
+        }
     }
 
     public void CreateSummonEffect()

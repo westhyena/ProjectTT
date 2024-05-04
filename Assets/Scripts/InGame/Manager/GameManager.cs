@@ -231,4 +231,15 @@ public class GameManager : MonoBehaviour
             // player.OnLevelUp();
         }
     }
+
+    public void CompanionLevelUp(int characterId)
+    {
+        int level = companionLevelMap[characterId];
+        int needPoint = DataMgr.instance.m_InGameSystemElement.Mercenary_LevelUp_NeedPoint[level];
+        if (companionPoints >= needPoint)
+        {
+            companionPoints -= needPoint;
+            companionLevelMap[characterId]++;
+        }
+    }
 }

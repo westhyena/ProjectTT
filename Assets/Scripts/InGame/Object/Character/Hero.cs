@@ -42,6 +42,7 @@ public class Hero : Character
     protected override void UpdateVariable()
     {
         followOffsetRange = GameManager.instance.heroFollowOffsetRange;
+        this.characterLevel = GameManager.instance.GetCompanionLevel(this.CharacterInfo.ID);
     }
 
     protected override void UpdateFollow()
