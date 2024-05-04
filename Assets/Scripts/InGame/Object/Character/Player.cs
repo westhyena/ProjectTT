@@ -17,12 +17,6 @@ public class Player : Character
         hpBarUI.Initialize(this);
     }
 
-    public void Initialize()
-    {
-        maxHp = 100.0f;
-        hp = maxHp;
-    }
-
     public override List<Character> GetTargetList()
     {
         return GameManager.instance.GetEnemyList();
@@ -35,7 +29,6 @@ public class Player : Character
 
     protected override void UpdateVariable()
     {
-        this.characterLevel = GameManager.instance.PlayerLevel;
     }
 
     protected override void UpdateManual()

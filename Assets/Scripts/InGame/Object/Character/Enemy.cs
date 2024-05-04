@@ -9,9 +9,6 @@ public class Enemy : Character
     public void Initialize(Player player)
     {
         this.player = player;
-
-        maxHp = 100.0f;
-        hp = maxHp;
     }
 
     public override List<Character> GetTargetList()

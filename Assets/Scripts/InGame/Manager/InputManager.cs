@@ -64,6 +64,12 @@ public class InputManager : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            int leftExp = GameManager.instance.MaxExp - GameManager.instance.PlayerExp;
+            GameManager.instance.AddPlayerExp(leftExp);
+        }
+
         if (Input.GetKeyDown(KeyCode.P))
         {
             if (Time.timeScale > 0.0f)

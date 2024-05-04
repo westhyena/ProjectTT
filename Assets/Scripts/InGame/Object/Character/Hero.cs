@@ -20,8 +20,6 @@ public class Hero : Character
     public void Initialize(Player player)
     {
         this.player = player;
-        maxHp = 100.0f;
-        hp = maxHp;
     }
 
     public override List<Character> GetTargetList()
@@ -37,7 +35,6 @@ public class Hero : Character
     protected override void UpdateVariable()
     {
         followOffsetRange = GameManager.instance.heroFollowOffsetRange;
-        this.characterLevel = GameManager.instance.GetCompanionLevel(this.CharacterInfo.ID);
     }
 
     protected override void UpdateFollow()

@@ -61,7 +61,6 @@ public abstract class Character : MonoBehaviour
 
     float attackSpeed = 1.0f;
 
-    float baseAttackStat = 10.0f;
     public float AttackStat { get {
         int growHP = 0, growAttackDamge = 0, growPD = 0, growMD = 0;
         DataMgr.instance.GetCharacterGrowData(
@@ -73,7 +72,7 @@ public abstract class Character : MonoBehaviour
             ref growMD 
         );
         return (
-            baseAttackStat + 
+            characterInfo.AttackDamage + 
             growAttackDamge
         );
     } }
@@ -81,9 +80,6 @@ public abstract class Character : MonoBehaviour
     public float PhysicDefenceStat { get { return basePhysicDefenceStat; } }
     float baseMagicDefenceStat = 5.0f;
     public float MagicDefenceStat { get { return baseMagicDefenceStat; } }
-    public float hpStat = 100.0f;
-    public float HpStat { get { return hpStat; } }
-
 
     protected float movementSpeed = 20.0f;
 
@@ -110,8 +106,24 @@ public abstract class Character : MonoBehaviour
     protected Character target = null;
 
     protected float hp = 100.0f;
-    protected float maxHp = 100.0f;
-    public float HPRatio { get { return hp / maxHp; } }
+    public float MaxHP { get
+        {
+            int growHP = 0, growAttackDamge = 0, growPD = 0, growMD = 0;
+            DataMgr.instance.GetCharacterGrowData(
+                characterInfo.ID,
+                characterLevel,
+                ref growHP,
+                ref growAttackDamge,
+                ref growPD,
+                ref growMD 
+            );
+            return (
+                characterInfo.HP + 
+                growHP
+            );
+        }
+    }
+    public float HPRatio { get { return hp / MaxHP; } }
     public bool IsDead { get { return hp <= 0.0f; } }
 
     List<SkillEffect> skillEffectList = new ();
@@ -157,8 +169,6 @@ public abstract class Character : MonoBehaviour
         if (this.characterInfo != null)
         {
             this.mspd = characterInfo.MoveSpeed;
-            this.hpStat = characterInfo.HP;
-            this.baseAttackStat = characterInfo.AttackDamage;
             this.basePhysicDefenceStat = characterInfo.PD;
             this.baseMagicDefenceStat = characterInfo.MD;
 
@@ -166,7 +176,6 @@ public abstract class Character : MonoBehaviour
             this.attackSpeed =  characterInfo.AttackSpeed;
             this.attackCooltime = this.attackSpeed + Time.fixedDeltaTime;
 
-            
             normalHitPrefab = ResourceManager.GetHitPrefab("Hit_Base_A");
             if (!string.IsNullOrEmpty(characterInfo.ObjectEffFileName))
             {
@@ -180,8 +189,7 @@ public abstract class Character : MonoBehaviour
 
         this.animator.SetFloat("attackSpeed", 1.0f / this.attackSpeed);
 
-        maxHp = hpStat;
-        hp = maxHp;
+        hp = MaxHP;
 
         if (DebugManager.instance.isDebugMode)
         {
@@ -556,5 +564,15 @@ public abstract class Character : MonoBehaviour
     {
         UpdateVariable();
         UpdateState();
+    }
+
+    public void OnLevelUp(int newLevel)
+    {
+        float prevMaxHP = MaxHP;
+        this.characterLevel = newLevel;
+
+        float newMaxHP = MaxHP;
+
+        hp += newMaxHP - prevMaxHP;
     }
 }

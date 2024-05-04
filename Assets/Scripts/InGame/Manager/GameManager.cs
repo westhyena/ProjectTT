@@ -166,7 +166,7 @@ public class GameManager : MonoBehaviour
             playerExp -= MaxExp;
             playerLevel++;
             
-            // player.OnLevelUp();
+            player.OnLevelUp(playerLevel);
         }
     }
 
@@ -178,6 +178,14 @@ public class GameManager : MonoBehaviour
         {
             companionPoints -= needPoint;
             companionLevelMap[characterId]++;
+
+            foreach (Hero hero in HeroManager.instance.AliveHeroList)
+            {
+                if (hero.CharacterInfo.ID == characterId)
+                {
+                    hero.OnLevelUp(level + 1);
+                }
+            }
         }
     }
 }
