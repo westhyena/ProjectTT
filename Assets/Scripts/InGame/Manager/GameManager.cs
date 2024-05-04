@@ -142,68 +142,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public Character GetRandomHero()
-    {
-        int randIdx = Random.Range(0, heroManager.HeroList.Count + 1);
-        if (randIdx == heroManager.HeroList.Count)
-        {
-            return player;
-        }
-        return heroManager.HeroList[randIdx];
-    }
-
-    public Character GetRandomEnemy()
-    {
-        int randIdx = Random.Range(0, enemyManager.EnemyList.Count);
-        return enemyManager.EnemyList[randIdx];
-    }
-
-    public Character GetNearestHero(Vector2 position)
-    {
-        return GetNearestHero(position, true);
-    }
-
-    public Character GetNearestHero(Vector2 position, bool includePlayer)
-    {
-        Character nearestTarget = null;
-        float nearestDistanceSqr = Mathf.Infinity;
-        foreach (Hero hero in heroManager.AliveHeroList)
-        {
-            float distanceSqr = Vector2.SqrMagnitude(position - hero.Position2D);
-            if (distanceSqr < nearestDistanceSqr)
-            {
-                nearestDistanceSqr = distanceSqr;
-                nearestTarget = hero;
-            }
-        }
-
-        if (includePlayer)
-        {
-            float distanceSqr = Vector2.SqrMagnitude(position - player.Position2D);
-            if (distanceSqr < nearestDistanceSqr)
-            {
-                nearestTarget = player;
-            }
-        }
-        return nearestTarget;
-    }
-
-    public Character GetNearestEnemy(Vector2 position)
-    {
-        Enemy nearestEnemy = null;
-        float nearestDistanceSqr = Mathf.Infinity;
-        foreach (Enemy enemy in enemyManager.AliveEnemyList)
-        {
-            float distanceSqr = Vector2.SqrMagnitude(position - enemy.Position2D);
-            if (distanceSqr < nearestDistanceSqr)
-            {
-                nearestDistanceSqr = distanceSqr;
-                nearestEnemy = enemy;
-            }
-        }
-        return nearestEnemy;
-    }
-
     public List<Character> GetEnemyList()
     {
         return enemyManager.AliveEnemyList.Cast<Character>().ToList();

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -60,6 +61,18 @@ public class InputManager : MonoBehaviour
             foreach (Enemy enemy in EnemyManager.instance.AliveEnemyList)
             {
                 enemy.Damage(999999999, DamageType_E.Physics);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (Time.timeScale > 0.0f)
+            {
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                Time.timeScale = 1f;
             }
         }
     }
