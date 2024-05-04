@@ -383,6 +383,10 @@ public class SkillDataElement
 	/// </summary>
 	public ActivePosition_E ActivePosition;
 	/// <summary>
+	/// 공중유닛 공격 가능여부
+	/// </summary>
+	public bool DoAerialUnitAttack;
+	/// <summary>
 	/// 대상 구분
 	/// </summary>
 	public Target_E Target;
@@ -451,6 +455,10 @@ public class CharacterDataElement
 	/// 유닛 스텐스( 지상이냐 공중이냐 )
 	/// </summary>
 	public StancePosition_E Position;
+	/// <summary>
+	/// 공중유닛 공격 가능 여부
+	/// </summary>
+	public bool DoAerialUnitAttack;
 	/// <summary>
 	/// 공격타입
 	/// </summary>

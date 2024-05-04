@@ -2969,6 +2969,7 @@ MonoBehaviour:
       UserSkillNameID: 5000
       UserSkillDescID: 6000
       ActivePosition: 1
+      DoAerialUnitAttack: 0
       Target: 1
       CoolTime: 10
       Type: 0
@@ -2988,6 +2989,7 @@ MonoBehaviour:
       UserSkillNameID: 5001
       UserSkillDescID: 6001
       ActivePosition: 1
+      DoAerialUnitAttack: 0
       Target: 1
       CoolTime: 10
       Type: 0
@@ -3007,6 +3009,7 @@ MonoBehaviour:
       UserSkillNameID: 5002
       UserSkillDescID: 6002
       ActivePosition: 1
+      DoAerialUnitAttack: 0
       Target: 1
       CoolTime: 10
       Type: 0
@@ -3026,6 +3029,7 @@ MonoBehaviour:
       UserSkillNameID: 5003
       UserSkillDescID: 6003
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 5
       Type: 0
@@ -3045,15 +3049,13 @@ MonoBehaviour:
       UserSkillNameID: 5004
       UserSkillDescID: 6004
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 5
       Type: 1
       TargetSelectType: 0
       DamageTypeRange: 0
-      SkillData:
-      - SkillDataKind: 0
-        Value: 50
-        Time: 0
+      SkillData: []
       IconName: MagicBall_ICON
       MyPositionEffectName: 
       ProjectileEffectName: Projectile_MagicBall
@@ -3064,15 +3066,13 @@ MonoBehaviour:
       UserSkillNameID: 5005
       UserSkillDescID: 6005
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 5
       Type: 0
       TargetSelectType: 0
       DamageTypeRange: 0
-      SkillData:
-      - SkillDataKind: 0
-        Value: 50
-        Time: 0
+      SkillData: []
       IconName: PowerShot_ICON
       MyPositionEffectName: 
       ProjectileEffectName: 
@@ -3083,6 +3083,7 @@ MonoBehaviour:
       UserSkillNameID: 5006
       UserSkillDescID: 6006
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 5
       Type: 0
@@ -3102,15 +3103,13 @@ MonoBehaviour:
       UserSkillNameID: 5007
       UserSkillDescID: 6007
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 5
       Type: 0
       TargetSelectType: 0
       DamageTypeRange: 0
       SkillData:
-      - SkillDataKind: 0
-        Value: 20
-        Time: 0
       - SkillDataKind: 1
         Value: 30
         Time: 2
@@ -3124,15 +3123,13 @@ MonoBehaviour:
       UserSkillNameID: 5008
       UserSkillDescID: 6008
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 5
       Type: 1
       TargetSelectType: 0
       DamageTypeRange: 0
-      SkillData:
-      - SkillDataKind: 0
-        Value: 50
-        Time: 0
+      SkillData: []
       IconName: BatwaveBlast_ICON
       MyPositionEffectName: 
       ProjectileEffectName: Projectile_BatwaveBlast
@@ -3143,6 +3140,7 @@ MonoBehaviour:
       UserSkillNameID: 5009
       UserSkillDescID: 6009
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 7
       Type: 0
@@ -3162,6 +3160,7 @@ MonoBehaviour:
       UserSkillNameID: 5010
       UserSkillDescID: 6010
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 7
       Type: 0
@@ -3181,6 +3180,7 @@ MonoBehaviour:
       UserSkillNameID: 5011
       UserSkillDescID: 6011
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 7
       Type: 1
@@ -3200,6 +3200,7 @@ MonoBehaviour:
       UserSkillNameID: 5012
       UserSkillDescID: 6012
       ActivePosition: 1
+      DoAerialUnitAttack: 0
       Target: 1
       CoolTime: 10
       Type: 0
@@ -3219,15 +3220,13 @@ MonoBehaviour:
       UserSkillNameID: 5013
       UserSkillDescID: 6013
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 7
       Type: 1
       TargetSelectType: 0
       DamageTypeRange: 0
-      SkillData:
-      - SkillDataKind: 0
-        Value: 100
-        Time: 0
+      SkillData: []
       IconName: IceBall_ICON
       MyPositionEffectName: 
       ProjectileEffectName: Projectile_IceBall
@@ -3238,6 +3237,7 @@ MonoBehaviour:
       UserSkillNameID: 5014
       UserSkillDescID: 6014
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 7
       Type: 1
@@ -3257,6 +3257,7 @@ MonoBehaviour:
       UserSkillNameID: 5015
       UserSkillDescID: 6015
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 7
       Type: 1
@@ -3279,6 +3280,7 @@ MonoBehaviour:
       UserSkillNameID: 5016
       UserSkillDescID: 6016
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 7
       Type: 1
@@ -3301,15 +3303,13 @@ MonoBehaviour:
       UserSkillNameID: 5017
       UserSkillDescID: 6017
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 7
       Type: 0
       TargetSelectType: 0
       DamageTypeRange: 0
-      SkillData:
-      - SkillDataKind: 0
-        Value: 100
-        Time: 0
+      SkillData: []
       IconName: HeadShot_ICON
       MyPositionEffectName: 
       ProjectileEffectName: 
@@ -3320,6 +3320,7 @@ MonoBehaviour:
       UserSkillNameID: 5018
       UserSkillDescID: 6018
       ActivePosition: 1
+      DoAerialUnitAttack: 0
       Target: 1
       CoolTime: 10
       Type: 0
@@ -3342,6 +3343,7 @@ MonoBehaviour:
       UserSkillNameID: 5019
       UserSkillDescID: 6019
       ActivePosition: 1
+      DoAerialUnitAttack: 0
       Target: 1
       CoolTime: 10
       Type: 0
@@ -3361,15 +3363,13 @@ MonoBehaviour:
       UserSkillNameID: 5020
       UserSkillDescID: 6020
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 10
       Type: 0
       TargetSelectType: 0
       DamageTypeRange: 0
-      SkillData:
-      - SkillDataKind: 0
-        Value: 150
-        Time: 0
+      SkillData: []
       IconName: WeakPointHit_ICON
       MyPositionEffectName: 
       ProjectileEffectName: 
@@ -3380,6 +3380,7 @@ MonoBehaviour:
       UserSkillNameID: 5021
       UserSkillDescID: 6021
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 10
       Type: 1
@@ -3402,6 +3403,7 @@ MonoBehaviour:
       UserSkillNameID: 5022
       UserSkillDescID: 6022
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 10
       Type: 0
@@ -3424,6 +3426,7 @@ MonoBehaviour:
       UserSkillNameID: 5023
       UserSkillDescID: 6023
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 10
       Type: 1
@@ -3446,6 +3449,7 @@ MonoBehaviour:
       UserSkillNameID: 5024
       UserSkillDescID: 6024
       ActivePosition: 1
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 10
       Type: 0
@@ -3468,6 +3472,7 @@ MonoBehaviour:
       UserSkillNameID: 5025
       UserSkillDescID: 6025
       ActivePosition: 0
+      DoAerialUnitAttack: 0
       Target: 0
       CoolTime: 10
       Type: 1
@@ -3487,6 +3492,7 @@ MonoBehaviour:
       UserSkillNameID: 5026
       UserSkillDescID: 6026
       ActivePosition: 1
+      DoAerialUnitAttack: 0
       Target: 1
       CoolTime: 10
       Type: 0
@@ -3506,6 +3512,7 @@ MonoBehaviour:
       UserSkillNameID: 5027
       UserSkillDescID: 6027
       ActivePosition: 1
+      DoAerialUnitAttack: 0
       Target: 1
       CoolTime: 10
       Type: 0
@@ -3528,6 +3535,7 @@ MonoBehaviour:
       UserSkillNameID: 5028
       UserSkillDescID: 6028
       ActivePosition: 1
+      DoAerialUnitAttack: 0
       Target: 1
       CoolTime: 10
       Type: 0
@@ -3551,6 +3559,7 @@ MonoBehaviour:
       CharacterDescID: 2000
       MoveSpeed: 5
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 2
@@ -3577,6 +3586,7 @@ MonoBehaviour:
       CharacterDescID: 4000
       MoveSpeed: 5
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 2
@@ -3603,6 +3613,7 @@ MonoBehaviour:
       CharacterDescID: 4001
       MoveSpeed: 3.5
       Position: 0
+      DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
       AttackRange: 6
@@ -3629,6 +3640,7 @@ MonoBehaviour:
       CharacterDescID: 4002
       MoveSpeed: 3.5
       Position: 0
+      DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
       AttackRange: 5
@@ -3655,6 +3667,7 @@ MonoBehaviour:
       CharacterDescID: 4003
       MoveSpeed: 3
       Position: 0
+      DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
       AttackRange: 4
@@ -3681,6 +3694,7 @@ MonoBehaviour:
       CharacterDescID: 11000
       MoveSpeed: 2.75
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 1
@@ -3707,6 +3721,7 @@ MonoBehaviour:
       CharacterDescID: 11001
       MoveSpeed: 3
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 1
@@ -3733,6 +3748,7 @@ MonoBehaviour:
       CharacterDescID: 11002
       MoveSpeed: 2.5
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 1
@@ -3759,6 +3775,7 @@ MonoBehaviour:
       CharacterDescID: 11003
       MoveSpeed: 2
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 1
@@ -3785,6 +3802,7 @@ MonoBehaviour:
       CharacterDescID: 11004
       MoveSpeed: 4
       Position: 0
+      DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
       AttackRange: 4
@@ -3811,6 +3829,7 @@ MonoBehaviour:
       CharacterDescID: 11005
       MoveSpeed: 4
       Position: 1
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 1
@@ -3837,6 +3856,7 @@ MonoBehaviour:
       CharacterDescID: 11006
       MoveSpeed: 4
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 1
       AttackRange: 3
@@ -3863,6 +3883,7 @@ MonoBehaviour:
       CharacterDescID: 11007
       MoveSpeed: 4
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 2
@@ -3889,6 +3910,7 @@ MonoBehaviour:
       CharacterDescID: 11008
       MoveSpeed: 4
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 1
       AttackRange: 4
@@ -3914,7 +3936,8 @@ MonoBehaviour:
       CharacterNameID: 10009
       CharacterDescID: 11009
       MoveSpeed: 4
-      Position: 0
+      Position: 1
+      DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
       AttackRange: 3
@@ -3941,6 +3964,7 @@ MonoBehaviour:
       CharacterDescID: 11010
       MoveSpeed: 4
       Position: 0
+      DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
       AttackRange: 3
@@ -3967,6 +3991,7 @@ MonoBehaviour:
       CharacterDescID: 11011
       MoveSpeed: 3
       Position: 0
+      DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
       AttackRange: 8
@@ -3993,6 +4018,7 @@ MonoBehaviour:
       CharacterDescID: 11012
       MoveSpeed: 4
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 1
       AttackRange: 3
@@ -4019,6 +4045,7 @@ MonoBehaviour:
       CharacterDescID: 11013
       MoveSpeed: 4
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 1
       AttackRange: 3
@@ -4045,6 +4072,7 @@ MonoBehaviour:
       CharacterDescID: 11014
       MoveSpeed: 3
       Position: 1
+      DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
       AttackRange: 3
@@ -4071,6 +4099,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4097,6 +4126,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4123,6 +4153,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4149,6 +4180,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4175,6 +4207,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4201,6 +4234,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4227,6 +4261,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4253,6 +4288,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4279,6 +4315,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4305,6 +4342,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4331,6 +4369,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4357,6 +4396,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4383,6 +4423,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4409,6 +4450,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4435,6 +4477,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4461,6 +4504,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4487,6 +4531,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4513,6 +4558,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4539,6 +4585,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4565,6 +4612,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4591,6 +4639,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4617,6 +4666,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4643,6 +4693,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4669,6 +4720,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4695,6 +4747,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4721,6 +4774,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4747,6 +4801,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4773,6 +4828,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4799,6 +4855,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4825,6 +4882,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4851,6 +4909,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4877,6 +4936,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4903,6 +4963,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4929,6 +4990,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4955,6 +5017,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -4981,6 +5044,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -5007,6 +5071,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -5033,6 +5098,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -5059,6 +5125,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -5085,6 +5152,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -5111,6 +5179,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -5137,6 +5206,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -5163,6 +5233,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -5189,6 +5260,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -5215,6 +5287,7 @@ MonoBehaviour:
       CharacterDescID: 
       MoveSpeed: 0
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 0
@@ -5241,6 +5314,7 @@ MonoBehaviour:
       CharacterDescID: 21001
       MoveSpeed: 2
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 2
@@ -5267,6 +5341,7 @@ MonoBehaviour:
       CharacterDescID: 31000
       MoveSpeed: 1
       Position: 0
+      DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
       AttackRange: 3
@@ -5293,6 +5368,7 @@ MonoBehaviour:
       CharacterDescID: 31001
       MoveSpeed: 1
       Position: 0
+      DoAerialUnitAttack: 1
       Type: 0
       AttackType: 0
       AttackRange: 3

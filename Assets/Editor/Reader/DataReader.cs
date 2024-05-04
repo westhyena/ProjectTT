@@ -601,73 +601,75 @@ public class DataReader : EditorWindow
 								sde.UserSkillName = Get<string>(obj, 1);
 								sde.UserSkillNameID = Get<string>(obj, 2);
 								sde.UserSkillDescID = Get<string>(obj, 3);
-								if (string.IsNullOrEmpty(Get<string>(obj, 4)) == false)
-									sde.ActivePosition = (ActivePosition_E)Get<int>(obj, 4);
+								if (string.IsNullOrEmpty(Get<string>(obj, 4)))
+									sde.DoAerialUnitAttack = Get<int>(obj, 4) == 0 ? false : true;
 								if (string.IsNullOrEmpty(Get<string>(obj, 5)) == false)
-									sde.Target = (Target_E)Get<int>(obj, 5);
+									sde.ActivePosition = (ActivePosition_E)Get<int>(obj, 5);
 								if (string.IsNullOrEmpty(Get<string>(obj, 6)) == false)
-									sde.CoolTime = Get<float>(obj, 6);
+									sde.Target = (Target_E)Get<int>(obj, 6);
 								if (string.IsNullOrEmpty(Get<string>(obj, 7)) == false)
-									sde.Type = (DamageType_E)Get<int>(obj, 7);
+									sde.CoolTime = Get<float>(obj, 7);
 								if (string.IsNullOrEmpty(Get<string>(obj, 8)) == false)
-									sde.TargetSelectType = (TargetSelect_E)Get<int>(obj, 8);
+									sde.Type = (DamageType_E)Get<int>(obj, 8);
 								if (string.IsNullOrEmpty(Get<string>(obj, 9)) == false)
-									sde.DamageTypeRange = Get<float>(obj, 9);
+									sde.TargetSelectType = (TargetSelect_E)Get<int>(obj, 9);
+								if (string.IsNullOrEmpty(Get<string>(obj, 10)) == false)
+									sde.DamageTypeRange = Get<float>(obj, 10);
 
 								float _Value = 0f;
 								float _Time = 0f;
-								for (int sk = 10; sk <= 21; ++sk)
+								for (int sk = 11; sk <= 22; ++sk)
 								{
 									switch (sk)
 									{
-										case 10:
-											_Value = string.IsNullOrEmpty(Get<string>(obj, 10)) ? 0 : Get<float>(obj, 10);
+										case 11:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 10)) ? 0 : Get<float>(obj, 11);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Damage, _Value));
 											break;
-										case 11:
 										case 12:
-											_Value = string.IsNullOrEmpty(Get<string>(obj, 11)) ? 0 : Get<float>(obj, 11);
-											_Time = string.IsNullOrEmpty(Get<string>(obj, 12)) ? 0 : Get<float>(obj, 12);
+										case 13:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 12)) ? 0 : Get<float>(obj, 12);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 13)) ? 0 : Get<float>(obj, 13);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.DotDamage, _Value, _Time));
 											++sk;
 											break;
-										case 13:
 										case 14:
-											_Value = string.IsNullOrEmpty(Get<string>(obj, 13)) ? 0 : Get<float>(obj, 13);
-											_Time = string.IsNullOrEmpty(Get<string>(obj, 14)) ? 0 : Get<float>(obj, 14);
+										case 15:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 14)) ? 0 : Get<float>(obj, 14);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 15)) ? 0 : Get<float>(obj, 15);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackUp, _Value, _Time));
 											++sk;
 											break;
-										case 15:
 										case 16:
-											_Value = string.IsNullOrEmpty(Get<string>(obj, 15)) ? 0 : Get<float>(obj, 15);
-											_Time = string.IsNullOrEmpty(Get<string>(obj, 16)) ? 0 : Get<float>(obj, 16);
+										case 17:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 16)) ? 0 : Get<float>(obj, 16);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 17)) ? 0 : Get<float>(obj, 17);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackSpeedUp, 0, _Time));
 											++sk;
 											break;
-										case 17:
-											_Value = string.IsNullOrEmpty(Get<string>(obj, 17)) ? 0 : Get<float>(obj, 17);
+										case 18:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 18)) ? 0 : Get<float>(obj, 18);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Heal, _Value));
-											break;
-										case 18:
-											_Time = string.IsNullOrEmpty(Get<string>(obj, 18)) ? 0 : Get<float>(obj, 18);
-											if (_Time != 0)
-												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Immunity, 0, _Time));
 											break;
 										case 19:
 											_Time = string.IsNullOrEmpty(Get<string>(obj, 19)) ? 0 : Get<float>(obj, 19);
 											if (_Time != 0)
-												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Stun, 0, _Time));
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Immunity, 0, _Time));
 											break;
 										case 20:
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 20)) ? 0 : Get<float>(obj, 20);
+											if (_Time != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Stun, 0, _Time));
+											break;
 										case 21:
-											_Value = string.IsNullOrEmpty(Get<string>(obj, 20)) ? 0 : Get<float>(obj, 20);
-											_Time = string.IsNullOrEmpty(Get<string>(obj, 21)) ? 0 : Get<float>(obj, 21);
+										case 22:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 21)) ? 0 : Get<float>(obj, 21);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 22)) ? 0 : Get<float>(obj, 22);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackSpeedDown, _Value, _Time));
 											++sk;
@@ -720,32 +722,33 @@ public class DataReader : EditorWindow
 								cde.CharacterDescID = Get<string>(obj, 3);
 								cde.MoveSpeed = Get<float>(obj, 4);
 								cde.Position = (StancePosition_E)Get<int>(obj, 5);
-								cde.Type = (DamageType_E)Get<int>(obj, 6);
-								cde.AttackType = (AttackType_E)Get<int>(obj, 7);
-								cde.AttackRange = Get<float>(obj, 8);
-								cde.DamageTargetType = (DamageTargetType_E)Get<int>(obj, 9);
-								cde.DamageTypeRange = Get<float>(obj, 10);
-								cde.AttackSpeed = Get<float>(obj, 11);
-								cde.AttackDamage = Get<int>(obj, 12);
-								cde.HP = Get<int>(obj, 13);
-								cde.PD = Get<int>(obj, 14);
-								cde.MD = Get<int>(obj, 15);
+								cde.DoAerialUnitAttack = Get<int>(obj, 6) == 0 ? false : true;
+								cde.Type = (DamageType_E)Get<int>(obj, 7);
+								cde.AttackType = (AttackType_E)Get<int>(obj, 8);
+								cde.AttackRange = Get<float>(obj, 9);
+								cde.DamageTargetType = (DamageTargetType_E)Get<int>(obj, 10);
+								cde.DamageTypeRange = Get<float>(obj, 11);
+								cde.AttackSpeed = Get<float>(obj, 12);
+								cde.AttackDamage = Get<int>(obj, 13);
+								cde.HP = Get<int>(obj, 14);
+								cde.PD = Get<int>(obj, 15);
+								cde.MD = Get<int>(obj, 16);
 								cde.AllSkillList = new List<int>();
-								if (string.IsNullOrEmpty(Get<string>(obj, 16)) == false)
+								if (string.IsNullOrEmpty(Get<string>(obj, 17)) == false)
 								{
-									string[] Skills = Get<string>(obj, 16).Split(",");
+									string[] Skills = Get<string>(obj, 17).Split(",");
 									for (int asl = 0; asl < Skills.Length; ++asl)
 										cde.AllSkillList.Add(int.Parse(Skills[asl]));
 								}
-								if (string.IsNullOrEmpty(Get<string>(obj, 17)) == false)
-									cde.Exp = Get<int>(obj, 17);
 								if (string.IsNullOrEmpty(Get<string>(obj, 18)) == false)
-									cde.Gold = Get<int>(obj, 18);
+									cde.Exp = Get<int>(obj, 18);
+								if (string.IsNullOrEmpty(Get<string>(obj, 19)) == false)
+									cde.Gold = Get<int>(obj, 19);
 
-								cde.GrowHp = Get<int>(obj, 19);
-								cde.GrowAttackDamage = Get<int>(obj, 20);
-								cde.GrowPD = Get<int>(obj, 21);
-								cde.GrowMD = Get<int>(obj, 22);
+								cde.GrowHp = Get<int>(obj, 20);
+								cde.GrowAttackDamage = Get<int>(obj, 21);
+								cde.GrowPD = Get<int>(obj, 22);
+								cde.GrowMD = Get<int>(obj, 23);
 
 								DataTable Character_FileTable = ReadSingleSheet(string.Format("{0}_File", CharacterDataSheet[i]), DataPath);
 								//파일명 셋팅
