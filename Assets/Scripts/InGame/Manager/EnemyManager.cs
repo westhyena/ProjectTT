@@ -26,7 +26,7 @@ public class EnemyManager : MonoBehaviour
     public List<Enemy> EnemyList => enemyMap.Values.ToList();
     public List<Enemy> AliveEnemyList => EnemyList.FindAll(enemy => !enemy.IsDead);
 
-    public Enemy CreateEnemy(CharacterDataElement info, Vector3 position)
+    public Enemy CreateEnemy(CharacterDataElement info, int level, Vector3 position)
     {
         Player player = GameManager.instance.Player;
         GameObject prefab = ResourceManager.GetCharacterPrefab(info.ObjectFileName);
@@ -36,7 +36,7 @@ public class EnemyManager : MonoBehaviour
         enemyObj.transform.localRotation = Quaternion.Euler(GameManager.instance.characterRotation);
         Enemy enemy = enemyObj.GetOrAddComponent<Enemy>();
         enemy.Initialize(player);
-        enemy.InitializeCharacter(info.ID, 0);
+        enemy.InitializeCharacter(info.ID, level);
         enemyMap[enemy.GetInstanceID()] = enemy;
         return enemy;
     }

@@ -48,6 +48,7 @@ public class StageManager : MonoBehaviour
                 Vector3 spawnPoint = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)].position;
                 enemyManager.CreateEnemy(
                     characterInfo,
+                    waveInfo.CharacterLevel,
                     spawnPoint + (Vector3)randomOffset);
             }
             createdCount += createCount;
