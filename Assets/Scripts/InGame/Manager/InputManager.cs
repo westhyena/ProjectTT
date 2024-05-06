@@ -68,6 +68,9 @@ public class InputManager : MonoBehaviour
         {
             int leftExp = GameManager.instance.MaxExp - GameManager.instance.PlayerExp;
             GameManager.instance.AddPlayerExp(leftExp);
+
+            leftExp = GameManager.instance.MaxExp - GameManager.instance.PlayerExp;
+            GameManager.instance.AddPlayerExp(leftExp);
         }
 
         if (Input.GetKeyDown(KeyCode.P))

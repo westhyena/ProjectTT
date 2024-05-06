@@ -76,6 +76,9 @@ public class GameManager : MonoBehaviour
         return companionLevelMap[characterId];
     }
 
+    bool isBuffCardSelecting = false;
+    int levelUpBuffToSelectCount = 0;
+
     void Awake()
     {
         heroManager = GetComponent<HeroManager>();
@@ -96,6 +99,16 @@ public class GameManager : MonoBehaviour
         {
             companionLevelMap[characterId] = 0;
         }
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0.0f;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1.0f;
     }
 
     void Update()
@@ -165,7 +178,14 @@ public class GameManager : MonoBehaviour
         {
             playerExp -= MaxExp;
             playerLevel++;
-            
+
+            if (!isBuffCardSelecting)
+            {
+                StartCoroutine(BuffCardSelectCoroutine());
+            }
+            isBuffCardSelecting = true;
+            levelUpBuffToSelectCount++;
+
             player.OnLevelUp(playerLevel);
         }
     }
@@ -187,5 +207,38 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator BuffCardSelectCoroutine()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if (levelUpBuffToSelectCount > 0)
+        {
+            UIManager.instance.buffSelectUI.gameObject.SetActive(true);
+            PauseGame();
+        }
+
+        while (levelUpBuffToSelectCount > 0)
+        {
+            if (!UIManager.instance.buffSelectUI.gameObject.activeSelf)
+            {
+                yield return new WaitForSeconds(0.1f);
+                UIManager.instance.buffSelectUI.gameObject.SetActive(true);
+                PauseGame();
+            }
+            else
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
+
+        isBuffCardSelecting = false;
+    }
+
+    public void OnSelectBuffCard()
+    {
+        levelUpBuffToSelectCount--;
+        UIManager.instance.buffSelectUI.gameObject.SetActive(false);
+        ResumeGame();
     }
 }

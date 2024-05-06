@@ -23,6 +23,8 @@ public class UIManager : MonoBehaviour
 
     public CompanionUI[] companionUIs;
 
+    public BuffSelectUI buffSelectUI;
+
     [SerializeField]
     GameObject hpBarPrefab;
     public HPBarUI CreateHPBar(Transform parent)
