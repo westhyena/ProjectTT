@@ -298,7 +298,8 @@ public class DataReader : EditorWindow
 
 				case EXls.TranslationData:
 					#region TranslationData
-					string[] TranslationDataSheet = { "Text", "HeroName", "HeroDesc", "MercenaryName", "MercenaryDesc", "MonsterName", "MonsterDesc", "MiddleBossName", "MiddleBossDesc", "BossName", "BossDesc", "SkillName", "SkillDesc" };
+					string[] TranslationDataSheet = { "Text", "HeroName", "HeroDesc", "MercenaryName", "MercenaryDesc", "MonsterName", "MonsterDesc", "MiddleBossName", "MiddleBossDesc", "BossName", "BossDesc", 
+						"UserActiveSkill","UserActiveSkillDesc","Stage","StageDesc","UserSelectCard","UserSelectCardDesc","SkillName", "SkillDesc" };
 
 					for (int i = 0; i < TranslationDataSheet.Length; ++i)
 					{
