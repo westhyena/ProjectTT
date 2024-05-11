@@ -71,9 +71,19 @@ public abstract class Character : MonoBehaviour
             ref growPD,
             ref growMD 
         );
+
+        float skillAddDamage = 0;
+        foreach (Skill.EffectHolder effectHolder in this.skillEffectList)
+        {
+            if (effectHolder.effectInfo.EffectType == SkillDataKind_E.AttackUp)
+            {
+                skillAddDamage += effectHolder.effectInfo.Value;
+            }
+        }
         return (
             characterInfo.AttackDamage + 
-            growAttackDamge
+            growAttackDamge +
+            skillAddDamage
         );
     } }
     float basePhysicDefenceStat = 5.0f;

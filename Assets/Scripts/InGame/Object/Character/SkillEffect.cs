@@ -5,9 +5,12 @@ using UnityEngine;
 public class SkillEffect
 {
     SkillDataKind_E effectType;
+    public SkillDataKind_E EffectType => effectType;
     DamageType_E damageType;
+    public DamageType_E DamageType => damageType;
 
     float value;
+    public float Value => value;
     float duration;
     public float Duration => duration;
     public bool IsOneTimeEffect => duration == 0.0f;
