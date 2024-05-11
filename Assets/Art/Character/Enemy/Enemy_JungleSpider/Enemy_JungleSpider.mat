@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e7c0301eb5c3f844d998960d928f7298, type: 3}
+        m_Texture: {fileID: -8328923581568760697, guid: 43c3e926a61d6f0419f9edf9742158cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_Tex:
-        m_Texture: {fileID: 2800000, guid: b23d51553b3f0e34d98828ce03437070, type: 3}
+        m_Texture: {fileID: 2800000, guid: 61b823dca8275b449a8b8af666a4240f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Smoothness_Tex:
@@ -93,7 +93,7 @@ Material:
     - _twirl_Strength: 10
     m_Colors:
     - _Add_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
     - _Dissolve_Color: {r: 1, g: 0.03301889, b: 0.03301889, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
