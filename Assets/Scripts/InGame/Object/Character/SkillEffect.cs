@@ -9,7 +9,9 @@ public class SkillEffect
 
     float value;
     float duration;
-    public bool isOneTimeEffect => duration == 0.0f;
+    public float Duration => duration;
+    public bool IsOneTimeEffect => duration == 0.0f;
+    public bool IsDotEffect => effectType == SkillDataKind_E.DotDamage;
     Character source;
     public SkillEffect(
         SkillDataKind_E effectType,
@@ -36,6 +38,7 @@ public class SkillEffect
         switch (effectType)
         {
             case SkillDataKind_E.Damage:
+            case SkillDataKind_E.DotDamage:
                 ApplyDamage(target);
                 break;
         }

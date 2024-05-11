@@ -5,16 +5,37 @@ public class Skill
 {
     public class EffectHolder
     {
-        public EffectInfo effectInfo;
-        public float value;
-        public float duration;
-        public EffectHolder(EffectInfo effectInfo, float value, float duration)
+        public SkillEffect effectInfo;
+        float timer = 0.0f;
+        float dotTimer = 0.0f;
+        float CONST_DOT_TIME = 1.0f;
+        public bool isEnd => timer > effectInfo.Duration;
+
+        public EffectHolder(SkillEffect effectInfo)
         {
             this.effectInfo = effectInfo;
-            this.value = value;
-            this.duration = duration;
+        }
+
+        public void Update(Character target)
+        {
+            timer += Time.deltaTime;
+            if (effectInfo.IsDotEffect)
+            {
+                UpdateDot(target);
+            }
+        }
+
+        void UpdateDot(Character target)
+        {
+            dotTimer += Time.deltaTime;
+            if (dotTimer > CONST_DOT_TIME)
+            {
+                effectInfo.ApplyEffect(target);
+                dotTimer = 0.0f;
+            }
         }
     }
+
     Character character;
     SkillDataElement skillInfo;
     public SkillDataElement SkillInfo => skillInfo;
@@ -25,7 +46,7 @@ public class Skill
 
     GameObject projectilePrefab;
 
-    List<SkillEffect> effectList = new ();
+    List<EffectHolder> effectList = new ();
 
     float skillTimer = 0.0f;
 
@@ -49,13 +70,13 @@ public class Skill
 
         foreach (SkillDataBase skillEffect in skillInfo.SkillData)
         {
-            effectList.Add(new SkillEffect(
+            effectList.Add(new EffectHolder(new SkillEffect(
                 skillEffect.SkillDataKind,
                 skillInfo.Type,
                 skillEffect.Value,
                 skillEffect.Time,
                 this.character
-            ));
+            )));
         }
 
         if (!string.IsNullOrEmpty(skillInfo.ProjectileEffectName))
@@ -146,7 +167,7 @@ public class Skill
             return targets;
         }
 
-        Character randomTarget = targets[Random.Range(0, targets.Length)];
+        Character randomTarget = targets[UnityEngine.Random.Range(0, targets.Length)];
         return new Character[] { randomTarget };
     }
 
@@ -163,7 +184,7 @@ public class Skill
         foreach (Character effectsTarget in effectsTargets)
         {
             CreateHitObject(effectsTarget);
-            foreach (SkillEffect effect in effectList)
+            foreach (EffectHolder effect in effectList)
             {
                 effectsTarget.AddSkillEffect(effect);
             }
@@ -195,7 +216,7 @@ public class Skill
             {
                 if (projectilePrefab != null)
                 {
-                    Projectile projectile = Object.Instantiate(projectilePrefab).GetComponent<Projectile>();
+                    Projectile projectile = GameObject.Instantiate(projectilePrefab).GetComponent<Projectile>();
                     projectile.Initialize(character, useTarget, this);
                 }
                 else

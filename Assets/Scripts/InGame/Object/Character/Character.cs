@@ -126,7 +126,7 @@ public abstract class Character : MonoBehaviour
     public float HPRatio { get { return hp / MaxHP; } }
     public bool IsDead { get { return hp <= 0.0f; } }
 
-    List<SkillEffect> skillEffectList = new ();
+    List<Skill.EffectHolder> skillEffectList = new ();
 
     protected virtual void Awake()
     {
@@ -551,19 +551,34 @@ public abstract class Character : MonoBehaviour
         }
     }
 
-    public void AddSkillEffect(SkillEffect skillEffect)
+    public void AddSkillEffect(Skill.EffectHolder effectHolder)
     {
-        if (skillEffect.isOneTimeEffect)
+        if (effectHolder.effectInfo.IsOneTimeEffect)
         {
             // Don't Add to List
-            skillEffect.ApplyEffect(this);
+            effectHolder.effectInfo.ApplyEffect(this);
         }
+        else
+        {
+            skillEffectList.Add(effectHolder);
+        }
+    }
+
+    void UpdateEffect()
+    {
+        foreach (Skill.EffectHolder effect in skillEffectList)
+        {
+            effect.Update(this);
+        }
+
+        skillEffectList.RemoveAll(effect => effect.isEnd);
     }
 
     protected void Update()
     {
         UpdateVariable();
         UpdateState();
+        UpdateEffect();
     }
 
     public void OnLevelUp(int newLevel)
