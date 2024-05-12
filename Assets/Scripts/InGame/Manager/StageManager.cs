@@ -82,6 +82,7 @@ public class StageManager : MonoBehaviour
         List<Wave> waveList = new();
         public bool IsBossWaveGroup => waveList.Exists(w => w.IsBossWave);
         float endTime;
+        public float EndTime => endTime;
         float timer = 0.0f;
 
         public WaveGroup(List<WaveDataInfo> waveDataList, float endTime)
@@ -115,6 +116,19 @@ public class StageManager : MonoBehaviour
     int curWaveGroupIndex = 0;
 
     Stage stage;
+
+    public float TotalTime
+    {
+        get
+        {
+            float time = 0.0f;
+            foreach (WaveGroup waveGroup in waveGroupList)
+            {
+                time += waveGroup.EndTime;
+            }
+            return time;
+        }
+    }
 
     void Awake()
     {
