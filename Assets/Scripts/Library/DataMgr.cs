@@ -588,7 +588,7 @@ public class InGame_CharacterGrowDataElement
 
 #endregion
 
-#region UserSelectCard_E
+#region UserSelectCard
 
 public enum CardBuffType_E
 {
@@ -625,6 +625,15 @@ public class UserSelectCardDataElement
 	/// </summary>
 	public TargetSelect_E TargetSelect;
 	public List<CardBuff> CardBuffList = new List<CardBuff>();
+	/// <summary>
+	/// 재구매 재화 타입
+	/// </summary>
+	public Goods_E reBuyGoodsType;
+	/// <summary>
+	/// 재구매 비용
+	/// </summary>
+	public int reBuyPrice;
+
 	/// <summary>
 	/// 카드 아이콘
 	/// </summary>
@@ -816,12 +825,13 @@ public class DataMgr : MonoBehaviour
 	/// <returns></returns>
 	public List<UserSelectCardDataElement> GetUserSelectCardList()
 	{
+		int returnCardCount = 4;
 		List<UserSelectCardDataElement> UserCard = new List<UserSelectCardDataElement>();
 		float MaxRatio = 0;
 		for (int i = 0; i < m_UserSelectCardTableDataElementList.Count; ++i)
 			MaxRatio += m_UserSelectCardTableDataElementList[i].Ratio;
 
-		while (UserCard.Count < 5)
+		while (UserCard.Count < returnCardCount)
 		{
 			float ratio = UnityEngine.Random.Range(0, MaxRatio + 1);
 			float AddRatio = 0;
