@@ -3378,6 +3378,13 @@ MonoBehaviour:
         CharacterLevel: 4
         SummonCount: 10
       - WaveID: 1
+        SummonTime: 12
+        ObjName: "\uC815\uAE00\uAC70\uBBF8"
+        CharacterID: 1008
+        MonsterType: 0
+        CharacterLevel: 4
+        SummonCount: 10
+      - WaveID: 1
         SummonTime: 15
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
@@ -3405,7 +3412,7 @@ MonoBehaviour:
         CharacterID: 1014
         MonsterType: 0
         CharacterLevel: 3
-        SummonCount: 10
+        SummonCount: 5
       Wave3:
       - WaveID: 3
         SummonTime: 1
@@ -4265,7 +4272,7 @@ MonoBehaviour:
       CharacterName: "\uD30C\uB780\uBA38\uB9AC \uC601\uC6C5"
       CharacterNameID: 1000
       CharacterDescID: 2000
-      MoveSpeed: 5
+      MoveSpeed: 5.5
       Position: 0
       DoAerialUnitAttack: 0
       Type: 0
@@ -4616,16 +4623,16 @@ MonoBehaviour:
       CharacterName: "\uC815\uAE00 \uAC70\uBBF8"
       CharacterNameID: 10008
       CharacterDescID: 11008
-      MoveSpeed: 4
+      MoveSpeed: 3.2
       Position: 0
       DoAerialUnitAttack: 0
       Type: 0
-      AttackType: 1
-      AttackRange: 4
+      AttackType: 0
+      AttackRange: 1
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1
-      AttackDamage: 5
+      AttackDamage: 25
       HP: 50
       PD: 1
       MD: 1
@@ -4637,7 +4644,7 @@ MonoBehaviour:
       GrowPD: 2
       GrowMD: 1
       iconFileName: 
-      ObjectFileName: 
+      ObjectFileName: Enemy_JungleSpider
       ObjectEffFileName: 
     - ID: 1009
       CharacterName: "\uAD34\uC0C1\uD55C \uACF5\uC911\uC0C8"
