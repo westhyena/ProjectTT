@@ -29,6 +29,7 @@ public class Player : Character
 
     protected override void UpdateVariable()
     {
+        base.UpdateVariable();
     }
 
     protected override void UpdateManual()

@@ -34,6 +34,7 @@ public class Hero : Character
 
     protected override void UpdateVariable()
     {
+        base.UpdateVariable();
         followOffsetRange = GameManager.instance.heroFollowOffsetRange;
     }
 

@@ -23,6 +23,7 @@ public class Enemy : Character
 
     protected override void UpdateVariable()
     {
+        base.UpdateVariable();
     }
 
     protected override void OnDamage(float damage)
