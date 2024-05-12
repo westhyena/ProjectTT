@@ -3291,7 +3291,7 @@ MonoBehaviour:
       Vnm: 
       Mys: 
   m_InGameSystemElement:
-    MercenaryPointGetTime: 5
+    MercenaryPointGetTime: 3
     GetMercenaryPoint: 20
     Mercenary_LevelUp_NeedPoint: 0200000004000000060000000a0000000f000000140000001400000019000000190000001e0000001e0000002300000023000000280000002800000032000000
     Summon_NeedPoint: 15
@@ -4288,10 +4288,10 @@ MonoBehaviour:
       AllSkillList: 01000000020000000a000000140000001f000000290000002b0000003300000034000000
       Exp: 0
       Gold: 0
-      GrowHp: 20
-      GrowAttackDamage: 10
+      GrowHp: 50
+      GrowAttackDamage: 15
       GrowPD: 5
-      GrowMD: 2
+      GrowMD: 5
       iconFileName: Hero_CyonKnight
       ObjectFileName: Hero_CyonKnight
       ObjectEffFileName: 
@@ -4423,8 +4423,8 @@ MonoBehaviour:
       AllSkillList: 
       Exp: 10
       Gold: 5
-      GrowHp: 5
-      GrowAttackDamage: 2
+      GrowHp: 6
+      GrowAttackDamage: 3
       GrowPD: 1
       GrowMD: 1
       iconFileName: 
@@ -4450,8 +4450,8 @@ MonoBehaviour:
       AllSkillList: 
       Exp: 10
       Gold: 5
-      GrowHp: 5
-      GrowAttackDamage: 3
+      GrowHp: 6
+      GrowAttackDamage: 4
       GrowPD: 2
       GrowMD: 1
       iconFileName: 
@@ -4478,7 +4478,7 @@ MonoBehaviour:
       Exp: 10
       Gold: 5
       GrowHp: 5
-      GrowAttackDamage: 2
+      GrowAttackDamage: 5
       GrowPD: 2
       GrowMD: 1
       iconFileName: 
@@ -4639,8 +4639,8 @@ MonoBehaviour:
       AllSkillList: 
       Exp: 10
       Gold: 5
-      GrowHp: 5
-      GrowAttackDamage: 3
+      GrowHp: 7
+      GrowAttackDamage: 4
       GrowPD: 2
       GrowMD: 1
       iconFileName: 
@@ -4721,7 +4721,7 @@ MonoBehaviour:
       Exp: 10
       Gold: 5
       GrowHp: 5
-      GrowAttackDamage: 3
+      GrowAttackDamage: 5
       GrowPD: 2
       GrowMD: 1
       iconFileName: 
@@ -4801,7 +4801,7 @@ MonoBehaviour:
       AllSkillList: 
       Exp: 10
       Gold: 5
-      GrowHp: 5
+      GrowHp: 4
       GrowAttackDamage: 1
       GrowPD: 2
       GrowMD: 1
@@ -6037,7 +6037,7 @@ MonoBehaviour:
       DamageTypeRange: 0
       AttackSpeed: 2
       AttackDamage: 50
-      HP: 1000
+      HP: 2000
       PD: 5
       MD: 5
       AllSkillList: 
@@ -6091,7 +6091,7 @@ MonoBehaviour:
       DamageTypeRange: 0
       AttackSpeed: 1
       AttackDamage: 100
-      HP: 11000
+      HP: 20000
       PD: 10
       MD: 10
       AllSkillList: 
