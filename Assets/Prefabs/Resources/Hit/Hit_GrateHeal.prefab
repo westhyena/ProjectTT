@@ -675,7 +675,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 10.18, y: 3.64, z: 5}
+    m_Scale: {x: 14, y: 4, z: 5}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -1609,8 +1609,8 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 25
-      minScalar: 10
+      scalar: 35
+      minScalar: 15
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -10250,7 +10250,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 18
+      scalar: 24
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -14949,7 +14949,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7091525265086515009}
   serializedVersion: 8
-  lengthInSec: 1
+  lengthInSec: 0.6
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -15077,8 +15077,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 5
+      scalar: 20
+      minScalar: 8
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -15659,7 +15659,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 1.5
       mode: 0
       spread: 0
       speed:
@@ -15778,7 +15778,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 6
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -19750,7 +19750,7 @@ GameObject:
   - component: {fileID: 5199654606224565255}
   - component: {fileID: -2382325340536681076}
   m_Layer: 0
-  m_Name: Hit_Heal_L
+  m_Name: Hit_GrateHeal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

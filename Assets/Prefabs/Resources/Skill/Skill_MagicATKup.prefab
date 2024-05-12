@@ -4906,6 +4906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9181266744691537511}
+  - component: {fileID: 3722301841822767582}
   m_Layer: 0
   m_Name: Skill_MagicATKup
   m_TagString: Untagged
@@ -4929,6 +4930,19 @@ Transform:
   - {fileID: 8191029934547120911}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3722301841822767582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990376174723473654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4937d924837454dc0930437abb390825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 5
 --- !u!1 &5448050637040293916
 GameObject:
   m_ObjectHideFlags: 0
