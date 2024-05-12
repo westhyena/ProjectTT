@@ -488,6 +488,15 @@ public abstract class Character : MonoBehaviour
         }
     }
 
+    public void Heal(float healVal)
+    {
+        hp += healVal;
+        if (hp > MaxHP)
+        {
+            hp = MaxHP;
+        }
+    }
+
     protected void Die()
     {
         collider2d.enabled = false;

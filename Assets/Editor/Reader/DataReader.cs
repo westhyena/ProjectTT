@@ -848,7 +848,7 @@ public class DataReader : EditorWindow
 								ce.CardRating = (Rating_E)Get<int>(obj, 4);
 								ce.TargetSelect = (TargetSelect_E)Get<int>(obj, 5);
 
-								for (int b = 6; b <= 9; ++b)
+								for (int b = 6; b <= 10; ++b)
 								{
 									CardBuff card = new CardBuff();
 									if (string.IsNullOrEmpty(Get<string>(obj, b)) == false)
@@ -858,6 +858,10 @@ public class DataReader : EditorWindow
 										ce.CardBuffList.Add(card);
 									}
 								}
+
+								ce.reBuyGoodsType = (Goods_E)Get<int>(obj, 11);
+								ce.reBuyPrice = Get<int>(obj, 12);
+
 								DataTable Character_FileTable = ReadSingleSheet("UserCard_File", DataPath);
 								//파일명 셋팅
 								object[] obj2 = Character_FileTable.Rows[ii].ItemArray;

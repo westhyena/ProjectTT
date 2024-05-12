@@ -36,6 +36,11 @@ public class SkillEffect
         target.Damage(value, damageType);
     }
 
+    void ApplyHeal(Character target)
+    {
+        target.Heal(value);
+    }
+
     public void ApplyEffect(Character target)
     {
         switch (effectType)
@@ -43,6 +48,9 @@ public class SkillEffect
             case SkillDataKind_E.Damage:
             case SkillDataKind_E.DotDamage:
                 ApplyDamage(target);
+                break;
+            case SkillDataKind_E.Heal:
+                ApplyHeal(target);
                 break;
         }
     }

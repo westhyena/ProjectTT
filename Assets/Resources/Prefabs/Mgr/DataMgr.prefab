@@ -7052,7 +7052,9 @@ MonoBehaviour:
       CardBuffList:
       - Type: 0
         Value: 5
-      CardIconName: 
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Critical_Probability
       BuffCardFileName: NORMAL_Card
     - ID: 1
       CardName: "\uC601\uC6C5 \uD06C\uB9AC\uD2F0\uCEEC \uB370\uBBF8\uC9C0 \uC99D\uAC00"
@@ -7063,7 +7065,9 @@ MonoBehaviour:
       CardBuffList:
       - Type: 1
         Value: 10
-      CardIconName: 
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Critical_Damage
       BuffCardFileName: NORMAL_Card
     - ID: 2
       CardName: "\uC601\uC6C5 \uACF5\uACA9\uB825 \uC99D\uAC00"
@@ -7074,7 +7078,9 @@ MonoBehaviour:
       CardBuffList:
       - Type: 2
         Value: 10
-      CardIconName: 
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Attack_Boost
       BuffCardFileName: NORMAL_Card
     - ID: 3
       CardName: "\uC601\uC6C5 \uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00"
@@ -7085,7 +7091,9 @@ MonoBehaviour:
       CardBuffList:
       - Type: 3
         Value: 0.1
-      CardIconName: 
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Attack_Speed
       BuffCardFileName: NORMAL_Card
     - ID: 4
       CardName: "\uC601\uC6C5 \uD68C\uBCF5"
@@ -7093,8 +7101,12 @@ MonoBehaviour:
       CardDescID: 804
       CardRating: 0
       TargetSelect: 0
-      CardBuffList: []
-      CardIconName: 
+      CardBuffList:
+      - Type: 4
+        Value: 500
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Full_Recovery
       BuffCardFileName: NORMAL_Card
     - ID: 5
       CardName: "\uC6A9\uBCD1 \uD06C\uB9AC\uD2F0\uCEEC \uC99D\uAC00"
@@ -7105,7 +7117,9 @@ MonoBehaviour:
       CardBuffList:
       - Type: 0
         Value: 5
-      CardIconName: 
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Critical_Probability
       BuffCardFileName: NORMAL_Card
     - ID: 6
       CardName: "\uC6A9\uBCD1 \uD06C\uB9AC\uD2F0\uCEEC \uB370\uBBF8\uC9C0 \uC99D\uAC00"
@@ -7116,7 +7130,9 @@ MonoBehaviour:
       CardBuffList:
       - Type: 1
         Value: 10
-      CardIconName: 
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Critical_Damage
       BuffCardFileName: NORMAL_Card
     - ID: 7
       CardName: "\uC6A9\uBCD1 \uACF5\uACA9\uB825 \uC99D\uAC00"
@@ -7127,7 +7143,9 @@ MonoBehaviour:
       CardBuffList:
       - Type: 2
         Value: 10
-      CardIconName: 
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Attack_Boost
       BuffCardFileName: NORMAL_Card
     - ID: 8
       CardName: "\uC6A9\uBCD1 \uACF5\uACA9 \uC18D\uB3C4 \uC99D\uAC00"
@@ -7138,7 +7156,9 @@ MonoBehaviour:
       CardBuffList:
       - Type: 3
         Value: 0.1
-      CardIconName: 
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Attack_Speed
       BuffCardFileName: NORMAL_Card
     - ID: 9
       CardName: "\uC6A9\uBCD1 \uD68C\uBCF5"
@@ -7146,8 +7166,12 @@ MonoBehaviour:
       CardDescID: 809
       CardRating: 0
       TargetSelect: 1
-      CardBuffList: []
-      CardIconName: 
+      CardBuffList:
+      - Type: 4
+        Value: 500
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Full_Recovery
       BuffCardFileName: NORMAL_Card
     - ID: 10
       CardName: "\uC804\uCCB4 \uD06C\uB9AC\uD2F0\uCEEC \uC99D\uAC00"
@@ -7158,7 +7182,9 @@ MonoBehaviour:
       CardBuffList:
       - Type: 0
         Value: 5
-      CardIconName: 
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Critical_Probability
       BuffCardFileName: NORMAL_Card
     - ID: 11
       CardName: "\uC804\uCCB4 \uD06C\uB9AC\uD2F0\uCEEC \uB370\uBBF8\uC9C0 \uC99D\uAC00"
@@ -7169,7 +7195,9 @@ MonoBehaviour:
       CardBuffList:
       - Type: 1
         Value: 10
-      CardIconName: 
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Critical_Damage
       BuffCardFileName: NORMAL_Card
     - ID: 12
       CardName: "\uC804\uCCB4 \uACF5\uACA9\uB825 \uC99D\uAC00"
@@ -7180,7 +7208,9 @@ MonoBehaviour:
       CardBuffList:
       - Type: 2
         Value: 10
-      CardIconName: 
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Attack_Boost
       BuffCardFileName: NORMAL_Card
     - ID: 13
       CardName: "\uC804\uCCB4 \uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00"
@@ -7191,7 +7221,9 @@ MonoBehaviour:
       CardBuffList:
       - Type: 3
         Value: 0.1
-      CardIconName: 
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Attack_Speed
       BuffCardFileName: NORMAL_Card
     - ID: 14
       CardName: "\uC804\uCCB4 \uD68C\uBCF5"
@@ -7199,8 +7231,12 @@ MonoBehaviour:
       CardDescID: 814
       CardRating: 0
       TargetSelect: 2
-      CardBuffList: []
-      CardIconName: 
+      CardBuffList:
+      - Type: 4
+        Value: 500
+      reBuyGoodsType: 0
+      reBuyPrice: 1000
+      CardIconName: Full_Recovery
       BuffCardFileName: NORMAL_Card
   m_UserSelectCardTableDataElementList:
   - UserSelectCardID: 0
