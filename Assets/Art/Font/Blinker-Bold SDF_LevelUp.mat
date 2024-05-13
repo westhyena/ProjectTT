@@ -12,7 +12,6 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - GLOW_ON
   - UNDERLAY_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -90,9 +89,9 @@ Material:
     - _StencilWriteMask: 255
     - _TextureHeight: 256
     - _TextureWidth: 256
-    - _UnderlayDilate: 0.623
+    - _UnderlayDilate: 0.372
     - _UnderlayOffsetX: 0
-    - _UnderlayOffsetY: -0
+    - _UnderlayOffsetY: -0.135
     - _UnderlaySoftness: 0.05
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
@@ -108,5 +107,5 @@ Material:
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0.047169805, g: 0, b: 0, a: 1}
+    - _UnderlayColor: {r: 0.4627451, g: 0.24560322, b: 0, a: 1}
   m_BuildTextureStacks: []
