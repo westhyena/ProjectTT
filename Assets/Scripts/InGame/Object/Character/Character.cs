@@ -318,7 +318,6 @@ public abstract class Character : MonoBehaviour
 
     protected virtual void UpdateVariable()
     {
-        Debug.Log(this.name + " - " + this.AttackSpeed + ", " + (1.0f / this.AttackSpeed));
         this.animator.SetFloat("attackSpeed", 1.0f / this.AttackSpeed);
     }
 
