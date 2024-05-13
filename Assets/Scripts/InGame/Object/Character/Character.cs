@@ -59,7 +59,28 @@ public abstract class Character : MonoBehaviour
     float rangeOfTarget = 3.0f;
     public float RangeOfTarget { get { return rangeOfTarget; } }
 
-    float attackSpeed = 1.0f;
+    float baseAttackSpeed = 1.0f;
+    public float AttackSpeed 
+    {
+        get
+        {
+            float ratio = 1.0f;
+            foreach (Skill.EffectHolder effectHolder in this.skillEffectList)
+            {
+                if (effectHolder.effectInfo.EffectType == SkillDataKind_E.AttackSpeedUp)
+                {
+                    ratio *= 1.0f + effectHolder.effectInfo.Value;
+                }
+                else if (effectHolder.effectInfo.EffectType == SkillDataKind_E.AttackSpeedDown)
+                {
+                    ratio *= 1.0f - effectHolder.effectInfo.Value;
+                }
+            }
+            return baseAttackSpeed * ratio;
+        }
+    }
+
+    public float AttackCooltime => AttackSpeed + Time.fixedDeltaTime;
 
     public float AttackStat { get {
         int growHP = 0, growAttackDamge = 0, growPD = 0, growMD = 0;
@@ -108,8 +129,6 @@ public abstract class Character : MonoBehaviour
     public Transform projectileSpawnPoint;
 
     protected float attackStartDistance = 5.0f;
-    protected float attackCooltime = 3.0f;
-    protected float attackDelay = 0.2f;
 
     protected float dyingDelay = 3.0f;
 
@@ -183,8 +202,7 @@ public abstract class Character : MonoBehaviour
             this.baseMagicDefenceStat = characterInfo.MD;
 
             this.rangeOfTarget = characterInfo.AttackRange;
-            this.attackSpeed =  characterInfo.AttackSpeed;
-            this.attackCooltime = this.attackSpeed + Time.fixedDeltaTime;
+            this.baseAttackSpeed =  characterInfo.AttackSpeed;
 
             normalHitPrefab = ResourceManager.GetHitPrefab("Hit_Base_A");
             if (!string.IsNullOrEmpty(characterInfo.ObjectEffFileName))
@@ -196,8 +214,6 @@ public abstract class Character : MonoBehaviour
         movementSpeed = GameManager.instance.baseColliderWidth * this.mspd;
         attackStartDistance = GameManager.instance.baseColliderWidth * rangeOfTarget;
         targetStartDistance = attackStartDistance * 2.0f;
-
-        this.animator.SetFloat("attackSpeed", 1.0f / this.attackSpeed);
 
         hp = MaxHP;
 
@@ -302,7 +318,7 @@ public abstract class Character : MonoBehaviour
 
     protected virtual void UpdateVariable()
     {
-
+        this.animator.SetFloat("attackSpeed", 1.0f / this.AttackSpeed);
     }
 
     void UpdateInit()
@@ -383,7 +399,7 @@ public abstract class Character : MonoBehaviour
     void UpdateAttack()
     {
         Move(Vector2.zero);
-        if (curStateTime > attackCooltime)
+        if (curStateTime > AttackCooltime)
         {
             if (target.IsDead)
             {
