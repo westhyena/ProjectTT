@@ -588,8 +588,13 @@ public abstract class Character : MonoBehaviour
 
     protected void UpdateState()
     {
-        curStateTime += Time.deltaTime;
+        if (IsStun)
+        {
+            ChangeState(State.Idle);
+            return;
+        }
 
+        curStateTime += Time.deltaTime;
         switch (state)
         {
             case State.Init:

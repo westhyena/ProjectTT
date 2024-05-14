@@ -44,6 +44,10 @@ public class Player : Character
 
     public void ManualMove(Vector2 movement)
     {
+        if (IsStun)
+        {
+            return;
+        }
         if (movement.sqrMagnitude > 0)
         {
             ChangeState(State.Manual);
