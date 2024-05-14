@@ -59,6 +59,36 @@ public abstract class Character : MonoBehaviour
     float rangeOfTarget = 3.0f;
     public float RangeOfTarget { get { return rangeOfTarget; } }
 
+    public bool IsImmune
+    {
+        get
+        {
+            foreach (Skill.EffectHolder effectHolder in this.skillEffectList)
+            {
+                if (effectHolder.effectInfo.EffectType == SkillDataKind_E.Immunity)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
+    public bool IsStun
+    {
+        get
+        {
+            foreach (Skill.EffectHolder effectHolder in this.skillEffectList)
+            {
+                if (effectHolder.effectInfo.EffectType == SkillDataKind_E.Stun)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
     float baseAttackSpeed = 1.0f;
     public float AttackSpeed 
     {
@@ -493,6 +523,11 @@ public abstract class Character : MonoBehaviour
             this.characterInfo.ID,
             1
         );
+
+        if (IsImmune)
+        {
+            damage = 0;
+        }
 
         OnDamage(damage);
 
