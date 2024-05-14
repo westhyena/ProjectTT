@@ -173,15 +173,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hand_r
+      name: bone
       rect:
         serializedVersion: 2
-        x: 211
+        x: 277
         y: 578
-        width: 141
-        height: 218
+        width: 214
+        height: 227
       alignment: 9
-      pivot: {x: 0.43951827, y: 0.7954541}
+      pivot: {x: 0.85338783, y: 0.55286264}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,27 +189,6 @@ TextureImporter:
       bones: []
       spriteID: 2faf7fd38da3a164a88f083e3b44353e
       internalID: -666350381
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hand_l
-      rect:
-        serializedVersion: 2
-        x: 357
-        y: 578
-        width: 140
-        height: 219
-      alignment: 9
-      pivot: {x: 0.40600696, y: 0.8341023}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd42d32ccce5b8f4eb3c8e5084bfd6fd
-      internalID: -812367683
       vertices: []
       indices: 
       edges: []
@@ -346,7 +325,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 13
-        width: 212
+        width: 208
         height: 782
       alignment: 9
       pivot: {x: 0.5707129, y: 0.3281312}
@@ -394,12 +373,12 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       arm_up: 5672967
+      bone: -666350381
       eye: -1635844677
       hair: -6519113
       hair_l: -505464883
       hair_r: -178644479
       hand_l: -812367683
-      hand_r: -666350381
       head: -1800618300
       leg: 1832143986
       mouth: -1354939852
