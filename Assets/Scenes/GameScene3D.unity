@@ -13281,6 +13281,11 @@ MonoBehaviour:
   - {fileID: 1880760130}
   - {fileID: 1033392408}
   buffSelectUI: {fileID: 108257930}
+  buffGradeIcon:
+  - {fileID: 21300000, guid: e8f471de82167284faa93dd80ed4e250, type: 3}
+  - {fileID: 21300000, guid: 056dae97b8f19234da6eba4d001a9a71, type: 3}
+  - {fileID: 21300000, guid: d22b18ac315eaa5489ee53ecfda05c52, type: 3}
+  - {fileID: 21300000, guid: 3f8536c6463212049b694cd2e62a5063, type: 3}
   hpBarPrefab: {fileID: 1303233818708691970, guid: e996cd1b356ee458088cf0566d81057b, type: 3}
   playerHPBarPrefab: {fileID: 1303233818708691970, guid: 0fa6560b2fba6c8468c87a2e73f36b7c, type: 3}
   damagePrefab: {fileID: 8733567991069426994, guid: d2af5a73ac1e53148a9976d9e64b5c51, type: 3}
