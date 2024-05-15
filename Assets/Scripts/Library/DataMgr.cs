@@ -820,7 +820,7 @@ public class DataMgr : MonoBehaviour
 	}
 
 	/// <summary>
-	/// 랜덤한 5개의 유저셀렉트 카드 리스트를 반환한다.
+	/// 랜덤한 4개의 유저셀렉트 카드 리스트를 반환한다.
 	/// </summary>
 	/// <returns></returns>
 	public List<UserSelectCardDataElement> GetUserSelectCardList()

@@ -25,6 +25,8 @@ public class UIManager : MonoBehaviour
 
     public BuffSelectUI buffSelectUI;
 
+    public Sprite[] buffGradeIcon;
+
     [SerializeField]
     GameObject hpBarPrefab;
     public HPBarUI CreateHPBar(Transform parent)

@@ -214,16 +214,18 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         if (levelUpBuffToSelectCount > 0)
         {
-            UIManager.instance.buffSelectUI.gameObject.SetActive(true);
+            List<UserSelectCardDataElement> cardList = DataMgr.instance.GetUserSelectCardList();
+            UIManager.instance.buffSelectUI.Initialize(cardList);
             PauseGame();
         }
 
         while (levelUpBuffToSelectCount > 0)
         {
-            if (!UIManager.instance.buffSelectUI.gameObject.activeSelf)
+            if (!UIManager.instance.buffSelectUI.gameObject.activeInHierarchy)
             {
                 yield return new WaitForSeconds(0.1f);
-                UIManager.instance.buffSelectUI.gameObject.SetActive(true);
+                List<UserSelectCardDataElement> cardList = DataMgr.instance.GetUserSelectCardList();
+                UIManager.instance.buffSelectUI.Initialize(cardList);
                 PauseGame();
             }
             else

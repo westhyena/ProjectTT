@@ -19,6 +19,16 @@ public class BuffSelectUI : MonoBehaviour
         }
     }
 
+    public void Initialize(List<UserSelectCardDataElement> cardList)
+    {
+        gameObject.SetActive(true);
+
+        for (int i = 0; i < cardList.Count; i++)
+        {
+            buffCardUIs[i].Initialize(cardList[i]);
+        }
+    }
+
     void OnClickBuffCard(BuffCardUI buffCardUI)
     {
         GameManager.instance.OnSelectBuffCard();

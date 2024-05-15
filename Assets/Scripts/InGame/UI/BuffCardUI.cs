@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,5 +18,14 @@ public class BuffCardUI : MonoBehaviour
     {
         button = GetComponent<Button>();
         cardImage = GetComponent<Image>();
+    }
+
+    public void Initialize(UserSelectCardDataElement cardData)
+    {
+        iconImage.sprite = ResourceManager.GetBuffIcon(cardData.CardIconName);
+        nameText.text = cardData.CardName;
+        descriptionText.text = cardData.CardName;
+
+        cardImage.sprite = UIManager.instance.buffGradeIcon[(int)cardData.CardRating];
     }
 }
