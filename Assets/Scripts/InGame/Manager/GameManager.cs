@@ -79,6 +79,8 @@ public class GameManager : MonoBehaviour
     bool isBuffCardSelecting = false;
     int levelUpBuffToSelectCount = 0;
 
+    List<UserSelectCardDataElement> buffCardList = new();
+
     void Awake()
     {
         heroManager = GetComponent<HeroManager>();
@@ -237,8 +239,28 @@ public class GameManager : MonoBehaviour
         isBuffCardSelecting = false;
     }
 
-    public void OnSelectBuffCard()
+    public void OnSelectBuffCard(UserSelectCardDataElement cardData)
     {
+        foreach (CardBuff cardBuff in cardData.CardBuffList)
+        {
+            if (cardBuff.Type == CardBuffType_E.Heal)
+            {
+                List<Character> targetList = new ();
+                if (cardData.TargetSelect == TargetSelect_E.One || cardData.TargetSelect == TargetSelect_E.All)
+                {
+                    targetList.Add(player);
+                }
+                if (cardData.TargetSelect == TargetSelect_E.Area || cardData.TargetSelect == TargetSelect_E.All)
+                {
+                    targetList.AddRange(heroManager.AliveHeroList.Cast<Character>());
+                }
+                foreach (Character target in targetList)
+                {
+                    target.Heal(cardBuff.Value);
+                }
+            }
+        }
+        buffCardList.Add(cardData);
         levelUpBuffToSelectCount--;
         UIManager.instance.buffSelectUI.gameObject.SetActive(false);
         ResumeGame();

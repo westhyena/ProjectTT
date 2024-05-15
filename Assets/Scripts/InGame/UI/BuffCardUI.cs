@@ -1,5 +1,4 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +13,9 @@ public class BuffCardUI : MonoBehaviour
     public TMP_Text nameText;
     public TMP_Text descriptionText;
 
+    UserSelectCardDataElement cardData;
+    public UserSelectCardDataElement CardData => cardData;
+
     void Awake()
     {
         button = GetComponent<Button>();
@@ -22,6 +24,7 @@ public class BuffCardUI : MonoBehaviour
 
     public void Initialize(UserSelectCardDataElement cardData)
     {
+        this.cardData = cardData;
         iconImage.sprite = ResourceManager.GetBuffIcon(cardData.CardIconName);
         nameText.text = cardData.CardName;
         descriptionText.text = cardData.CardName;

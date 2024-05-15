@@ -31,6 +31,6 @@ public class BuffSelectUI : MonoBehaviour
 
     void OnClickBuffCard(BuffCardUI buffCardUI)
     {
-        GameManager.instance.OnSelectBuffCard();
+        GameManager.instance.OnSelectBuffCard(buffCardUI.CardData);
     }
 }
