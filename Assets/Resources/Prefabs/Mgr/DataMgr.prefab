@@ -3344,10 +3344,10 @@ MonoBehaviour:
       - WaveID: 0
         SummonTime: 12
         ObjName: "\uB098\uC05C \uBC84\uC12F"
-        CharacterID: 1000
+        CharacterID: 1009
         MonsterType: 0
         CharacterLevel: 2
-        SummonCount: 7
+        SummonCount: 3
       - WaveID: 0
         SummonTime: 15
         ObjName: "\uB098\uC05C \uBC84\uC12F"
@@ -3423,11 +3423,11 @@ MonoBehaviour:
         SummonCount: 20
       - WaveID: 3
         SummonTime: 10
-        ObjName: "\uC2AC\uB77C\uC784"
-        CharacterID: 1003
+        ObjName: "\uD63C\uC774 \uB098\uAC04 \uC8FC\uC220\uC0AC"
+        CharacterID: 1010
         MonsterType: 0
         CharacterLevel: 5
-        SummonCount: 30
+        SummonCount: 10
       - WaveID: 3
         SummonTime: 15
         ObjName: "\uD63C\uC774 \uB098\uAC04 \uCC3D\uBCD1"
@@ -4671,7 +4671,7 @@ MonoBehaviour:
       GrowPD: 2
       GrowMD: 1
       iconFileName: 
-      ObjectFileName: 
+      ObjectFileName: Enemy_WeirdBird
       ObjectEffFileName: 
     - ID: 1010
       CharacterName: "\uD63C\uC774 \uB098\uAC04 \uC8FC\uC220\uC0AC"
@@ -4680,7 +4680,7 @@ MonoBehaviour:
       MoveSpeed: 4
       Position: 0
       DoAerialUnitAttack: 1
-      Type: 0
+      Type: 1
       AttackType: 1
       AttackRange: 3
       DamageTargetType: 0
@@ -4698,7 +4698,7 @@ MonoBehaviour:
       GrowPD: 2
       GrowMD: 1
       iconFileName: 
-      ObjectFileName: 
+      ObjectFileName: Enemy_GhostlyShaman
       ObjectEffFileName: 
     - ID: 1011
       CharacterName: "\uD63C\uC774 \uB098\uAC04 \uCC3D\uBCD1 "
