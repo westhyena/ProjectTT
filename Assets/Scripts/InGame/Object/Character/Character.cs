@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Character : MonoBehaviour
@@ -112,7 +110,7 @@ public abstract class Character : MonoBehaviour
 
     public float AttackCooltime => AttackSpeed + Time.fixedDeltaTime;
 
-    public float AttackStat { get {
+    public virtual float AttackStat { get {
         int growHP = 0, growAttackDamge = 0, growPD = 0, growMD = 0;
         DataMgr.instance.GetCharacterGrowData(
             characterInfo.ID,

@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
     int levelUpBuffToSelectCount = 0;
 
     List<UserSelectCardDataElement> buffCardList = new();
+    public List<UserSelectCardDataElement> BuffCardList => buffCardList;
 
     void Awake()
     {

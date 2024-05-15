@@ -7,6 +7,30 @@ public class Player : Character
     private Vector2 manualMovement = Vector2.zero;
     GameObject followEffect;
 
+    public override float AttackStat
+    {
+        get
+        {
+            float baseStat = base.AttackStat;
+            float ratio = 1.0f;
+            foreach (UserSelectCardDataElement buffCard in GameManager.instance.BuffCardList)
+            {
+                if (buffCard.TargetSelect == TargetSelect_E.Area)
+                {
+                    continue;
+                }
+                foreach (CardBuff buff in buffCard.CardBuffList)
+                {
+                    if (buff.Type == CardBuffType_E.AttackUp_Percent)
+                    {
+                        ratio += buff.Value / 100.0f;
+                    }
+                }
+            }
+            return baseStat * ratio;
+        }
+    }
+
     protected override void Awake()
     {
         base.Awake();
