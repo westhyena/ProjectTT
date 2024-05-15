@@ -98,7 +98,7 @@ Material:
     - _EnableExternalAlpha: 0
     - _Mask_intensity: 1
     - _Metalic: 0
-    - _Normal_Strength: 1
+    - _Normal_Strength: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.4
@@ -106,7 +106,7 @@ Material:
     - _twirl_Strength: 10
     m_Colors:
     - _Add_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 1}
     - _Dissolve_Color: {r: 1, g: 0.03301889, b: 0.03301889, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
