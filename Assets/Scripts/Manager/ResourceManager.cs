@@ -22,6 +22,11 @@ public class ResourceManager
         return Resources.Load<GameObject>($"Skill/{name}");
     }
 
+    public static Sprite GetSkillIcon(string name)
+    {
+        return Resources.Load<Sprite>($"SkillIcon/{name}");
+    }
+
     public static GameObject GetProjectilePrefab(string name)
     {
         return Resources.Load<GameObject>($"Projectile/{name}");

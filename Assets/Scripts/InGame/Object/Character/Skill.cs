@@ -50,6 +50,8 @@ public class Skill
 
     float skillTimer = 0.0f;
 
+    public float CoolTimeRatio => skillTimer / skillInfo.CoolTime;
+
     public Skill(Character character, SkillDataElement skillInfo)
     {
         this.character = character;

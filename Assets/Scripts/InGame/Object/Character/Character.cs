@@ -43,6 +43,7 @@ public abstract class Character : MonoBehaviour
     GameObject normalSkillPrefab;
 
     List<Skill> skillList = new ();
+    public List<Skill> SkillList => skillList;
 
     protected Animator animator;
     protected string[] attackTriggers;
