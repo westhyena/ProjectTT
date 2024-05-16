@@ -87,8 +87,8 @@ public abstract class Character : MonoBehaviour
         }
     }
 
-    float baseAttackSpeed = 1.0f;
-    public float AttackSpeed 
+    protected float baseAttackSpeed = 1.0f;
+    public virtual float AttackSpeed
     {
         get
         {
@@ -97,11 +97,11 @@ public abstract class Character : MonoBehaviour
             {
                 if (effectHolder.effectInfo.EffectType == SkillDataKind_E.AttackSpeedUp)
                 {
-                    ratio *= 1.0f + effectHolder.effectInfo.Value;
+                    ratio += effectHolder.effectInfo.Value;
                 }
                 else if (effectHolder.effectInfo.EffectType == SkillDataKind_E.AttackSpeedDown)
                 {
-                    ratio *= 1.0f - effectHolder.effectInfo.Value;
+                    ratio -= effectHolder.effectInfo.Value;
                 }
             }
             return baseAttackSpeed * ratio;
@@ -183,7 +183,7 @@ public abstract class Character : MonoBehaviour
     public float HPRatio { get { return hp / MaxHP; } }
     public bool IsDead { get { return hp <= 0.0f; } }
 
-    List<Skill.EffectHolder> skillEffectList = new ();
+    protected List<Skill.EffectHolder> skillEffectList = new ();
 
     protected virtual void Awake()
     {

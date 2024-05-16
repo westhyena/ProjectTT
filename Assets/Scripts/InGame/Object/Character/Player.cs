@@ -31,6 +31,40 @@ public class Player : Character
         }
     }
 
+    public override float AttackSpeed
+    {
+        get
+        {
+            float ratio = 1.0f;
+            foreach (Skill.EffectHolder effectHolder in this.skillEffectList)
+            {
+                if (effectHolder.effectInfo.EffectType == SkillDataKind_E.AttackSpeedUp)
+                {
+                    ratio += effectHolder.effectInfo.Value;
+                }
+                else if (effectHolder.effectInfo.EffectType == SkillDataKind_E.AttackSpeedDown)
+                {
+                    ratio -= effectHolder.effectInfo.Value;
+                }
+            }
+            foreach (UserSelectCardDataElement buffCard in GameManager.instance.BuffCardList)
+            {
+                if (buffCard.TargetSelect == TargetSelect_E.Area)
+                {
+                    continue;
+                }
+                foreach (CardBuff buff in buffCard.CardBuffList)
+                {
+                    if (buff.Type == CardBuffType_E.AttackSpeed_Percent)
+                    {
+                        ratio -= buff.Value / 100.0f;
+                    }
+                }
+            }
+            return baseAttackSpeed * ratio;
+        }
+    }
+
     protected override void Awake()
     {
         base.Awake();
