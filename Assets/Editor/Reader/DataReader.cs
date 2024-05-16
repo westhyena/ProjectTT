@@ -690,6 +690,29 @@ public class DataReader : EditorWindow
 								sde.MyPositionEffectName = Get<string>(obj2, 5);
 								sde.TargetPointEffectName = Get<string>(obj2, 6);
 
+								sde.BuffIcons = new List<BuffIcons>();
+								sde.deBuffIcons = new List<BuffIcons>();
+
+								if ( string.IsNullOrEmpty( Get<string>(obj2,7)) == false )
+								{
+									string[] Buff = Get<string>(obj2, 7).Split(',');
+									for(int b = 0; b < Buff.Length; ++b)
+									{
+										BuffIcons bi = new BuffIcons(Buff[b]);
+										sde.BuffIcons.Add(bi);
+									}
+								}
+
+								if (string.IsNullOrEmpty(Get<string>(obj2, 8)) == false)
+								{
+									string[] deBuff = Get<string>(obj2, 8).Split(',');
+									for (int b = 0; b < deBuff.Length; ++b)
+									{
+										BuffIcons bi = new BuffIcons(deBuff[b]);
+										sde.deBuffIcons.Add(bi);
+									}
+								}
+
 								m_DataMgr.m_SkillDataElementDic.Add(sde.ID, sde);
 							}
 						}
@@ -734,22 +757,31 @@ public class DataReader : EditorWindow
 								cde.HP = Get<int>(obj, 14);
 								cde.PD = Get<int>(obj, 15);
 								cde.MD = Get<int>(obj, 16);
-								cde.AllSkillList = new List<int>();
 								if (string.IsNullOrEmpty(Get<string>(obj, 17)) == false)
+									cde.CriticalPer = Get<float>(obj, 17);
+								if (string.IsNullOrEmpty(Get<string>(obj, 18)) == false)
+									cde.CriticalDamage = Get<float>(obj, 18);
+
+								cde.AllSkillList = new List<int>();
+								if (string.IsNullOrEmpty(Get<string>(obj, 19)) == false)
 								{
-									string[] Skills = Get<string>(obj, 17).Split(",");
+									string[] Skills = Get<string>(obj, 19).Split(",");
 									for (int asl = 0; asl < Skills.Length; ++asl)
 										cde.AllSkillList.Add(int.Parse(Skills[asl]));
 								}
-								if (string.IsNullOrEmpty(Get<string>(obj, 18)) == false)
-									cde.Exp = Get<int>(obj, 18);
-								if (string.IsNullOrEmpty(Get<string>(obj, 19)) == false)
-									cde.Gold = Get<int>(obj, 19);
+								if (string.IsNullOrEmpty(Get<string>(obj, 20)) == false)
+									cde.Exp = Get<int>(obj, 20);
+								if (string.IsNullOrEmpty(Get<string>(obj, 21)) == false)
+									cde.Gold = Get<int>(obj, 21);
 
-								cde.GrowHp = Get<int>(obj, 20);
-								cde.GrowAttackDamage = Get<int>(obj, 21);
-								cde.GrowPD = Get<int>(obj, 22);
-								cde.GrowMD = Get<int>(obj, 23);
+								cde.GrowHp = Get<int>(obj, 22);
+								cde.GrowAttackDamage = Get<int>(obj, 23);
+								cde.GrowPD = Get<int>(obj, 24);
+								cde.GrowMD = Get<int>(obj, 25);
+								if (string.IsNullOrEmpty(Get<string>(obj, 26)) == false)
+									cde.GrowCriticalPer = Get<float>(obj, 26);
+								if (string.IsNullOrEmpty(Get<string>(obj, 27)) == false)
+									cde.GrowCriticalDamage = Get<float>(obj, 27);
 
 								DataTable Character_FileTable = ReadSingleSheet(string.Format("{0}_File", CharacterDataSheet[i]), DataPath);
 								//파일명 셋팅
@@ -793,7 +825,8 @@ public class DataReader : EditorWindow
 								icgde.Add_Hp = Get<int>(obj, 3);
 								icgde.Add_PD = Get<int>(obj, 4);
 								icgde.Add_MD = Get<int>(obj, 5);
-
+								icgde.Add_CriticalPer = Get<float>(obj, 6);
+								icgde.Add_CriticalDamage = Get<float>(obj, 7);
 								DataList.Add(icgde);
 
 							}

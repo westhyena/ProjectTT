@@ -3699,6 +3699,10 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: 
+      BuffIcons:
+      - Kind: 0
+        IconFileName: API
+      deBuffIcons: []
     - ID: 1
       UserSkillName: "\uBB34\uAE30 \uAC15\uD654"
       UserSkillNameID: 5001
@@ -3719,6 +3723,10 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: 
+      BuffIcons:
+      - Kind: 0
+        IconFileName: API
+      deBuffIcons: []
     - ID: 2
       UserSkillName: "\uACF5\uC18D \uC99D\uAC00"
       UserSkillNameID: 5002
@@ -3739,6 +3747,10 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: 
+      BuffIcons:
+      - Kind: 2
+        IconFileName: ASI
+      deBuffIcons: []
     - ID: 10
       UserSkillName: "\uC2A4\uB9E4\uC2DC"
       UserSkillNameID: 5003
@@ -3759,6 +3771,8 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: Hit_Base_A
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 11
       UserSkillName: "\uB9E4\uC9C1\uBCFC"
       UserSkillNameID: 5004
@@ -3776,6 +3790,8 @@ MonoBehaviour:
       ProjectileEffectName: Projectile_MagicBall
       TargetPointEffectName: 
       ObjectDamageEffectName: Hit_Base_A
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 12
       UserSkillName: "\uD30C\uC6CC\uC0F7"
       UserSkillNameID: 5005
@@ -3793,6 +3809,8 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: Hit_PowerShot
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 13
       UserSkillName: "\uD3ED\uD0C4\uD654\uC0B4"
       UserSkillNameID: 5006
@@ -3813,6 +3831,8 @@ MonoBehaviour:
       ProjectileEffectName: Projectile_BombArrow
       TargetPointEffectName: Hit_Explosion_S
       ObjectDamageEffectName: 
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 14
       UserSkillName: "\uB3C5\uD654\uC0B4"
       UserSkillNameID: 5007
@@ -3833,6 +3853,10 @@ MonoBehaviour:
       ProjectileEffectName: Projectile_Poison
       TargetPointEffectName: 
       ObjectDamageEffectName: Hit_Poison_S
+      BuffIcons: []
+      deBuffIcons:
+      - Kind: 11
+        IconFileName: Poison
     - ID: 15
       UserSkillName: "\uC74C\uD30C \uD0C0\uACA9"
       UserSkillNameID: 5008
@@ -3850,6 +3874,8 @@ MonoBehaviour:
       ProjectileEffectName: Projectile_BatwaveBlast
       TargetPointEffectName: 
       ObjectDamageEffectName: 
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 20
       UserSkillName: "\uBE45\uC2A4\uC719"
       UserSkillNameID: 5009
@@ -3870,6 +3896,8 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: Hit_Base_A
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 21
       UserSkillName: "\uBE45\uC0F7"
       UserSkillNameID: 5010
@@ -3890,6 +3918,8 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: Hit_BigShot
       ObjectDamageEffectName: 
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 22
       UserSkillName: "\uD30C\uC774\uC5B4\uBCFC"
       UserSkillNameID: 5011
@@ -3910,6 +3940,8 @@ MonoBehaviour:
       ProjectileEffectName: Projectile_FireBall
       TargetPointEffectName: 
       ObjectDamageEffectName: Hit_Explosion_S
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 23
       UserSkillName: "\uD790"
       UserSkillNameID: 5012
@@ -3930,6 +3962,8 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: Hit_Heal_S
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 24
       UserSkillName: "\uC544\uC774\uC2A4\uBCFC"
       UserSkillNameID: 5013
@@ -3947,6 +3981,8 @@ MonoBehaviour:
       ProjectileEffectName: Projectile_IceBall
       TargetPointEffectName: 
       ObjectDamageEffectName: Hit_IceBall_S
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 25
       UserSkillName: "\uC36C\uB354\uBCFC\uD2B8"
       UserSkillNameID: 5014
@@ -3967,6 +4003,8 @@ MonoBehaviour:
       ProjectileEffectName: Projectile_Thunderbolt
       TargetPointEffectName: 
       ObjectDamageEffectName: Hit_Thunderbolt_S
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 26
       UserSkillName: "\uD504\uB85C\uC98C"
       UserSkillNameID: 5015
@@ -3990,6 +4028,10 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: Hit_Frozen_S
       ObjectDamageEffectName: 
+      BuffIcons: []
+      deBuffIcons:
+      - Kind: 13
+        IconFileName: Stun
     - ID: 27
       UserSkillName: "\uB3C5\uC9C0\uB300"
       UserSkillNameID: 5016
@@ -4013,6 +4055,10 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: Hit_PoisonZone
       ObjectDamageEffectName: 
+      BuffIcons: []
+      deBuffIcons:
+      - Kind: 11
+        IconFileName: Poison
     - ID: 28
       UserSkillName: "\uD5E4\uB4DC\uC0F7"
       UserSkillNameID: 5017
@@ -4030,6 +4076,8 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: Hit_HeadShot
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 30
       UserSkillName: "\uD3ED\uC8FC"
       UserSkillNameID: 5018
@@ -4053,6 +4101,12 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: 
+      BuffIcons:
+      - Kind: 0
+        IconFileName: API
+      - Kind: 2
+        IconFileName: ASI
+      deBuffIcons: []
     - ID: 31
       UserSkillName: "\uD765\uBD84\uC0C1\uD0DC"
       UserSkillNameID: 5019
@@ -4073,6 +4127,10 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: 
+      BuffIcons:
+      - Kind: 0
+        IconFileName: API
+      deBuffIcons: []
     - ID: 32
       UserSkillName: "\uC57D\uC810\uAC15\uD0C0"
       UserSkillNameID: 5020
@@ -4090,6 +4148,8 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: Hit_WeakPointHit
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 40
       UserSkillName: "\uBE14\uB9AC\uC790\uB4DC"
       UserSkillNameID: 5021
@@ -4113,6 +4173,8 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: 
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 41
       UserSkillName: "\uC2E0\uC758\uB9DD\uCE58"
       UserSkillNameID: 5022
@@ -4136,6 +4198,10 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: 
+      BuffIcons: []
+      deBuffIcons:
+      - Kind: 13
+        IconFileName: Stun
     - ID: 42
       UserSkillName: "\uBA54\uD14C\uC624"
       UserSkillNameID: 5023
@@ -4159,6 +4225,8 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: Hit_Meteor
       ObjectDamageEffectName: 
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 43
       UserSkillName: "\uC0AC\uC790\uD6C4"
       UserSkillNameID: 5024
@@ -4182,6 +4250,10 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: 
+      BuffIcons: []
+      deBuffIcons:
+      - Kind: 13
+        IconFileName: Stun
     - ID: 44
       UserSkillName: "\uBC88\uAC1C\uD3ED\uD48D"
       UserSkillNameID: 5025
@@ -4202,6 +4274,10 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: Hit_Thunderstorm
       ObjectDamageEffectName: 
+      BuffIcons: []
+      deBuffIcons:
+      - Kind: 13
+        IconFileName: Stun
     - ID: 50
       UserSkillName: "\uADF8\uB808\uC774\uD2B8 \uD790"
       UserSkillNameID: 5026
@@ -4222,6 +4298,8 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: 
+      BuffIcons: []
+      deBuffIcons: []
     - ID: 51
       UserSkillName: "\uACA9\uB824"
       UserSkillNameID: 5027
@@ -4245,6 +4323,12 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: 
+      BuffIcons:
+      - Kind: 0
+        IconFileName: API
+      - Kind: 2
+        IconFileName: ASI
+      deBuffIcons: []
     - ID: 52
       UserSkillName: "\uC2E0\uC758\uAC00\uD638"
       UserSkillNameID: 5028
@@ -4265,6 +4349,10 @@ MonoBehaviour:
       ProjectileEffectName: 
       TargetPointEffectName: 
       ObjectDamageEffectName: 
+      BuffIcons:
+      - Kind: 5
+        IconFileName: INV
+      deBuffIcons: []
   m_CharacterDataElementDic:
     _keys: 0000000064000000650000006600000067000000e8030000e9030000ea030000eb030000ec030000ed030000ee030000ef030000f0030000f1030000f2030000f3030000f4030000f5030000f6030000f7030000f8030000f9030000fa030000fb030000fc030000fd030000fe030000ff030000000400000104000002040000030400000404000005040000060400000704000008040000090400000a0400000b0400000c0400000d0400000e0400000f040000100400001104000012040000130400001404000015040000160400001704000018040000190400001a0400001b0400001c0400001d0400001e0400001f04000020040000210400002204000023040000d0070000b80b0000b90b0000
     _values:
@@ -4285,6 +4373,8 @@ MonoBehaviour:
       HP: 2000
       PD: 50
       MD: 20
+      CriticalPer: 10
+      CriticalDamage: 50
       AllSkillList: 01000000020000000a000000140000001f000000290000002b0000003300000034000000
       Exp: 0
       Gold: 0
@@ -4292,6 +4382,8 @@ MonoBehaviour:
       GrowAttackDamage: 15
       GrowPD: 5
       GrowMD: 5
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: Hero_CyonKnight
       ObjectFileName: Hero_CyonKnight
       ObjectEffFileName: 
@@ -4312,6 +4404,8 @@ MonoBehaviour:
       HP: 100
       PD: 10
       MD: 5
+      CriticalPer: 10
+      CriticalDamage: 30
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -4319,6 +4413,8 @@ MonoBehaviour:
       GrowAttackDamage: 2
       GrowPD: 1
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: Mercenary_Warrior
       ObjectFileName: Mercenary_Warrior
       ObjectEffFileName: 
@@ -4339,6 +4435,8 @@ MonoBehaviour:
       HP: 80
       PD: 6
       MD: 6
+      CriticalPer: 10
+      CriticalDamage: 30
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -4346,6 +4444,8 @@ MonoBehaviour:
       GrowAttackDamage: 1
       GrowPD: 1
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: Mercenary_Archer
       ObjectFileName: Mercenary_Archer
       ObjectEffFileName: Projectile_arrow
@@ -4366,6 +4466,8 @@ MonoBehaviour:
       HP: 65
       PD: 5
       MD: 10
+      CriticalPer: 10
+      CriticalDamage: 30
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -4373,6 +4475,8 @@ MonoBehaviour:
       GrowAttackDamage: 2
       GrowPD: 0
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: Mercenary_Wizard
       ObjectFileName: Mercenary_Wizard
       ObjectEffFileName: Projectile_FireBall
@@ -4393,6 +4497,8 @@ MonoBehaviour:
       HP: 90
       PD: 8
       MD: 2
+      CriticalPer: 10
+      CriticalDamage: 30
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -4400,6 +4506,8 @@ MonoBehaviour:
       GrowAttackDamage: 2
       GrowPD: 1
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: Mercenary_DwarfAxe
       ObjectFileName: Mercenary_DwarfAxe
       ObjectEffFileName: Projectile_Dwarf_axe
@@ -4420,6 +4528,8 @@ MonoBehaviour:
       HP: 40
       PD: 1
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4427,6 +4537,8 @@ MonoBehaviour:
       GrowAttackDamage: 3
       GrowPD: 1
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: Enemy_FungiPurplecap
       ObjectEffFileName: 
@@ -4447,6 +4559,8 @@ MonoBehaviour:
       HP: 55
       PD: 1
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4454,6 +4568,8 @@ MonoBehaviour:
       GrowAttackDamage: 4
       GrowPD: 2
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: Enemy_FuryHog
       ObjectEffFileName: 
@@ -4474,6 +4590,8 @@ MonoBehaviour:
       HP: 70
       PD: 1
       MD: 1
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4481,6 +4599,8 @@ MonoBehaviour:
       GrowAttackDamage: 5
       GrowPD: 2
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: Enemy_HogWarrior
       ObjectEffFileName: 
@@ -4501,6 +4621,8 @@ MonoBehaviour:
       HP: 60
       PD: 1
       MD: 1
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4508,6 +4630,8 @@ MonoBehaviour:
       GrowAttackDamage: 3
       GrowPD: 2
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: Enemy_Slime
       ObjectEffFileName: 
@@ -4528,6 +4652,8 @@ MonoBehaviour:
       HP: 50
       PD: 1
       MD: 1
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4535,6 +4661,8 @@ MonoBehaviour:
       GrowAttackDamage: 1
       GrowPD: 2
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -4555,6 +4683,8 @@ MonoBehaviour:
       HP: 50
       PD: 1
       MD: 1
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4562,6 +4692,8 @@ MonoBehaviour:
       GrowAttackDamage: 2
       GrowPD: 2
       GrowMD: 5
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -4582,6 +4714,8 @@ MonoBehaviour:
       HP: 50
       PD: 1
       MD: 1
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4589,6 +4723,8 @@ MonoBehaviour:
       GrowAttackDamage: 1
       GrowPD: 2
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -4609,6 +4745,8 @@ MonoBehaviour:
       HP: 50
       PD: 1
       MD: 1
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4616,6 +4754,8 @@ MonoBehaviour:
       GrowAttackDamage: 5
       GrowPD: 2
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -4636,6 +4776,8 @@ MonoBehaviour:
       HP: 50
       PD: 1
       MD: 1
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4643,6 +4785,8 @@ MonoBehaviour:
       GrowAttackDamage: 4
       GrowPD: 2
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: Enemy_JungleSpider
       ObjectEffFileName: 
@@ -4663,6 +4807,8 @@ MonoBehaviour:
       HP: 50
       PD: 1
       MD: 1
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4670,6 +4816,8 @@ MonoBehaviour:
       GrowAttackDamage: 1
       GrowPD: 2
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: Enemy_WeirdBird
       ObjectEffFileName: 
@@ -4690,6 +4838,8 @@ MonoBehaviour:
       HP: 50
       PD: 1
       MD: 1
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4697,6 +4847,8 @@ MonoBehaviour:
       GrowAttackDamage: 4
       GrowPD: 2
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: Enemy_GhostlyShaman
       ObjectEffFileName: 
@@ -4717,6 +4869,8 @@ MonoBehaviour:
       HP: 35
       PD: 1
       MD: 1
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4724,6 +4878,8 @@ MonoBehaviour:
       GrowAttackDamage: 5
       GrowPD: 2
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: Enemy_GhostlyJavelin
       ObjectEffFileName: Projectile_GhostlyJavelin
@@ -4744,6 +4900,8 @@ MonoBehaviour:
       HP: 50
       PD: 1
       MD: 1
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4751,6 +4909,8 @@ MonoBehaviour:
       GrowAttackDamage: 2
       GrowPD: 2
       GrowMD: 2
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -4771,6 +4931,8 @@ MonoBehaviour:
       HP: 50
       PD: 1
       MD: 1
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4778,6 +4940,8 @@ MonoBehaviour:
       GrowAttackDamage: 6
       GrowPD: 2
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -4798,6 +4962,8 @@ MonoBehaviour:
       HP: 20
       PD: 1
       MD: 1
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 10
       Gold: 5
@@ -4805,6 +4971,8 @@ MonoBehaviour:
       GrowAttackDamage: 1
       GrowPD: 2
       GrowMD: 1
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: Enemy_BigEyeBat
       ObjectEffFileName: Projectile_BatwaveBlast
@@ -4825,6 +4993,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -4832,6 +5002,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -4852,6 +5024,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -4859,6 +5033,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -4879,6 +5055,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -4886,6 +5064,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -4906,6 +5086,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -4913,6 +5095,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -4933,6 +5117,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -4940,6 +5126,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -4960,6 +5148,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -4967,6 +5157,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -4987,6 +5179,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -4994,6 +5188,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5014,6 +5210,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5021,6 +5219,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5041,6 +5241,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5048,6 +5250,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5068,6 +5272,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5075,6 +5281,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5095,6 +5303,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5102,6 +5312,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5122,6 +5334,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5129,6 +5343,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5149,6 +5365,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5156,6 +5374,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5176,6 +5396,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5183,6 +5405,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5203,6 +5427,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5210,6 +5436,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5230,6 +5458,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5237,6 +5467,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5257,6 +5489,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5264,6 +5498,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5284,6 +5520,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5291,6 +5529,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5311,6 +5551,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5318,6 +5560,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5338,6 +5582,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5345,6 +5591,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5365,6 +5613,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5372,6 +5622,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5392,6 +5644,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5399,6 +5653,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5419,6 +5675,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5426,6 +5684,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5446,6 +5706,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5453,6 +5715,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5473,6 +5737,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5480,6 +5746,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5500,6 +5768,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5507,6 +5777,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5527,6 +5799,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5534,6 +5808,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5554,6 +5830,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5561,6 +5839,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5581,6 +5861,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5588,6 +5870,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5608,6 +5892,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5615,6 +5901,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5635,6 +5923,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5642,6 +5932,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5662,6 +5954,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5669,6 +5963,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5689,6 +5985,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5696,6 +5994,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5716,6 +6016,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5723,6 +6025,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5743,6 +6047,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5750,6 +6056,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5770,6 +6078,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5777,6 +6087,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5797,6 +6109,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5804,6 +6118,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5824,6 +6140,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5831,6 +6149,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5851,6 +6171,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5858,6 +6180,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5878,6 +6202,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5885,6 +6211,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5905,6 +6233,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5912,6 +6242,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5932,6 +6264,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5939,6 +6273,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5959,6 +6295,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5966,6 +6304,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -5986,6 +6326,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -5993,6 +6335,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -6013,6 +6357,8 @@ MonoBehaviour:
       HP: 0
       PD: 0
       MD: 0
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 0
@@ -6020,6 +6366,8 @@ MonoBehaviour:
       GrowAttackDamage: 0
       GrowPD: 0
       GrowMD: 0
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -6040,6 +6388,8 @@ MonoBehaviour:
       HP: 2000
       PD: 5
       MD: 5
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 100
       Gold: 100
@@ -6047,6 +6397,8 @@ MonoBehaviour:
       GrowAttackDamage: 5
       GrowPD: 10
       GrowMD: 5
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: BossM_ColossalTroll
       ObjectEffFileName: 
@@ -6067,6 +6419,8 @@ MonoBehaviour:
       HP: 10000
       PD: 10
       MD: 10
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 1000
@@ -6074,6 +6428,8 @@ MonoBehaviour:
       GrowAttackDamage: 10
       GrowPD: 20
       GrowMD: 5
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: 
       ObjectEffFileName: 
@@ -6094,6 +6450,8 @@ MonoBehaviour:
       HP: 20000
       PD: 10
       MD: 10
+      CriticalPer: 0
+      CriticalDamage: 0
       AllSkillList: 
       Exp: 0
       Gold: 1000
@@ -6101,6 +6459,8 @@ MonoBehaviour:
       GrowAttackDamage: 25
       GrowPD: 15
       GrowMD: 15
+      GrowCriticalPer: 0
+      GrowCriticalDamage: 0
       iconFileName: 
       ObjectFileName: Boss_Audrey
       ObjectEffFileName: Projectile_MagicBall
@@ -6112,186 +6472,248 @@ MonoBehaviour:
       Add_Hp: 0
       Add_PD: 0
       Add_MD: 0
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 1
       MaxExp: 200
       Add_AttackDamage: 5
       Add_Hp: 10
       Add_PD: 1
       Add_MD: 1
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 2
       MaxExp: 300
       Add_AttackDamage: 10
       Add_Hp: 20
       Add_PD: 2
       Add_MD: 2
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 3
       MaxExp: 400
       Add_AttackDamage: 15
       Add_Hp: 30
       Add_PD: 3
       Add_MD: 3
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 4
       MaxExp: 500
       Add_AttackDamage: 20
       Add_Hp: 40
       Add_PD: 4
       Add_MD: 4
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 5
       MaxExp: 600
       Add_AttackDamage: 25
       Add_Hp: 50
       Add_PD: 5
       Add_MD: 5
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 6
       MaxExp: 700
       Add_AttackDamage: 30
       Add_Hp: 60
       Add_PD: 6
       Add_MD: 6
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 7
       MaxExp: 800
       Add_AttackDamage: 35
       Add_Hp: 70
       Add_PD: 7
       Add_MD: 7
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 8
       MaxExp: 900
       Add_AttackDamage: 40
       Add_Hp: 80
       Add_PD: 8
       Add_MD: 8
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 9
       MaxExp: 1000
       Add_AttackDamage: 45
       Add_Hp: 90
       Add_PD: 9
       Add_MD: 9
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 10
       MaxExp: 1100
       Add_AttackDamage: 50
       Add_Hp: 100
       Add_PD: 10
       Add_MD: 10
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 11
       MaxExp: 1200
       Add_AttackDamage: 55
       Add_Hp: 110
       Add_PD: 11
       Add_MD: 11
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 12
       MaxExp: 1300
       Add_AttackDamage: 60
       Add_Hp: 120
       Add_PD: 12
       Add_MD: 12
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 13
       MaxExp: 1400
       Add_AttackDamage: 65
       Add_Hp: 130
       Add_PD: 13
       Add_MD: 13
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 14
       MaxExp: 1500
       Add_AttackDamage: 70
       Add_Hp: 140
       Add_PD: 14
       Add_MD: 14
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 15
       MaxExp: 1600
       Add_AttackDamage: 75
       Add_Hp: 150
       Add_PD: 15
       Add_MD: 15
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 16
       MaxExp: 1700
       Add_AttackDamage: 80
       Add_Hp: 160
       Add_PD: 16
       Add_MD: 16
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 17
       MaxExp: 1800
       Add_AttackDamage: 85
       Add_Hp: 170
       Add_PD: 17
       Add_MD: 17
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 18
       MaxExp: 1900
       Add_AttackDamage: 90
       Add_Hp: 180
       Add_PD: 18
       Add_MD: 18
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 19
       MaxExp: 2000
       Add_AttackDamage: 95
       Add_Hp: 190
       Add_PD: 19
       Add_MD: 19
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 20
       MaxExp: 2100
       Add_AttackDamage: 100
       Add_Hp: 200
       Add_PD: 20
       Add_MD: 20
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 21
       MaxExp: 2200
       Add_AttackDamage: 105
       Add_Hp: 210
       Add_PD: 21
       Add_MD: 21
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 22
       MaxExp: 2300
       Add_AttackDamage: 110
       Add_Hp: 220
       Add_PD: 22
       Add_MD: 22
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 23
       MaxExp: 2400
       Add_AttackDamage: 115
       Add_Hp: 230
       Add_PD: 23
       Add_MD: 23
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 24
       MaxExp: 2500
       Add_AttackDamage: 120
       Add_Hp: 240
       Add_PD: 24
       Add_MD: 24
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 25
       MaxExp: 2600
       Add_AttackDamage: 125
       Add_Hp: 250
       Add_PD: 25
       Add_MD: 25
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 26
       MaxExp: 2700
       Add_AttackDamage: 130
       Add_Hp: 260
       Add_PD: 26
       Add_MD: 26
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 27
       MaxExp: 2800
       Add_AttackDamage: 135
       Add_Hp: 270
       Add_PD: 27
       Add_MD: 27
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 28
       MaxExp: 2900
       Add_AttackDamage: 140
       Add_Hp: 280
       Add_PD: 28
       Add_MD: 28
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 29
       MaxExp: 3000
       Add_AttackDamage: 145
       Add_Hp: 290
       Add_PD: 29
       Add_MD: 29
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 30
       MaxExp: 3100
       Add_AttackDamage: 150
       Add_Hp: 300
       Add_PD: 30
       Add_MD: 30
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     Mercenary:
     - Level: 0
       MaxExp: 100
@@ -6299,186 +6721,248 @@ MonoBehaviour:
       Add_Hp: 0
       Add_PD: 0
       Add_MD: 0
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 1
       MaxExp: 200
       Add_AttackDamage: 5
       Add_Hp: 10
       Add_PD: 1
       Add_MD: 1
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 2
       MaxExp: 300
       Add_AttackDamage: 10
       Add_Hp: 20
       Add_PD: 2
       Add_MD: 2
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 3
       MaxExp: 400
       Add_AttackDamage: 15
       Add_Hp: 30
       Add_PD: 3
       Add_MD: 3
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 4
       MaxExp: 500
       Add_AttackDamage: 20
       Add_Hp: 40
       Add_PD: 4
       Add_MD: 4
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 5
       MaxExp: 600
       Add_AttackDamage: 25
       Add_Hp: 50
       Add_PD: 5
       Add_MD: 5
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 6
       MaxExp: 700
       Add_AttackDamage: 30
       Add_Hp: 60
       Add_PD: 6
       Add_MD: 6
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 7
       MaxExp: 800
       Add_AttackDamage: 35
       Add_Hp: 70
       Add_PD: 7
       Add_MD: 7
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 8
       MaxExp: 900
       Add_AttackDamage: 40
       Add_Hp: 80
       Add_PD: 8
       Add_MD: 8
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 9
       MaxExp: 1000
       Add_AttackDamage: 45
       Add_Hp: 90
       Add_PD: 9
       Add_MD: 9
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 10
       MaxExp: 1100
       Add_AttackDamage: 50
       Add_Hp: 100
       Add_PD: 10
       Add_MD: 10
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 11
       MaxExp: 1200
       Add_AttackDamage: 55
       Add_Hp: 110
       Add_PD: 11
       Add_MD: 11
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 12
       MaxExp: 1300
       Add_AttackDamage: 60
       Add_Hp: 120
       Add_PD: 12
       Add_MD: 12
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 13
       MaxExp: 1400
       Add_AttackDamage: 65
       Add_Hp: 130
       Add_PD: 13
       Add_MD: 13
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 14
       MaxExp: 1500
       Add_AttackDamage: 70
       Add_Hp: 140
       Add_PD: 14
       Add_MD: 14
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 15
       MaxExp: 1600
       Add_AttackDamage: 75
       Add_Hp: 150
       Add_PD: 15
       Add_MD: 15
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 16
       MaxExp: 1700
       Add_AttackDamage: 80
       Add_Hp: 160
       Add_PD: 16
       Add_MD: 16
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 17
       MaxExp: 1800
       Add_AttackDamage: 85
       Add_Hp: 170
       Add_PD: 17
       Add_MD: 17
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 18
       MaxExp: 1900
       Add_AttackDamage: 90
       Add_Hp: 180
       Add_PD: 18
       Add_MD: 18
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 19
       MaxExp: 2000
       Add_AttackDamage: 95
       Add_Hp: 190
       Add_PD: 19
       Add_MD: 19
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 20
       MaxExp: 2100
       Add_AttackDamage: 100
       Add_Hp: 200
       Add_PD: 20
       Add_MD: 20
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 21
       MaxExp: 2200
       Add_AttackDamage: 105
       Add_Hp: 210
       Add_PD: 21
       Add_MD: 21
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 22
       MaxExp: 2300
       Add_AttackDamage: 110
       Add_Hp: 220
       Add_PD: 22
       Add_MD: 22
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 23
       MaxExp: 2400
       Add_AttackDamage: 115
       Add_Hp: 230
       Add_PD: 23
       Add_MD: 23
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 24
       MaxExp: 2500
       Add_AttackDamage: 120
       Add_Hp: 240
       Add_PD: 24
       Add_MD: 24
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 25
       MaxExp: 2600
       Add_AttackDamage: 125
       Add_Hp: 250
       Add_PD: 25
       Add_MD: 25
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 26
       MaxExp: 2700
       Add_AttackDamage: 130
       Add_Hp: 260
       Add_PD: 26
       Add_MD: 26
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 27
       MaxExp: 2800
       Add_AttackDamage: 135
       Add_Hp: 270
       Add_PD: 27
       Add_MD: 27
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 28
       MaxExp: 2900
       Add_AttackDamage: 140
       Add_Hp: 280
       Add_PD: 28
       Add_MD: 28
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 29
       MaxExp: 3000
       Add_AttackDamage: 145
       Add_Hp: 290
       Add_PD: 29
       Add_MD: 29
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 30
       MaxExp: 3100
       Add_AttackDamage: 150
       Add_Hp: 300
       Add_PD: 30
       Add_MD: 30
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     Monster:
     - Level: 0
       MaxExp: 100
@@ -6486,186 +6970,248 @@ MonoBehaviour:
       Add_Hp: 0
       Add_PD: 0
       Add_MD: 0
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 1
       MaxExp: 200
       Add_AttackDamage: 5
       Add_Hp: 10
       Add_PD: 1
       Add_MD: 1
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 2
       MaxExp: 300
       Add_AttackDamage: 7
       Add_Hp: 20
       Add_PD: 2
       Add_MD: 2
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 3
       MaxExp: 400
       Add_AttackDamage: 9
       Add_Hp: 30
       Add_PD: 3
       Add_MD: 3
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 4
       MaxExp: 500
       Add_AttackDamage: 11
       Add_Hp: 40
       Add_PD: 4
       Add_MD: 4
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 5
       MaxExp: 600
       Add_AttackDamage: 13
       Add_Hp: 50
       Add_PD: 5
       Add_MD: 5
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 6
       MaxExp: 700
       Add_AttackDamage: 15
       Add_Hp: 60
       Add_PD: 6
       Add_MD: 6
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 7
       MaxExp: 800
       Add_AttackDamage: 17
       Add_Hp: 70
       Add_PD: 7
       Add_MD: 7
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 8
       MaxExp: 900
       Add_AttackDamage: 19
       Add_Hp: 80
       Add_PD: 8
       Add_MD: 8
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 9
       MaxExp: 1000
       Add_AttackDamage: 21
       Add_Hp: 90
       Add_PD: 9
       Add_MD: 9
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 10
       MaxExp: 1100
       Add_AttackDamage: 23
       Add_Hp: 100
       Add_PD: 10
       Add_MD: 10
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 11
       MaxExp: 1200
       Add_AttackDamage: 25
       Add_Hp: 110
       Add_PD: 11
       Add_MD: 11
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 12
       MaxExp: 1300
       Add_AttackDamage: 27
       Add_Hp: 120
       Add_PD: 12
       Add_MD: 12
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 13
       MaxExp: 1400
       Add_AttackDamage: 29
       Add_Hp: 130
       Add_PD: 13
       Add_MD: 13
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 14
       MaxExp: 1500
       Add_AttackDamage: 31
       Add_Hp: 140
       Add_PD: 14
       Add_MD: 14
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 15
       MaxExp: 1600
       Add_AttackDamage: 33
       Add_Hp: 150
       Add_PD: 15
       Add_MD: 15
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 16
       MaxExp: 1700
       Add_AttackDamage: 35
       Add_Hp: 160
       Add_PD: 16
       Add_MD: 16
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 17
       MaxExp: 1800
       Add_AttackDamage: 37
       Add_Hp: 170
       Add_PD: 17
       Add_MD: 17
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 18
       MaxExp: 1900
       Add_AttackDamage: 39
       Add_Hp: 180
       Add_PD: 18
       Add_MD: 18
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 19
       MaxExp: 2000
       Add_AttackDamage: 41
       Add_Hp: 190
       Add_PD: 19
       Add_MD: 19
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 20
       MaxExp: 2100
       Add_AttackDamage: 43
       Add_Hp: 200
       Add_PD: 20
       Add_MD: 20
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 21
       MaxExp: 2200
       Add_AttackDamage: 45
       Add_Hp: 210
       Add_PD: 21
       Add_MD: 21
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 22
       MaxExp: 2300
       Add_AttackDamage: 47
       Add_Hp: 220
       Add_PD: 22
       Add_MD: 22
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 23
       MaxExp: 2400
       Add_AttackDamage: 49
       Add_Hp: 230
       Add_PD: 23
       Add_MD: 23
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 24
       MaxExp: 2500
       Add_AttackDamage: 51
       Add_Hp: 240
       Add_PD: 24
       Add_MD: 24
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 25
       MaxExp: 2600
       Add_AttackDamage: 53
       Add_Hp: 250
       Add_PD: 25
       Add_MD: 25
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 26
       MaxExp: 2700
       Add_AttackDamage: 55
       Add_Hp: 260
       Add_PD: 26
       Add_MD: 26
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 27
       MaxExp: 2800
       Add_AttackDamage: 57
       Add_Hp: 270
       Add_PD: 27
       Add_MD: 27
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 28
       MaxExp: 2900
       Add_AttackDamage: 59
       Add_Hp: 280
       Add_PD: 28
       Add_MD: 28
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 29
       MaxExp: 3000
       Add_AttackDamage: 61
       Add_Hp: 290
       Add_PD: 29
       Add_MD: 29
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 30
       MaxExp: 3100
       Add_AttackDamage: 63
       Add_Hp: 300
       Add_PD: 30
       Add_MD: 30
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     MiddleBoss:
     - Level: 0
       MaxExp: 100
@@ -6673,186 +7219,248 @@ MonoBehaviour:
       Add_Hp: 0
       Add_PD: 0
       Add_MD: 0
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 1
       MaxExp: 200
       Add_AttackDamage: 5
       Add_Hp: 10
       Add_PD: 1
       Add_MD: 1
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 2
       MaxExp: 300
       Add_AttackDamage: 8
       Add_Hp: 20
       Add_PD: 2
       Add_MD: 2
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 3
       MaxExp: 400
       Add_AttackDamage: 11
       Add_Hp: 30
       Add_PD: 3
       Add_MD: 3
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 4
       MaxExp: 500
       Add_AttackDamage: 14
       Add_Hp: 40
       Add_PD: 4
       Add_MD: 4
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 5
       MaxExp: 600
       Add_AttackDamage: 17
       Add_Hp: 50
       Add_PD: 5
       Add_MD: 5
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 6
       MaxExp: 700
       Add_AttackDamage: 20
       Add_Hp: 60
       Add_PD: 6
       Add_MD: 6
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 7
       MaxExp: 800
       Add_AttackDamage: 23
       Add_Hp: 70
       Add_PD: 7
       Add_MD: 7
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 8
       MaxExp: 900
       Add_AttackDamage: 26
       Add_Hp: 80
       Add_PD: 8
       Add_MD: 8
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 9
       MaxExp: 1000
       Add_AttackDamage: 29
       Add_Hp: 90
       Add_PD: 9
       Add_MD: 9
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 10
       MaxExp: 1100
       Add_AttackDamage: 32
       Add_Hp: 100
       Add_PD: 10
       Add_MD: 10
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 11
       MaxExp: 1200
       Add_AttackDamage: 35
       Add_Hp: 110
       Add_PD: 11
       Add_MD: 11
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 12
       MaxExp: 1300
       Add_AttackDamage: 38
       Add_Hp: 120
       Add_PD: 12
       Add_MD: 12
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 13
       MaxExp: 1400
       Add_AttackDamage: 41
       Add_Hp: 130
       Add_PD: 13
       Add_MD: 13
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 14
       MaxExp: 1500
       Add_AttackDamage: 44
       Add_Hp: 140
       Add_PD: 14
       Add_MD: 14
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 15
       MaxExp: 1600
       Add_AttackDamage: 47
       Add_Hp: 150
       Add_PD: 15
       Add_MD: 15
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 16
       MaxExp: 1700
       Add_AttackDamage: 50
       Add_Hp: 160
       Add_PD: 16
       Add_MD: 16
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 17
       MaxExp: 1800
       Add_AttackDamage: 53
       Add_Hp: 170
       Add_PD: 17
       Add_MD: 17
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 18
       MaxExp: 1900
       Add_AttackDamage: 56
       Add_Hp: 180
       Add_PD: 18
       Add_MD: 18
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 19
       MaxExp: 2000
       Add_AttackDamage: 59
       Add_Hp: 190
       Add_PD: 19
       Add_MD: 19
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 20
       MaxExp: 2100
       Add_AttackDamage: 62
       Add_Hp: 200
       Add_PD: 20
       Add_MD: 20
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 21
       MaxExp: 2200
       Add_AttackDamage: 65
       Add_Hp: 210
       Add_PD: 21
       Add_MD: 21
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 22
       MaxExp: 2300
       Add_AttackDamage: 68
       Add_Hp: 220
       Add_PD: 22
       Add_MD: 22
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 23
       MaxExp: 2400
       Add_AttackDamage: 71
       Add_Hp: 230
       Add_PD: 23
       Add_MD: 23
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 24
       MaxExp: 2500
       Add_AttackDamage: 74
       Add_Hp: 240
       Add_PD: 24
       Add_MD: 24
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 25
       MaxExp: 2600
       Add_AttackDamage: 77
       Add_Hp: 250
       Add_PD: 25
       Add_MD: 25
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 26
       MaxExp: 2700
       Add_AttackDamage: 80
       Add_Hp: 260
       Add_PD: 26
       Add_MD: 26
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 27
       MaxExp: 2800
       Add_AttackDamage: 83
       Add_Hp: 270
       Add_PD: 27
       Add_MD: 27
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 28
       MaxExp: 2900
       Add_AttackDamage: 86
       Add_Hp: 280
       Add_PD: 28
       Add_MD: 28
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 29
       MaxExp: 3000
       Add_AttackDamage: 89
       Add_Hp: 290
       Add_PD: 29
       Add_MD: 29
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 30
       MaxExp: 3100
       Add_AttackDamage: 92
       Add_Hp: 300
       Add_PD: 30
       Add_MD: 30
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     Boss:
     - Level: 0
       MaxExp: 100
@@ -6860,186 +7468,248 @@ MonoBehaviour:
       Add_Hp: 0
       Add_PD: 0
       Add_MD: 0
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 1
       MaxExp: 200
       Add_AttackDamage: 5
       Add_Hp: 10
       Add_PD: 1
       Add_MD: 1
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 2
       MaxExp: 300
       Add_AttackDamage: 9
       Add_Hp: 20
       Add_PD: 2
       Add_MD: 2
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 3
       MaxExp: 400
       Add_AttackDamage: 13
       Add_Hp: 30
       Add_PD: 3
       Add_MD: 3
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 4
       MaxExp: 500
       Add_AttackDamage: 17
       Add_Hp: 40
       Add_PD: 4
       Add_MD: 4
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 5
       MaxExp: 600
       Add_AttackDamage: 21
       Add_Hp: 50
       Add_PD: 5
       Add_MD: 5
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 6
       MaxExp: 700
       Add_AttackDamage: 25
       Add_Hp: 60
       Add_PD: 6
       Add_MD: 6
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 7
       MaxExp: 800
       Add_AttackDamage: 29
       Add_Hp: 70
       Add_PD: 7
       Add_MD: 7
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 8
       MaxExp: 900
       Add_AttackDamage: 33
       Add_Hp: 80
       Add_PD: 8
       Add_MD: 8
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 9
       MaxExp: 1000
       Add_AttackDamage: 37
       Add_Hp: 90
       Add_PD: 9
       Add_MD: 9
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 10
       MaxExp: 1100
       Add_AttackDamage: 41
       Add_Hp: 100
       Add_PD: 10
       Add_MD: 10
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 11
       MaxExp: 1200
       Add_AttackDamage: 45
       Add_Hp: 110
       Add_PD: 11
       Add_MD: 11
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 12
       MaxExp: 1300
       Add_AttackDamage: 49
       Add_Hp: 120
       Add_PD: 12
       Add_MD: 12
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 13
       MaxExp: 1400
       Add_AttackDamage: 53
       Add_Hp: 130
       Add_PD: 13
       Add_MD: 13
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 14
       MaxExp: 1500
       Add_AttackDamage: 57
       Add_Hp: 140
       Add_PD: 14
       Add_MD: 14
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 15
       MaxExp: 1600
       Add_AttackDamage: 61
       Add_Hp: 150
       Add_PD: 15
       Add_MD: 15
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 16
       MaxExp: 1700
       Add_AttackDamage: 65
       Add_Hp: 160
       Add_PD: 16
       Add_MD: 16
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 17
       MaxExp: 1800
       Add_AttackDamage: 69
       Add_Hp: 170
       Add_PD: 17
       Add_MD: 17
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 18
       MaxExp: 1900
       Add_AttackDamage: 73
       Add_Hp: 180
       Add_PD: 18
       Add_MD: 18
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 19
       MaxExp: 2000
       Add_AttackDamage: 77
       Add_Hp: 190
       Add_PD: 19
       Add_MD: 19
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 20
       MaxExp: 2100
       Add_AttackDamage: 81
       Add_Hp: 200
       Add_PD: 20
       Add_MD: 20
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 21
       MaxExp: 2200
       Add_AttackDamage: 85
       Add_Hp: 210
       Add_PD: 21
       Add_MD: 21
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 22
       MaxExp: 2300
       Add_AttackDamage: 89
       Add_Hp: 220
       Add_PD: 22
       Add_MD: 22
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 23
       MaxExp: 2400
       Add_AttackDamage: 93
       Add_Hp: 230
       Add_PD: 23
       Add_MD: 23
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 24
       MaxExp: 2500
       Add_AttackDamage: 97
       Add_Hp: 240
       Add_PD: 24
       Add_MD: 24
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 25
       MaxExp: 2600
       Add_AttackDamage: 101
       Add_Hp: 250
       Add_PD: 25
       Add_MD: 25
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 26
       MaxExp: 2700
       Add_AttackDamage: 105
       Add_Hp: 260
       Add_PD: 26
       Add_MD: 26
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 27
       MaxExp: 2800
       Add_AttackDamage: 109
       Add_Hp: 270
       Add_PD: 27
       Add_MD: 27
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 28
       MaxExp: 2900
       Add_AttackDamage: 113
       Add_Hp: 280
       Add_PD: 28
       Add_MD: 28
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 29
       MaxExp: 3000
       Add_AttackDamage: 117
       Add_Hp: 290
       Add_PD: 29
       Add_MD: 29
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
     - Level: 30
       MaxExp: 3100
       Add_AttackDamage: 121
       Add_Hp: 300
       Add_PD: 30
       Add_MD: 30
+      Add_CriticalPer: 0
+      Add_CriticalDamage: 0
   m_UserSelectCardDataElementDic:
     _keys: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
     _values:

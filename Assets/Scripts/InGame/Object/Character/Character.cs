@@ -112,13 +112,16 @@ public abstract class Character : MonoBehaviour
 
     public virtual float AttackStat { get {
         int growHP = 0, growAttackDamge = 0, growPD = 0, growMD = 0;
+        float growCriticalPer = 0, growCriticalDamage = 0;
         DataMgr.instance.GetCharacterGrowData(
             characterInfo.ID,
             characterLevel,
             ref growHP,
             ref growAttackDamge,
             ref growPD,
-            ref growMD 
+            ref growMD,
+            ref growCriticalPer,
+            ref growCriticalDamage
         );
 
         float skillAddDamage = 0;
@@ -129,11 +132,24 @@ public abstract class Character : MonoBehaviour
                 skillAddDamage += effectHolder.effectInfo.Value;
             }
         }
-        return (
-            characterInfo.AttackDamage + 
+
+        int AttackDamage = (
+            characterInfo.AttackDamage +
             growAttackDamge +
-            skillAddDamage
+            (int)skillAddDamage
         );
+
+        //크리티컬 추가
+        float CriticalPer = growCriticalPer + characterInfo.CriticalPer;
+        float CriticalDamage = growCriticalDamage + characterInfo.CriticalDamage;
+        float Rnd = Random.Range(0, 101);
+		if (Rnd <= CriticalPer)
+		{
+			int addCriticalDamage = (int)(AttackDamage * (CriticalDamage * 0.01f));
+            AttackDamage += addCriticalDamage;
+		}
+
+        return AttackDamage;
     } }
     float basePhysicDefenceStat = 5.0f;
     public float PhysicDefenceStat { get { return basePhysicDefenceStat; } }
@@ -166,13 +182,16 @@ public abstract class Character : MonoBehaviour
     public float MaxHP { get
         {
             int growHP = 0, growAttackDamge = 0, growPD = 0, growMD = 0;
+            float growCriticalPer = 0, growCriticalDamage = 0;
             DataMgr.instance.GetCharacterGrowData(
                 characterInfo.ID,
                 characterLevel,
                 ref growHP,
                 ref growAttackDamge,
                 ref growPD,
-                ref growMD 
+                ref growMD,
+                ref growCriticalPer,
+                ref growCriticalDamage
             );
             return (
                 characterInfo.HP + 
