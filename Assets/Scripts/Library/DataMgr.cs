@@ -370,6 +370,125 @@ public class UserActiveSkillDataElement
 
 #region SkillData
 
+public enum BuffANDdeBuffKind_E
+{
+	/// <summary>
+	/// 공격력 증가
+	/// </summary>
+	AttackPowerIncrease,
+	/// <summary>
+	/// 방어력 증가
+	/// </summary>
+	DefenseIncrease,
+	/// <summary>
+	/// 공격속도증가
+	/// </summary>
+	AttackSpeedIncrease,
+	/// <summary>
+	/// 크리티컬 확률 증가
+	/// </summary>
+	CriticalChanceIncrease,
+	/// <summary>
+	/// 크리티컬 데미지 증가
+	/// </summary>
+	CriticalDamageIncrease,
+	/// <summary>
+	/// 무적
+	/// </summary>
+	Invincibility,
+	/// <summary>
+	/// 공격력 감소
+	/// </summary>
+	AttackPowerDecrease,
+	/// <summary>
+	/// 방어력 감소
+	/// </summary>
+	DefenseDecrease,
+	/// <summary>
+	/// 공격속도 감소
+	/// </summary>
+	AttackSpeedDecrease,
+	/// <summary>
+	/// 이동속도 감소
+	/// </summary>
+	MovementSpeedDecrease,
+	/// <summary>
+	/// 출혈
+	/// </summary>
+	Bleed,
+	/// <summary>
+	/// 중독
+	/// </summary>
+	Poison,
+	/// <summary>
+	/// 화상
+	/// </summary>
+	Burn,
+	/// <summary>
+	/// 스턴
+	/// </summary>
+	Stun
+}
+
+[Serializable]
+public struct BuffIcons
+{
+	public BuffANDdeBuffKind_E Kind;
+	public string IconFileName;
+
+	public BuffIcons(string FileName)
+	{
+		IconFileName = FileName;
+		Kind = BuffANDdeBuffKind_E.AttackPowerIncrease;
+		switch (FileName)
+		{
+			case "API":
+				Kind = BuffANDdeBuffKind_E.AttackPowerIncrease;
+				break;
+			case "DI":
+				Kind = BuffANDdeBuffKind_E.DefenseIncrease;
+				break;
+			case "ASI":
+				Kind = BuffANDdeBuffKind_E.AttackSpeedIncrease;
+				break;
+			case "CCI":
+				Kind = BuffANDdeBuffKind_E.CriticalChanceIncrease;
+				break;
+			case "CDI":
+				Kind = BuffANDdeBuffKind_E.CriticalDamageIncrease;
+				break;
+			case "INV":
+				Kind = BuffANDdeBuffKind_E.Invincibility;
+				break;
+			case "APD":
+				Kind = BuffANDdeBuffKind_E.AttackPowerDecrease;
+				break;
+			case "DD":
+				Kind = BuffANDdeBuffKind_E.DefenseDecrease;
+				break;
+			case "ASD":
+				Kind = BuffANDdeBuffKind_E.AttackSpeedDecrease;
+				break;
+			case "MSD":
+				Kind = BuffANDdeBuffKind_E.MovementSpeedDecrease;
+				break;
+			case "Bleed":
+				Kind = BuffANDdeBuffKind_E.Bleed;
+				break;
+			case "Poison":
+				Kind = BuffANDdeBuffKind_E.Poison;
+				break;
+			case "Burn":
+				Kind = BuffANDdeBuffKind_E.Burn;
+				break;
+			case "Stun":
+				Kind = BuffANDdeBuffKind_E.Stun;
+				break;
+		}
+	}
+}
+
+
 [Serializable]
 public class SkillDataElement
 {
@@ -436,6 +555,9 @@ public class SkillDataElement
 	/// 대상 오브젝트에 표시되는 이펙트
 	/// </summary>
 	public string ObjectDamageEffectName;
+	public List<BuffIcons> BuffIcons;
+	public List<BuffIcons> deBuffIcons;
+
 }
 
 #endregion
@@ -492,6 +614,14 @@ public class CharacterDataElement
 	/// </summary>
 	public int MD;
 	/// <summary>
+	/// 크리티컬 퍼센트
+	/// </summary>
+	public float CriticalPer;
+	/// <summary>
+	/// 크리티컬 데미지
+	/// </summary>
+	public float CriticalDamage;
+	/// <summary>
 	/// 영웅별 전체 스킬 리스트
 	/// </summary>
 	public List<int> AllSkillList = new List<int>();
@@ -519,6 +649,14 @@ public class CharacterDataElement
 	/// 케릭터 고유 특별 추가 마법방어력 성장 값
 	/// </summary>
 	public int GrowMD;
+	/// <summary>
+	/// 케릭터 고유 특별 추가 크리티컬 퍼센트
+	/// </summary>
+	public float GrowCriticalPer;
+	/// <summary>
+	/// 케릭터 고유 특별 추가 크리티컬 데미지
+	/// </summary>
+	public float GrowCriticalDamage;
 
 	public string iconFileName;
 	/// <summary>
@@ -559,6 +697,14 @@ public class InGame_CharacterGrowData
 	/// 추가되는 마방
 	/// </summary>
 	public int Add_MD;
+	/// <summary>
+	/// 추가되는 크리티컬 퍼센트
+	/// </summary>
+	public float Add_CriticalPer;
+	/// <summary>
+	/// 추가되는 크리티컬 데미지
+	/// </summary>
+	public float Add_CriticalDamage;
 }
 
 [Serializable]
@@ -752,14 +898,17 @@ public class DataMgr : MonoBehaviour
 	/// </summary>
 	/// <param name="Damage">데미지</param>
 	/// <param name="DamageType">데미지 타입</param>
+	/// <param name="BuffCriticalPer">버프받은 크리티컬 퍼센트</param>
+	/// <param name="CriticalDamage">버프받은 크리티컬 데미지</param>
 	/// <param name="TargetIndex">대상 CharacterIndex</param>
 	/// <param name="TargetLevel">대상 레벨</param>
 	/// <returns></returns>
-	public int GetFinalDamage(int Damage,DamageType_E DamageType,int TargetIndex,int TargetLevel)
+	public int GetFinalDamage(int Damage,DamageType_E DamageType/*,float CriticalPer,float CriticalDamage*/,int TargetIndex,int TargetLevel)
 	{
-		int returnDamage = 0;
+		int returnDamage = Damage;
 		float RValue = 0.1f;
 		List<InGame_CharacterGrowData> TargetGrowDataList = GetGrowData(TargetIndex);
+		
 		switch (DamageType)
 		{
 			case DamageType_E.Physics:
@@ -778,9 +927,16 @@ public class DataMgr : MonoBehaviour
 				int RndMaxResistanceMValue = UnityEngine.Random.Range(0, resistanceMValue);
 				returnDamage = Damage - (TargetMD + RndMaxResistanceMValue);
 				break;
-			default:
-				return Damage;
 		}
+
+		//float Rnd = UnityEngine.Random.Range(0, 101);
+		//if ( Rnd <= CriticalPer)
+		//{
+		//	int addCriticalDamage = (int)(returnDamage * (CriticalDamage * 0.01f));
+		//	returnDamage += addCriticalDamage;
+		//}
+
+
 
 		return returnDamage <= 0 ? 1 : returnDamage;
 	}
@@ -809,7 +965,7 @@ public class DataMgr : MonoBehaviour
 	/// <summary>
 	/// 레벨에 따른 Grow수치를 적용한 수치 반환
 	/// </summary>
-	public void GetCharacterGrowData(int CharacterID,int CharacterLevel,ref int HP,ref int AttackDmg, ref int PD, ref int MD)
+	public void GetCharacterGrowData(int CharacterID,int CharacterLevel,ref int HP,ref int AttackDmg, ref int PD, ref int MD,ref float CriticalPer,ref float CriticalDamage)
 	{
 		List<InGame_CharacterGrowData> TargetGrowDataList = GetGrowData(CharacterID);
 
@@ -817,6 +973,8 @@ public class DataMgr : MonoBehaviour
 		AttackDmg = (m_CharacterDataElementDic[CharacterID].GrowHp * CharacterLevel) + TargetGrowDataList[CharacterLevel].Add_AttackDamage;
 		PD = (m_CharacterDataElementDic[CharacterID].GrowPD * CharacterLevel) + TargetGrowDataList[CharacterLevel].Add_PD;
 		MD = (m_CharacterDataElementDic[CharacterID].GrowMD * CharacterLevel) + TargetGrowDataList[CharacterLevel].Add_MD;
+		CriticalPer = (m_CharacterDataElementDic[CharacterID].CriticalPer * CharacterLevel) + TargetGrowDataList[CharacterLevel].Add_CriticalPer;
+		CriticalDamage = (m_CharacterDataElementDic[CharacterID].CriticalDamage * CharacterLevel) + TargetGrowDataList[CharacterLevel].Add_CriticalDamage;
 	}
 
 	/// <summary>
