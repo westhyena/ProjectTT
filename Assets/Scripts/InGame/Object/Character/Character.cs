@@ -88,6 +88,11 @@ public abstract class Character : MonoBehaviour
         }
     }
 
+    protected virtual List<CardBuff> GetCardBuffList(CardBuffType_E buffType)
+    {
+        return new List<CardBuff>();
+    }
+
     protected float baseAttackSpeed = 1.0f;
     public virtual float AttackSpeed
     {
@@ -105,6 +110,8 @@ public abstract class Character : MonoBehaviour
                     ratio -= effectHolder.effectInfo.Value;
                 }
             }
+
+            GetCardBuffList(CardBuffType_E.AttackSpeed_Percent).ForEach(buff => ratio -= buff.Value / 100.0f);
             return baseAttackSpeed * ratio;
         }
     }
@@ -150,12 +157,59 @@ public abstract class Character : MonoBehaviour
             AttackDamage += addCriticalDamage;
 		}
 
-        return AttackDamage;
+        float ratio = 1.0f;
+        GetCardBuffList(CardBuffType_E.AttackUp_Percent).ForEach(buff => ratio += buff.Value / 100.0f);
+
+        return AttackDamage * ratio;
     } }
     float basePhysicDefenceStat = 5.0f;
     public float PhysicDefenceStat { get { return basePhysicDefenceStat; } }
     float baseMagicDefenceStat = 5.0f;
     public float MagicDefenceStat { get { return baseMagicDefenceStat; } }
+
+    public virtual float CriticalPer
+    {
+        get
+        {
+            int growHP = 0, growAttackDamge = 0, growPD = 0, growMD = 0;
+            float growCriticalPer = 0, growCriticalDamage = 0;
+            DataMgr.instance.GetCharacterGrowData(
+                characterInfo.ID,
+                characterLevel,
+                ref growHP,
+                ref growAttackDamge,
+                ref growPD,
+                ref growMD,
+                ref growCriticalPer,
+                ref growCriticalDamage
+            );
+            float ratio = 1.0f;
+            GetCardBuffList(CardBuffType_E.Critical_Percent).ForEach(buff => ratio += buff.Value / 100.0f);
+            return (growCriticalPer + characterInfo.CriticalPer) * ratio;
+        }
+    }
+
+    public virtual float CriticalDamage
+    {
+        get
+        {
+            int growHP = 0, growAttackDamge = 0, growPD = 0, growMD = 0;
+            float growCriticalPer = 0, growCriticalDamage = 0;
+            DataMgr.instance.GetCharacterGrowData(
+                characterInfo.ID,
+                characterLevel,
+                ref growHP,
+                ref growAttackDamge,
+                ref growPD,
+                ref growMD,
+                ref growCriticalPer,
+                ref growCriticalDamage
+            );
+            float ratio = 1.0f;
+            GetCardBuffList(CardBuffType_E.Critical_Damage).ForEach(buff => ratio += buff.Value / 100.0f);
+            return (growCriticalDamage + characterInfo.CriticalDamage) * ratio;
+        }
+    }
 
     protected float movementSpeed = 20.0f;
 

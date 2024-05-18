@@ -7,62 +7,24 @@ public class Player : Character
     private Vector2 manualMovement = Vector2.zero;
     GameObject followEffect;
 
-    public override float AttackStat
+    protected override List<CardBuff> GetCardBuffList(CardBuffType_E buffType)
     {
-        get
+        List<CardBuff> buffList = new ();
+        foreach (UserSelectCardDataElement buffCard in GameManager.instance.BuffCardList)
         {
-            float baseStat = base.AttackStat;
-            float ratio = 1.0f;
-            foreach (UserSelectCardDataElement buffCard in GameManager.instance.BuffCardList)
+            if (buffCard.TargetSelect == TargetSelect_E.Area)
             {
-                if (buffCard.TargetSelect == TargetSelect_E.Area)
+                continue;
+            }
+            foreach (CardBuff buff in buffCard.CardBuffList)
+            {
+                if (buff.Type == buffType)
                 {
-                    continue;
-                }
-                foreach (CardBuff buff in buffCard.CardBuffList)
-                {
-                    if (buff.Type == CardBuffType_E.AttackUp_Percent)
-                    {
-                        ratio += buff.Value / 100.0f;
-                    }
+                    buffList.Add(buff);
                 }
             }
-            return baseStat * ratio;
         }
-    }
-
-    public override float AttackSpeed
-    {
-        get
-        {
-            float ratio = 1.0f;
-            foreach (Skill.EffectHolder effectHolder in this.skillEffectList)
-            {
-                if (effectHolder.effectInfo.EffectType == SkillDataKind_E.AttackSpeedUp)
-                {
-                    ratio += effectHolder.effectInfo.Value;
-                }
-                else if (effectHolder.effectInfo.EffectType == SkillDataKind_E.AttackSpeedDown)
-                {
-                    ratio -= effectHolder.effectInfo.Value;
-                }
-            }
-            foreach (UserSelectCardDataElement buffCard in GameManager.instance.BuffCardList)
-            {
-                if (buffCard.TargetSelect == TargetSelect_E.Area)
-                {
-                    continue;
-                }
-                foreach (CardBuff buff in buffCard.CardBuffList)
-                {
-                    if (buff.Type == CardBuffType_E.AttackSpeed_Percent)
-                    {
-                        ratio -= buff.Value / 100.0f;
-                    }
-                }
-            }
-            return baseAttackSpeed * ratio;
-        }
+        return buffList;
     }
 
     protected override void Awake()
