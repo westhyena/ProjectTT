@@ -10,10 +10,12 @@ public class CompanionSummonUI : MonoBehaviour
 
     [SerializeField]
     TMP_Text needPointText;
+    Color originalColor;
 
     void Awake()
     {
         button = GetComponent<Button>();
+        originalColor = needPointText.color;
     }
 
     void Start()
@@ -24,5 +26,13 @@ public class CompanionSummonUI : MonoBehaviour
     void Update()
     {
         needPointText.text = GameManager.instance.CompanionSummonPoint.ToString();
+        if (GameManager.instance.CompanionSummonPoint > GameManager.instance.CompanionPoints)
+        {
+            needPointText.color = Color.red;
+        }
+        else
+        {
+            needPointText.color = originalColor;
+        }
     }
 }

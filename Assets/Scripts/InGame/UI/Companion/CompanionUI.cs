@@ -12,6 +12,7 @@ public class CompanionUI : MonoBehaviour
 
     [SerializeField]
     TMP_Text needPointText;
+    Color originalColor;
 
     [SerializeField]
     TMP_Text levelText;
@@ -29,6 +30,8 @@ public class CompanionUI : MonoBehaviour
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(this.OnClick);
+
+        originalColor = needPointText.color;
     }
 
     void OnClick()
@@ -75,11 +78,20 @@ public class CompanionUI : MonoBehaviour
         if (level >= needPointList.Count)
         {
             needPointText.text = "MAX";
+            needPointText.color = originalColor;
         } 
         else
         {
             int needPoint = needPointList[level];
             needPointText.text = needPoint.ToString();
+            if (GameManager.instance.CompanionPoints < needPoint)
+            {
+                needPointText.color = Color.red;
+            }
+            else
+            {
+                needPointText.color = originalColor;
+            }
         }
     }
 

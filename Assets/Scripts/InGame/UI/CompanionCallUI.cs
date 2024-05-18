@@ -11,10 +11,12 @@ public class CompanionCallUI : MonoBehaviour
 
     [SerializeField]
     TMP_Text needPointText;
+    Color originalColor;
 
     void Awake()
     {
         button = GetComponent<Button>();
+        originalColor = needPointText.color;
     }
 
     void Start()
@@ -25,5 +27,13 @@ public class CompanionCallUI : MonoBehaviour
     void Update()
     {
         needPointText.text = GameManager.instance.CompanionCallPoint.ToString();
+        if (GameManager.instance.CompanionCallPoint > GameManager.instance.CompanionPoints)
+        {
+            needPointText.color = Color.red;
+        }
+        else
+        {
+            needPointText.color = originalColor;
+        }
     }
 }
