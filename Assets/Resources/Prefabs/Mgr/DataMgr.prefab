@@ -3700,7 +3700,7 @@ MonoBehaviour:
       TargetPointEffectName: 
       ObjectDamageEffectName: 
       BuffIcons:
-      - Kind: 0
+      - Kind: 2
         IconFileName: API
       deBuffIcons: []
     - ID: 1
@@ -3724,7 +3724,7 @@ MonoBehaviour:
       TargetPointEffectName: 
       ObjectDamageEffectName: 
       BuffIcons:
-      - Kind: 0
+      - Kind: 2
         IconFileName: API
       deBuffIcons: []
     - ID: 2
@@ -3748,7 +3748,7 @@ MonoBehaviour:
       TargetPointEffectName: 
       ObjectDamageEffectName: 
       BuffIcons:
-      - Kind: 2
+      - Kind: 3
         IconFileName: ASI
       deBuffIcons: []
     - ID: 10
@@ -3855,7 +3855,7 @@ MonoBehaviour:
       ObjectDamageEffectName: Hit_Poison_S
       BuffIcons: []
       deBuffIcons:
-      - Kind: 11
+      - Kind: 1
         IconFileName: Poison
     - ID: 15
       UserSkillName: "\uC74C\uD30C \uD0C0\uACA9"
@@ -3953,10 +3953,7 @@ MonoBehaviour:
       Type: 0
       TargetSelectType: 0
       DamageTypeRange: 0
-      SkillData:
-      - SkillDataKind: 4
-        Value: 100
-        Time: 0
+      SkillData: []
       IconName: Heal_ICON
       MyPositionEffectName: 
       ProjectileEffectName: 
@@ -4020,9 +4017,6 @@ MonoBehaviour:
       - SkillDataKind: 0
         Value: 75
         Time: 0
-      - SkillDataKind: 6
-        Value: 0
-        Time: 2
       IconName: Frozen_ICON
       MyPositionEffectName: 
       ProjectileEffectName: 
@@ -4030,7 +4024,7 @@ MonoBehaviour:
       ObjectDamageEffectName: 
       BuffIcons: []
       deBuffIcons:
-      - Kind: 13
+      - Kind: 6
         IconFileName: Stun
     - ID: 27
       UserSkillName: "\uB3C5\uC9C0\uB300"
@@ -4057,7 +4051,7 @@ MonoBehaviour:
       ObjectDamageEffectName: 
       BuffIcons: []
       deBuffIcons:
-      - Kind: 11
+      - Kind: 1
         IconFileName: Poison
     - ID: 28
       UserSkillName: "\uD5E4\uB4DC\uC0F7"
@@ -4102,9 +4096,9 @@ MonoBehaviour:
       TargetPointEffectName: 
       ObjectDamageEffectName: 
       BuffIcons:
-      - Kind: 0
-        IconFileName: API
       - Kind: 2
+        IconFileName: API
+      - Kind: 3
         IconFileName: ASI
       deBuffIcons: []
     - ID: 31
@@ -4128,7 +4122,7 @@ MonoBehaviour:
       TargetPointEffectName: 
       ObjectDamageEffectName: 
       BuffIcons:
-      - Kind: 0
+      - Kind: 2
         IconFileName: API
       deBuffIcons: []
     - ID: 32
@@ -4165,9 +4159,6 @@ MonoBehaviour:
       - SkillDataKind: 0
         Value: 150
         Time: 0
-      - SkillDataKind: 7
-        Value: 0.2
-        Time: 3
       IconName: 
       MyPositionEffectName: 
       ProjectileEffectName: 
@@ -4190,9 +4181,6 @@ MonoBehaviour:
       - SkillDataKind: 0
         Value: 150
         Time: 0
-      - SkillDataKind: 6
-        Value: 0
-        Time: 2
       IconName: 
       MyPositionEffectName: 
       ProjectileEffectName: 
@@ -4200,7 +4188,7 @@ MonoBehaviour:
       ObjectDamageEffectName: 
       BuffIcons: []
       deBuffIcons:
-      - Kind: 13
+      - Kind: 6
         IconFileName: Stun
     - ID: 42
       UserSkillName: "\uBA54\uD14C\uC624"
@@ -4242,9 +4230,6 @@ MonoBehaviour:
       - SkillDataKind: 0
         Value: 150
         Time: 0
-      - SkillDataKind: 6
-        Value: 0
-        Time: 2
       IconName: LionPower_ICON
       MyPositionEffectName: Skill_LionPower
       ProjectileEffectName: 
@@ -4252,7 +4237,7 @@ MonoBehaviour:
       ObjectDamageEffectName: 
       BuffIcons: []
       deBuffIcons:
-      - Kind: 13
+      - Kind: 6
         IconFileName: Stun
     - ID: 44
       UserSkillName: "\uBC88\uAC1C\uD3ED\uD48D"
@@ -4276,7 +4261,7 @@ MonoBehaviour:
       ObjectDamageEffectName: 
       BuffIcons: []
       deBuffIcons:
-      - Kind: 13
+      - Kind: 6
         IconFileName: Stun
     - ID: 50
       UserSkillName: "\uADF8\uB808\uC774\uD2B8 \uD790"
@@ -4289,10 +4274,7 @@ MonoBehaviour:
       Type: 0
       TargetSelectType: 2
       DamageTypeRange: 0
-      SkillData:
-      - SkillDataKind: 4
-        Value: 500
-        Time: 0
+      SkillData: []
       IconName: 
       MyPositionEffectName: 
       ProjectileEffectName: 
@@ -4324,9 +4306,9 @@ MonoBehaviour:
       TargetPointEffectName: 
       ObjectDamageEffectName: 
       BuffIcons:
-      - Kind: 0
-        IconFileName: API
       - Kind: 2
+        IconFileName: API
+      - Kind: 3
         IconFileName: ASI
       deBuffIcons: []
     - ID: 52
@@ -4340,10 +4322,7 @@ MonoBehaviour:
       Type: 0
       TargetSelectType: 2
       DamageTypeRange: 0
-      SkillData:
-      - SkillDataKind: 5
-        Value: 0
-        Time: 5
+      SkillData: []
       IconName: 
       MyPositionEffectName: 
       ProjectileEffectName: 

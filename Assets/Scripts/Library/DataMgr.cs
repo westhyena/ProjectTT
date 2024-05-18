@@ -176,6 +176,39 @@ public enum SkillDataKind_E
 	/// 공격속도 감소
 	/// </summary>
 	AttackSpeedDown,
+	/// <summary>
+	/// 공격력 감소
+	/// </summary>
+	AttackDown,
+	/// <summary>
+	/// 공격속도 감소
+	/// </summary>
+	MoveSpeedDown,
+	/// <summary>
+	/// 물리 방어력 감소
+	/// </summary>
+	PDDown,
+	/// <summary>
+	/// 마법 방어력 감소
+	/// </summary>
+	MDDown,
+	/// <summary>
+	/// 물리 방어 증가
+	/// </summary>
+	PDUp,
+	/// <summary>
+	/// 마법 방어 증가
+	/// </summary>
+	MDUp,
+	/// <summary>
+	/// 크리티컬 확률증가
+	/// </summary>
+	CriticalPerUp,
+	/// <summary>
+	/// 크리티컬 데미지 증가
+	/// </summary>
+	CriticalDamageUp,
+
 };
 #endregion
 
@@ -370,119 +403,55 @@ public class UserActiveSkillDataElement
 
 #region SkillData
 
-public enum BuffANDdeBuffKind_E
-{
-	/// <summary>
-	/// 공격력 증가
-	/// </summary>
-	AttackPowerIncrease,
-	/// <summary>
-	/// 방어력 증가
-	/// </summary>
-	DefenseIncrease,
-	/// <summary>
-	/// 공격속도증가
-	/// </summary>
-	AttackSpeedIncrease,
-	/// <summary>
-	/// 크리티컬 확률 증가
-	/// </summary>
-	CriticalChanceIncrease,
-	/// <summary>
-	/// 크리티컬 데미지 증가
-	/// </summary>
-	CriticalDamageIncrease,
-	/// <summary>
-	/// 무적
-	/// </summary>
-	Invincibility,
-	/// <summary>
-	/// 공격력 감소
-	/// </summary>
-	AttackPowerDecrease,
-	/// <summary>
-	/// 방어력 감소
-	/// </summary>
-	DefenseDecrease,
-	/// <summary>
-	/// 공격속도 감소
-	/// </summary>
-	AttackSpeedDecrease,
-	/// <summary>
-	/// 이동속도 감소
-	/// </summary>
-	MovementSpeedDecrease,
-	/// <summary>
-	/// 출혈
-	/// </summary>
-	Bleed,
-	/// <summary>
-	/// 중독
-	/// </summary>
-	Poison,
-	/// <summary>
-	/// 화상
-	/// </summary>
-	Burn,
-	/// <summary>
-	/// 스턴
-	/// </summary>
-	Stun
-}
-
 [Serializable]
 public struct BuffIcons
 {
-	public BuffANDdeBuffKind_E Kind;
+	public SkillDataKind_E Kind;
 	public string IconFileName;
 
 	public BuffIcons(string FileName)
 	{
 		IconFileName = FileName;
-		Kind = BuffANDdeBuffKind_E.AttackPowerIncrease;
+		Kind = SkillDataKind_E.AttackUp;
 		switch (FileName)
 		{
 			case "API":
-				Kind = BuffANDdeBuffKind_E.AttackPowerIncrease;
+				Kind = SkillDataKind_E.AttackUp;
 				break;
 			case "DI":
-				Kind = BuffANDdeBuffKind_E.DefenseIncrease;
+				Kind = SkillDataKind_E.PDUp;
 				break;
 			case "ASI":
-				Kind = BuffANDdeBuffKind_E.AttackSpeedIncrease;
+				Kind = SkillDataKind_E.AttackSpeedUp;
 				break;
 			case "CCI":
-				Kind = BuffANDdeBuffKind_E.CriticalChanceIncrease;
+				Kind = SkillDataKind_E.CriticalPerUp;
 				break;
 			case "CDI":
-				Kind = BuffANDdeBuffKind_E.CriticalDamageIncrease;
+				Kind = SkillDataKind_E.CriticalDamageUp;
 				break;
 			case "INV":
-				Kind = BuffANDdeBuffKind_E.Invincibility;
+				Kind = SkillDataKind_E.Immunity;
 				break;
 			case "APD":
-				Kind = BuffANDdeBuffKind_E.AttackPowerDecrease;
+				Kind = SkillDataKind_E.AttackDown;
 				break;
 			case "DD":
-				Kind = BuffANDdeBuffKind_E.DefenseDecrease;
+				Kind = SkillDataKind_E.PDDown;
 				break;
 			case "ASD":
-				Kind = BuffANDdeBuffKind_E.AttackSpeedDecrease;
+				Kind = SkillDataKind_E.AttackSpeedDown;
 				break;
 			case "MSD":
-				Kind = BuffANDdeBuffKind_E.MovementSpeedDecrease;
+				Kind = SkillDataKind_E.MoveSpeedDown;
 				break;
 			case "Bleed":
-				Kind = BuffANDdeBuffKind_E.Bleed;
-				break;
 			case "Poison":
-				Kind = BuffANDdeBuffKind_E.Poison;
-				break;
 			case "Burn":
-				Kind = BuffANDdeBuffKind_E.Burn;
+				Kind = SkillDataKind_E.DotDamage;
 				break;
 			case "Stun":
-				Kind = BuffANDdeBuffKind_E.Stun;
+				Kind = SkillDataKind_E.Stun;
 				break;
 		}
 	}

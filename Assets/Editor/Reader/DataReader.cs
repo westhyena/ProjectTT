@@ -628,7 +628,7 @@ public class DataReader : EditorWindow
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Damage, _Value));
 											break;
-										case 12:
+										case 12://도트뎀
 										case 13:
 											_Value = string.IsNullOrEmpty(Get<string>(obj, 12)) ? 0 : Get<float>(obj, 12);
 											_Time = string.IsNullOrEmpty(Get<string>(obj, 13)) ? 0 : Get<float>(obj, 13);
@@ -636,7 +636,7 @@ public class DataReader : EditorWindow
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.DotDamage, _Value, _Time));
 											++sk;
 											break;
-										case 14:
+										case 14://공격력 증가
 										case 15:
 											_Value = string.IsNullOrEmpty(Get<string>(obj, 14)) ? 0 : Get<float>(obj, 14);
 											_Time = string.IsNullOrEmpty(Get<string>(obj, 15)) ? 0 : Get<float>(obj, 15);
@@ -644,7 +644,7 @@ public class DataReader : EditorWindow
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackUp, _Value, _Time));
 											++sk;
 											break;
-										case 16:
+										case 16://공속 증가
 										case 17:
 											_Value = string.IsNullOrEmpty(Get<string>(obj, 16)) ? 0 : Get<float>(obj, 16);
 											_Time = string.IsNullOrEmpty(Get<string>(obj, 17)) ? 0 : Get<float>(obj, 17);
@@ -652,27 +652,91 @@ public class DataReader : EditorWindow
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackSpeedUp, 0, _Time));
 											++sk;
 											break;
-										case 18:
+										case 18://물방 증가
+										case 19:
 											_Value = string.IsNullOrEmpty(Get<string>(obj, 18)) ? 0 : Get<float>(obj, 18);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 19)) ? 0 : Get<float>(obj, 19);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.PDUp, 0, _Time));
+											++sk;
+											break;
+										case 20://마방 증가
+										case 21:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 20)) ? 0 : Get<float>(obj, 20);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 21)) ? 0 : Get<float>(obj, 21);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.MDUp, 0, _Time));
+											++sk;
+											break;
+										case 22://크리티컬 확률 증가
+										case 23:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 20)) ? 0 : Get<float>(obj, 20);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 21)) ? 0 : Get<float>(obj, 21);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.CriticalPerUp, 0, _Time));
+											++sk;
+											break;
+										case 24://크리티컬 데미지 증가
+										case 25:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 20)) ? 0 : Get<float>(obj, 20);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 21)) ? 0 : Get<float>(obj, 21);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.CriticalDamageUp, 0, _Time));
+											++sk;
+											break;
+										case 26://힐
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 26)) ? 0 : Get<float>(obj, 26);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Heal, _Value));
 											break;
-										case 19:
-											_Time = string.IsNullOrEmpty(Get<string>(obj, 19)) ? 0 : Get<float>(obj, 19);
+										case 27://무적
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 27)) ? 0 : Get<float>(obj, 27);
 											if (_Time != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Immunity, 0, _Time));
 											break;
-										case 20:
-											_Time = string.IsNullOrEmpty(Get<string>(obj, 20)) ? 0 : Get<float>(obj, 20);
+										case 28://기절시간
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 28)) ? 0 : Get<float>(obj, 28);
 											if (_Time != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.Stun, 0, _Time));
 											break;
-										case 21:
-										case 22:
-											_Value = string.IsNullOrEmpty(Get<string>(obj, 21)) ? 0 : Get<float>(obj, 21);
-											_Time = string.IsNullOrEmpty(Get<string>(obj, 22)) ? 0 : Get<float>(obj, 22);
+										case 29://공속 감소
+										case 30:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 29)) ? 0 : Get<float>(obj, 29);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 30)) ? 0 : Get<float>(obj, 30);
 											if (_Value != 0)
 												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackSpeedDown, _Value, _Time));
+											++sk;
+											break;
+										case 31://공격력 감소
+										case 32:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 31)) ? 0 : Get<float>(obj, 31);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 32)) ? 0 : Get<float>(obj, 32);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.AttackDown, _Value, _Time));
+											++sk;
+											break;
+										case 33://이동속도 감소
+										case 34:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 33)) ? 0 : Get<float>(obj, 33);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 34)) ? 0 : Get<float>(obj, 34);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.MoveSpeedDown, _Value, _Time));
+											++sk;
+											break;
+										case 35://물방 감소
+										case 36:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 35)) ? 0 : Get<float>(obj, 35);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 36)) ? 0 : Get<float>(obj, 36);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.PDDown, _Value, _Time));
+											++sk;
+											break;
+										case 37://마방 감소
+										case 38:
+											_Value = string.IsNullOrEmpty(Get<string>(obj, 37)) ? 0 : Get<float>(obj, 37);
+											_Time = string.IsNullOrEmpty(Get<string>(obj, 38)) ? 0 : Get<float>(obj, 38);
+											if (_Value != 0)
+												sde.SkillData.Add(new SkillDataBase((int)SkillDataKind_E.MDDown, _Value, _Time));
 											++sk;
 											break;
 									}
