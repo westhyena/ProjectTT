@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     public int playerCharacterId = 0;
     public int[] companionCharacterIds;
 
+    public int[] userActiveSkillIds;
+
     Player player;
     public Player Player { get { return player; } }
 
