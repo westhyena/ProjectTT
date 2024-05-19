@@ -74,6 +74,11 @@ public class Player : Character
         {
             ChangeState(State.Manual);
             Move(movement);
+
+            if (DebugManager.instance.isAlwaysFollow)
+            {
+                HeroManager.instance.AliveHeroList.ForEach(hero => hero.FollowPlayer());
+            }
         }
     }
 

@@ -22,4 +22,5 @@ public class DebugManager : MonoBehaviour
     public GameObject circleRangePrefab;
 
     public bool isPlayerAuto = false;
+    public bool isAlwaysFollow = false;
 }

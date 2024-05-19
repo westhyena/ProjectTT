@@ -9,6 +9,8 @@ public class Hero : Character
 
     Vector2 followOffset = Vector2.zero;
     float followOffsetRange = 5.0f;
+    float followDoneDistance = 5.0f;
+    float followSpeed = 20.0f;
 
     protected override List<CardBuff> GetCardBuffList(CardBuffType_E buffType)
     {
@@ -64,25 +66,37 @@ public class Hero : Character
     {
         base.UpdateFollow();
         Vector2 followPosition = PlayerPosition2D + followOffset;
-        transform.position = followPosition;
-        ChangeState(State.Idle);
-
-        // float distanceSqr = (followPosition - Position2D).sqrMagnitude;
-        // if (distanceSqr < followDoneDistance * followDoneDistance)
-        // {
-        //     ChangeState(State.Idle);
-        // }
-        // else
-        // {
-        //     Move((followPosition - Position2D).normalized, followSpeed);
-        // }
+        
+        if (!DebugManager.instance.isAlwaysFollow)
+        {
+            transform.position = followPosition;
+            ChangeState(State.Idle);
+        }
+        else
+        {
+            float distanceSqr = (followPosition - Position2D).sqrMagnitude;
+            if (distanceSqr < followDoneDistance * followDoneDistance)
+            {
+                ChangeState(State.Idle);
+            }
+            else
+            {
+                Move((followPosition - Position2D).normalized, followSpeed);
+            }
+        }
     }
 
     public void FollowPlayer()
     {
-        followOffset = Random.insideUnitCircle.normalized * followOffsetRange;
-        animator.SetTrigger("CallToArms");
-        ChangeState(State.Follow);
+        if (state != State.Follow)
+        {
+            followOffset = Random.insideUnitCircle.normalized * followOffsetRange;
+            if (!DebugManager.instance.isAlwaysFollow)
+            {
+                animator.SetTrigger("CallToArms");
+            }
+            ChangeState(State.Follow);
+        }
     }
 
     protected override void OnDead()
