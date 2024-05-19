@@ -4184,7 +4184,7 @@ MonoBehaviour:
       IconName: 
       MyPositionEffectName: 
       ProjectileEffectName: 
-      TargetPointEffectName: 
+      TargetPointEffectName: Hit_GodsHammer
       ObjectDamageEffectName: 
       BuffIcons: []
       deBuffIcons:
@@ -4279,7 +4279,7 @@ MonoBehaviour:
       MyPositionEffectName: 
       ProjectileEffectName: 
       TargetPointEffectName: 
-      ObjectDamageEffectName: 
+      ObjectDamageEffectName: Hit_GreatHeal
       BuffIcons: []
       deBuffIcons: []
     - ID: 51
@@ -4736,7 +4736,7 @@ MonoBehaviour:
       GrowCriticalPer: 0
       GrowCriticalDamage: 0
       iconFileName: 
-      ObjectFileName: 
+      ObjectFileName: Enemy_SlimeGreen
       ObjectEffFileName: 
     - ID: 1008
       CharacterName: "\uC815\uAE00 \uAC70\uBBF8"
