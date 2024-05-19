@@ -35,6 +35,8 @@ public class Hero : Character
         base.Awake();
         HPBarUI hpBarUI = UIManager.instance.CreateHPBar(this.transform);
         hpBarUI.Initialize(this);
+
+        hpBarUI.GetComponent<SkillBuffUI>().Initialize(this);
     }
 
     public void Initialize(Player player)

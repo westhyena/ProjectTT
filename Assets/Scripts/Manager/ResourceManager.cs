@@ -37,6 +37,11 @@ public class ResourceManager
         return Resources.Load<GameObject>($"Hit/{name}");
     }
 
+    public static Sprite GetIngameBuffDebuffIcon(string name)
+    {
+        return Resources.Load<Sprite>($"IngameBuffDebuff/{name}");
+    }
+
     public static GameObject GetStagePrefab(string name)
     {
         return Resources.Load<GameObject>($"Stage/{name}");

@@ -5,14 +5,16 @@ public class Skill
 {
     public class EffectHolder
     {
+        public Skill skill;
         public SkillEffect effectInfo;
         float timer = 0.0f;
         float dotTimer = 0.0f;
         float CONST_DOT_TIME = 1.0f;
         public bool isEnd => timer > effectInfo.Duration;
 
-        public EffectHolder(SkillEffect effectInfo)
+        public EffectHolder(Skill skill, SkillEffect effectInfo)
         {
+            this.skill = skill;
             this.effectInfo = effectInfo;
         }
 
@@ -72,7 +74,7 @@ public class Skill
 
         foreach (SkillDataBase skillEffect in skillInfo.SkillData)
         {
-            effectList.Add(new EffectHolder(new SkillEffect(
+            effectList.Add(new EffectHolder(this, new SkillEffect(
                 skillEffect.SkillDataKind,
                 skillInfo.Type,
                 skillEffect.Value,

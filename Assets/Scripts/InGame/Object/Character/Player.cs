@@ -35,6 +35,8 @@ public class Player : Character
 
         HPBarUI hpBarUI = UIManager.instance.CreatePlayerHPBar(this.transform);
         hpBarUI.Initialize(this);
+
+        hpBarUI.GetComponent<SkillBuffUI>().Initialize(this);
     }
 
     public override List<Character> GetTargetList()

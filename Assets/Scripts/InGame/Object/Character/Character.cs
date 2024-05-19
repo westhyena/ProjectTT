@@ -258,6 +258,7 @@ public abstract class Character : MonoBehaviour
     public bool IsDead { get { return hp <= 0.0f; } }
 
     protected List<Skill.EffectHolder> skillEffectList = new ();
+    public List<Skill.EffectHolder> SkillEffectList => skillEffectList;
 
     protected virtual void Awake()
     {
