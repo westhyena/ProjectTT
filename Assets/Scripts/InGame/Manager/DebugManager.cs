@@ -20,4 +20,6 @@ public class DebugManager : MonoBehaviour
     public bool isDebugMode = false;
 
     public GameObject circleRangePrefab;
+
+    public bool isPlayerAuto = false;
 }

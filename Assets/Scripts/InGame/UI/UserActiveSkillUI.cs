@@ -9,6 +9,9 @@ public class UserActiveSkillUI : MonoBehaviour
 
     void Awake()
     {
+    }
 
+    void Start()
+    {
     }
 }

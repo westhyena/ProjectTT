@@ -82,4 +82,52 @@ public class Player : Character
         followEffect.SetActive(false);
         followEffect.SetActive(true);
     }
+
+    protected override void UpdateIdle()
+    {
+        if (DebugManager.instance.isPlayerAuto)
+        {
+            base.UpdateIdle();
+        }
+        else
+        {
+            Character nearestTarget = GetNearestTarget(Position2D);
+            if (nearestTarget != null)
+            {
+                if (CheckDistanceUnder(nearestTarget.Position2D, targetStartDistance))
+                {
+                    ChangeState(State.Target);
+                    target = nearestTarget;
+                }
+            }
+
+            Move(Vector2.zero);
+        }
+    }
+
+    protected override void UpdateTarget()
+    {
+        if (DebugManager.instance.isPlayerAuto)
+        {
+            base.UpdateTarget();
+        }
+        else
+        {
+            if (target == null || target.IsDead ||
+                CheckDistanceOver(target.Position2D, targetStartDistance))
+            {
+                ChangeState(State.Idle);
+                return;
+            }
+
+            if (CheckDistanceUnder(target.Position2D, attackStartDistance))
+            {
+                ChangeState(State.Attack);
+                // 바로 공격하게
+                curStateTime = float.MaxValue;
+            }
+
+            Move(Vector2.zero);
+        }
+    }
 }

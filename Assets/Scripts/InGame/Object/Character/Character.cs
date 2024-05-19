@@ -432,7 +432,7 @@ public abstract class Character : MonoBehaviour
         }
     }
 
-    void UpdateIdle()
+    protected virtual void UpdateIdle()
     {
         if (moveTarget == null)
         {
@@ -462,7 +462,7 @@ public abstract class Character : MonoBehaviour
         }
     }
 
-    void UpdateTarget()
+    protected virtual void UpdateTarget()
     {
         if (target == null || target.IsDead ||
             CheckDistanceOver(target.Position2D, targetStartDistance))
