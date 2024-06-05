@@ -559,6 +559,10 @@ public class CharacterDataElement
 	/// </summary>
 	public AttackType_E AttackType;
 	/// <summary>
+	/// 타겟 인식 범위
+	/// </summary>
+	public float TargetRecognitionRange;
+	/// <summary>
 	/// 공격 범위
 	/// </summary>
 	public float AttackRange;

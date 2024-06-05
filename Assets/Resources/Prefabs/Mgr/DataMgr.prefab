@@ -3322,8 +3322,8 @@ MonoBehaviour:
         SummonCount: 5
       - WaveID: 0
         SummonTime: 8
-        ObjName: "\uB098\uC05C \uBC84\uC12F"
-        CharacterID: 1000
+        ObjName: "\uB179\uC0C9 \uC2AC\uB77C\uC784"
+        CharacterID: 1007
         MonsterType: 0
         CharacterLevel: 1
         SummonCount: 5
@@ -3350,10 +3350,10 @@ MonoBehaviour:
         SummonCount: 3
       - WaveID: 0
         SummonTime: 15
-        ObjName: "\uB098\uC05C \uBC84\uC12F"
-        CharacterID: 1000
+        ObjName: "\uB179\uC0C9 \uC2AC\uB77C\uC784"
+        CharacterID: 1007
         MonsterType: 0
-        CharacterLevel: 3
+        CharacterLevel: 5
         SummonCount: 4
       Wave1:
       - WaveID: 1
@@ -3361,35 +3361,35 @@ MonoBehaviour:
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
         MonsterType: 0
-        CharacterLevel: 3
+        CharacterLevel: 5
         SummonCount: 10
       - WaveID: 1
         SummonTime: 4
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
         MonsterType: 0
-        CharacterLevel: 3
+        CharacterLevel: 5
         SummonCount: 10
       - WaveID: 1
         SummonTime: 10
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
         MonsterType: 0
-        CharacterLevel: 4
+        CharacterLevel: 8
         SummonCount: 10
       - WaveID: 1
         SummonTime: 12
         ObjName: "\uC815\uAE00\uAC70\uBBF8"
         CharacterID: 1008
         MonsterType: 0
-        CharacterLevel: 4
+        CharacterLevel: 8
         SummonCount: 10
       - WaveID: 1
         SummonTime: 15
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
         MonsterType: 0
-        CharacterLevel: 5
+        CharacterLevel: 8
         SummonCount: 15
       Wave2:
       - WaveID: 2
@@ -3397,21 +3397,21 @@ MonoBehaviour:
         ObjName: "\uD63C\uC774\uB098\uAC04 \uC6D0\uC8FC\uBBFC"
         CharacterID: 2000
         MonsterType: 1
-        CharacterLevel: 5
+        CharacterLevel: 8
         SummonCount: 1
       - WaveID: 2
         SummonTime: 5
         ObjName: "\uC804\uC0AC \uBA67\uB3FC\uC9C0"
         CharacterID: 1002
         MonsterType: 0
-        CharacterLevel: 5
+        CharacterLevel: 8
         SummonCount: 10
       - WaveID: 2
         SummonTime: 10
         ObjName: "\uB208\uC54C \uBC15\uC950"
         CharacterID: 1014
         MonsterType: 0
-        CharacterLevel: 3
+        CharacterLevel: 8
         SummonCount: 5
       Wave3:
       - WaveID: 3
@@ -3419,21 +3419,21 @@ MonoBehaviour:
         ObjName: "\uC2AC\uB77C\uC784"
         CharacterID: 1003
         MonsterType: 0
-        CharacterLevel: 5
+        CharacterLevel: 8
         SummonCount: 20
       - WaveID: 3
         SummonTime: 10
         ObjName: "\uD63C\uC774 \uB098\uAC04 \uC8FC\uC220\uC0AC"
         CharacterID: 1010
         MonsterType: 0
-        CharacterLevel: 5
+        CharacterLevel: 8
         SummonCount: 10
       - WaveID: 3
         SummonTime: 15
         ObjName: "\uD63C\uC774 \uB098\uAC04 \uCC3D\uBCD1"
         CharacterID: 1011
         MonsterType: 0
-        CharacterLevel: 3
+        CharacterLevel: 7
         SummonCount: 10
       Wave4:
       - WaveID: 4
@@ -3441,21 +3441,21 @@ MonoBehaviour:
         ObjName: "\uAC70\uB300\uD55C \uAF43\uC78E \uC2DD\uBB3C"
         CharacterID: 3001
         MonsterType: 2
-        CharacterLevel: 5
+        CharacterLevel: 8
         SummonCount: 1
       - WaveID: 4
         SummonTime: 5
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
         MonsterType: 0
-        CharacterLevel: 6
+        CharacterLevel: 8
         SummonCount: 20
       - WaveID: 4
         SummonTime: 10
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1001
         MonsterType: 0
-        CharacterLevel: 6
+        CharacterLevel: 8
         SummonCount: 20
       IconName: "\uC544\uC774\uCF58 \uD30C\uC77C \uBA85"
       StageMapObjectName: Theme_002_Jungle
@@ -4344,7 +4344,8 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
-      AttackRange: 2
+      TargetRecognitionRange: 5
+      AttackRange: 1.5
       DamageTargetType: 2
       DamageTypeRange: 0
       AttackSpeed: 1
@@ -4375,7 +4376,8 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
-      AttackRange: 2
+      TargetRecognitionRange: 5
+      AttackRange: 1.5
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 0.7
@@ -4385,7 +4387,7 @@ MonoBehaviour:
       MD: 5
       CriticalPer: 10
       CriticalDamage: 30
-      AllSkillList: 
+      AllSkillList: 02000000
       Exp: 0
       Gold: 0
       GrowHp: 10
@@ -4406,7 +4408,8 @@ MonoBehaviour:
       DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
-      AttackRange: 7.5
+      TargetRecognitionRange: 5
+      AttackRange: 4
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 0.9
@@ -4416,7 +4419,7 @@ MonoBehaviour:
       MD: 6
       CriticalPer: 10
       CriticalDamage: 30
-      AllSkillList: 
+      AllSkillList: 0c000000
       Exp: 0
       Gold: 0
       GrowHp: 5
@@ -4437,7 +4440,8 @@ MonoBehaviour:
       DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
-      AttackRange: 6.5
+      TargetRecognitionRange: 5
+      AttackRange: 2.5
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1
@@ -4447,7 +4451,7 @@ MonoBehaviour:
       MD: 10
       CriticalPer: 10
       CriticalDamage: 30
-      AllSkillList: 
+      AllSkillList: 0b000000
       Exp: 0
       Gold: 0
       GrowHp: 3
@@ -4468,7 +4472,8 @@ MonoBehaviour:
       DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
-      AttackRange: 5
+      TargetRecognitionRange: 5
+      AttackRange: 3
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1.5
@@ -4478,7 +4483,7 @@ MonoBehaviour:
       MD: 2
       CriticalPer: 10
       CriticalDamage: 30
-      AllSkillList: 
+      AllSkillList: 01000000
       Exp: 0
       Gold: 0
       GrowHp: 6
@@ -4499,6 +4504,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 5
       AttackRange: 1
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4530,6 +4536,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 5
       AttackRange: 1
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4561,6 +4568,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 5
       AttackRange: 1
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4592,6 +4600,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 5
       AttackRange: 1
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4623,6 +4632,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
+      TargetRecognitionRange: 5
       AttackRange: 4
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4654,6 +4664,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 5
       AttackRange: 1
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4680,11 +4691,12 @@ MonoBehaviour:
       CharacterName: "\uC815\uAE00 \uB450\uB354\uC9C0"
       CharacterNameID: 10006
       CharacterDescID: 11006
-      MoveSpeed: 4
+      MoveSpeed: 2
       Position: 0
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 1
+      TargetRecognitionRange: 5
       AttackRange: 3
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4711,17 +4723,18 @@ MonoBehaviour:
       CharacterName: "\uB179\uC0C9 \uC2AC\uB77C\uC784"
       CharacterNameID: 10007
       CharacterDescID: 11007
-      MoveSpeed: 4
+      MoveSpeed: 2
       Position: 0
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
-      AttackRange: 2
+      TargetRecognitionRange: 5
+      AttackRange: 1
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1
-      AttackDamage: 5
-      HP: 50
+      AttackDamage: 30
+      HP: 45
       PD: 1
       MD: 1
       CriticalPer: 0
@@ -4747,6 +4760,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 5
       AttackRange: 1
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4778,6 +4792,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
+      TargetRecognitionRange: 5
       AttackRange: 3
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4809,6 +4824,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 1
       Type: 1
       AttackType: 1
+      TargetRecognitionRange: 5
       AttackRange: 3
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4840,7 +4856,8 @@ MonoBehaviour:
       DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
-      AttackRange: 8
+      TargetRecognitionRange: 5
+      AttackRange: 4
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1
@@ -4871,6 +4888,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 1
+      TargetRecognitionRange: 5
       AttackRange: 3
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4902,6 +4920,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 1
+      TargetRecognitionRange: 5
       AttackRange: 3
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4933,6 +4952,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
+      TargetRecognitionRange: 5
       AttackRange: 3
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4964,6 +4984,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -4995,6 +5016,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5026,6 +5048,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5057,6 +5080,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5088,6 +5112,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5119,6 +5144,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5150,6 +5176,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5181,6 +5208,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5212,6 +5240,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5243,6 +5272,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5274,6 +5304,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5305,6 +5336,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5336,6 +5368,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5367,6 +5400,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5398,6 +5432,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5429,6 +5464,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5460,6 +5496,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5491,6 +5528,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5522,6 +5560,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5553,6 +5592,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5584,6 +5624,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5615,6 +5656,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5646,6 +5688,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5677,6 +5720,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5708,6 +5752,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5739,6 +5784,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5770,6 +5816,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5801,6 +5848,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5832,6 +5880,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5863,6 +5912,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5894,6 +5944,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5925,6 +5976,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5956,6 +6008,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -5987,6 +6040,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6018,6 +6072,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6049,6 +6104,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6080,6 +6136,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6111,6 +6168,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6142,6 +6200,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6173,6 +6232,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6204,6 +6264,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6235,6 +6296,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6266,6 +6328,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6297,6 +6360,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6328,6 +6392,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 0
       AttackRange: 0
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6359,6 +6424,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 5
       AttackRange: 2
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6369,7 +6435,7 @@ MonoBehaviour:
       MD: 5
       CriticalPer: 0
       CriticalDamage: 0
-      AllSkillList: 
+      AllSkillList: 0a000000
       Exp: 100
       Gold: 100
       GrowHp: 100
@@ -6390,6 +6456,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 0
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 5
       AttackRange: 3
       DamageTargetType: 0
       DamageTypeRange: 0
@@ -6400,7 +6467,7 @@ MonoBehaviour:
       MD: 10
       CriticalPer: 0
       CriticalDamage: 0
-      AllSkillList: 
+      AllSkillList: 0a0000000b00000016000000
       Exp: 0
       Gold: 1000
       GrowHp: 100
@@ -6421,6 +6488,7 @@ MonoBehaviour:
       DoAerialUnitAttack: 1
       Type: 0
       AttackType: 0
+      TargetRecognitionRange: 5
       AttackRange: 3
       DamageTargetType: 0
       DamageTypeRange: 0

@@ -813,39 +813,40 @@ public class DataReader : EditorWindow
 								cde.DoAerialUnitAttack = Get<int>(obj, 6) == 0 ? false : true;
 								cde.Type = (DamageType_E)Get<int>(obj, 7);
 								cde.AttackType = (AttackType_E)Get<int>(obj, 8);
-								cde.AttackRange = Get<float>(obj, 9);
-								cde.DamageTargetType = (DamageTargetType_E)Get<int>(obj, 10);
-								cde.DamageTypeRange = Get<float>(obj, 11);
-								cde.AttackSpeed = Get<float>(obj, 12);
-								cde.AttackDamage = Get<int>(obj, 13);
-								cde.HP = Get<int>(obj, 14);
-								cde.PD = Get<int>(obj, 15);
-								cde.MD = Get<int>(obj, 16);
-								if (string.IsNullOrEmpty(Get<string>(obj, 17)) == false)
-									cde.CriticalPer = Get<float>(obj, 17);
+								cde.TargetRecognitionRange = Get<float>(obj, 9);
+								cde.AttackRange = Get<float>(obj, 10);
+								cde.DamageTargetType = (DamageTargetType_E)Get<int>(obj, 11);
+								cde.DamageTypeRange = Get<float>(obj, 12);
+								cde.AttackSpeed = Get<float>(obj, 13);
+								cde.AttackDamage = Get<int>(obj, 14);
+								cde.HP = Get<int>(obj, 15);
+								cde.PD = Get<int>(obj, 16);
+								cde.MD = Get<int>(obj, 17);
 								if (string.IsNullOrEmpty(Get<string>(obj, 18)) == false)
-									cde.CriticalDamage = Get<float>(obj, 18);
+									cde.CriticalPer = Get<float>(obj, 18);
+								if (string.IsNullOrEmpty(Get<string>(obj, 19)) == false)
+									cde.CriticalDamage = Get<float>(obj, 19);
 
 								cde.AllSkillList = new List<int>();
-								if (string.IsNullOrEmpty(Get<string>(obj, 19)) == false)
+								if (string.IsNullOrEmpty(Get<string>(obj, 20)) == false)
 								{
-									string[] Skills = Get<string>(obj, 19).Split(",");
+									string[] Skills = Get<string>(obj, 20).Split(",");
 									for (int asl = 0; asl < Skills.Length; ++asl)
 										cde.AllSkillList.Add(int.Parse(Skills[asl]));
 								}
-								if (string.IsNullOrEmpty(Get<string>(obj, 20)) == false)
-									cde.Exp = Get<int>(obj, 20);
 								if (string.IsNullOrEmpty(Get<string>(obj, 21)) == false)
-									cde.Gold = Get<int>(obj, 21);
+									cde.Exp = Get<int>(obj, 21);
+								if (string.IsNullOrEmpty(Get<string>(obj, 22)) == false)
+									cde.Gold = Get<int>(obj, 22);
 
-								cde.GrowHp = Get<int>(obj, 22);
-								cde.GrowAttackDamage = Get<int>(obj, 23);
-								cde.GrowPD = Get<int>(obj, 24);
-								cde.GrowMD = Get<int>(obj, 25);
-								if (string.IsNullOrEmpty(Get<string>(obj, 26)) == false)
-									cde.GrowCriticalPer = Get<float>(obj, 26);
+								cde.GrowHp = Get<int>(obj, 23);
+								cde.GrowAttackDamage = Get<int>(obj, 24);
+								cde.GrowPD = Get<int>(obj, 25);
+								cde.GrowMD = Get<int>(obj, 26);
 								if (string.IsNullOrEmpty(Get<string>(obj, 27)) == false)
-									cde.GrowCriticalDamage = Get<float>(obj, 27);
+									cde.GrowCriticalPer = Get<float>(obj, 27);
+								if (string.IsNullOrEmpty(Get<string>(obj, 28)) == false)
+									cde.GrowCriticalDamage = Get<float>(obj, 28);
 
 								DataTable Character_FileTable = ReadSingleSheet(string.Format("{0}_File", CharacterDataSheet[i]), DataPath);
 								//파일명 셋팅
