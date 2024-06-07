@@ -316,7 +316,7 @@ public abstract class Character : MonoBehaviour
 
         movementSpeed = GameManager.instance.baseColliderWidth * this.mspd;
         attackStartDistance = GameManager.instance.baseColliderWidth * rangeOfTarget;
-        targetStartDistance = attackStartDistance * 2.0f;
+        targetStartDistance = GameManager.instance.baseColliderWidth * characterInfo.TargetRecognitionRange;
 
         hp = MaxHP;
 
@@ -434,10 +434,10 @@ public abstract class Character : MonoBehaviour
 
     protected virtual void UpdateIdle()
     {
-        if (moveTarget == null)
-        {
-            moveTarget = GetNearestTarget(Position2D);
-        }
+        // if (moveTarget == null)
+        // {
+        //     moveTarget = GetNearestTarget(Position2D);
+        // }
 
         Character nearestTarget = GetNearestTarget(Position2D);
         if (nearestTarget != null)
@@ -446,10 +446,10 @@ public abstract class Character : MonoBehaviour
             {
                 ChangeState(State.Target);
                 target = nearestTarget;
-            }
 
-            Vector3 direction = (nearestTarget.Position2D - Position2D).normalized;
-            Move(direction);
+                Vector3 direction = (nearestTarget.Position2D - Position2D).normalized;
+                Move(direction);
+            }
         }
         else if (moveTarget != null)
         {
