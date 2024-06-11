@@ -645,18 +645,18 @@ public abstract class Character : MonoBehaviour
 
     protected void UpdateSkill()
     {
-        foreach (Skill skill in skillList)
-        {
-            skill.UpdateSkill();
-        }
+        // foreach (Skill skill in skillList)
+        // {
+        //     skill.UpdateSkill();
+        // }
     }
 
     protected void UpdateSkillTimerOnly()
     {
-        foreach (Skill skill in skillList)
-        {
-            skill.UpdateSkillTimer();
-        }
+        // foreach (Skill skill in skillList)
+        // {
+        //     skill.UpdateSkillTimer();
+        // }
     }
 
     protected void UpdateState()
