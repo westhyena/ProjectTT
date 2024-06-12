@@ -238,7 +238,7 @@ public class TranslationElement
 public class InGameSystemElement
 {
 	/// <summary>
-	/// 용병포인트 획득 시간
+	/// 용병포인트 획득 시간 (사용 안함!!!)
 	/// </summary>
 	public float MercenaryPointGetTime;
 	/// <summary>
@@ -266,9 +266,50 @@ public class InGameSystemElement
 public struct WaveDataInfo
 {
 	/// <summary>
-	/// 웨이브
+	/// 웨이브 (사용안함!!!)
 	/// </summary>
 	public int WaveID;
+	/// <summary>
+	/// 스팟 포인트 (몬스터 소환 포인트)
+	/// </summary>
+	public int SpotPoint;
+	/// <summary>
+	/// 등장시간(초)
+	/// </summary>
+	public float SummonTime;
+	/// <summary>
+	/// (구분용) 소환 오브젝트 이름
+	/// </summary>
+	public string ObjName;
+	/// <summary>
+	/// 소환 오브젝트 ID
+	/// </summary>
+	public int CharacterID;
+	/// <summary>
+	/// 몬스터 타입
+	/// </summary>
+	public MonsterType_E MonsterType;
+	/// <summary>
+	/// 소환 오브젝트 레벨
+	/// </summary>
+	public int CharacterLevel;
+	/// <summary>
+	/// 소환될 갯수
+	/// </summary>
+	public int SummonCount;
+}
+
+[Serializable]
+public struct SpotPointDataInfo
+{
+	/// <summary>
+	/// 웨이브 (사용안함!!!)
+	/// </summary>
+	public int WaveID;
+	/// <summary>
+	/// 스팟 포인트 (몬스터 소환 포인트)
+	/// </summary>
+	public int SpotPoint;
 	/// <summary>
 	/// 등장시간(초)
 	/// </summary>
@@ -330,6 +371,17 @@ public class StageWaveDataElement
 	public List<WaveDataInfo> Wave2 = new List<WaveDataInfo>();
 	public List<WaveDataInfo> Wave3 = new List<WaveDataInfo>();
 	public List<WaveDataInfo> Wave4 = new List<WaveDataInfo>();
+
+	public List<SpotPointDataInfo> Spot0 = new List<SpotPointDataInfo>();
+	public List<SpotPointDataInfo> Spot1 = new List<SpotPointDataInfo>();
+	public List<SpotPointDataInfo> Spot2 = new List<SpotPointDataInfo>();
+	public List<SpotPointDataInfo> Spot3 = new List<SpotPointDataInfo>();
+	public List<SpotPointDataInfo> Spot4 = new List<SpotPointDataInfo>();
+	public List<SpotPointDataInfo> Spot5 = new List<SpotPointDataInfo>();
+	public List<SpotPointDataInfo> Spot6 = new List<SpotPointDataInfo>();
+	public List<SpotPointDataInfo> Spot7 = new List<SpotPointDataInfo>();
+	public List<SpotPointDataInfo> Spot8 = new List<SpotPointDataInfo>();
+	public List<SpotPointDataInfo> Spot9 = new List<SpotPointDataInfo>();
 
 	/// <summary>
 	/// 맵 아이콘 파일명

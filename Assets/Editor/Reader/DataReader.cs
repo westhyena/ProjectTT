@@ -422,8 +422,9 @@ public class DataReader : EditorWindow
 										if (string.IsNullOrEmpty(Get<string>(obj2, 0)))
 											continue;
 
-										WaveDataInfo info = new WaveDataInfo();
-										info.WaveID = Get<int>(obj2, 0);
+										SpotPointDataInfo info = new SpotPointDataInfo();
+										//info.WaveID = Get<int>(obj2, 0);
+										info.SpotPoint = Get<int>(obj2, 0);
 										info.SummonTime = Get<float>(obj2, 1);
 										info.ObjName = Get<string>(obj2, 2);
 										info.CharacterID = Get<int>(obj2, 3);
@@ -434,19 +435,34 @@ public class DataReader : EditorWindow
 										switch (info.WaveID)
 										{
 											case 0:
-												swde.Wave0.Add(info);
+												swde.Spot0.Add(info);
 												break;
 											case 1:
-												swde.Wave1.Add(info);
+												swde.Spot1.Add(info);
 												break;
 											case 2:
-												swde.Wave2.Add(info);
+												swde.Spot2.Add(info);
 												break;
 											case 3:
-												swde.Wave3.Add(info);
+												swde.Spot3.Add(info);
 												break;
 											case 4:
-												swde.Wave4.Add(info);
+												swde.Spot4.Add(info);
+												break;
+											case 5:
+												swde.Spot5.Add(info);
+												break;
+											case 6:
+												swde.Spot6.Add(info);
+												break;
+											case 7:
+												swde.Spot7.Add(info);
+												break;
+											case 8:
+												swde.Spot8.Add(info);
+												break;
+											case 9:
+												swde.Spot9.Add(info);
 												break;
 										}
 									}

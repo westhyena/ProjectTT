@@ -3292,7 +3292,7 @@ MonoBehaviour:
       Mys: 
   m_InGameSystemElement:
     MercenaryPointGetTime: 3
-    GetMercenaryPoint: 20
+    GetMercenaryPoint: 100
     Mercenary_LevelUp_NeedPoint: 0200000004000000060000000a0000000f000000140000001400000019000000190000001e0000001e0000002300000023000000280000002800000032000000
     Summon_NeedPoint: 15
     Call_NeedPoint: 10
@@ -3305,158 +3305,189 @@ MonoBehaviour:
       StageDescID: 600
       PlayTime: 300
       StartMercenaryPoint: 0
-      Wave0:
+      Wave0: []
+      Wave1: []
+      Wave2: []
+      Wave3: []
+      Wave4: []
+      Spot0:
       - WaveID: 0
+        SpotPoint: 0
         SummonTime: 1
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
         MonsterType: 0
         CharacterLevel: 1
-        SummonCount: 5
+        SummonCount: 2
       - WaveID: 0
-        SummonTime: 5
-        ObjName: "\uB098\uC05C \uBC84\uC12F"
-        CharacterID: 1000
-        MonsterType: 0
-        CharacterLevel: 1
-        SummonCount: 5
-      - WaveID: 0
-        SummonTime: 8
-        ObjName: "\uB179\uC0C9 \uC2AC\uB77C\uC784"
-        CharacterID: 1007
-        MonsterType: 0
-        CharacterLevel: 1
-        SummonCount: 5
-      - WaveID: 0
-        SummonTime: 9
-        ObjName: "\uC815\uAE00\uAC70\uBBF8"
-        CharacterID: 1008
-        MonsterType: 0
-        CharacterLevel: 1
-        SummonCount: 3
-      - WaveID: 0
-        SummonTime: 10
-        ObjName: "\uB098\uC05C \uBC84\uC12F"
-        CharacterID: 1000
-        MonsterType: 0
-        CharacterLevel: 2
-        SummonCount: 6
-      - WaveID: 0
-        SummonTime: 12
-        ObjName: "\uB098\uC05C \uBC84\uC12F"
-        CharacterID: 1009
-        MonsterType: 0
-        CharacterLevel: 2
-        SummonCount: 3
-      - WaveID: 0
-        SummonTime: 15
-        ObjName: "\uB179\uC0C9 \uC2AC\uB77C\uC784"
-        CharacterID: 1007
-        MonsterType: 0
-        CharacterLevel: 5
-        SummonCount: 4
-      Wave1:
-      - WaveID: 1
+        SpotPoint: 0
         SummonTime: 1
-        ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
-        CharacterID: 1001
+        ObjName: "\uD3C9\uC57C \uC2AC\uB77C\uC784"
+        CharacterID: 1003
         MonsterType: 0
-        CharacterLevel: 5
-        SummonCount: 10
-      - WaveID: 1
-        SummonTime: 4
-        ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
-        CharacterID: 1001
-        MonsterType: 0
-        CharacterLevel: 5
-        SummonCount: 10
-      - WaveID: 1
-        SummonTime: 10
-        ObjName: "\uB098\uC05C \uBC84\uC12F"
-        CharacterID: 1000
-        MonsterType: 0
-        CharacterLevel: 8
-        SummonCount: 10
-      - WaveID: 1
-        SummonTime: 12
-        ObjName: "\uC815\uAE00\uAC70\uBBF8"
-        CharacterID: 1008
-        MonsterType: 0
-        CharacterLevel: 8
-        SummonCount: 10
-      - WaveID: 1
-        SummonTime: 15
-        ObjName: "\uB098\uC05C \uBC84\uC12F"
-        CharacterID: 1000
-        MonsterType: 0
-        CharacterLevel: 8
-        SummonCount: 15
-      Wave2:
-      - WaveID: 2
-        SummonTime: 1
-        ObjName: "\uD63C\uC774\uB098\uAC04 \uC6D0\uC8FC\uBBFC"
-        CharacterID: 2000
-        MonsterType: 1
-        CharacterLevel: 8
+        CharacterLevel: 1
         SummonCount: 1
-      - WaveID: 2
-        SummonTime: 5
-        ObjName: "\uC804\uC0AC \uBA67\uB3FC\uC9C0"
+      - WaveID: 0
+        SpotPoint: 1
+        SummonTime: 1
+        ObjName: "\uB179\uC0C9 \uC2AC\uB77C\uC784"
+        CharacterID: 1007
+        MonsterType: 0
+        CharacterLevel: 2
+        SummonCount: 3
+      - WaveID: 0
+        SpotPoint: 1
+        SummonTime: 1
+        ObjName: "\uC815\uAE00\uAC70\uBBF8"
+        CharacterID: 1008
+        MonsterType: 0
+        CharacterLevel: 2
+        SummonCount: 1
+      - WaveID: 0
+        SpotPoint: 2
+        SummonTime: 1
+        ObjName: "\uCD08\uC6D0\uC758 \uB3FC\uC9C0"
+        CharacterID: 1001
+        MonsterType: 0
+        CharacterLevel: 3
+        SummonCount: 4
+      - WaveID: 0
+        SpotPoint: 2
+        SummonTime: 1
+        ObjName: "\uD654\uB09C \uB3FC\uC9C0 \uC804\uC0AC"
         CharacterID: 1002
         MonsterType: 0
+        CharacterLevel: 3
+        SummonCount: 1
+      - WaveID: 0
+        SpotPoint: 3
+        SummonTime: 1
+        ObjName: "\uC815\uAE00\uAC70\uBBF8"
+        CharacterID: 1008
+        MonsterType: 0
+        CharacterLevel: 3
+        SummonCount: 4
+      - WaveID: 0
+        SpotPoint: 3
+        SummonTime: 1
+        ObjName: "\uB098\uC05C \uBC84\uC12F"
+        CharacterID: 1001
+        MonsterType: 0
+        CharacterLevel: 5
+        SummonCount: 2
+      - WaveID: 0
+        SpotPoint: 3
+        SummonTime: 1
+        ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
+        CharacterID: 1001
+        MonsterType: 0
+        CharacterLevel: 5
+        SummonCount: 1
+      - WaveID: 0
+        SpotPoint: 4
+        SummonTime: 1
+        ObjName: "\uB098\uC05C \uBC84\uC12F"
+        CharacterID: 1000
+        MonsterType: 0
         CharacterLevel: 8
-        SummonCount: 10
-      - WaveID: 2
-        SummonTime: 10
+        SummonCount: 5
+      - WaveID: 0
+        SpotPoint: 4
+        SummonTime: 1
+        ObjName: "\uAD34\uC0C1\uD55C \uACF5\uC911\uC0C8"
+        CharacterID: 1009
+        MonsterType: 0
+        CharacterLevel: 10
+        SummonCount: 1
+      - WaveID: 0
+        SpotPoint: 5
+        SummonTime: 1
+        ObjName: "\uD63C\uC774\uB098\uAC04 \uCC3D\uBCD1"
+        CharacterID: 1011
+        MonsterType: 0
+        CharacterLevel: 8
+        SummonCount: 6
+      - WaveID: 0
+        SpotPoint: 6
+        SummonTime: 1
+        ObjName: "\uD63C\uC774\uB098\uAC04 \uC8FC\uC220\uC0AC"
+        CharacterID: 1010
+        MonsterType: 1
+        CharacterLevel: 8
+        SummonCount: 6
+      - WaveID: 0
+        SpotPoint: 7
+        SummonTime: 1
+        ObjName: "\uCD08\uC6D0\uC758 \uB3FC\uC9C0"
+        CharacterID: 1001
+        MonsterType: 0
+        CharacterLevel: 7
+        SummonCount: 3
+      - WaveID: 0
+        SpotPoint: 7
+        SummonTime: 1
         ObjName: "\uB208\uC54C \uBC15\uC950"
         CharacterID: 1014
         MonsterType: 0
-        CharacterLevel: 8
-        SummonCount: 5
-      Wave3:
-      - WaveID: 3
+        CharacterLevel: 7
+        SummonCount: 2
+      - WaveID: 0
+        SpotPoint: 7
         SummonTime: 1
-        ObjName: "\uC2AC\uB77C\uC784"
+        ObjName: "\uD3C9\uC57C \uC2AC\uB77C\uC784"
         CharacterID: 1003
         MonsterType: 0
-        CharacterLevel: 8
-        SummonCount: 20
-      - WaveID: 3
-        SummonTime: 10
-        ObjName: "\uD63C\uC774 \uB098\uAC04 \uC8FC\uC220\uC0AC"
-        CharacterID: 1010
+        CharacterLevel: 7
+        SummonCount: 3
+      - WaveID: 0
+        SpotPoint: 8
+        SummonTime: 1
+        ObjName: "\uD3C9\uC57C\uC758 \uAC70\uB300 \uD2B8\uB864"
+        CharacterID: 2000
         MonsterType: 0
         CharacterLevel: 8
-        SummonCount: 10
-      - WaveID: 3
-        SummonTime: 15
+        SummonCount: 1
+      - WaveID: 0
+        SpotPoint: 8
+        SummonTime: 1
         ObjName: "\uD63C\uC774 \uB098\uAC04 \uCC3D\uBCD1"
         CharacterID: 1011
         MonsterType: 0
         CharacterLevel: 7
-        SummonCount: 10
-      Wave4:
-      - WaveID: 4
+        SummonCount: 5
+      - WaveID: 0
+        SpotPoint: 9
         SummonTime: 1
         ObjName: "\uAC70\uB300\uD55C \uAF43\uC78E \uC2DD\uBB3C"
         CharacterID: 3001
         MonsterType: 2
         CharacterLevel: 8
         SummonCount: 1
-      - WaveID: 4
-        SummonTime: 5
-        ObjName: "\uB098\uC05C \uBC84\uC12F"
-        CharacterID: 1000
+      - WaveID: 0
+        SpotPoint: 9
+        SummonTime: 1
+        ObjName: "\uB208\uC54C \uBC15\uC950"
+        CharacterID: 1014
         MonsterType: 0
         CharacterLevel: 8
-        SummonCount: 20
-      - WaveID: 4
-        SummonTime: 10
+        SummonCount: 5
+      - WaveID: 0
+        SpotPoint: 9
+        SummonTime: 1
         ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
-        CharacterID: 1001
+        CharacterID: 1002
         MonsterType: 0
         CharacterLevel: 8
-        SummonCount: 20
+        SummonCount: 3
+      Spot1: []
+      Spot2: []
+      Spot3: []
+      Spot4: []
+      Spot5: []
+      Spot6: []
+      Spot7: []
+      Spot8: []
+      Spot9: []
       IconName: "\uC544\uC774\uCF58 \uD30C\uC77C \uBA85"
       StageMapObjectName: Theme_002_Jungle
     - id: 1
@@ -3465,95 +3496,189 @@ MonoBehaviour:
       StageDescID: 601
       PlayTime: 300
       StartMercenaryPoint: 1
-      Wave0:
+      Wave0: []
+      Wave1: []
+      Wave2: []
+      Wave3: []
+      Wave4: []
+      Spot0:
       - WaveID: 0
-        SummonTime: 5
+        SpotPoint: 0
+        SummonTime: 1
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
         MonsterType: 0
         CharacterLevel: 1
-        SummonCount: 30
+        SummonCount: 2
       - WaveID: 0
-        SummonTime: 10
-        ObjName: "\uB098\uC05C \uBC84\uC12F"
-        CharacterID: 1000
+        SpotPoint: 0
+        SummonTime: 1
+        ObjName: "\uD3C9\uC57C \uC2AC\uB77C\uC784"
+        CharacterID: 1003
         MonsterType: 0
         CharacterLevel: 1
-        SummonCount: 50
-      - WaveID: 0
-        SummonTime: 30
-        ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
-        CharacterID: 1001
-        MonsterType: 0
-        CharacterLevel: 5
-        SummonCount: 20
-      Wave1:
-      - WaveID: 1
-        SummonTime: 60
-        ObjName: "\uC804\uC0AC \uBA67\uB3FC\uC9C0"
-        CharacterID: 1002
-        MonsterType: 0
-        CharacterLevel: 5
-        SummonCount: 50
-      - WaveID: 1
-        SummonTime: 65
-        ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
-        CharacterID: 1001
-        MonsterType: 0
-        CharacterLevel: 5
-        SummonCount: 50
-      Wave2:
-      - WaveID: 2
-        SummonTime: 120
-        ObjName: "\uD63C\uC774\uB098\uAC04 \uC6D0\uC8FC\uBBFC"
-        CharacterID: 2000
-        MonsterType: 1
-        CharacterLevel: 15
         SummonCount: 1
-      - WaveID: 2
-        SummonTime: 120
+      - WaveID: 0
+        SpotPoint: 1
+        SummonTime: 1
+        ObjName: "\uB179\uC0C9 \uC2AC\uB77C\uC784"
+        CharacterID: 1007
+        MonsterType: 0
+        CharacterLevel: 2
+        SummonCount: 3
+      - WaveID: 0
+        SpotPoint: 1
+        SummonTime: 1
+        ObjName: "\uC815\uAE00\uAC70\uBBF8"
+        CharacterID: 1008
+        MonsterType: 0
+        CharacterLevel: 2
+        SummonCount: 1
+      - WaveID: 0
+        SpotPoint: 2
+        SummonTime: 1
+        ObjName: "\uCD08\uC6D0\uC758 \uB3FC\uC9C0"
+        CharacterID: 1001
+        MonsterType: 0
+        CharacterLevel: 3
+        SummonCount: 4
+      - WaveID: 0
+        SpotPoint: 2
+        SummonTime: 1
+        ObjName: "\uD654\uB09C \uB3FC\uC9C0 \uC804\uC0AC"
+        CharacterID: 1002
+        MonsterType: 0
+        CharacterLevel: 3
+        SummonCount: 1
+      - WaveID: 0
+        SpotPoint: 3
+        SummonTime: 1
+        ObjName: "\uC815\uAE00\uAC70\uBBF8"
+        CharacterID: 1008
+        MonsterType: 0
+        CharacterLevel: 3
+        SummonCount: 4
+      - WaveID: 0
+        SpotPoint: 3
+        SummonTime: 1
+        ObjName: "\uB098\uC05C \uBC84\uC12F"
+        CharacterID: 1001
+        MonsterType: 0
+        CharacterLevel: 5
+        SummonCount: 2
+      - WaveID: 0
+        SpotPoint: 3
+        SummonTime: 1
+        ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
+        CharacterID: 1001
+        MonsterType: 0
+        CharacterLevel: 5
+        SummonCount: 1
+      - WaveID: 0
+        SpotPoint: 4
+        SummonTime: 1
         ObjName: "\uB098\uC05C \uBC84\uC12F"
         CharacterID: 1000
         MonsterType: 0
-        CharacterLevel: 5
-        SummonCount: 30
-      Wave3:
-      - WaveID: 3
-        SummonTime: 180
-        ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
-        CharacterID: 1001
+        CharacterLevel: 8
+        SummonCount: 5
+      - WaveID: 0
+        SpotPoint: 4
+        SummonTime: 1
+        ObjName: "\uAD34\uC0C1\uD55C \uACF5\uC911\uC0C8"
+        CharacterID: 1009
         MonsterType: 0
         CharacterLevel: 10
-        SummonCount: 50
-      - WaveID: 3
-        SummonTime: 200
-        ObjName: "\uC2AC\uB77C\uC784"
+        SummonCount: 1
+      - WaveID: 0
+        SpotPoint: 5
+        SummonTime: 1
+        ObjName: "\uD63C\uC774\uB098\uAC04 \uCC3D\uBCD1"
+        CharacterID: 1011
+        MonsterType: 0
+        CharacterLevel: 8
+        SummonCount: 6
+      - WaveID: 0
+        SpotPoint: 6
+        SummonTime: 1
+        ObjName: "\uD63C\uC774\uB098\uAC04 \uC8FC\uC220\uC0AC"
+        CharacterID: 1010
+        MonsterType: 1
+        CharacterLevel: 8
+        SummonCount: 6
+      - WaveID: 0
+        SpotPoint: 7
+        SummonTime: 1
+        ObjName: "\uCD08\uC6D0\uC758 \uB3FC\uC9C0"
+        CharacterID: 1001
+        MonsterType: 0
+        CharacterLevel: 7
+        SummonCount: 3
+      - WaveID: 0
+        SpotPoint: 7
+        SummonTime: 1
+        ObjName: "\uB208\uC54C \uBC15\uC950"
+        CharacterID: 1014
+        MonsterType: 0
+        CharacterLevel: 7
+        SummonCount: 2
+      - WaveID: 0
+        SpotPoint: 7
+        SummonTime: 1
+        ObjName: "\uD3C9\uC57C \uC2AC\uB77C\uC784"
         CharacterID: 1003
         MonsterType: 0
-        CharacterLevel: 5
-        SummonCount: 100
-      Wave4:
-      - WaveID: 4
-        SummonTime: 240
-        ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
-        CharacterID: 1001
+        CharacterLevel: 7
+        SummonCount: 3
+      - WaveID: 0
+        SpotPoint: 8
+        SummonTime: 1
+        ObjName: "\uD3C9\uC57C\uC758 \uAC70\uB300 \uD2B8\uB864"
+        CharacterID: 2000
         MonsterType: 0
-        CharacterLevel: 10
-        SummonCount: 100
-      - WaveID: 4
-        SummonTime: 250
-        ObjName: "\uC804\uC0AC \uBA67\uB3FC\uC9C0"
+        CharacterLevel: 8
+        SummonCount: 1
+      - WaveID: 0
+        SpotPoint: 8
+        SummonTime: 1
+        ObjName: "\uD63C\uC774 \uB098\uAC04 \uCC3D\uBCD1"
+        CharacterID: 1011
+        MonsterType: 0
+        CharacterLevel: 7
+        SummonCount: 5
+      - WaveID: 0
+        SpotPoint: 9
+        SummonTime: 1
+        ObjName: "\uAC70\uB300\uD55C \uAF43\uC78E \uC2DD\uBB3C"
+        CharacterID: 3001
+        MonsterType: 2
+        CharacterLevel: 8
+        SummonCount: 1
+      - WaveID: 0
+        SpotPoint: 9
+        SummonTime: 1
+        ObjName: "\uB208\uC54C \uBC15\uC950"
+        CharacterID: 1014
+        MonsterType: 0
+        CharacterLevel: 8
+        SummonCount: 5
+      - WaveID: 0
+        SpotPoint: 9
+        SummonTime: 1
+        ObjName: "\uD654\uB09C \uBA67\uB3FC\uC9C0"
         CharacterID: 1002
         MonsterType: 0
-        CharacterLevel: 10
-        SummonCount: 100
-      - WaveID: 4
-        SummonTime: 260
-        ObjName: "\uC2AC\uB77C\uC784"
-        CharacterID: 1003
-        MonsterType: 0
-        CharacterLevel: 10
-        SummonCount: 100
+        CharacterLevel: 8
+        SummonCount: 3
+      Spot1: []
+      Spot2: []
+      Spot3: []
+      Spot4: []
+      Spot5: []
+      Spot6: []
+      Spot7: []
+      Spot8: []
+      Spot9: []
       IconName: "\uC544\uC774\uCF58 \uD30C\uC77C \uBA85"
       StageMapObjectName: "\uB9F5 \uC624\uBE0C\uC81D\uD2B8 \uD30C\uC77C\uBA85"
   m_UserActiveSkillDataElementDic:
@@ -4348,8 +4473,8 @@ MonoBehaviour:
       AttackRange: 1.5
       DamageTargetType: 2
       DamageTypeRange: 0
-      AttackSpeed: 1
-      AttackDamage: 30
+      AttackSpeed: 0.5
+      AttackDamage: 10
       HP: 2000
       PD: 50
       MD: 20
@@ -4381,8 +4506,8 @@ MonoBehaviour:
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 0.7
-      AttackDamage: 20
-      HP: 100
+      AttackDamage: 8
+      HP: 500
       PD: 10
       MD: 5
       CriticalPer: 10
@@ -4408,13 +4533,13 @@ MonoBehaviour:
       DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
-      TargetRecognitionRange: 5
-      AttackRange: 4
+      TargetRecognitionRange: 6
+      AttackRange: 5
       DamageTargetType: 0
       DamageTypeRange: 0
-      AttackSpeed: 0.9
-      AttackDamage: 25
-      HP: 80
+      AttackSpeed: 0.8
+      AttackDamage: 10
+      HP: 300
       PD: 6
       MD: 6
       CriticalPer: 10
@@ -4440,13 +4565,13 @@ MonoBehaviour:
       DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
-      TargetRecognitionRange: 5
-      AttackRange: 2.5
+      TargetRecognitionRange: 6
+      AttackRange: 5
       DamageTargetType: 0
       DamageTypeRange: 0
-      AttackSpeed: 1
-      AttackDamage: 30
-      HP: 65
+      AttackSpeed: 0.9
+      AttackDamage: 20
+      HP: 200
       PD: 5
       MD: 10
       CriticalPer: 10
@@ -4472,13 +4597,13 @@ MonoBehaviour:
       DoAerialUnitAttack: 1
       Type: 0
       AttackType: 1
-      TargetRecognitionRange: 5
-      AttackRange: 3
+      TargetRecognitionRange: 6
+      AttackRange: 4.5
       DamageTargetType: 0
       DamageTypeRange: 0
-      AttackSpeed: 1.5
-      AttackDamage: 40
-      HP: 90
+      AttackSpeed: 1
+      AttackDamage: 18
+      HP: 300
       PD: 8
       MD: 2
       CriticalPer: 10
@@ -6429,7 +6554,7 @@ MonoBehaviour:
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 2
-      AttackDamage: 50
+      AttackDamage: 20
       HP: 2000
       PD: 5
       MD: 5
@@ -6493,7 +6618,7 @@ MonoBehaviour:
       DamageTargetType: 0
       DamageTypeRange: 0
       AttackSpeed: 1
-      AttackDamage: 100
+      AttackDamage: 20
       HP: 20000
       PD: 10
       MD: 10
