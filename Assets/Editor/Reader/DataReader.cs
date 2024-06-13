@@ -432,7 +432,7 @@ public class DataReader : EditorWindow
 										info.CharacterLevel = Get<int>(obj2, 5);
 										info.SummonCount = Get<int>(obj2, 6);
 
-										switch (info.WaveID)
+										switch (info.SpotPoint)
 										{
 											case 0:
 												swde.Spot0.Add(info);

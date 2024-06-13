@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class StageManager : MonoBehaviour
@@ -130,7 +131,7 @@ public class StageManager : MonoBehaviour
         }
     }
 
-    void Awake()
+    void CreateStage()
     {
         StageWaveDataElement stageInfo = DataMgr.instance.m_StageWaveDataElementDic[stageId];
 
@@ -138,26 +139,46 @@ public class StageManager : MonoBehaviour
         GameObject stageObject = Instantiate(stagePrefab);
         this.stage = stageObject.GetComponent<Stage>();
 
-        List<WaveDataInfo>[] groupInfos = new List<WaveDataInfo>[]
+        List<SpotPointDataInfo>[] spotInfos = new List<SpotPointDataInfo>[]
         {
-            stageInfo.Wave0,
-            stageInfo.Wave1,
-            stageInfo.Wave2,
-            stageInfo.Wave3,
-            stageInfo.Wave4,
+            stageInfo.Spot0,
+            stageInfo.Spot1,
+            stageInfo.Spot2,
+            stageInfo.Spot3,
+            stageInfo.Spot4,
+            stageInfo.Spot5,
+            stageInfo.Spot6,
+            stageInfo.Spot7,
+            stageInfo.Spot8,
+            stageInfo.Spot9
         };
 
-        foreach (List<WaveDataInfo> groupInfo in groupInfos)
+        for (int i = 0; i < spotInfos.Length; ++i)
         {
-            if (groupInfo == null) continue;
+            List<SpotPointDataInfo> spotInfo = spotInfos[i];
+            if (spotInfo == null) continue;
 
-            waveGroupList.Add(new WaveGroup(groupInfo, 60.0f));
+            if (i >= this.stage.spawnPoints.Length) break;
+
+            Transform spawnPoint = this.stage.spawnPoints[i];
+            foreach (SpotPointDataInfo spotData in spotInfo)
+            {
+                for (int j = 0; j < spotData.SummonCount; ++j)
+                {
+                    Vector2 randomOffset = UnityEngine.Random.insideUnitCircle;
+                    EnemyManager.instance.CreateEnemy(
+                        DataMgr.instance.GetCharacterDataElement(spotData.CharacterID),
+                        spotData.CharacterLevel,
+                        spawnPoint.position + (Vector3)randomOffset
+                    );
+                }
+            }
         }
     }
 
     void Start()
     {
-        StartWave();
+        CreateStage();
     }
 
     void StartWave()
