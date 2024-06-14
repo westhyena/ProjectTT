@@ -186,12 +186,12 @@ public class GameManager : MonoBehaviour
             playerExp -= MaxExp;
             playerLevel++;
 
-            if (!isBuffCardSelecting)
-            {
-                StartCoroutine(BuffCardSelectCoroutine());
-            }
-            isBuffCardSelecting = true;
-            levelUpBuffToSelectCount++;
+            // if (!isBuffCardSelecting)
+            // {
+            //     StartCoroutine(BuffCardSelectCoroutine());
+            // }
+            // isBuffCardSelecting = true;
+            // levelUpBuffToSelectCount++;
 
             player.OnLevelUp(playerLevel);
         }
