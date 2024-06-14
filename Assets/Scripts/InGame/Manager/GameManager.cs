@@ -91,6 +91,8 @@ public class GameManager : MonoBehaviour
 
         player = heroManager.CreatePlayer(playerCharacterId);
 
+        companionPoints = DataMgr.instance.m_InGameSystemElement.GetMercenaryPoint;
+
         companionGaugeSpeed = 1.0f / DataMgr.instance.m_InGameSystemElement.MercenaryPointGetTime;
 
         companionPointPerCycle = DataMgr.instance.m_InGameSystemElement.GetMercenaryPoint;
@@ -118,12 +120,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        companionGauge += companionGaugeSpeed * Time.deltaTime;
-        if (companionGauge >= 1.0f)
-        {
-            companionGauge = 0.0f;
-            companionPoints += companionPointPerCycle;
-        }
+        // companionGauge += companionGaugeSpeed * Time.deltaTime;
+        // if (companionGauge >= 1.0f)
+        // {
+        //     companionGauge = 0.0f;
+        //     companionPoints += companionPointPerCycle;
+        // }
 
         gameTimer += Time.deltaTime;
     }
@@ -138,11 +140,11 @@ public class GameManager : MonoBehaviour
 
             foreach (CompanionUI companionUI in UIManager.instance.companionUIs)
             {
-                if (companionUI.CharacterInfo.ID == hero.CharacterInfo.ID)
-                {
-                    companionUI.CreateSummonEffect();
-                    break;
-                }
+                // if (companionUI.CharacterInfo.ID == hero.CharacterInfo.ID)
+                // {
+                //     companionUI.CreateSummonEffect();
+                //     break;
+                // }
             }
         }        
     }
