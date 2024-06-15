@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     HeroManager heroManager;
     EnemyManager enemyManager;
+    StageManager stageManager;
 
     public Vector3 characterRotation = new(-30.0f, 0.0f, 0.0f);
 
@@ -88,6 +90,7 @@ public class GameManager : MonoBehaviour
     {
         heroManager = GetComponent<HeroManager>();
         enemyManager = GetComponent<EnemyManager>();
+        stageManager = GetComponent<StageManager>();
 
         player = heroManager.CreatePlayer(playerCharacterId);
 
@@ -118,6 +121,43 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
+    IEnumerator StageClearCoroutine()
+    {
+        yield return new WaitForSeconds(0.1f);
+        levelUpBuffToSelectCount = 1;
+        
+        List<UserSelectCardDataElement> cardList = DataMgr.instance.GetUserSelectCardList();
+        UIManager.instance.buffSelectUI.Initialize(cardList);
+        PauseGame();
+
+        while (levelUpBuffToSelectCount > 0)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        player.transform.position = Vector3.zero;
+        foreach (Hero hero in heroManager.AliveHeroList)
+        {
+            Vector2 followOffset = Random.insideUnitCircle.normalized * 5.0f;
+            Vector2 followPosition = player.Position2D + followOffset;
+            hero.transform.position = followPosition;
+        }
+
+        stageManager.CreateStage();
+        isBuffCardSelecting = false;
+    }
+
+    void CheckMonster()
+    {
+        if (isBuffCardSelecting) return;
+
+        if (enemyManager.AliveEnemyList.Count == 0)
+        {
+            isBuffCardSelecting = true;
+            StartCoroutine(StageClearCoroutine());
+        }
+    }
+
     void Update()
     {
         // companionGauge += companionGaugeSpeed * Time.deltaTime;
@@ -126,6 +166,8 @@ public class GameManager : MonoBehaviour
         //     companionGauge = 0.0f;
         //     companionPoints += companionPointPerCycle;
         // }
+
+        CheckMonster();
 
         gameTimer += Time.deltaTime;
     }

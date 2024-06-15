@@ -131,8 +131,12 @@ public class StageManager : MonoBehaviour
         }
     }
 
-    void CreateStage()
+    public void CreateStage()
     {
+        if (this.stage != null)
+        {
+            Destroy(this.stage.gameObject);
+        }
         StageWaveDataElement stageInfo = DataMgr.instance.m_StageWaveDataElementDic[stageId];
 
         GameObject stagePrefab = ResourceManager.GetStagePrefab(stageInfo.StageMapObjectName);
@@ -212,6 +216,6 @@ public class StageManager : MonoBehaviour
 
     void Update()
     {
-        CheckWave();
+        // CheckWave();
     }
 }
